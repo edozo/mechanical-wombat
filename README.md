@@ -32,7 +32,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 
 ## Todo
 
-- [ ] Remove PropTypes
+- [x] Remove PropTypes
 - [ ] Update all relevant packages
 - [ ] Add styled-components
 - [ ] Add styled-theming
