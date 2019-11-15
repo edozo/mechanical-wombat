@@ -3,4 +3,4 @@ import { StyledButton } from './Button.styles'
 
 export interface Props { text: string }
 
-export const Button = (props: Props) => <StyledButton>{props.text}</StyledButton>;
+export const Button = (props: Props) => <StyledButton {...props} >{props.text}</StyledButton>;

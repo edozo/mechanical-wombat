@@ -26,6 +26,17 @@ class Example extends React.Component {
 }
 ```
 
+## Default theme
+```ts
+const myTheme = {
+  borderRadius: '5px',
+  colors: {
+    primary: 'green',
+    secondary: 'blue',
+  },
+}
+```
+
 ## License
 
 MIT © [martinmcneela](https://github.com/martinmcneela)
