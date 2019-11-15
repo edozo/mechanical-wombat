@@ -5,6 +5,7 @@
   "author": "martinmcneela",
   "license": "MIT",
   "repository": "martinmcneela/test-ui-lib",
+  "homepage": "https://martinmcneela.github.io/test-ui-lib",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
