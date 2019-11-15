@@ -42,3 +42,4 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [ ] Add husky
 - [ ] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
+- [ ] Get gh-pages working
