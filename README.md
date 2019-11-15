@@ -33,7 +33,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 ## Todo
 
 - [x] Remove PropTypes
-- [ ] Update all relevant packages
+- [x] Update all relevant packages
 - [ ] Add styled-components
 - [ ] Add styled-theming
 - [ ] Add eslint
