@@ -35,6 +35,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [x] Remove PropTypes
 - [x] Update all relevant packages
 - [ ] Add styled-components
+- [ ] Try to import as a private repo to app
 - [ ] Add styled-theming
 - [ ] Add eslint
 - [ ] Add prettier
@@ -42,5 +43,5 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [ ] Add husky
 - [ ] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
-- [ ] Get gh-pages working
+- [ ] Get gh-pages working (with storybook)
 - [ ] Setup git merging/workflow rules
