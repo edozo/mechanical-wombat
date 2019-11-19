@@ -55,6 +55,6 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - ~~[ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential~~
 - [ ] Get gh-pages working (with storybook)
 - [ ] Setup git merging/workflow rules
-- [ ] Storybook Storyshots
+- [ ] Storybook Storyshots (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
 - [ ] Storybook Docs
-- [ ] Storybook knobs
+- [ ] Storybook knobs (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
