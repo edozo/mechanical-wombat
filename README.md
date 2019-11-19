@@ -46,7 +46,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [x] Remove PropTypes
 - [x] Update all relevant packages
 - [x] Add styled-components
-- [ ] Try to import as a private repo to app
+- [ ] Try to import as a private repo to app (https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages)
 - [ ] Add eslint
 - [ ] Add prettier
 - [ ] Add stylelint
