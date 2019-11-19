@@ -20,7 +20,9 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -29,12 +31,15 @@
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^5.2.6",
     "@svgr/rollup": "^4.3.3",
     "@types/jest": "^24.0.23",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.4.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-runtime": "^6.26.0",
     "cross-env": "^6.0.3",
     "gh-pages": "^2.1.1",
@@ -49,6 +54,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.25.2",
     "rollup-plugin-url": "^3.0.0",
+    "storybook-addon-styled-component-theme": "^1.2.5",
     "styled-components": "^4.4.1",
     "typescript": "^3.7.2"
   },

@@ -51,7 +51,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [ ] Add prettier
 - [ ] Add stylelint
 - [ ] Add husky
-- [ ] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
+- [x] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
 - [ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential
 - [ ] Get gh-pages working (with storybook)
