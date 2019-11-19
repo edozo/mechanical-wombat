@@ -52,7 +52,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [x] Add husky
 - [x] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
-- ~~ Add styled-theming (https://github.com/styled-components/styled-theming), not essential~~
+~~[ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential~~
 - [ ] Get gh-pages working (with storybook)
 - [ ] Setup git merging/workflow rules
 - [ ] Storybook Storyshots (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
