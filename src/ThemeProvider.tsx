@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
-
-const defaultTheme: DefaultTheme = {
-  borderRadius: '5px',
-  colors: {
-    primary: 'green',
-    secondary: 'blue',
-  },
-};
+import { defaultTheme } from './defaultTheme'
 
 const ComponentLibThemeProvider = (props: any) => {
   const mergedTheme: DefaultTheme =  {
