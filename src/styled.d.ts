@@ -1,12 +1,12 @@
-import 'styled-components'
+import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    name: string
-    borderRadius: string
+    name: string;
+    borderRadius: string;
     colors: {
-      primary: string
-      secondary: string
-    }
+      primary: string;
+      secondary: string;
+    };
   }
 }
