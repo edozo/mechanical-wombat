@@ -13,20 +13,19 @@ yarn add test-ui-lib
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 
-import { MyComponent } from 'test-ui-lib'
+import { MyComponent } from 'test-ui-lib';
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent meaningOfLife={42} />
-    )
+  render() {
+    return <MyComponent meaningOfLife={42} />;
   }
 }
 ```
 
 ## Default theme
+
 ```ts
 const myTheme = {
   borderRadius: '5px',
@@ -34,7 +33,7 @@ const myTheme = {
     primary: 'green',
     secondary: 'blue',
   },
-}
+};
 ```
 
 ## License
@@ -47,12 +46,15 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [x] Update all relevant packages
 - [x] Add styled-components
 - [ ] Try to import as a private repo to app (https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages)
-- [ ] Add eslint
-- [ ] Add prettier
-- [ ] Add stylelint
-- [ ] Add husky
+- [x] Add eslint
+- [x] Add prettier
+- [x] Add stylelint
+- [x] Add husky
 - [x] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
-- [ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential
+- ~~[ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential~~
 - [ ] Get gh-pages working (with storybook)
 - [ ] Setup git merging/workflow rules
+- [ ] Storybook Storyshots
+- [ ] Storybook Docs
+- [ ] Storybook knobs
