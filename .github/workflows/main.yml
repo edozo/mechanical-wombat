@@ -1,0 +1,22 @@
+name: Component Lib CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Component lib PR with Node 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+    - name: yarn install, and lint
+      run: |
+        yarn install
+        yarn lint
+      env:
+        CI: true
+        
+        
