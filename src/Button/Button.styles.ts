@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  border: 2px solid ${(props): string => props.theme.colors.green};
+  border: 2px solid ${props => props.theme.colors.green};
   border-radius: 50px;
   font-size: 1.2em;
   padding: 8px 24px;
   transition: all 0.2s;
   box-sizing: border-box;
-  color: ${(props): string => props.theme.colors.skyBlue};
+  color: ${props => props.theme.colors.skyBlue};
   :hover {
-    background: ${(props): string => props.theme.colors.skyBlue};
+    background: ${props => props.theme.colors.skyBlue};
     color: #fff;
   }
   :focus {
