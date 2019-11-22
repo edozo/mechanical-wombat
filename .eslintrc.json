@@ -71,7 +71,7 @@
       {
         "allowExpressions": true
       }
-]
+    ]
   },
   "settings": {
     "import/resolver": {
