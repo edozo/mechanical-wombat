@@ -11,3 +11,9 @@ export const primaryVariant = (): JSX.Element => (
     <p>Icon</p>
   </TableDownloadButton>
 );
+
+export const primaryVariantDisabled = (): JSX.Element => (
+  <TableDownloadButton variant="primary" disabled>
+    <p>Icon</p>
+  </TableDownloadButton>
+);
