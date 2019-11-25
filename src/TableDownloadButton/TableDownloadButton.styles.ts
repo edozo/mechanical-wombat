@@ -7,13 +7,13 @@ interface Props {
 }
 
 export const TableActionButton = styled.button<Props>`
-  border-radius: 0px 0px 0px 2px;
   height: 70px;
   width: 56px;
   color: white;
   ${p =>
     p.variant === 'primary' &&
     css`
+      border: 2px solid ${p.theme.colors.skyBlue};
       background-color: ${p.theme.colors.skyBlue};
       outline: none;
       &:hover {
@@ -28,6 +28,7 @@ export const TableActionButton = styled.button<Props>`
       }
       &:disabled {
         background-color: ${p.theme.colors.gray3};
+        border: 2px solid ${p.theme.colors.gray3};
       }
     `};
 ` as React.FunctionComponent<Props>;
