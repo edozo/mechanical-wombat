@@ -18,6 +18,7 @@ export const TableActionButton = styled.button<Props>`
       outline: none;
       &:hover {
         background-color: ${p.theme.colors.lightSkyBlue};
+        border: 2px solid ${p.theme.colors.lightSkyBlue};
       }
       &:focus {
         background-color: ${p.theme.colors.lightSkyBlue};
