@@ -5,6 +5,14 @@ declare module 'styled-components' {
     name: string;
     borderRadius: string;
     colors: {
+      aliases: {
+        primary: string;
+        primaryLight: string;
+        primaryDark: string;
+        secondary: string;
+        secondaryLight: string;
+        secondaryDark: string;
+      };
       skyBlue: string;
       green: string;
       red: string;
