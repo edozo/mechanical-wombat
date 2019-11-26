@@ -8,18 +8,18 @@ export default {
 
 export const SingleFormatOption = (): JSX.Element => (
   <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <DownloadFormat options={[{ format: 'pdf' }]} />
+    <DownloadFormat options={[{ format: 'PDF' }]} />
   </div>
 );
 
 export const MultiFormatOption = (): JSX.Element => (
   <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <DownloadFormat options={[{ format: 'pdf' }, { format: 'jpg' }, { format: 'docx' }]} />
+    <DownloadFormat options={[{ format: 'PDF' }, { format: 'JPG' }, { format: 'DOCX' }]} />
   </div>
 );
 
 export const DisabledMultiFormatOption = (): JSX.Element => (
   <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <DownloadFormat options={[{ format: 'pdf' }, { format: 'jpg' }, { format: 'docx' }]} variant="disabled" />
+    <DownloadFormat options={[{ format: 'PDF' }, { format: 'JPG' }, { format: 'DOCX' }]} variant="disabled" />
   </div>
 );
