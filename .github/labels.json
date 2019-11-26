@@ -1,0 +1,45 @@
+[
+  {
+    "name": "🐛 bug 🐛",
+    "color": "#d73a4a"
+  },
+  {
+    "name": "🤒 changes requested 🤒",
+    "color": "#ed95a9",
+    "description": "Changes requested by reviewing developer(s) on PR"
+  },
+  {
+    "name": "🙉 DO NOT MERGE 🙉",
+    "color": "#c4212c",
+    "description": "Not ready to be merged"
+  },
+  {
+    "name": "🙈 DO NOT REVIEW 🙈",
+    "color": "#ffae42",
+    "description": "PR's not ready for review"
+  },
+  {
+    "name": "⛑️ help wanted ⛑️",
+    "color": "#008672"
+  },
+  {
+    "name": "🙈 hotfix 🚀",
+    "color": "#05c62f",
+    "description": "Fixes a bug on release/production branch"
+  },
+  {
+    "name": "Question ❔",
+    "color": "#b792ef",
+    "description": "Further information is requested"
+  },
+  {
+    "name": "Ready for review 👀",
+    "color": "#7057ff",
+    "description": "Ready to be reviewed, or re-reviewed"
+  },
+  {
+    "name": "🚀 Approved 🚀",
+    "color": "#edfc7b",
+    "description": "PR approved and ready to merge"
+  }
+]
