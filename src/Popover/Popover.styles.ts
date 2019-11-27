@@ -60,13 +60,11 @@ export const FormatList = styled.div`
     content: '';
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid ${p => p.theme.colors.black};
     position: absolute;
     right: 13px;
     top: 0;
   }
   &:before {
-    border-bottom: 8px solid ${p => p.theme.colors.black};
     top: -9px;
     bottom: auto;
   }
