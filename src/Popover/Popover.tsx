@@ -3,7 +3,7 @@ import { FormatOption, FormatList } from './Popover.styles';
 
 export interface Props {
   options: {
-    format: string;
+    label: string;
   }[];
   variant?: string;
 }
@@ -14,8 +14,8 @@ export const Popover = (props: Props): JSX.Element => {
     <FormatList>
       {options.map(option => {
         return (
-          <FormatOption key={option.format} variant={variant}>
-            <span>{option.format}</span>
+          <FormatOption key={option.label} variant={variant}>
+            <span>{option.label}</span>
           </FormatOption>
         );
       })}
