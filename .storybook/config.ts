@@ -1,8 +1,6 @@
-import { configure } from '@storybook/react';
-import {addDecorator} from '@storybook/react';
-import {withThemesProvider} from 'storybook-addon-styled-component-theme';
-import { defaultTheme } from '../src/defaultTheme'
-import { addParameters } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import { defaultTheme } from '../src/defaultTheme';
 
 const themes = [defaultTheme];
 addDecorator(withThemesProvider(themes));
@@ -15,4 +13,4 @@ addParameters({
 });
 
 // automatically import all files ending in *.stories.tsx
-configure(require.context('../src', true, /\.stories\.tsx?$/), module)
+configure(require.context('../src', true, /\.stories\.tsx?$/), module);
