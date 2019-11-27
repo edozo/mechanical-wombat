@@ -1,6 +1,6 @@
 export { Example } from './Example';
 export { Button } from './Button';
 export { TableDownloadButton } from './TableDownloadButton';
-export { DownloadFormat } from './DownloadFormat';
+export { PopOver } from './Popover';
 
 export { default } from './ThemeProvider';

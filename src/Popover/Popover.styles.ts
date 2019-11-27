@@ -22,6 +22,10 @@ export const FormatOption = styled.div<OptionProps>`
     border-radius: 0 0 5px 5px;
   }
 
+  &:only-child {
+    border-radius: 5px;
+  }
+
   &:hover {
     background-color: ${p => p.theme.colors.lightSkyBlue};
     color: ${p => p.theme.colors.white};

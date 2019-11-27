@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FormatOption, FormatList } from './DownloadFormat.styles';
+import { FormatOption, FormatList } from './Popover.styles';
 
 export interface Props {
   options: {
@@ -8,7 +8,7 @@ export interface Props {
   variant?: string;
 }
 
-export const DownloadFormat = (props: Props): JSX.Element => {
+export const Popover = (props: Props): JSX.Element => {
   const { options, variant } = props;
   return (
     <FormatList>
