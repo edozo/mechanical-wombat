@@ -27,12 +27,12 @@ export const FormatOption = styled.div<OptionProps>`
   }
 
   &:hover {
-    background-color: ${p => p.theme.colors.lightSkyBlue};
+    background-color: ${p => p.theme.colors.aliases.primaryLight};
     color: ${p => p.theme.colors.white};
   }
 
   &:active {
-    background-color: ${p => p.theme.colors.darkSkyBlue};
+    background-color: ${p => p.theme.colors.aliases.primaryDark};
   }
 
   &:not(:last-child) {
