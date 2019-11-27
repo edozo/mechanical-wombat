@@ -3,7 +3,8 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     name: string;
-    borderRadius: string;
+    borderRadiusSmall: string;
+    boxShadowSmall: string;
     colors: {
       aliases: {
         primary: string;

@@ -15,15 +15,15 @@ export const FormatOption = styled.div<OptionProps>`
   align-items: center;
 
   &:first-child {
-    border-radius: 5px 5px 0 0;
+    border-radius: ${p => p.theme.borderRadiusSmall} ${p => p.theme.borderRadiusSmall} 0 0;
   }
 
   &:last-child {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 ${p => p.theme.borderRadiusSmall} ${p => p.theme.borderRadiusSmall};
   }
 
   &:only-child {
-    border-radius: 5px;
+    border-radius: ${p => p.theme.borderRadiusSmall};
   }
 
   &:hover {
@@ -49,6 +49,7 @@ export const FormatOption = styled.div<OptionProps>`
 `;
 
 export const FormatList = styled.div`
+  box-shadow: ${p => p.theme.boxShadowSmall};
   background-color: ${p => p.theme.colors.white};
   width: 80px;
   position: absolute;
