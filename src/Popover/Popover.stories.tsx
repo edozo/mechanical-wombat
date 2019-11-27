@@ -19,6 +19,12 @@ export const MultiFormatOption = (): JSX.Element => (
   </div>
 );
 
+export const LongListOption = (): JSX.Element => (
+  <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
+    <Popover>{[{ label: 'THIS IS A LONG LIST OPTION' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
+  </div>
+);
+
 export const DisabledMultiFormatOption = (): JSX.Element => (
   <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
     <Popover disabled>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>

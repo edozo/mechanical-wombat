@@ -14,6 +14,7 @@ export const ListOption = styled.div<OptionProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px 10px;
 
   &:first-child {
     border-radius: ${p => p.theme.borderRadiusSmall} ${p => p.theme.borderRadiusSmall} 0 0;
@@ -52,7 +53,6 @@ export const ListOption = styled.div<OptionProps>`
 export const PopoverList = styled.div`
   box-shadow: ${p => p.theme.boxShadowSmall};
   background-color: ${p => p.theme.colors.white};
-  width: 80px;
   position: absolute;
   left: 35px;
   top: 35px;
