@@ -39,5 +39,11 @@ declare module 'styled-components' {
       lightRed: string;
       lighterRed: string;
     };
+    font: {
+      family: {
+        title: string;
+        body: string;
+      };
+    };
   }
 }

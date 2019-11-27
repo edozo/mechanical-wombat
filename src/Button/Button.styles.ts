@@ -4,6 +4,7 @@ export const StyledButton = styled.button`
   border: 2px solid ${p => p.theme.colors.aliases.primary};
   border-radius: 50px;
   font-size: 1.2em;
+  font-family: ${p => p.theme.font.family.body};
   padding: 8px 24px;
   transition: all 0.2s;
   box-sizing: border-box;
