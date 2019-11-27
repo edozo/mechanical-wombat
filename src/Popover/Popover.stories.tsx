@@ -4,29 +4,24 @@ import { Popover } from './Popover';
 export default {
   title: 'Popover',
   component: Popover,
+  parameters: {
+    backgrounds: [
+      { name: 'orange', value: '#e67b17', default: true },
+      { name: 'dark blue', value: '#3b5998' },
+    ],
+  },
 };
 
-export const SingleFormatOption = (): JSX.Element => (
-  // TODO: Build a reusable component for this so we can use in multiple places or a storybook addon to handle it.
-  <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <Popover>{[{ label: 'PDF' }]}</Popover>
-  </div>
-);
+export const SingleFormatOption = (): JSX.Element => <Popover>{[{ label: 'PDF' }]}</Popover>;
 
 export const MultiFormatOption = (): JSX.Element => (
-  <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <Popover>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
-  </div>
+  <Popover>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
 );
 
 export const LongListOption = (): JSX.Element => (
-  <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <Popover>{[{ label: 'THIS IS A LONG LIST OPTION' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
-  </div>
+  <Popover>{[{ label: 'THIS IS A LONG LIST OPTION' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
 );
 
 export const DisabledMultiFormatOption = (): JSX.Element => (
-  <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <Popover disabled>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
-  </div>
+  <Popover disabled>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
 );
