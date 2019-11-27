@@ -10,7 +10,7 @@ addDecorator(withThemesProvider(themes));
 configure(req, module);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename))
+  req.keys().forEach(filename => req(filename));
 }
 
 const withGlobal = cb => (
