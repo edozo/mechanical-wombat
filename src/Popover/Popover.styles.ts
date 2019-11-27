@@ -2,9 +2,10 @@ import styled, { css } from 'styled-components';
 
 interface OptionProps {
   variant?: string;
+  disabled?: boolean;
 }
 
-export const FormatOption = styled.div<OptionProps>`
+export const ListOption = styled.div<OptionProps>`
   text-align: center;
   font-weight: bold;
   height: 36px;
@@ -40,7 +41,7 @@ export const FormatOption = styled.div<OptionProps>`
   }
 
   ${p =>
-    p.variant === 'disabled' &&
+    p.disabled &&
     css`
       &:hover {
         background-color: ${p.theme.colors.gray3};
@@ -48,7 +49,7 @@ export const FormatOption = styled.div<OptionProps>`
     `};
 `;
 
-export const FormatList = styled.div`
+export const PopoverList = styled.div`
   box-shadow: ${p => p.theme.boxShadowSmall};
   background-color: ${p => p.theme.colors.white};
   width: 80px;

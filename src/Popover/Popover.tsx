@@ -1,24 +1,25 @@
 import * as React from 'react';
-import { FormatOption, FormatList } from './Popover.styles';
+import { ListOption, PopoverList } from './Popover.styles';
 
 export interface Props {
   options: {
     label: string;
   }[];
   variant?: string;
+  disabled?: boolean;
 }
 
 export const Popover = (props: Props): JSX.Element => {
-  const { options, variant } = props;
+  const { options, disabled, variant } = props;
   return (
-    <FormatList>
+    <PopoverList>
       {options.map(option => {
         return (
-          <FormatOption key={option.label} variant={variant}>
+          <ListOption key={option.label} disabled={disabled} variant={variant}>
             <span>{option.label}</span>
-          </FormatOption>
+          </ListOption>
         );
       })}
-    </FormatList>
+    </PopoverList>
   );
 };

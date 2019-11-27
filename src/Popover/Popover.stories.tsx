@@ -21,6 +21,6 @@ export const MultiFormatOption = (): JSX.Element => (
 
 export const DisabledMultiFormatOption = (): JSX.Element => (
   <div style={{ backgroundColor: 'red', height: '200px', width: '200px' }}>
-    <Popover options={[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]} variant="disabled" />
+    <Popover options={[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]} disabled />
   </div>
 );
