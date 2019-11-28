@@ -30,8 +30,12 @@ const colors = {
 
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
-  borderRadiusSmall: '5px',
-  boxShadowSmall: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+  borderRadius: {
+    small: '5px',
+  },
+  boxShadow: {
+    standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+  },
   colors: {
     ...colors,
     aliases: {

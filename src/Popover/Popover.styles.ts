@@ -17,15 +17,15 @@ export const ListOption = styled.div<OptionProps>`
   padding: 5px 10px;
 
   &:first-child {
-    border-radius: ${p => p.theme.borderRadiusSmall} ${p => p.theme.borderRadiusSmall} 0 0;
+    border-radius: ${p => p.theme.borderRadius.small} ${p => p.theme.borderRadius.small} 0 0;
   }
 
   &:last-child {
-    border-radius: 0 0 ${p => p.theme.borderRadiusSmall} ${p => p.theme.borderRadiusSmall};
+    border-radius: 0 0 ${p => p.theme.borderRadius.small} ${p => p.theme.borderRadius.small};
   }
 
   &:only-child {
-    border-radius: ${p => p.theme.borderRadiusSmall};
+    border-radius: ${p => p.theme.borderRadius.small};
   }
 
   &:hover {
@@ -51,11 +51,10 @@ export const ListOption = styled.div<OptionProps>`
 `;
 
 export const PopoverList = styled.div`
-  box-shadow: ${p => p.theme.boxShadowSmall};
+  box-shadow: ${p => p.theme.boxShadow.standard};
   background-color: ${p => p.theme.colors.white};
-  position: absolute;
-  left: 35px;
-  top: 35px;
+  position: relative;
+  display: inline-block;
   border-radius: 5px;
   &:before,
   &:after {
@@ -65,10 +64,6 @@ export const PopoverList = styled.div`
     position: absolute;
     right: 13px;
     top: 0;
-  }
-  &:before {
-    top: -9px;
-    bottom: auto;
   }
   &:after {
     border-bottom: 8px solid ${p => p.theme.colors.white};
