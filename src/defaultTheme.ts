@@ -37,7 +37,12 @@ const font = {
 
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
-  borderRadius: '5px',
+  borderRadius: {
+    small: '5px',
+  },
+  boxShadow: {
+    standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+  },
   colors: {
     ...colors,
     aliases: {

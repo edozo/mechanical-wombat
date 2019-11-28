@@ -35,6 +35,8 @@
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-backgrounds": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "@svgr/rollup": "^4.3.3",
     "@types/jest": "^24.0.23",

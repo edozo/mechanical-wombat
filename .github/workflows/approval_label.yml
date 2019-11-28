@@ -12,5 +12,5 @@ jobs:
       env:
         APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ADD_LABEL: ":rocket: Approved :rocket:"
-        REMOVE_LABEL: "Ready%20for%20review%20:eyes:"
+        ADD_LABEL: "🚀 Approved 🚀"
+        REMOVE_LABEL: Ready for review 👀"
