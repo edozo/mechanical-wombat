@@ -1,7 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import { defaultTheme } from '../src/defaultTheme';
-import { withGlobalStyles } from './custom/withGlobalStyles'
+import { withGlobalStyles } from './custom/withGlobalStyles';
 
 const req = require.context('../src', true, /\.stories\.tsx$/);
 const themes = [defaultTheme];
