@@ -3,11 +3,17 @@ import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import { defaultTheme } from '../src/defaultTheme';
 import { withGlobalStyles } from './custom/withGlobalStyles';
 
+// Load stories
 const req = require.context('../src', true, /\.stories\.tsx$/);
+
+// Load themes and pass themes to theme switcher storybook UI
 const themes = [defaultTheme];
 addDecorator(withThemesProvider(themes));
-configure(req, module);
 
+// Load global styles into storybook UI
+addDecorator(withGlobalStyles);
+
+// Set background colour options
 addParameters({
   backgrounds: [
     { name: 'orange', value: '#e67b17' },
@@ -15,9 +21,4 @@ addParameters({
   ],
 });
 
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
-
-addDecorator(withGlobalStyles);
-configure(loadStories, module);
+configure(req, module);
