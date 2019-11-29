@@ -28,6 +28,13 @@ const colors = {
   lighterRed: '#FCE8E8',
 };
 
+const font = {
+  family: {
+    title: "'Poppins', Helvetica Neue, Helvetica, Arial, sans-serif",
+    body: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
+  },
+};
+
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
   borderRadius: {
@@ -47,6 +54,7 @@ const defaultTheme: DefaultTheme = {
       secondaryDark: colors.darkGreen,
     },
   },
+  font,
 };
 
 export { defaultTheme };
