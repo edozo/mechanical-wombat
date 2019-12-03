@@ -48,7 +48,6 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [ ] Try to import as a private repo to app (https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages)
 - [x] Add eslint
 - [x] Add prettier
-- [x] Add stylelint
 - [x] Add husky
 - [x] Add storybook (with knobs, actions, viewport, story source, docgen...etc... - https://storybook.js.org/docs/addons/addon-gallery/)
 - [ ] Add testing setup
@@ -57,5 +56,5 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - [ ] Setup git merging/workflow rules
 - [ ] Storybook Storyshots (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919, https://github.com/storybookjs/storybook/tree/master/addons/storyshots)
 - [ ] Storybook Docs (https://github.com/storybookjs/storybook/tree/master/addons/docs)
-- [ ] Storybook knobs (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
+- [x] Storybook knobs (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
 - [ ] https://github.com/hharnisc/storybook-addon-figma
