@@ -1,14 +1,15 @@
 import 'styled-components';
 
 declare module 'styled-components' {
+  interface SizeHelper {
+    small: string;
+    standard: string;
+    large: string;
+  }
   export interface DefaultTheme {
     name: string;
-    borderRadius: {
-      small: string;
-    };
-    boxShadow: {
-      standard: string;
-    };
+    borderRadius: SizeHelper;
+    boxShadow: SizeHelper;
     colors: {
       aliases: {
         primary: string;
