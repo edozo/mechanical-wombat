@@ -1,7 +1,20 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import { Button } from './Button';
 
-storiesOf('Fake button', module).add('Fake button', () => (
-  <Button text="I am not a real button, I will need to be replace with the real button" />
-));
+export default {
+  title: 'Button',
+  decorators: [withKnobs],
+};
+
+export const FakeButton = (): JSX.Element => {
+  const label = 'Colors';
+  const options = {
+    Primary: 'primary',
+    Secondary: 'secondary',
+  };
+  const defaultValue = 'primary';
+
+  const value = select(label, options, defaultValue);
+  return <Button variant={value} disabled={boolean('Disabled', false)} text={text('Label', 'Hello Storybook')} />;
+};

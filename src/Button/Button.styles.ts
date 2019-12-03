@@ -1,6 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const StyledButton = styled.button`
+interface OptionProps {
+  variant?: 'primary' | 'secondary';
+  disabled?: boolean;
+}
+
+export const StyledButton = styled.button<OptionProps>`
   border: 2px solid ${p => p.theme.colors.aliases.primary};
   border-radius: 50px;
   font-size: 1.2em;
@@ -10,19 +15,31 @@ export const StyledButton = styled.button`
   box-sizing: border-box;
   color: ${p => p.theme.colors.white};
   background: ${p => p.theme.colors.aliases.primary};
-  :hover {
+  ${p =>
+    p.variant === 'secondary' &&
+    css`
+      background-color: red;
+    `}
+
+  &:hover {
     background: ${p => p.theme.colors.aliases.primaryLight};
     border: 2px solid ${p => p.theme.colors.aliases.primaryLight};
     color: #fff;
   }
-  :focus {
+  &:focus {
     background: ${p => p.theme.colors.aliases.primaryLight};
     border: 2px solid ${p => p.theme.colors.aliases.primaryDark};
     outline: none;
   }
-  :active {
+  &:active {
     background: ${p => p.theme.colors.aliases.primaryDark};
     border: 2px solid ${p => p.theme.colors.aliases.primaryDark};
     outline: none;
   }
+
+  ${p =>
+    p.disabled &&
+    css`
+      background-color: ${p.theme.colors.gray3};
+    `}
 `;
