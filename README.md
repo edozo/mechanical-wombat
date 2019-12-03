@@ -54,8 +54,7 @@ MIT © [martinmcneela](https://github.com/martinmcneela)
 - ~~[ ] Add styled-theming (https://github.com/styled-components/styled-theming), not essential~~
 - [ ] Get gh-pages working (with storybook)
 - [ ] Setup git merging/workflow rules
-- [ ] Storybook Storyshots (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
-- [ ] Storybook Docs
-- [ ] storybook-addon-react-live-edit
-- [ ] Add stylelint
+- [ ] Storybook Storyshots (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919, https://github.com/storybookjs/storybook/tree/master/addons/storyshots)
+- [ ] Storybook Docs (https://github.com/storybookjs/storybook/tree/master/addons/docs)
 - [x] Storybook knobs (https://medium.com/@pongsatt/how-to-setup-storybook-in-react-typescript-project-ad2516515919)
+- [ ] https://github.com/hharnisc/storybook-addon-figma
