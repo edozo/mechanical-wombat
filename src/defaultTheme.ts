@@ -37,8 +37,17 @@ const font = {
 
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
+  spacing: {
+    xxsmall: '4px',
+    xsmall: '8px',
+    small: '16px',
+    base: '24px',
+    large: '32px',
+    xlarge: '48px',
+    xxlarge: '64px',
+  },
   borderRadius: {
-    small: '2px',
+    small: '1px',
     standard: '5px',
     large: '50px',
   },

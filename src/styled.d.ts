@@ -8,6 +8,15 @@ declare module 'styled-components' {
   }
   export interface DefaultTheme {
     name: string;
+    spacing: {
+      xxsmall: string;
+      xsmall: string;
+      small: string;
+      base: string;
+      large: string;
+      xlarge: string;
+      xxlarge: string;
+    };
     borderRadius: SizeHelper;
     boxShadow: SizeHelper;
     colors: {

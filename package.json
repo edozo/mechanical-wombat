@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@storybook/addon-backgrounds": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-viewport": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "@svgr/rollup": "^4.3.3",
