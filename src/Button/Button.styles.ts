@@ -9,11 +9,6 @@ export interface StyleProps {
   disabled?: boolean;
 }
 
-const pseudoHelper = {
-  LIGHT: 'Light',
-  DARK: 'Dark',
-};
-
 export const StyledButton = styled.button<StyleProps>`
   font-family: ${p => p.theme.font.family.body};
   border: 2px solid ${p => p.theme.colors.aliases[p.color || 'primary']};
@@ -24,17 +19,17 @@ export const StyledButton = styled.button<StyleProps>`
   font-size: 1.2em; /* Get from theme */
   transition: all 0.2s; /* Get from theme */
   &:hover {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.LIGHT}`) || 'primaryLight']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.LIGHT}`) || 'primaryLight']};
+    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
+    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
   }
   &:focus {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.LIGHT}`) || 'primaryLight']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.DARK}`) || 'primaryDark']};
+    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
+    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
     outline: none;
   }
   &:active {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.DARK}`) || 'primaryDark']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}${pseudoHelper.DARK}`) || 'primaryDark']};
+    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
+    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
     outline: none;
   }
 
