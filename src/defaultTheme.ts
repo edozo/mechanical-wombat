@@ -37,11 +37,24 @@ const font = {
 
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
+  spacing: {
+    xxsmall: '4px',
+    xsmall: '8px',
+    small: '16px',
+    base: '24px',
+    large: '32px',
+    xlarge: '48px',
+    xxlarge: '64px',
+  },
   borderRadius: {
-    small: '5px',
+    small: '1px',
+    standard: '5px',
+    large: '50px',
   },
   boxShadow: {
+    small: '1px 1px 10px rgba(0, 0, 0, 0.25)',
     standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+    large: '1px 1px 10px rgba(0, 0, 0, 0.25)',
   },
   colors: {
     ...colors,
