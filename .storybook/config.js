@@ -4,7 +4,7 @@ import { defaultTheme } from '../src/defaultTheme';
 import { withGlobalStyles } from './custom/withGlobalStyles';
 
 // Load stories
-const req = require.context('../src', true, /\.stories\.tsx$/);
+const req = require.context('../src', true, /\.stories\.(tsx|mdx)$/);
 
 // Load themes and pass themes to theme switcher storybook UI
 const themes = [defaultTheme];
