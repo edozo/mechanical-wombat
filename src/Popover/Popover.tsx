@@ -6,6 +6,7 @@ export interface Props {
   disabled?: boolean;
   children?: {
     label?: string;
+    onClick?: () => void;
   }[];
 }
 
@@ -16,7 +17,7 @@ export const Popover = (props: Props): JSX.Element => {
       {children &&
         children.map(option => {
           return (
-            <ListOption key={option.label} disabled={disabled} variant={variant}>
+            <ListOption key={option.label} disabled={disabled} variant={variant} onClick={option.onClick}>
               <span>{option.label}</span>
             </ListOption>
           );

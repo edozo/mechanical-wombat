@@ -17,15 +17,15 @@ export const ListOption = styled.div<OptionProps>`
   padding: 5px 10px;
 
   &:first-child {
-    border-radius: ${p => p.theme.borderRadius.small} ${p => p.theme.borderRadius.small} 0 0;
+    border-radius: ${p => p.theme.borderRadius.standard} ${p => p.theme.borderRadius.standard} 0 0;
   }
 
   &:last-child {
-    border-radius: 0 0 ${p => p.theme.borderRadius.small} ${p => p.theme.borderRadius.small};
+    border-radius: 0 0 ${p => p.theme.borderRadius.standard} ${p => p.theme.borderRadius.standard};
   }
 
   &:only-child {
-    border-radius: ${p => p.theme.borderRadius.small};
+    border-radius: ${p => p.theme.borderRadius.standard};
   }
 
   &:hover {
