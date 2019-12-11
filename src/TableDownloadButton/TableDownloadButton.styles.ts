@@ -13,19 +13,19 @@ export const TableActionButton = styled.button<Props>`
   ${p =>
     p.variant === 'primary' &&
     css`
-      border: 2px solid ${p.theme.colors.skyBlue};
-      background-color: ${p.theme.colors.skyBlue};
+      border: 2px solid ${p.theme.colors.aliases.primary};
+      background-color: ${p.theme.colors.aliases.primary};
       outline: none;
       &:hover {
-        background-color: ${p.theme.colors.lightSkyBlue};
-        border: 2px solid ${p.theme.colors.lightSkyBlue};
+        background-color: ${p.theme.colors.aliases.primaryLight};
+        border: 2px solid ${p.theme.colors.aliases.primaryLight};
       }
       &:focus {
-        background-color: ${p.theme.colors.lightSkyBlue};
-        border: 2px solid ${p.theme.colors.darkSkyBlue};
+        background-color: ${p.theme.colors.aliases.primaryLight};
+        border: 2px solid ${p.theme.colors.aliases.primaryDark};
       }
       &:active {
-        background-color: ${p.theme.colors.darkSkyBlue};
+        background-color: ${p.theme.colors.aliases.primaryDark};
       }
       &:disabled {
         background-color: ${p.theme.colors.gray3};
