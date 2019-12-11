@@ -21,38 +21,44 @@ declare module 'styled-components' {
     boxShadow: SizeHelper;
     colors: {
       aliases: {
-        primary: string;
         primaryLight: string;
+        primary: string;
         primaryDark: string;
-        secondary: string;
         secondaryLight: string;
+        secondary: string;
         secondaryDark: string;
       };
+      // Sky blue
+      skyBlueLighter: string;
+      skyBlueLight: string;
       skyBlue: string;
-      green: string;
+      skyBlueDark: string;
+      skyBlueDarker: string;
+      // Red
+      redLighter: string;
+      redLight: string;
       red: string;
-      steelBlue: string;
+      // Misc
       white: string;
       black: string;
-      lighterSkyBlue: string;
-      lightSkyBlue: string;
-      darkSkyBlue: string;
-      darkerSkyBlue: string;
-      lighterGreen: string;
-      lightGreen: string;
-      darkGreen: string;
-      darkerGreen: string;
+      // Green
+      greenLighter: string;
+      greenLight: string;
+      green: string;
+      greenDark: string;
+      greenDarker: string;
+      // Gray
       gray1: string;
       gray2: string;
       gray3: string;
       gray4: string;
       gray5: string;
-      lighterSteelBlue: string;
-      lightSteelBlue: string;
-      darkSteelBlue: string;
-      darkerSteelBlue: string;
-      lightRed: string;
-      lighterRed: string;
+      // Steel blue
+      steelBlueLighter: string;
+      steelBlueLight: string;
+      steelBlue: string;
+      steelBlueDark: string;
+      steelBlueDarker: string;
     };
     font: {
       family: {

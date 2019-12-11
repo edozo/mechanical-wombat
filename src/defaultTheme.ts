@@ -1,31 +1,37 @@
 import { DefaultTheme } from 'styled-components';
 
 const colors = {
+  // Sky blue
+  skyBlueLighter: '#B4EEF9',
+  skyBlueLight: '#1DCEEC',
   skyBlue: '#00B8D7',
-  green: '#99C875',
+  skyBlueDark: '#019FBA',
+  skyBlueDarker: '#00859C',
+  // Red
+  redLighter: '#FCE8E8',
+  redLight: '#FFC0C0',
   red: '#DB0010',
-  steelBlue: '#E5EEFE',
+  // Misc
   white: '#FFFFFF',
   black: '#212529',
-  lighterSkyBlue: '#B4EEF9',
-  lightSkyBlue: '#1DCEEC',
-  darkSkyBlue: '#019FBA',
-  darkerSkyBlue: '#00859C',
-  lighterGreen: '#C8EAAF',
-  lightGreen: '#A0D777',
-  darkGreen: '#8AB26B',
-  darkerGreen: '#75985B',
+  // Green
+  greenLighter: '#C8EAAF',
+  greenLight: '#A0D777',
+  green: '#99C875',
+  greenDark: '#8AB26B',
+  greenDarker: '#75985B',
+  // Gray
   gray1: '#F6F6F6',
   gray2: '#F2F2F2',
   gray3: '#D5D7DC',
   gray4: '#717171',
   gray5: '#4C4C4C',
-  lighterSteelBlue: '#F7FAFC',
-  lightSteelBlue: '#F1F5FD',
-  darkSteelBlue: '#ABB8C5',
-  darkerSteelBlue: '#818E9B',
-  lightRed: '#FFC0C0',
-  lighterRed: '#FCE8E8',
+  // Steel blue
+  steelBlueLighter: '#F7FAFC',
+  steelBlueLight: '#F1F5FD',
+  steelBlue: '#E5EEFE',
+  steelBlueDark: '#ABB8C5',
+  steelBlueDarker: '#818E9B',
 };
 
 const font = {
@@ -60,11 +66,11 @@ const defaultTheme: DefaultTheme = {
     ...colors,
     aliases: {
       primary: colors.skyBlue,
-      primaryLight: colors.lightSkyBlue,
-      primaryDark: colors.darkSkyBlue,
+      primaryLight: colors.skyBlueLight,
+      primaryDark: colors.skyBlueDark,
       secondary: colors.green,
-      secondaryLight: colors.lightGreen,
-      secondaryDark: colors.darkGreen,
+      secondaryLight: colors.greenLight,
+      secondaryDark: colors.greenDark,
     },
   },
   font,
