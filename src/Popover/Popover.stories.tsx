@@ -13,7 +13,7 @@ export default {
 };
 
 export const SingleFormatOption = (): JSX.Element => (
-  <Popover>
+  <Popover isOpen setIsOpen={() => null}>
     {[
       {
         label: 'PDF',
@@ -26,7 +26,7 @@ export const SingleFormatOption = (): JSX.Element => (
 );
 
 export const MultiFormatOption = (): JSX.Element => (
-  <Popover>
+  <Popover isOpen setIsOpen={() => null}>
     {[
       {
         label: 'PDF',
@@ -51,7 +51,7 @@ export const MultiFormatOption = (): JSX.Element => (
 );
 
 export const LongListOption = (): JSX.Element => (
-  <Popover>
+  <Popover isOpen setIsOpen={() => null}>
     {[
       {
         label: 'THIS IS A LONG LIST OPTION',
@@ -76,5 +76,7 @@ export const LongListOption = (): JSX.Element => (
 );
 
 export const DisabledMultiFormatOption = (): JSX.Element => (
-  <Popover disabled>{[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}</Popover>
+  <Popover disabled isOpen setIsOpen={() => null}>
+    {[{ label: 'PDF' }, { label: 'JPG' }, { label: 'DOCX' }]}
+  </Popover>
 );

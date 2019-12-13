@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { ListOption, PopoverList } from './Popover.styles';
+import { useOnClickOutside } from '../hooks/custom-hooks';
+
+const { useRef } = React;
 
 export interface Props {
+  isOpen: boolean;
+  setIsOpen: (param: boolean) => void;
   variant?: string;
   disabled?: boolean;
   children?: {
@@ -11,17 +16,22 @@ export interface Props {
 }
 
 export const Popover = (props: Props): JSX.Element => {
-  const { children, disabled, variant } = props;
+  const { children, disabled, variant, isOpen, setIsOpen } = props;
+  const node = useRef();
+  useOnClickOutside(node, () => setIsOpen(false));
+
   return (
-    <PopoverList>
-      {children &&
-        children.map(option => {
-          return (
-            <ListOption key={option.label} disabled={disabled} variant={variant} onClick={option.onClick}>
-              <span>{option.label}</span>
-            </ListOption>
-          );
-        })}
-    </PopoverList>
+    isOpen && (
+      <PopoverList ref={node}>
+        {children &&
+          children.map(option => {
+            return (
+              <ListOption key={option.label} disabled={disabled} variant={variant} onClick={option.onClick}>
+                <span>{option.label}</span>
+              </ListOption>
+            );
+          })}
+      </PopoverList>
+    )
   );
 };
