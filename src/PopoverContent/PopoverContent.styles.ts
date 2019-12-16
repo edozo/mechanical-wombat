@@ -4,7 +4,7 @@ export interface StyleProps {
   radius?: 'small' | 'standard' | 'large';
 }
 
-export const StyledPopover = styled.div<StyleProps>`
+export const StyledPopoverContent = styled.div<StyleProps>`
   box-shadow: ${p => p.theme.boxShadow.standard};
   background-color: ${p => p.theme.colors.white};
   position: relative;
