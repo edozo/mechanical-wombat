@@ -12,7 +12,7 @@ const rebootOptions = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins|Open+Sans');
+  @import url('https://fonts.googleapis.com/css?family=Poppins|Open+Sans'); /* update to match the design system */
   ${reboot(rebootOptions)}
   h1, h2, h3, h4, h5, h6 {
     font-family: ${defaultTheme.font.family.title}

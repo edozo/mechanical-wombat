@@ -22,33 +22,33 @@ This is my button. There are many others like it, but this one is mine. My butto
 
 ## Playground
 
-Click on the 'Kitchen sink' link in the menu and choose the 'Canvas' and 'Knobs' tab to change the appearance of this component and to see all it's different combinations.
+Click on the 'Knobs' link in the menu and choose the 'Canvas' and 'Knobs' tab to change the appearance of this component and to see all it's different combinations.
 
-<Story name="Kitchen sink" parameters={{ decorators: [withKnobs] }}>
+<Story name="Knobs" parameters={{ decorators: [withKnobs] }}>
   <Button  disabled={boolean('Disabled', false)} variant={select(
-    'Variant',
-    {
-      Standard: 'standard',
-      Outline: 'outline',
-      Ghost: 'ghost',
-    },
-    'outline',
-  )} radius={select(
-    'Radius',
-    {
-      Small: 'small',
-      Standard: 'standard',
-      Large: 'large',
-    },
-    'large',
-  )} color={select(
-    'Colour',
-    {
-      Primary: 'primary',
-      Secondary: 'secondary',
-    },
-    'secondary',
-  )}>{text('label', 'Kitchen sink')}</Button>
+      'Variant',
+      {
+        Standard: 'standard',
+        Outline: 'outline',
+        Ghost: 'ghost',
+      },
+      'outline',
+    )} radius={select(
+      'Radius',
+      {
+        Small: 'small',
+        Standard: 'standard',
+        Large: 'large',
+      },
+      'large',
+    )} color={select(
+      'Colour',
+      {
+        Primary: 'primary',
+        Secondary: 'secondary',
+      },
+      'secondary',
+    )}>{text('label', 'Knobs')}</Button>
 </Story>
 
 # Props
