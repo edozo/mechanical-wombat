@@ -32,3 +32,13 @@ The Popover is a wrapper intended to have other react components passed in as ch
     </PopoverContent>
   </Popover>
 </Story>
+
+## Playground
+
+Click on the 'Knobs' link in the menu and choose the 'Canvas' and 'Knobs' tab to change the appearance of this component and to see all it's different combinations.
+
+<Story name="Knobs" parameters={{ decorators: [withKnobs] }}>
+  <Popover isOpen={boolean('Open', true)}>
+    <div style={{padding: '8px'}}>This is my popover</div>
+  </Popover>
+</Story>
