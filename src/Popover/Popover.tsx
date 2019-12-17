@@ -1,8 +1,18 @@
 import * as React from 'react';
-import { StyledPopover, StyleProps } from './Popover.styles';
+import { useOnClickOutside } from '../hooks';
 
-export interface Props extends StyleProps {
+const { useRef } = React;
+
+export interface Props {
+  isOpen: boolean;
+  setIsOpen: (param: boolean) => void;
   children: React.ReactNode;
 }
 
-export const Popover = (props: Props): JSX.Element => <StyledPopover {...props}>{props.children}</StyledPopover>;
+export const Popover = (props: Props): JSX.Element => {
+  const { isOpen, setIsOpen, children } = props;
+  const node = useRef(null);
+  useOnClickOutside(node, () => setIsOpen(false));
+
+  return <div ref={node}>{isOpen && children}</div>;
+};
