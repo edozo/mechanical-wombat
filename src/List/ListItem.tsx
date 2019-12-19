@@ -3,7 +3,6 @@ import { StyledListItem, StyleProps } from './ListItem.styles';
 
 export interface Props extends StyleProps {
   children: React.ReactNode;
-  classname?: string;
 }
 
 export const ListItem = (props: Props): JSX.Element => {

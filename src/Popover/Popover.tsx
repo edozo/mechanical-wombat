@@ -14,7 +14,6 @@ export const Popover = (props: Props): JSX.Element => {
   const node = useRef(null);
   useOnClickOutside(node, () => setIsOpen(false));
 
-  // set classname prop and rerelease? or should we just pass all props down. This fixes not letting us override component styled then just style the popover where it is with absolute position
   return (
     <div ref={node} {...rest}>
       {isOpen && children}
