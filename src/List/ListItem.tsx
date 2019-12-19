@@ -5,9 +5,14 @@ export interface Props extends StyleProps {
   children: React.ReactNode;
 }
 
-export const ListItem = (props: Props): JSX.Element =>
-  props.disabled ? (
-    <StyledListItem disabled={props.disabled}>{props.children}</StyledListItem>
+export const ListItem = (props: Props): JSX.Element => {
+  const { disabled, children, ...rest } = props;
+
+  return props.disabled ? (
+    <StyledListItem disabled={disabled} {...rest}>
+      {children}
+    </StyledListItem>
   ) : (
-    <StyledListItem {...props}>{props.children}</StyledListItem>
+    <StyledListItem {...rest}>{children}</StyledListItem>
   );
+};
