@@ -6,6 +6,7 @@ export interface Props {
   children: React.ReactNode;
   disabled?: boolean;
 }
-export const TableDownloadButton = (props: Props): JSX.Element => (
-  <TableActionButton {...props}>{props.children}</TableActionButton>
-);
+export const TableDownloadButton = (props: Props): JSX.Element => {
+  const { children, ...rest } = props;
+  return <TableActionButton {...rest}>{children}</TableActionButton>;
+};

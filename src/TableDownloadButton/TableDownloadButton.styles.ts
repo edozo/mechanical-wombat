@@ -23,6 +23,7 @@ export const TableActionButton = styled.button<Props>`
       &:focus {
         background-color: ${p.theme.colors.aliases.primaryLight};
         border: 2px solid ${p.theme.colors.aliases.primaryDark};
+        outline: none;
       }
       &:active {
         background-color: ${p.theme.colors.aliases.primaryDark};
