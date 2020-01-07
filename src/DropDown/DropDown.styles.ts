@@ -73,6 +73,8 @@ export const StyledListItemImage = styled.img`
   width: 40px;
   height: 32px;
   margin-right: ${p => p.theme.spacing.small};
+  border: 1px solid ${p => p.theme.colors.steelBlueDark};
+  border-radius: 3px;
 `;
 
 export const StyledArrow = styled.img<StyleProps>`
