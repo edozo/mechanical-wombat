@@ -41,6 +41,7 @@ const font = {
   },
   size: {
     bodySmall: '16px',
+    label: '14px',
   },
 };
 

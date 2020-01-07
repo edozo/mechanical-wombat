@@ -6,5 +6,6 @@ export { PopoverContent } from './PopoverContent';
 export { Popover } from './Popover';
 export { DropDown } from './DropDown';
 export { List, ListItem } from './List';
+export { ToggleGroup } from './ToggleGroup';
 
 export { default } from './ThemeProvider';
