@@ -7,7 +7,7 @@ export interface StyleProps {
 
 export const StyledDownshiftPreview = styled.button`
   border: 1px solid ${p => p.theme.colors.steelBlueDark};
-  border-radius: 3px;
+  border-radius: ${p => p.theme.borderRadius.small};
   background: white;
   width: 100%;
   display: flex;

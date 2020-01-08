@@ -57,14 +57,18 @@ const defaultTheme: DefaultTheme = {
     xxlarge: '64px',
   },
   borderRadius: {
-    small: '1px',
-    standard: '5px',
-    large: '50px',
+    xsmall: '1px',
+    small: '3px',
+    standard: '6px',
+    large: '10px',
+    xlarge: '9999px',
   },
   boxShadow: {
+    xsmall: '1px 1px 10px rgba(0, 0, 0, 0.25)',
     small: '1px 1px 10px rgba(0, 0, 0, 0.25)',
     standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
     large: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+    xlarge: '1px 1px 10px rgba(0, 0, 0, 0.25)',
   },
   colors: {
     ...colors,

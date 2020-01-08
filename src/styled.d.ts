@@ -2,9 +2,11 @@ import 'styled-components';
 
 declare module 'styled-components' {
   interface SizeHelper {
+    xsmall: string;
     small: string;
     standard: string;
     large: string;
+    xlarge: string;
   }
   export interface DefaultTheme {
     name: string;
