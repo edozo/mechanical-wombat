@@ -39,6 +39,9 @@ const font = {
     title: "'Poppins', Helvetica Neue, Helvetica, Arial, sans-serif",
     body: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
   },
+  size: {
+    bodySmall: '16px',
+  },
 };
 
 const defaultTheme: DefaultTheme = {

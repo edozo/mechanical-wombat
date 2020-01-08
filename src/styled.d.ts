@@ -65,6 +65,9 @@ declare module 'styled-components' {
         title: string;
         body: string;
       };
+      size: {
+        bodySmall: string;
+      };
     };
   }
 }
