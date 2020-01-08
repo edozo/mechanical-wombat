@@ -31,16 +31,20 @@ export const DropDown = (props: Props): JSX.Element => (
           <StyledDownshiftPreview {...getToggleButtonProps()}>
             {selectedItem ? (
               <StyledDownshiftPreviewInner>
-                {selectedItem.thumbnail && <StyledListItemImage alt="" src={selectedItem.thumbnail} />}
+                {selectedItem.thumbnail && (
+                  <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
+                )}
                 {selectedItem.label}
               </StyledDownshiftPreviewInner>
             ) : (
               <StyledDownshiftPreviewInner>
-                {props.items[0].thumbnail && <StyledListItemImage alt="" src={props.items[0].thumbnail} />}
+                {props.items[0].thumbnail && (
+                  <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={props.items[0].thumbnail} />
+                )}
                 {props.items[0].label}
               </StyledDownshiftPreviewInner>
             )}
-            <StyledArrow isOpen={isOpen} alt="" src={arrow} />
+            <StyledArrow isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
           </StyledDownshiftPreview>
           {isOpen && (
             <StyledList {...getMenuProps()}>
@@ -52,7 +56,7 @@ export const DropDown = (props: Props): JSX.Element => (
                     key: item.value,
                   })}
                 >
-                  {item.thumbnail && <StyledListItemImage alt="" src={item.thumbnail} />}
+                  {item.thumbnail && <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />}
                   {item.label}
                 </StyledListItem>
               ))}
