@@ -43,6 +43,11 @@ const font = {
     bodySmall: '16px',
     label: '14px',
   },
+  weight: {
+    bold: 700,
+    semibold: 600,
+    regular: 400,
+  },
 };
 
 const defaultTheme: DefaultTheme = {

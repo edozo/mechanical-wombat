@@ -2,10 +2,6 @@
 import styled, { css } from 'styled-components';
 
 export interface StyleProps {
-  color?: 'primary' | 'secondary';
-  variant?: 'standard' | 'outline' | 'ghost';
-  size?: 'small' | 'standard' | 'large';
-  radius?: 'small' | 'standard' | 'large';
   isActive?: boolean;
   disabled?: boolean;
 }
@@ -17,11 +13,13 @@ export const StyledToggleGroup = styled.div<StyleProps>`
 `;
 
 export const StyledToggleButton = styled.button<StyleProps>`
-  font-family: ${p => p.theme.font.size.label};
+  font-size: ${p => p.theme.font.size.label};
+  font-weight: ${p => p.theme.font.weight.semibold};
   background-color: transparent;
   color: ${p => p.theme.colors.white};
   border: none;
   border-radius: ${p => p.theme.borderRadius.standard};
+  padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.small};
   margin: ${p => p.theme.spacing.xxsmall};
   :hover {
     background-color: ${p => p.theme.colors.white};
