@@ -41,7 +41,7 @@ const font = {
   },
   size: {
     bodySmall: '16px',
-    label: '14px',
+    label: '14px', // TODO: rename this with Silvia
   },
   weight: {
     bold: 700,
