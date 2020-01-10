@@ -5,6 +5,10 @@ export interface StyleProps {
   highlighted?: boolean;
 }
 
+export const StyledDownshiftWrapper = styled.div`
+  position: relative;
+`;
+
 export const StyledDownshiftPreview = styled.button`
   border: 1px solid ${p => p.theme.colors.steelBlueDark};
   border-radius: ${p => p.theme.borderRadius.small};
@@ -33,7 +37,8 @@ export const StyledList = styled.ul`
   margin: 0;
   list-style: none;
   padding-left: 0;
-  position: relative;
+  position: absolute;
+  width: 100%;
   background: ${p => p.theme.colors.white};
   box-shadow: ${p => p.theme.boxShadow.standard};
   margin-top: ${p => p.theme.spacing.xsmall};
