@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { ToggleGroup } from 'test-ui-lib';
+import { DropDown } from 'test-ui-lib';
 
 /**
  * This should be used as a playground for building components,
@@ -11,14 +11,17 @@ export const items = [
   {
     label: 'Item A',
     value: 'itema',
+    thumbnail: 'https://i1.pngguru.com/preview/350/922/403/classic-car-icon-256-png-icon.jpg',
   },
   {
     label: 'Item B',
     value: 'itemb',
+    thumbnail: 'https://i1.pngguru.com/preview/350/922/403/classic-car-icon-256-png-icon.jpg',
   },
   {
     label: 'Item C',
     value: 'itemc',
+    thumbnail: 'https://i1.pngguru.com/preview/350/922/403/classic-car-icon-256-png-icon.jpg',
   },
 ];
 
@@ -38,7 +41,7 @@ export default class App extends Component {
         }}
       >
         <div style={{ width: '400px' }}>
-          <ToggleGroup items={items} onChange={this.onChange} />
+          <DropDown items={items} initialSelectedItem={items[0]} onChange={this.onChange} />
         </div>
       </div>
     );

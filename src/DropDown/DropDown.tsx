@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Downshift from 'downshift';
 import {
+  StyledDownshiftWrapper,
   StyledDownshiftPreview,
   StyledDownshiftPreviewInner,
   StyledList,
@@ -19,31 +20,23 @@ export interface Item {
 export interface Props {
   children: React.ReactNode;
   items: Item[];
+  initialSelectedItem: Item;
 }
 
 const itemToString = (item: Item): string => (item ? item.value : '');
 
 export const DropDown = (props: Props): JSX.Element => (
   <div>
-    <Downshift {...props} itemToString={itemToString}>
-      {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen }) => (
-        <div>
+    <Downshift {...props} initialSelectedItem={props.initialSelectedItem} itemToString={itemToString}>
+      {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
+        <StyledDownshiftWrapper {...getRootProps()}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>
-            {selectedItem ? (
-              <StyledDownshiftPreviewInner>
-                {selectedItem.thumbnail && (
-                  <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
-                )}
-                {selectedItem.label}
-              </StyledDownshiftPreviewInner>
-            ) : (
-              <StyledDownshiftPreviewInner>
-                {props.items[0].thumbnail && (
-                  <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={props.items[0].thumbnail} />
-                )}
-                {props.items[0].label}
-              </StyledDownshiftPreviewInner>
-            )}
+            <StyledDownshiftPreviewInner>
+              {selectedItem.thumbnail && (
+                <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
+              )}
+              {selectedItem.label}
+            </StyledDownshiftPreviewInner>
             <StyledArrow isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
           </StyledDownshiftPreview>
           {isOpen && (
@@ -62,7 +55,7 @@ export const DropDown = (props: Props): JSX.Element => (
               ))}
             </StyledList>
           )}
-        </div>
+        </StyledDownshiftWrapper>
       )}
     </Downshift>
   </div>

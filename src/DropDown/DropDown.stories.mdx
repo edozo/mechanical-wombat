@@ -51,7 +51,7 @@ Label and value with image thumbnail only
 
 <Preview>
   <Story name="With images">
-    <DropDown onChange={onChange} items={itemsWithImages} />
+    <DropDown onChange={onChange} items={itemsWithImages} initialSelectedItem={items[1]} />
   </Story>
 </Preview>
 
@@ -60,5 +60,5 @@ Label and value with image thumbnail only
 Label and value only
 
 <Story name="Default">
-  <DropDown onChange={onChange} items={items} />
+  <DropDown onChange={onChange} items={items} initialSelectedItem={items[2]} />
 </Story>
