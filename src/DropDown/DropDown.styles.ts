@@ -39,6 +39,7 @@ export const StyledList = styled.ul`
   padding-left: 0;
   position: absolute;
   width: 100%;
+  z-index: 1;
   background: ${p => p.theme.colors.white};
   box-shadow: ${p => p.theme.boxShadow.standard};
   margin-top: ${p => p.theme.spacing.xsmall};

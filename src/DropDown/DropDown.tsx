@@ -32,7 +32,7 @@ export const DropDown = (props: Props): JSX.Element => (
         <StyledDownshiftWrapper {...getRootProps()}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>
             <StyledDownshiftPreviewInner>
-              {selectedItem.thumbnail && (
+              {selectedItem && selectedItem.thumbnail && (
                 <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
               )}
               {selectedItem.label}
@@ -49,7 +49,9 @@ export const DropDown = (props: Props): JSX.Element => (
                     key: item.value,
                   })}
                 >
-                  {item.thumbnail && <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />}
+                  {selectedItem && item.thumbnail && (
+                    <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />
+                  )}
                   {item.label}
                 </StyledListItem>
               ))}
