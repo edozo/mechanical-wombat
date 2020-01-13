@@ -38,4 +38,4 @@ In the application repo
 Documentation: https://github.com/whitecolor/yalc#pushing-updates-automatically-to-all-installations
 Explanation: https://www.viget.com/articles/how-to-use-local-unpublished-node-packages-as-project-dependencies/
 
-They talk about a faster way to do updates bu tI have not been able to get it working yet.
+They talk about a faster way to do updates but I have not been able to get it working yet.

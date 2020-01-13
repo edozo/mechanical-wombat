@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export interface StyleProps {
   isOpen?: boolean;
@@ -67,14 +67,24 @@ export const StyledListItem = styled.li<StyleProps>`
   margin: 0;
   padding: ${p => p.theme.spacing.xsmall};
   color: ${p => p.theme.colors.gray4};
-  background: ${p => p.highlighted && p.theme.colors.gray1};
-  background: ${p => p.selectedItem && p.theme.colors.gray3};
+  background: transparent;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: start;
   font-size: ${p => p.theme.font.size.bodySmall};
   transition: all 200ms;
+  ${p =>
+    p.highlighted &&
+    css`
+      background: ${p.theme.colors.gray1};
+    `};
+
+  ${p =>
+    p.selectedItem &&
+    css`
+      background: ${p.theme.colors.gray3};
+    `};
 `;
 
 export const StyledListItemImage = styled.img`

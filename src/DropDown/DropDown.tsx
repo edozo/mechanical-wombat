@@ -50,9 +50,7 @@ export const DropDown = (props: Props): JSX.Element => (
                     key: item.value,
                   })}
                 >
-                  {selectedItem && item.thumbnail && (
-                    <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />
-                  )}
+                  {item.thumbnail && <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />}
                   {item.label}
                 </StyledListItem>
               ))}
