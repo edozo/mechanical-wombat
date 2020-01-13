@@ -18,16 +18,16 @@ export interface Item {
 }
 
 export interface Props {
-  children: React.ReactNode;
   items: Item[];
-  initialSelectedItem: Item;
+  onChange: () => void;
+  selectedItem?: Item;
 }
 
 const itemToString = (item: Item): string => (item ? item.value : '');
 
 export const DropDown = (props: Props): JSX.Element => (
   <div>
-    <Downshift {...props} initialSelectedItem={props.initialSelectedItem} itemToString={itemToString}>
+    <Downshift {...props} selectedItem={props.selectedItem} itemToString={itemToString}>
       {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
         <StyledDownshiftWrapper {...getRootProps()}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>
@@ -44,6 +44,7 @@ export const DropDown = (props: Props): JSX.Element => (
               {props.items.map((item: Item, index: number) => (
                 <StyledListItem
                   highlighted={index === highlightedIndex}
+                  selectedItem={item === selectedItem}
                   {...getItemProps({
                     item,
                     key: item.value,

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export interface StyleProps {
   isOpen?: boolean;
   highlighted?: boolean;
+  selectedItem?: boolean;
 }
 
 export const StyledDownshiftWrapper = styled.div`
@@ -66,7 +67,8 @@ export const StyledListItem = styled.li<StyleProps>`
   margin: 0;
   padding: ${p => p.theme.spacing.xsmall};
   color: ${p => p.theme.colors.gray4};
-  background: ${p => (p.highlighted ? p.theme.colors.gray3 : 'transparent')};
+  background: ${p => p.highlighted && p.theme.colors.gray1};
+  background: ${p => p.selectedItem && p.theme.colors.gray3};
   font-weight: 700;
   display: flex;
   align-items: center;
