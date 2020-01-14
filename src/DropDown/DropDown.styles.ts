@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export interface StyleProps {
   isOpen?: boolean;
   highlighted?: boolean;
+  selectedItem?: boolean;
 }
 
 export const StyledDownshiftWrapper = styled.div`
@@ -39,6 +40,7 @@ export const StyledList = styled.ul`
   padding-left: 0;
   position: absolute;
   width: 100%;
+  z-index: 1;
   background: ${p => p.theme.colors.white};
   box-shadow: ${p => p.theme.boxShadow.standard};
   margin-top: ${p => p.theme.spacing.xsmall};
@@ -65,13 +67,24 @@ export const StyledListItem = styled.li<StyleProps>`
   margin: 0;
   padding: ${p => p.theme.spacing.xsmall};
   color: ${p => p.theme.colors.gray4};
-  background: ${p => (p.highlighted ? p.theme.colors.gray3 : 'transparent')};
+  background: transparent;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: start;
   font-size: ${p => p.theme.font.size.bodySmall};
   transition: all 200ms;
+  ${p =>
+    p.highlighted &&
+    css`
+      background: ${p.theme.colors.gray1};
+    `};
+
+  ${p =>
+    p.selectedItem &&
+    css`
+      background: ${p.theme.colors.gray3};
+    `};
 `;
 
 export const StyledListItemImage = styled.img`

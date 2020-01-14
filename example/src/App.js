@@ -26,7 +26,12 @@ export const items = [
 ];
 
 export default class App extends Component {
-  onChange = item => console.log(`The item value is '${item.value}' and the label is '${item.label}'`);
+  state = { selectedItem: items[0] };
+
+  onChange = item => {
+    console.log(`The item value is '${item.value}' and the label is '${item.label}'`);
+    this.setState({ selectedItem: item });
+  };
 
   render() {
     return (
@@ -41,7 +46,7 @@ export default class App extends Component {
         }}
       >
         <div style={{ width: '400px' }}>
-          <DropDown items={items} initialSelectedItem={items[0]} onChange={this.onChange} />
+          <DropDown items={items} selectedItem={this.state.selectedItem} onChange={this.onChange} />
         </div>
       </div>
     );
