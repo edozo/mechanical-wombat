@@ -44,7 +44,7 @@ export const DropDown = (props: Props): JSX.Element => (
               {props.items.map((item: Item, index: number) => (
                 <StyledListItem
                   highlighted={index === highlightedIndex}
-                  selectedItem={item === selectedItem}
+                  selectedItem={item.value === selectedItem.value}
                   {...getItemProps({
                     item,
                     key: item.value,
