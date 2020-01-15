@@ -1,3 +1,4 @@
+// TODO: Make this use hooks. Also don't think it need internal state.
 import React from 'react';
 import { StyledToggleGroup, StyledToggleButton, StyleProps } from './ToggleGroup.styles';
 
@@ -9,6 +10,7 @@ export interface Item {
 export interface Props extends StyleProps {
   items: Item[];
   onChange: (item: Item) => void;
+  selectedItem: Item;
 }
 
 export interface State {
@@ -16,7 +18,14 @@ export interface State {
 }
 
 class ToggleGroup extends React.Component<Props, State> {
-  state = { activeItem: { ...this.props.items[0] } };
+  state = { activeItem: this.props.selectedItem };
+
+  componentDidUpdate = (prevProps: any): void => {
+    if (this.props.selectedItem.value && this.props.selectedItem.value !== prevProps.selectedItem.value) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ activeItem: this.props.selectedItem });
+    }
+  };
 
   handleClick = (item: Item): void => {
     this.setState({ activeItem: item });
