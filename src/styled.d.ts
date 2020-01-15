@@ -71,6 +71,10 @@ declare module 'styled-components' {
         bodySmall: string;
         label: string;
       };
+      lineHeight: {
+        bodySmall: string;
+        label: string;
+      };
       weight: {
         bold: number;
         semibold: number;

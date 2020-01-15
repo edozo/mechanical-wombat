@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { DropDown } from 'test-ui-lib';
+import { ToggleGroup } from 'test-ui-lib';
 
 /**
  * This should be used as a playground for building components,
@@ -46,7 +46,7 @@ export default class App extends Component {
         }}
       >
         <div style={{ width: '400px' }}>
-          <DropDown items={items} selectedItem={this.state.selectedItem} onChange={this.onChange} />
+          <ToggleGroup items={items} selectedItem={this.state.selectedItem} onChange={this.onChange} />
         </div>
       </div>
     );

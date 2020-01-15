@@ -43,6 +43,10 @@ const font = {
     bodySmall: '16px',
     label: '14px', // TODO: rename this with Silvia
   },
+  lineHeight: {
+    bodySmall: '22px',
+    label: '24px', // TODO: rename this with Silvia
+  },
   weight: {
     bold: 700,
     semibold: 600,

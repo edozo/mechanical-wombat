@@ -14,12 +14,13 @@ export const StyledToggleGroup = styled.div<StyleProps>`
 
 export const StyledToggleButton = styled.button<StyleProps>`
   font-size: ${p => p.theme.font.size.label};
+  line-height: ${p => p.theme.font.lineHeight.label};
   font-weight: ${p => p.theme.font.weight.semibold};
   background-color: transparent;
   color: ${p => p.theme.colors.white};
   border: none;
   border-radius: ${p => p.theme.borderRadius.standard};
-  padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.small};
+  padding: 0 ${p => p.theme.spacing.small};
   margin: ${p => p.theme.spacing.xxsmall};
   :hover {
     background-color: ${p => p.theme.colors.white};
