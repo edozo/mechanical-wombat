@@ -74,6 +74,7 @@ export const StyledListItem = styled.li<StyleProps>`
   justify-content: start;
   font-size: ${p => p.theme.font.size.bodySmall};
   transition: all 200ms;
+  cursor: pointer;
   ${p =>
     p.highlighted &&
     css`
