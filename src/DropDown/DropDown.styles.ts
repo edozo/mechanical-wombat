@@ -44,6 +44,7 @@ export const StyledList = styled.ul`
   background: ${p => p.theme.colors.white};
   box-shadow: ${p => p.theme.boxShadow.standard};
   margin-top: ${p => p.theme.spacing.xsmall};
+  margin-bottom: ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
   &:after {
     content: '';
