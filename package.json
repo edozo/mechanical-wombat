@@ -19,7 +19,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "build-storybook -s public",
+    "predeploy": "build-storybook",
     "deploy": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
