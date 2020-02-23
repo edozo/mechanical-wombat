@@ -14,4 +14,4 @@ const ComponentLibThemeProvider = (props: any): JSX.Element => {
   return <ThemeProvider theme={mergedTheme}>{props.children}</ThemeProvider>;
 };
 
-export default ComponentLibThemeProvider;
+export { ComponentLibThemeProvider as ThemeProvider };

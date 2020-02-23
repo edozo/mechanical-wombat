@@ -16,7 +16,7 @@ export const StyledDownshiftPreview = styled.button`
   background: white;
   width: 100%;
   display: flex;
-  color: ${p => p.theme.colors.gray4};
+  color: ${p => p.theme.colors.grayDark};
   font-weight: 700;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ export const StyledList = styled.ul`
 export const StyledListItem = styled.li<StyleProps>`
   margin: 0;
   padding: ${p => p.theme.spacing.xsmall};
-  color: ${p => p.theme.colors.gray4};
+  color: ${p => p.theme.colors.grayDark};
   background: transparent;
   font-weight: 700;
   display: flex;
@@ -79,13 +79,13 @@ export const StyledListItem = styled.li<StyleProps>`
   ${p =>
     p.highlighted &&
     css`
-      background: ${p.theme.colors.gray1};
+      background: ${p.theme.colors.grayLighter};
     `};
 
   ${p =>
     p.selectedItem &&
     css`
-      background: ${p.theme.colors.gray3};
+      background: ${p.theme.colors.gray};
     `};
 `;
 

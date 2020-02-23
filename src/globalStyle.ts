@@ -3,7 +3,7 @@ import reboot from 'styled-reboot';
 import { defaultTheme } from './defaultTheme';
 
 const rebootOptions = {
-  fontFamilyBase: defaultTheme.font.family.body,
+  fontFamilyBase: defaultTheme.font.family.main,
   // TODO: Replace these with correct values when in theme
   // headingsMarginBottom: space[3],
   // paragraphMarginBottom: space[4],
@@ -12,11 +12,8 @@ const rebootOptions = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins|Open+Sans:400,600,700'); /* update to match the design system */
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'); /* update to match the design system */
   ${reboot(rebootOptions)}
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${defaultTheme.font.family.title}
-  }
 `;
 
 export { GlobalStyle };
