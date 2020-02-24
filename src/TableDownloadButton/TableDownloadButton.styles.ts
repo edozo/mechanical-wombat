@@ -29,8 +29,8 @@ export const TableActionButton = styled.button<Props>`
         background-color: ${p.theme.colors.aliases.primaryDark};
       }
       &:disabled {
-        background-color: ${p.theme.colors.gray3};
-        border: 2px solid ${p.theme.colors.gray3};
+        background-color: ${p.theme.colors.gray};
+        border: 2px solid ${p.theme.colors.gray};
       }
     `};
 ` as React.FunctionComponent<Props>;

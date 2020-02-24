@@ -6,7 +6,7 @@ export interface StyleProps {
 }
 
 export const StyledListItem = styled.div<StyleProps>`
-  color: ${p => p.theme.colors.gray4};
+  color: ${p => p.theme.colors.grayDark};
   font-weight: 700;
   background-color: ${p => p.theme.colors.white};
   position: relative;
@@ -17,12 +17,12 @@ export const StyledListItem = styled.div<StyleProps>`
     css`
       cursor: pointer;
       &:hover {
-        background-color: ${p.theme.colors.gray1};
+        background-color: ${p.theme.colors.grayLighter};
       }
       &:focus,
       &:active {
-        color: ${p.theme.colors.gray4};
-        background-color: ${p.theme.colors.gray3};
+        color: ${p.theme.colors.grayDark};
+        background-color: ${p.theme.colors.gray};
         outline: none;
       }
     `};

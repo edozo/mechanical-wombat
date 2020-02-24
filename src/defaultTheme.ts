@@ -21,11 +21,11 @@ const colors = {
   greenDark: '#8AB26B',
   greenDarker: '#75985B',
   // Gray
-  gray1: '#F6F6F6',
-  gray2: '#F2F2F2',
-  gray3: '#D5D7DC',
-  gray4: '#717171',
-  gray5: '#4C4C4C',
+  grayLighter: '#F6F6F6',
+  grayLight: '#F2F2F2',
+  gray: '#D5D7DC',
+  grayDark: '#717171',
+  grayDarker: '#4C4C4C',
   // Steel blue
   steelBlueLighter: '#F7FAFC',
   steelBlueLight: '#F1F5FD',
@@ -36,16 +36,39 @@ const colors = {
 
 const font = {
   family: {
-    title: "'Poppins', Helvetica Neue, Helvetica, Arial, sans-serif",
-    body: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
+    main: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
   },
   size: {
-    bodySmall: '16px',
-    label: '14px', // TODO: rename this with Silvia
+    h1: '2.5rem',
+    h2: '2rem',
+    h3: '1.5rem',
+    h4: '1.25rem',
+    h5: '1rem',
+    h6: '0.75rem',
+    body: '1.125rem',
+    bodySmall: '1rem',
+    label: '0.875rem',
+    small: '0.75rem',
   },
   lineHeight: {
-    bodySmall: '22px',
-    label: '24px', // TODO: rename this with Silvia
+    h1: '3.375rem',
+    h2: '2.75rem',
+    h3: '2.125rem',
+    h4: '1.75rem',
+    h5: '1.375rem',
+    h6: '1rem',
+    body: '1.5rem',
+    bodySmall: '1.375rem',
+    label: '1.5rem',
+    small: '1rem', // TODO: confirm with Silvia
+  },
+  letterSpacing: {
+    h1: '0.02rem',
+    h2: '0.01rem',
+    h3: '0.01rem',
+    h4: '0.01rem',
+    h5: '0.01rem',
+    h6: '0.08rem',
   },
   weight: {
     bold: 700,
@@ -73,11 +96,11 @@ const defaultTheme: DefaultTheme = {
     xlarge: '9999px',
   },
   boxShadow: {
-    xsmall: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    small: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+    xsmall: '1px 1px 10px rgba(0, 0, 0, 0)',
+    small: '1px 1px 10px rgba(0, 0, 0, 0)',
     standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    large: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    xlarge: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+    large: '1px 1px 10px rgba(0, 0, 0, 0)',
+    xlarge: '1px 1px 10px rgba(0, 0, 0, 0)',
   },
   colors: {
     ...colors,

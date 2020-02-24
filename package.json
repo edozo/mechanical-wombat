@@ -1,6 +1,6 @@
 {
   "name": "mechanical-wombat",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -19,8 +19,8 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build",
+    "predeploy": "build-storybook",
+    "deploy": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",

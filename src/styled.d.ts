@@ -50,11 +50,11 @@ declare module 'styled-components' {
       greenDark: string;
       greenDarker: string;
       // Gray
-      gray1: string;
-      gray2: string;
-      gray3: string;
-      gray4: string;
-      gray5: string;
+      grayLighter: string;
+      grayLight: string;
+      gray: string;
+      grayDark: string;
+      grayDarker: string;
       // Steel blue
       steelBlueLighter: string;
       steelBlueLight: string;
@@ -64,16 +64,39 @@ declare module 'styled-components' {
     };
     font: {
       family: {
-        title: string;
-        body: string;
+        main: string;
       };
       size: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+        body: string;
         bodySmall: string;
         label: string;
+        small: string;
       };
       lineHeight: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
+        body: string;
         bodySmall: string;
         label: string;
+        small: string;
+      };
+      letterSpacing: {
+        h1: string;
+        h2: string;
+        h3: string;
+        h4: string;
+        h5: string;
+        h6: string;
       };
       weight: {
         bold: number;
