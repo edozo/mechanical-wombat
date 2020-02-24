@@ -3,7 +3,7 @@ import { StyledDisplayBox, StyledDisplayBoxColor, StyledDisplayBoxWrapper, Style
 
 export const DisplayBox: React.FC = (props: StyleProps) => (
   <StyledDisplayBox {...props}>
-    <StyledDisplayBoxColor bg={props.bg} size={props.size} radius={props.radius} />
+    <StyledDisplayBoxColor background={props.background} size={props.size} borderRadius={props.borderRadius} />
     {props.children}
   </StyledDisplayBox>
 );

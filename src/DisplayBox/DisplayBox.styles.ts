@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export interface StyleProps {
-  readonly bg?: string;
+  readonly background?: string;
   readonly size?: string;
-  readonly radius?: string;
+  readonly borderRadius?: string;
   children?: React.ReactNode;
 }
 
@@ -12,8 +12,8 @@ export const StyledDisplayBox = styled.div<StyleProps>`
 `;
 
 export const StyledDisplayBoxColor = styled.div<StyleProps>`
-  background: ${p => (p.bg ? p.theme.colors[p.bg] : p.theme.colors.gray)};
-  border-radius: ${p => (p.radius ? p.theme.borderRadius[p.radius] : p.theme.borderRadius.small)};
+  background: ${p => (p.background ? p.theme.colors[p.background] : p.theme.colors.gray)};
+  border-radius: ${p => (p.borderRadius ? p.theme.borderRadius[p.borderRadius] : p.theme.borderRadius.small)};
   width: ${p => (p.size ? p.size : '100px')};
   height: ${p => (p.size ? p.size : '100px')};
   border: 1px solid ${p => p.theme.colors.gray};

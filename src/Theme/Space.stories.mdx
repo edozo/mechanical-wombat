@@ -10,7 +10,7 @@ export const spaces = [
   { size: '24px', name: 'base' },
   { size: '32px', name: 'largel' },
   { size: '48px', name: 'xlarge' },
-  { size: '64px', name: 'xxlargel' },
+  { size: '64px', name: 'xxlarge' },
 ];
 
 <Meta title="Theme|Space" />
@@ -22,7 +22,7 @@ This is the spacing that will be used throught all edozo apps (customer facing).
 <Story name="Default">
   <DisplayBoxWrapper>
     {spaces.map(space => (
-      <DisplayBox size={space.size} radius="xsmall">
+      <DisplayBox size={space.size} borderRadius="xsmall">
         <DisplayBoxSubTitle>{space.name}</DisplayBoxSubTitle>
         <DisplayBoxTitle>{space.size}</DisplayBoxTitle>
       </DisplayBox>

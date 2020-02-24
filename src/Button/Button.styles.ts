@@ -5,7 +5,7 @@ export interface StyleProps {
   color?: 'primary' | 'secondary';
   variant?: 'standard' | 'outline' | 'ghost';
   size?: 'small' | 'standard' | 'large';
-  radius?: 'small' | 'standard' | 'large';
+  borderRadius?: 'small' | 'standard' | 'large';
   disabled?: boolean;
 }
 
@@ -13,7 +13,7 @@ export const StyledButton = styled.button<StyleProps>`
   font-family: ${p => p.theme.font.family.main};
   border: 2px solid ${p => p.theme.colors.aliases[p.color || 'primary']};
   background-color: ${p => p.theme.colors.aliases[p.color || 'primary']};
-  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
+  border-radius: ${p => p.theme.borderRadius[p.borderRadius || 'standard']};
   color: ${p => p.theme.colors.white};
   padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.base}; /* Get from theme */
   font-size: 1.2em; /* Get from theme */

@@ -16,7 +16,7 @@ The Popover is a wrapper intended to have other react components passed in as ch
 <Preview>
   <Story name="Default">
     <Popover isOpen setIsOpen={() => {}}>
-      <PopoverContent radius="small">
+      <PopoverContent borderRadius="small">
         <div style={{padding: '8px'}}>This is my popoverContent</div>
       </PopoverContent>
     </Popover>
@@ -27,7 +27,7 @@ The Popover is a wrapper intended to have other react components passed in as ch
 
 <Story name="Closed">
   <Popover isOpen={false} setIsOpen={() => {}}>
-    <PopoverContent radius="small">
+    <PopoverContent borderRadius="small">
       <div style={{padding: '8px'}}>This is my popoverContent</div>
     </PopoverContent>
   </Popover>
