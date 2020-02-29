@@ -1,15 +1,8 @@
 // TODO: Finalize this once talked to Silvia about design system
 import styled, { css } from 'styled-components';
+import { Props } from './Button';
 
-export interface StyleProps {
-  color?: 'primary' | 'secondary';
-  variant?: 'standard' | 'outline' | 'ghost';
-  size?: 'small' | 'standard' | 'large';
-  borderRadius?: 'small' | 'standard' | 'large';
-  disabled?: boolean;
-}
-
-export const StyledButton = styled.button<StyleProps>`
+export const StyledButton = styled.button<Props>`
   font-family: ${p => p.theme.font.family.main};
   border: 2px solid ${p => p.theme.colors.aliases[p.color || 'primary']};
   background-color: ${p => p.theme.colors.aliases[p.color || 'primary']};
