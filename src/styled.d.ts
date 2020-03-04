@@ -19,6 +19,15 @@ declare module 'styled-components' {
       xlarge: string;
       xxlarge: string;
     };
+    icons: {
+      xxsmall: string;
+      xsmall: string;
+      small: string;
+      base: string;
+      large: string;
+      xlarge: string;
+      xxlarge: string;
+    };
     borderRadius: SizeHelper;
     boxShadow: SizeHelper;
     colors: {

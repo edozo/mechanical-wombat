@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { StyledButton, StyleProps } from './Button.styles';
+import { StyledButton } from './Button.styles';
 
-export interface Props extends StyleProps {
-  children: React.ReactNode;
+export interface Props {
+  color?: 'primary' | 'secondary';
+  variant?: 'standard' | 'outline' | 'ghost';
+  size?: 'small' | 'standard' | 'large';
+  borderRadius?: 'small' | 'standard' | 'large';
+  disabled?: boolean;
 }
 
-export const Button = (props: Props): JSX.Element => <StyledButton {...props}>{props.children}</StyledButton>;
+export const Button: React.FC<Props> = props => <StyledButton {...props}>{props.children}</StyledButton>;

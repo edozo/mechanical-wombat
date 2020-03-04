@@ -88,6 +88,15 @@ const defaultTheme: DefaultTheme = {
     xlarge: '48px',
     xxlarge: '64px',
   },
+  icons: {
+    xxsmall: '8px',
+    xsmall: '12px',
+    small: '16px',
+    base: '20px',
+    large: '24px',
+    xlarge: '48px',
+    xxlarge: '64px',
+  },
   borderRadius: {
     xsmall: '1px',
     small: '3px',
