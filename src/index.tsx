@@ -9,5 +9,6 @@ export { Popover } from './Popover';
 export { DropDown } from './DropDown';
 export * from './List';
 export { ToggleGroup } from './ToggleGroup';
+export { Switch } from './Switch';
 
 export { ThemeProvider } from './ThemeProvider';
