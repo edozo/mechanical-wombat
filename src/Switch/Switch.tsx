@@ -1,5 +1,6 @@
 import React from 'react';
-import './Switch.css';
+import cx from 'classnames';
+import styles from './Switch.css';
 
 type Props = {
   disabled?: boolean;
@@ -11,23 +12,23 @@ type Props = {
 
 export const Switch: React.FC<Props> = ({ disabled, id, currentValue, small, onChange }) => {
   return (
-    <div className={`toggle-switch${small ? ' small-switch' : ''}`}>
+    <div className={cx(styles.toggle_switch, { [styles.small_switch]: small })}>
       <input
         type="checkbox"
-        className="toggle-switch-checkbox"
+        className={styles.toggle_switch_checkbox}
         id={id}
         checked={currentValue}
         onChange={onChange}
         disabled={disabled}
       />
       {id ? (
-        <label className="toggle-switch-label" htmlFor={id}>
+        <label className={styles.toggle_switch_label} htmlFor={id}>
           <span
-            className={disabled ? 'toggle-switch-inner toggle-switch-disabled' : 'toggle-switch-inner'}
+            className={cx(styles.toggle_switch_inner, { [styles.toggle_switch_disabled]: disabled })}
             data-yes="yes"
             data-no="no"
           />
-          <span className={disabled ? 'toggle-switch-switch toggle-switch-disabled' : 'toggle-switch-switch'} />
+          <span className={cx(styles.toggle_switch_switch, { [styles.toggle_switch_disabled]: disabled })} />
         </label>
       ) : null}
     </div>

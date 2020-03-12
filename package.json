@@ -28,6 +28,7 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "downshift": "^3.4.8"
   },
   "peerDependencies": {

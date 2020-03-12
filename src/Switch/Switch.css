@@ -1,4 +1,4 @@
-.toggle-switch {
+.toggle_switch {
   position: relative;
   width: 75px;
   display: inline-block;
@@ -8,10 +8,10 @@
   -ms-user-select: none;
   text-align: left;
 }
-.toggle-switch-checkbox {
+.toggle_switch_checkbox {
   display: none;
 }
-.toggle-switch-label {
+.toggle_switch_label {
   display: block;
   overflow: hidden;
   cursor: pointer;
@@ -19,13 +19,13 @@
   border-radius: 20px;
   margin: 0;
 }
-.toggle-switch-inner {
+.toggle_switch_inner {
   display: block;
   width: 200%;
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
 }
-.toggle-switch-inner::before, .toggle-switch-inner::after {
+.toggle_switch_inner::before, .toggle_switch_inner::after {
   display: block;
   float: left;
   width: 50%;
@@ -37,22 +37,22 @@
   font-weight: bold;
   box-sizing: border-box;
 }
-.toggle-switch-inner:before {
+.toggle_switch_inner:before {
   content: "Yes";
   text-transform: uppercase;
   padding-left: 10px;
   background-color: #00B8D7;
   color: #fff;
 }
-.toggle-switch-disabled {
+.toggle_switch_disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
-.toggle-switch-disabled::before {
+.toggle_switch_disabled::before {
   background-color: #ccc;
   cursor: not-allowed;
 }
-.toggle-switch-inner::after {
+.toggle_switch_inner::after {
   content: "No";
   text-transform: uppercase;
   padding-right: 10px;
@@ -60,7 +60,7 @@
   color: #fff;
   text-align: right;
 }
-.toggle-switch-switch {
+.toggle_switch_switch {
   display: block;
   width: 24px;
   margin: 5px;
@@ -73,39 +73,39 @@
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
 }
-.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+.toggle_switch_checkbox:checked + .toggle_switch_label .toggle_switch_inner {
   margin-left: 0;
 }
-.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+.toggle_switch_checkbox:checked + .toggle_switch_label .toggle_switch_switch {
   right: 0px;
 }
 
-.toggle-switch.small-switch {
+.toggle_switch.small_switch {
   width: 40px;
 }
-.toggle-switch.small-switch .toggle-switch-inner:after, .toggle-switch.small-switch .toggle-switch-inner:before {
+.toggle_switch.small_switch .toggle_switch_inner:after, .toggle_switch.small_switch .toggle_switch_inner:before {
   content: "";
   height: 20px;
   line-height: 20px;
 }
-.toggle-switch.small-switch .toggle-switch-switch {
+.toggle_switch.small_switch .toggle_switch_switch {
   width: 16px;
   right: 20px;
   margin: 2px;
 }
 
 @media screen and (max-width: 991px) {
-  .toggle-switch {
+  .toggle_switch {
     transform: scale(0.9);
   }
 }
 @media screen and (max-width: 767px) {
-  .toggle-switch {
+  .toggle_switch {
     transform: scale(0.825);
   }
 }
 @media screen and (max-width: 575px) {
-  .toggle-switch {
+  .toggle_switch {
     transform: scale(0.75);
   }
 }

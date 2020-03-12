@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider, GlobalStyle } from 'test-ui-lib';
 
 import './index.css';
-import App from './App';
+import {App} from './App';
 
 const myTheme = {
   colors: {
