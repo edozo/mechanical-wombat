@@ -122,13 +122,4 @@ export const SwitchParent = styled.div`
     css`
       width: 40px;
     `}
-  @media screen and (max-width: 991px) {
-    transform: scale(0.9);
-  }
-  @media screen and (max-width: 767px) {
-    transform: scale(0.825);
-  }
-  @media screen and (max-width: 575px) {
-    transform: scale(0.75);
-  }
 `;

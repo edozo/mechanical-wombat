@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Switch } from './Switch';
 
-export const SwitchWrapper = ({ defaultToggleValue, small, disabled, id }) => {
+export const SwitchWrapper = ({ defaultToggleValue, small, disabled, id, onText, offText }) => {
   const [isChecked, setIsChecked] = useState(defaultToggleValue || false);
   return (
     <Switch
@@ -11,6 +11,8 @@ export const SwitchWrapper = ({ defaultToggleValue, small, disabled, id }) => {
       id={id}
       small={small}
       disabled={disabled}
+      onText={onText}
+      offText={offText}
     />
   );
 };
