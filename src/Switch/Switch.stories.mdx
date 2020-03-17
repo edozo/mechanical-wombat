@@ -1,0 +1,55 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { SwitchWrapper } from './SwitchWrapper';
+
+<Meta title="Switch" component={SwitchWrapper} />
+
+# Button
+
+## Description
+
+This is a toggle switch component that is fundamentally a checkbox
+
+## Preview
+
+<Preview>
+  <Story name="Toggled off with no text">
+    <SwitchWrapper id={1}/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Toggled on with no text">
+    <SwitchWrapper id={2} defaultToggleValue={true}/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="small off">
+    <SwitchWrapper id={3} small/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="small on">
+    <SwitchWrapper id={4} defaultToggleValue={true} small/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="disabled">
+    <SwitchWrapper id={5} disabled/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Toggled off with custom text">
+    <SwitchWrapper id={6} defaultToggleValue={false} offText='Boo'/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Toggled on with custom text">
+    <SwitchWrapper id={7} defaultToggleValue={true} onText='Yay!'/>
+  </Story>
+</Preview>
