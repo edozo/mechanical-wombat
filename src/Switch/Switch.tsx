@@ -11,15 +11,7 @@ type Props = {
   offText?: string;
 };
 
-export const Switch: React.FC<Props> = ({
-  disabled,
-  id,
-  currentValue,
-  small,
-  onChange,
-  onText = 'yes',
-  offText = 'no',
-}) => {
+export const Switch: React.FC<Props> = ({ disabled, id, currentValue, small, onChange, onText, offText }) => {
   return (
     <SwitchParent small={small}>
       <Checkbox type="checkbox" id={id} checked={currentValue} onChange={onChange} disabled={disabled} />

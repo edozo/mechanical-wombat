@@ -13,26 +13,26 @@ This is a toggle switch component that is fundamentally a checkbox
 ## Preview
 
 <Preview>
-  <Story name="Toggled off">
+  <Story name="Toggled off with no text">
     <SwitchWrapper id={1}/>
   </Story>
 </Preview>
 
 <Preview>
-  <Story name="Toggled on">
+  <Story name="Toggled on with no text">
     <SwitchWrapper id={2} defaultToggleValue={true}/>
   </Story>
 </Preview>
 
 <Preview>
-  <Story name="small on">
-    <SwitchWrapper id={3} defaultToggleValue={true} small/>
+  <Story name="small off">
+    <SwitchWrapper id={3} small/>
   </Story>
 </Preview>
 
 <Preview>
-  <Story name="small off">
-    <SwitchWrapper id={4} small/>
+  <Story name="small on">
+    <SwitchWrapper id={4} defaultToggleValue={true} small/>
   </Story>
 </Preview>
 
@@ -44,12 +44,12 @@ This is a toggle switch component that is fundamentally a checkbox
 
 <Preview>
   <Story name="Toggled off with custom text">
-    <SwitchWrapper id={6} defaultToggleValue={true} onText='Yay!'/>
+    <SwitchWrapper id={6} defaultToggleValue={false} offText='Boo'/>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="Toggled on with custom text">
-    <SwitchWrapper id={7} defaultToggleValue={false} offText='Boo'/>
+    <SwitchWrapper id={7} defaultToggleValue={true} onText='Yay!'/>
   </Story>
 </Preview>
