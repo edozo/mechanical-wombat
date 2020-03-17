@@ -35,7 +35,7 @@ export const ToggleInner = styled.span`
     content: attr(data-yes);
     text-transform: uppercase;
     padding-left: 10px;
-    background-color: #f90;
+    background-color: ${p => p.theme.colors.aliases.primary};
     color: #fff;
   }
 
