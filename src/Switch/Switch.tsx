@@ -7,11 +7,19 @@ type Props = {
   currentValue: boolean;
   small: boolean;
   onChange: () => void;
-  onText: string;
-  offText: string;
+  onText?: string;
+  offText?: string;
 };
 
-export const Switch: React.FC<Props> = ({ disabled, id, currentValue, small, onChange, onText, offText }) => {
+export const Switch: React.FC<Props> = ({
+  disabled,
+  id,
+  currentValue,
+  small,
+  onChange,
+  onText = 'yes',
+  offText = 'no',
+}) => {
   return (
     <SwitchParent small={small}>
       <Checkbox type="checkbox" id={id} checked={currentValue} onChange={onChange} disabled={disabled} />
@@ -22,8 +30,3 @@ export const Switch: React.FC<Props> = ({ disabled, id, currentValue, small, onC
     </SwitchParent>
   );
 };
-
-Switch.defaultProps = {
-  onText: 'yes',
-  offText: 'no',
-} as Partial<Props>;
