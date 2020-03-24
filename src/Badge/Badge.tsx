@@ -11,9 +11,10 @@ export const Badge: React.FC<Props> = ({
   background = 'grayLight',
   color = 'grayDarker',
   size = 'standard',
+  children,
   ...props
 }) => (
   <StyledBadge background={background} color={color} size={size} {...props}>
-    {props.children}
+    {children}
   </StyledBadge>
 );
