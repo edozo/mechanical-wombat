@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch } from 'test-ui-lib';
+import { H1 } from 'test-ui-lib';
 
 /**
  * This should be used as a playground for building components,
@@ -10,22 +10,7 @@ export const App = () => {
   const [isTwoChecked, setIsTwoChecked] = useState(false);
   return (
     <React.Fragment>
-      <div>
-      <p>Switch One:</p>
-      <Switch
-      currentValue={isOneChecked}
-      onChange={() => setIsOneChecked(!isOneChecked)}
-      id={1}
-      />
-    </div>
-    <div>
-      <p>Switch Two:</p>
-      <Switch
-      currentValue={isTwoChecked}
-      onChange={() => setIsTwoChecked(!isTwoChecked)}
-      id={2}
-      />
-    </div>
+      <H1>...play here</H1>
     </React.Fragment>
   );
 }
