@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { H1 } from 'test-ui-lib';
+import React from 'react';
+import { Badge } from 'test-ui-lib';
 
 /**
  * This should be used as a playground for building components,
  * storybook will be used for displaying components to stakeholders.
  */
 export const App = () => {
-  const [isOneChecked, setIsOneChecked] = useState(false);
-  const [isTwoChecked, setIsTwoChecked] = useState(false);
   return (
-    <React.Fragment>
-      <H1>...play here</H1>
-    </React.Fragment>
+    <div style={{ width: '100vw', height: '100vh', background: '#ccc'}}>
+      <Badge>£ 1.20</Badge>
+    </div>
   );
 }
