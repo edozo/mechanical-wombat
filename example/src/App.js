@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PriceIndicator, Button } from 'test-ui-lib';
+import { Button, PriceIndicator } from 'test-ui-lib';
 
 /**
  * This should be used as a playground for building components,
@@ -10,25 +10,16 @@ export const App = () => {
   const [priceIncrease, setPriceIncrease] = useState(0);
 
   const updatePrice = ({ priceIncrease }) => {
-    console.log('updatePrice -> priceIncrease', priceIncrease);
     setPriceIncrease(priceIncrease)
     setPriceTotal(prevState => prevState + priceIncrease)
   };
 
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#ccc' }}>
-      <PriceIndicator total={priceTotal} addition={priceIncrease} />
-        {/* <PriceIndicator.Total/> */}
-        {/* <PriceIndicator.Update/> */}
-      {/* </PriceIndicator> */}
-
-      {/* Helpers */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <Button onClick={() => updatePrice({ priceIncrease: 1 })}>Increase price by £1.00</Button>
-      <Button onClick={() => updatePrice({ priceIncrease: 3 })}>Increase price by £3.00</Button>
+      <div style={{ position: 'absolute', bottom: '24px', right: '24px' }}>
+        <PriceIndicator total={priceTotal} addition={priceIncrease}>hover content will be here and it can be super long</PriceIndicator>
+      </div>
+      <Button onClick={() => updatePrice({ priceIncrease: Math.random() })}>Increase price by random penny's</Button>
     </div>
   );
 };

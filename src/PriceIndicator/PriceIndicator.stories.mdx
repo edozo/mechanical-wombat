@@ -1,0 +1,37 @@
+import { useState } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { PriceIndicator } from '../PriceIndicator';
+import { Switch } from '../Switch';
+
+<Meta title="Components|PriceIndicator" />
+
+# PriceIndicator
+
+## Description
+
+PriceIndicator is a simple styled and animated set of elements to be use to indicate users that the costs of an item (map) are increasing
+
+### Default
+
+<Preview>
+  <Story name="Default">
+    {() => {
+      const [priceTotal, setPriceTotal] = useState(0);
+      const [priceIncrease, setPriceIncrease] = useState(0);
+      const updatePrice = ({ priceIncrease }) => {
+        setPriceIncrease(priceIncrease);
+        setPriceTotal(prevState => prevState + priceIncrease);
+      };
+      return (
+        <div style={{ height: '100px' }}>
+          <button onClick={() => updatePrice({ priceIncrease: Math.random() })}>Increase price by random penny's</button>
+          <div style={{ position: 'absolute', bottom: '24px', right: '24px' }}>
+            <PriceIndicator total={priceTotal} addition={priceIncrease}>
+              hover content will be here and it can be super long
+            </PriceIndicator>
+          </div>
+        </div>
+      );
+    }}
+  </Story>
+</Preview>

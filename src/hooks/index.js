@@ -1,1 +1,2 @@
-export { useOnClickOutside } from './hooks';
+export { useOnClickOutside } from './useOnClickOutside';
+export { useEffectAfterMount } from './useEffectAfterMount';

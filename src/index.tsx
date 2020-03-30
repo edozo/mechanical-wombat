@@ -12,5 +12,6 @@ export { ToggleGroup } from './ToggleGroup';
 export { Switch } from './Switch';
 export { Badge } from './Badge';
 export { PriceIndicator } from './PriceIndicator';
+export * from './hooks';
 
 export { ThemeProvider } from './ThemeProvider';
