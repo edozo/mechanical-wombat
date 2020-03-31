@@ -15,8 +15,8 @@ const hoverContentVariants = {
 };
 
 const hoverDividerVariants = {
-  rest: { y: 30 },
-  hover: { y: 0, transition: { duration: 0.1, delay: 0.4, ease: 'easeIn' } },
+  rest: { opacity: 0 },
+  hover: { opacity: 1, transition: { duration: 0.1, delay: 0.5, ease: 'easeIn' } },
 };
 
 export interface Props {
