@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from 'test-ui-lib';
+import { Badge } from 'mechanical-wombat';
 
 /**
  * This should be used as a playground for building components,

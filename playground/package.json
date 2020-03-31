@@ -9,7 +9,7 @@
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "3.4.1",
     "typescript": "link:../node_modules/typescript",
-    "test-ui-lib": "link:.."
+    "mechanical-wombat": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
