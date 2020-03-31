@@ -41,7 +41,6 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
 
   return (
     <React.Fragment>
-      {/* Tooltip UI */}
       <AnimatePresence>
         {isAdditionVisible && (
           <PriceUpdateIndicator variants={updaterVariants} initial="initial" animate="animate" exit="exit">
@@ -49,7 +48,6 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
           </PriceUpdateIndicator>
         )}
       </AnimatePresence>
-      {/* Badge and hover UI */}
       <PriceTotalWrapper onHoverStart={() => setIsPriceHover(true)} onHoverEnd={() => setIsPriceHover(false)}>
         {isPriceHover && (
           <HoverContainer initial="rest" animate="hover" exit="rest" variants={hoverContentVariants}>
