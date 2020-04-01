@@ -8,8 +8,8 @@ import { Badge } from 'mechanical-wombat';
 
 export const App = () => {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#ccc'}}>
-      <Badge>£ 1.20</Badge>
+    <div style={{ width: '100vw', height: '100vh', background: '#ccc' }}>
+      <Badge>I'm a badge</Badge>
     </div>
   );
-}
+};
