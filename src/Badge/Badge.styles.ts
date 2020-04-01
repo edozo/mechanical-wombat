@@ -3,7 +3,7 @@ import { Props } from './Badge';
 
 export const StyledBadge = styled.div<Props>`
   display: inline-block;
-  padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
+  padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
   border: 2px solid
     ${p => p.background && (p.theme.colors.aliases[p.background] || p.theme.colors[p.background] || p.background)};
@@ -12,6 +12,6 @@ export const StyledBadge = styled.div<Props>`
   color: ${p => p.color && (p.theme.colors.aliases[p.color] || p.theme.colors[p.color] || p.color)};
   font-family: ${p => p.theme.font.family.main};
   font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.label};
+  line-height: ${p => p.theme.font.lineHeight.small};
   font-weight: ${p => p.theme.font.weight.bold};
 `;
