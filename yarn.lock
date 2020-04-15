@@ -1177,6 +1177,11 @@
     style-value-types "^3.1.7"
     tslib "^1.10.0"
 
+"@popperjs/core@^2.2.0":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.2.1.tgz#d7d1d7fbdc1f2aa24e62f4ef4b001be7727340c5"
+  integrity sha512-BChdj3idQiLi+7vPhE6gEDiPzpozvSrUqbSMoSTlRbOQkU0p6u4si0UBydegTyphsYSZC2AUHGYYICP0gqmEVg==
+
 "@reach/router@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.2.1.tgz#34ae3541a5ac44fa7796e5506a5d7274a162be4e"
@@ -1705,6 +1710,14 @@
     "@svgr/plugin-jsx" "^4.3.3"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
+
+"@tippyjs/react@^4.0.0-alpha.4":
+  version "4.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.0.0-alpha.4.tgz#0e422ee0079b6b4bca84f40584f2dfc2e19364f1"
+  integrity sha512-jiBFNU8ZsKTjha+5goKulOpMcf/twCYVTlL2pPjnV31on2fRNFcPHL1ggqdBY3t0dba6xSsGceo0a3j6ZUzIFQ==
+  dependencies:
+    prop-types "^15.6.2"
+    tippy.js "^6.1.0"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -15126,6 +15139,13 @@ tinycolor2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
   integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
+
+tippy.js@^6.1.0, tippy.js@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.1.1.tgz#9ed09aa4f9c47fb06a0e280e03055f898f5ddfff"
+  integrity sha512-Sk+FPihack9XFbPOc2jRbn6iRLA9my2a8qhaGY6wwD3EeW57/xY5PAPkZOutKVYDWLyNZ/laCkJqg7QJG/gqQw==
+  dependencies:
+    "@popperjs/core" "^2.2.0"
 
 tmp@^0.0.33:
   version "0.0.33"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from 'mechanical-wombat';
+import { Tooltip } from 'mechanical-wombat';
 
 /**
  * This should be used as a playground for building components,
@@ -8,8 +8,11 @@ import { Badge } from 'mechanical-wombat';
 
 export const App = () => {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#ccc' }}>
-      <Badge>I'm a badge</Badge>
-    </div>
+    <Tooltip tooltipContent={<div>
+      <span>Tooltip</span>
+      <button type="button">content</button>
+    </div>}>
+      <button type="button">the child</button>
+    </Tooltip>
   );
 };
