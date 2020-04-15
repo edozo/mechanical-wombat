@@ -2,13 +2,13 @@ import React from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-type TootipProps = {
+type TooltipProps = {
   children: React.ReactElement;
-  tooltipContent: React.ReactElement;
+  content: React.ReactElement;
   interactive: boolean;
 };
-export const Tooltip: React.FC<TootipProps> = ({ interactive, tooltipContent, children, ...rest }) => (
-  <Tippy interactive={interactive} {...rest} content={tooltipContent}>
+export const Tooltip: React.FC<TooltipProps> = ({ interactive, content, children, ...rest }) => (
+  <Tippy interactive={interactive} {...rest} content={content}>
     {children}
   </Tippy>
 );
