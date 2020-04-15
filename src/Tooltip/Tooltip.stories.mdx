@@ -21,3 +21,14 @@ A tooltip component to display information on hover
     </Tooltip>
   </Story>
 </Preview>
+
+<Preview>
+  <Story name="Interactive">
+    <Tooltip interactive={true} tooltipContent={<div>
+      <span>Tooltip</span>
+      <button type="button">content</button>
+    </div>}>
+      <button type="button">the child</button>
+    </Tooltip>
+  </Story>
+</Preview>

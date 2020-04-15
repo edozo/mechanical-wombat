@@ -5,9 +5,10 @@ import 'tippy.js/dist/tippy.css';
 type TootipProps = {
   children: React.ReactElement;
   tooltipContent: React.ReactElement;
+  interactive: boolean;
 };
-export const Tooltip: React.FC<TootipProps> = ({ tooltipContent, children, ...rest }) => (
-  <Tippy {...rest} content={tooltipContent}>
+export const Tooltip: React.FC<TootipProps> = ({ interactive, tooltipContent, children, ...rest }) => (
+  <Tippy interactive={interactive} {...rest} content={tooltipContent}>
     {children}
   </Tippy>
 );
