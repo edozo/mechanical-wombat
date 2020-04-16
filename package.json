@@ -28,9 +28,8 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
-    "@tippyjs/react": "^4.0.0-alpha.4",
-    "downshift": "^3.4.8",
-    "tippy.js": "^6.1.1"
+    "@tippyjs/react": "^4.0.0",
+    "downshift": "^3.4.8"
   },
   "peerDependencies": {
     "framer-motion": "^1.10.2",

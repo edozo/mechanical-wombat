@@ -8,7 +8,7 @@ import { Tooltip } from 'mechanical-wombat';
 
 export const App = () => {
   return (
-    <Tooltip tooltipContent={<div>
+    <Tooltip content={<div>
       <span>Tooltip</span>
       <button type="button">content</button>
     </div>}>
