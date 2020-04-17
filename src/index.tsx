@@ -1,5 +1,4 @@
 export { GlobalStyle } from './globalStyle';
-export { Example } from './Example';
 export { Button } from './Button';
 export * from './Typography';
 export * from './Icons';
@@ -12,5 +11,6 @@ export { ToggleGroup } from './ToggleGroup';
 export { Switch } from './Switch';
 export { Badge } from './Badge';
 export { PriceIndicator } from './PriceIndicator';
+export { Tooltip } from './Tooltip';
 
 export { ThemeProvider } from './ThemeProvider';

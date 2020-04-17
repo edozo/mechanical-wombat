@@ -5,11 +5,11 @@
   "dependencies": {
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "mechanical-wombat": "link:..",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "3.4.1",
-    "typescript": "link:../node_modules/typescript",
-    "mechanical-wombat": "link:.."
+    "typescript": "link:../node_modules/typescript"
   },
   "scripts": {
     "start": "react-scripts start",
