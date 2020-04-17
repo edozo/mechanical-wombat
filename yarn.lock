@@ -1717,7 +1717,8 @@
   integrity sha512-eve/bDljsOE4+tTtzxWr92Lhf/oQLPGSCI7r/LvtrCYv1yVsWs/9NJRd3MlIvhwkq67uZWP7FLrsC6fUVbPAlQ==
   dependencies:
     prop-types "^15.6.2"
-    tippy.js "^6.1.1"
+    
+    .js "^6.1.1"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
