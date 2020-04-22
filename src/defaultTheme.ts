@@ -32,6 +32,22 @@ const colors = {
   steelBlue: '#E5EEFE',
   steelBlueDark: '#ABB8C5',
   steelBlueDarker: '#818E9B',
+
+  system: {
+    yellowLighter: '#FFF8E2',
+    yellowLight: '#FAEBB8',
+    yellow: '#EFBC11',
+    redLighter: '#FDE6E3',
+    redLight: '#F3CDC8',
+    red: '#D65846',
+    redDark: '#B93421',
+    redDarker: '#8C1F10',
+    blueLighter: '#E1E9F5',
+    blueLight: '#9BB0D0',
+    blue: '#3865A9',
+    blueDark: '#1D4A8E',
+    blueDarker: '#072C64',
+  },
 };
 
 const font = {
@@ -60,6 +76,7 @@ const font = {
     body: '1.5rem',
     bodySmall: '1.375rem',
     label: '1.5rem',
+    labelSmall: '1.25rem',
     small: '1rem', // TODO: confirm with Silvia
   },
   letterSpacing: {

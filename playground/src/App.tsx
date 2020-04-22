@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip } from 'mechanical-wombat';
+import { NotificationBar } from 'mechanical-wombat';
 
 /**
  * This should be used as a playground for building components,
@@ -8,11 +8,16 @@ import { Tooltip } from 'mechanical-wombat';
 
 export const App = () => {
   return (
-    <Tooltip content={<div>
-      <span>Tooltip</span>
-      <button type="button">content</button>
-    </div>}>
-      <button type="button">the child</button>
-    </Tooltip>
+    <NotificationBar variant='alert'>
+      <div>
+        <span>
+          You are currently using an outdated browser, this may cause issues using our site. Upgrade to a modern browser
+          for a better experience
+        </span>
+      </div>
+      <button type="button" style={{ backgroundColor: 'red' }}>
+        upgrade
+      </button>
+    </NotificationBar>
   );
 };

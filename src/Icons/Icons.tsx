@@ -4,6 +4,9 @@ import trashUrl, { ReactComponent as TrashCan } from './icons/trash-can.svg';
 import zoomOutUrl, { ReactComponent as ZoomOut } from './icons/zoom-out.svg';
 import zoomInUrl, { ReactComponent as ZoomIn } from './icons/zoom-in.svg';
 import saveUrl, { ReactComponent as Save } from './icons/save.svg';
+import notificationUrl, { ReactComponent as Notification } from './icons/notification.svg';
+import upgradeUrl, { ReactComponent as Upgrade } from './icons/upgrade.svg';
+import refreshUrl, { ReactComponent as Refresh } from './icons/refresh.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -48,3 +51,24 @@ const SaveIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, .
   </IconWrapper>
 );
 export { SaveIcon, saveUrl };
+
+const NotificationIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Notification fill={fill} {...props} />
+  </IconWrapper>
+);
+export { NotificationIcon, notificationUrl };
+
+const UpgradeIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Upgrade fill={fill} {...props} />
+  </IconWrapper>
+);
+export { UpgradeIcon, upgradeUrl };
+
+const RefreshIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Refresh fill={fill} {...props} />
+  </IconWrapper>
+);
+export { RefreshIcon, refreshUrl };
