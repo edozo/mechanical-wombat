@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { NotificationIcon, UpgradeIcon } from '../Icons';
 import { Props } from './NotificationBar';
 
-export const BarDiv = styled.div<Props>`
+export const StyledNotificationBar = styled.div<Props>`
   width: 100%;
   min-height: 40px;
   padding: 5px;
@@ -10,7 +10,7 @@ export const BarDiv = styled.div<Props>`
   display: flex;
   justify-content: space-between;
   ${p =>
-    p.variant === 'refresh' &&
+    p.variant === 'info' &&
     css`
       border-color: ${p.theme.colors.system.blue};
       background: ${p.theme.colors.system.blueLighter};
