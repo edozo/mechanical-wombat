@@ -43,7 +43,7 @@ const colors = {
     redDark: '#B93421',
     redDarker: '#8C1F10',
     blueLighter: '#E1E9F5',
-    blueLight: '#9BB0D0',
+    blueLight: '#558FE5',
     blue: '#3865A9',
     blueDark: '#1D4A8E',
     blueDarker: '#072C64',
