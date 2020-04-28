@@ -6,6 +6,10 @@ export type Props = {
   variant?: 'alert' | 'info';
 };
 
-export const NotificationBar: React.FC<Props> = props => {
-  return <StyledNotificationBar {...props}>{props.children}</StyledNotificationBar>;
+export const NotificationBar: React.FC<Props> = ({ children, variant = 'info', ...props }) => {
+  return (
+    <StyledNotificationBar variant={variant} {...props}>
+      {children}
+    </StyledNotificationBar>
+  );
 };
