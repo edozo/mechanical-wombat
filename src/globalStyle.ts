@@ -14,6 +14,9 @@ const rebootOptions = {
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'); /* update to match the design system */
   ${reboot(rebootOptions)}
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 export { GlobalStyle };

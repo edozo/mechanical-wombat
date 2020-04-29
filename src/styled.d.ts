@@ -70,6 +70,21 @@ declare module 'styled-components' {
       steelBlue: string;
       steelBlueDark: string;
       steelBlueDarker: string;
+      system: {
+        yellowLighter: string;
+        yellowLight: string;
+        yellow: string;
+        redLighter: string;
+        redLight: string;
+        red: string;
+        redDark: string;
+        redDarker: string;
+        blueLighter: string;
+        blueLight: string;
+        blue: string;
+        blueDark: string;
+        blueDarker: string;
+      };
     };
     font: {
       family: {
@@ -97,6 +112,7 @@ declare module 'styled-components' {
         body: string;
         bodySmall: string;
         label: string;
+        labelSmall: string;
         small: string;
       };
       letterSpacing: {
