@@ -1,5 +1,5 @@
-Ticket:
+BEFORE CREATING THIS PR, have you bumped the package JSON where appropriate?
 
-Why this is needed:
+Ticket / Why this is needed:
 
 Link to Figma doc:
