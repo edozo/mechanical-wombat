@@ -1,4 +1,6 @@
-# test-ui-lib
+# mechanical-wombat
+
+![Mechanical](./mechanical.gif)![Wombat](./wombat.gif)
 
 > React UI component lib
 
