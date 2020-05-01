@@ -1,6 +1,6 @@
 # mechanical-wombat
 
-![Image of a Wombat](./wombat.gif)
+![Mechanical](./mechanical.gif)![Wombat](./wombat.gif)
 
 > React UI component lib
 
