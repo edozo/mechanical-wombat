@@ -1,6 +1,10 @@
 # mechanical-wombat
 
-![Mechanical](./mechanical.gif)![Wombat](./wombat.gif)
+![Mechanical](./mechanical.gif)
+mechanical - “operated by a machine or machinery.”
+
+![Wombat](./wombat.gif)
+ wombat - “a burrowing plant-eating Australian marsupial which resembles a small bear with short legs.”
 
 > React UI component lib
 
