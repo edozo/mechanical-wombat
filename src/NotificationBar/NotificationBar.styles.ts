@@ -8,6 +8,11 @@ export const StyledNotificationBar = styled.div<Props>`
   border: 1px solid;
   display: flex;
   justify-content: space-between;
+  margin: ${p => p.theme.spacing.xxsmall} 0;
+  & > * {
+    font-size: ${p => p.theme.font.size.label};
+    line-height: ${p => p.theme.font.lineHeight.labelSmall};
+  }
   ${p =>
     p.variant === 'info' &&
     css`
