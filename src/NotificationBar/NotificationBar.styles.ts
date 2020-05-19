@@ -4,10 +4,13 @@ import { Props } from './NotificationBar';
 
 export const StyledNotificationBar = styled.div<Props>`
   width: 100%;
-  padding: ${p => p.theme.spacing.xxsmall};
   border: 1px solid;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: ${p => `${parseInt(p.theme.spacing.xsmall, 10) - 1}px`} ${p => p.theme.spacing.small};
+  font-size: ${p => p.theme.font.size.label};
+  line-height: ${p => p.theme.font.lineHeight.labelSmall};
   ${p =>
     p.variant === 'info' &&
     css`
@@ -26,7 +29,7 @@ export const StyledNotificationBar = styled.div<Props>`
 `;
 
 export const StyledNotificationIcon = styled(NotificationIcon)`
-  padding: 0 ${p => p.theme.spacing.base};
+  margin: 0 ${p => p.theme.spacing.small};
   fill: ${p => p.theme.colors.system.red};
 `;
 
