@@ -6,12 +6,11 @@ export const StyledNotificationBar = styled.div<Props>`
   width: 100%;
   border: 1px solid;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.small};
-  & > * {
-    font-size: ${p => p.theme.font.size.label};
-    line-height: ${p => p.theme.font.lineHeight.labelSmall};
-  }
+  padding: ${p => `${parseInt(p.theme.spacing.xsmall, 10) - 1}px`} ${p => p.theme.spacing.small};
+  font-size: ${p => p.theme.font.size.label};
+  line-height: ${p => p.theme.font.lineHeight.labelSmall};
   ${p =>
     p.variant === 'info' &&
     css`
