@@ -5,27 +5,26 @@ type Props = {
   disabled?: boolean;
   id: string;
   currentValue: boolean;
-  small: boolean;
+  size?: 'small' | 'default';
   onChange: () => void;
   onText?: string;
   offText?: string;
 };
 
-export const Switch: React.FC<Props> = ({ disabled, id, currentValue, small, onChange, onText, offText }) => {
-  return (
-    <SwitchParent small={small}>
-      <Checkbox
-        data-testid={id}
-        type="checkbox"
-        id={id}
-        checked={currentValue}
-        onChange={onChange}
-        disabled={disabled}
-      />
-      <Label htmlFor={id}>
-        <ToggleInner data-yes={onText} data-no={offText} small={small} />
-        <Toggle disabled={disabled} small={small} />
-      </Label>
-    </SwitchParent>
-  );
-};
+export const Switch: React.FC<Props> = ({
+  disabled,
+  id,
+  currentValue,
+  size = 'default',
+  onChange,
+  onText,
+  offText,
+}) => (
+  <SwitchParent size={size}>
+    <Checkbox data-testid={id} type="checkbox" id={id} checked={currentValue} onChange={onChange} disabled={disabled} />
+    <Label htmlFor={id}>
+      <ToggleInner data-yes={onText} data-no={offText} size={size} />
+      <Toggle disabled={disabled} size={size} />
+    </Label>
+  </SwitchParent>
+);

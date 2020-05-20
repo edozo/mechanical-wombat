@@ -20,21 +20,23 @@ export const ToggleInner = styled.span`
   transition: margin 0.3s ease-in 0s;
   &:before,
   &:after {
-    display: block;
+    display: inline-flex;
     float: left;
     width: 50%;
-    height: 34px;
+    height: 26px;
     padding: 0;
-    line-height: 34px;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     font-weight: bold;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
   }
   &:before {
     content: attr(data-yes);
     text-transform: uppercase;
-    padding-left: 10px;
+    padding-left: 6px;
+    padding-right: 24px;
     background-color: ${p => p.theme.colors.aliases.primary};
     color: #fff;
   }
@@ -42,10 +44,10 @@ export const ToggleInner = styled.span`
   :after {
     content: attr(data-no);
     text-transform: uppercase;
-    padding-right: 10px;
+    padding-right: 6px;
+    padding-left: 24px;
     background-color: #ccc;
     color: #fff;
-    text-align: right;
   }
 
   ${p =>
@@ -59,27 +61,24 @@ export const ToggleInner = styled.span`
       }
     `};
   ${p =>
-    p.small &&
+    p.size === 'small' &&
     css`
       &:after,
       &:before {
-        content: '';
         height: 20px;
-        line-height: 20px;
       }
     `}
 `;
 
 export const Toggle = styled.span`
   display: block;
-  width: 24px;
-  margin: 5px;
+  width: 18px;
+  margin: 4px;
   background: #fff;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 40px;
-  border: 0 solid #ccc;
+  right: 30px;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
   ${p =>
@@ -93,17 +92,17 @@ export const Toggle = styled.span`
       }
     `};
   ${p =>
-    p.small &&
+    p.size === 'small' &&
     css`
       width: 16px;
-      right: 20px;
+      right: 38px;
       margin: 2px;
     `}
 `;
 
 export const SwitchParent = styled.div`
   position: relative;
-  width: 75px;
+  width: 56px;
   display: inline-block;
   vertical-align: middle;
   user-select: none;
@@ -118,8 +117,8 @@ export const SwitchParent = styled.div`
   }
 
   ${p =>
-    p.small &&
+    p.size === 'small' &&
     css`
-      width: 40px;
+      width: 58px;
     `}
 `;
