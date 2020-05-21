@@ -33,7 +33,7 @@ export const PriceUpdateIndicator = styled(motion.div)`
 `;
 
 export const HoverContainer = styled(motion.div)`
-  background: ${p => p.theme.colors.grayLight};
+  background: ${p => p.theme.colors.white};
   z-index: 0;
   height: 32px;
   display: flex;
@@ -59,7 +59,7 @@ export const TotalPrice = styled.div<{ isActive: boolean }>`
   height: 32px;
   padding: 0 ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
-  background: ${p => p.theme.colors.grayLight};
+  background: ${p => p.theme.colors.white};
   color: ${p => (p.isActive ? p.theme.colors.aliases.primary : p.theme.colors.grayDarker)};
   font-family: ${p => p.theme.font.family.main};
   font-size: ${p => p.theme.font.size.label};

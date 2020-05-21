@@ -58,6 +58,7 @@ export const StyledBody = styled.p`
   font-size: ${p => p.theme.font.size.body};
   line-height: ${p => p.theme.font.lineHeight.body};
   font-weight: ${p => p.theme.font.weight.regular};
+  display: inline-block;
 `;
 
 export const StyledBodySmall = styled.p`
@@ -65,6 +66,7 @@ export const StyledBodySmall = styled.p`
   font-size: ${p => p.theme.font.size.bodySmall};
   line-height: ${p => p.theme.font.lineHeight.bodySmall};
   font-weight: ${p => p.theme.font.weight.regular};
+  display: inline-block;
 `;
 
 export const StyledLabel = styled.p`
@@ -72,6 +74,7 @@ export const StyledLabel = styled.p`
   font-size: ${p => p.theme.font.size.label};
   line-height: ${p => p.theme.font.lineHeight.label};
   font-weight: ${p => p.theme.font.weight.regular};
+  display: inline-block;
 `;
 
 export const StyledSmall = styled.p`
@@ -79,6 +82,7 @@ export const StyledSmall = styled.p`
   font-size: ${p => p.theme.font.size.small};
   line-height: ${p => p.theme.font.lineHeight.small};
   font-weight: ${p => p.theme.font.weight.semibold};
+  display: inline-block;
 `;
 
 export const DisplayWrapper = styled.div`
