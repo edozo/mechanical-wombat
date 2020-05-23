@@ -11,7 +11,13 @@ const updaterVariants = {
 
 const hoverContentVariants = {
   rest: { x: 500 },
-  hover: { x: 3, transition: { duration: 0.4, ease: 'easeIn' } },
+  hover: {
+    x: 0,
+    transitionEnd: {
+      overflow: 'visible',
+    },
+    transition: { duration: 0.4, ease: 'easeIn' },
+  },
 };
 
 const hoverDividerVariants = {

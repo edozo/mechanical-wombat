@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { PriceIndicator } from '../PriceIndicator';
 import { Switch } from '../Switch';
+import { Tooltip } from '../Tooltip';
 
 <Meta title="Components|PriceIndicator" />
 
@@ -53,7 +54,11 @@ PriceIndicator is a simple styled and animated set of elements to be use to indi
           <button onClick={() => updatePrice({ priceIncrease: Math.random() })}>Increase price by random penny's</button>
           <div style={{ position: 'absolute', bottom: '24px', right: '24px' }}>
             <PriceIndicator isActive total={priceTotal} addition={priceIncrease}>
-              hover content will be here and it can be super long
+              <Tooltip content={<div>
+                <span>Tooltip</span>
+              </div>}>
+                <button type="button">the child</button>
+              </Tooltip>hover content will be here and it can be super long
             </PriceIndicator>
           </div>
         </div>
