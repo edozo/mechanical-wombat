@@ -7,6 +7,7 @@ import saveUrl, { ReactComponent as Save } from './icons/save.svg';
 import notificationUrl, { ReactComponent as Notification } from './icons/notification.svg';
 import upgradeUrl, { ReactComponent as Upgrade } from './icons/upgrade.svg';
 import refreshUrl, { ReactComponent as Refresh } from './icons/refresh.svg';
+import questionUrl, { ReactComponent as Question } from './icons/question-icon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -72,3 +73,10 @@ const RefreshIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR
   </IconWrapper>
 );
 export { RefreshIcon, refreshUrl };
+
+const QuestionIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Question fill={fill} {...props} />
+  </IconWrapper>
+);
+export { QuestionIcon, questionUrl };
