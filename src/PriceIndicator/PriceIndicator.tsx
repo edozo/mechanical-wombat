@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useEffectAfterMount } from '../hooks';
-import { PriceUpdateIndicator, PriceTotalWrapper, HoverContainer, TotalPrice, Divider } from './PriceIndicator.styles';
+import {
+  PriceUpdateIndicator,
+  PriceTotalWrapper,
+  HoverContainer,
+  TotalPrice,
+  Divider,
+  StylePricingContainer,
+} from './PriceIndicator.styles';
 
 const updaterVariants = {
   initial: { opacity: 0, x: -50 },
@@ -46,7 +53,7 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
   }, [formattedAddition]);
 
   return (
-    <React.Fragment>
+    <StylePricingContainer>
       <AnimatePresence>
         {isAdditionVisible && (
           <PriceUpdateIndicator variants={updaterVariants} initial="initial" animate="animate" exit="exit">
@@ -60,11 +67,12 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
             {children}
           </HoverContainer>
         )}
-        <TotalPrice isActive={isActive} style={{ zIndex: 2 }}>
+
+        <TotalPrice isActive={isActive} isPriceHover={isPriceHover}>
           {isPriceHover && <Divider initial="rest" animate="hover" exit="rest" variants={hoverDividerVariants} />}
           {formattedTotal}
         </TotalPrice>
       </PriceTotalWrapper>
-    </React.Fragment>
+    </StylePricingContainer>
   );
 };
