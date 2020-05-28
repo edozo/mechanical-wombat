@@ -54,7 +54,7 @@ PriceIndicator is a simple styled and animated set of elements to be use to indi
           <button onClick={() => updatePrice({ priceIncrease: Math.random() })}>Increase price by random penny's</button>
           <div style={{ position: 'absolute', bottom: '24px', right: '24px' }}>
             <PriceIndicator isActive total={priceTotal} addition={priceIncrease}>
-              <Tooltip content={<div>
+              <Tooltip trigger="click" offset={[0, 16]} placement="top-start" interactive={true} interactiveBorder={30} content={<div>
                 <span>Tooltip</span>
               </div>}>
                 <button type="button">the child</button>

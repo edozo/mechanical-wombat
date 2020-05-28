@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const StylePricingContainer = styled.div`
+  transform: translateY(${p => p.theme.spacing.small});
+`;
+
 export const PriceTotalWrapper = styled(motion.div)`
   display: inline-flex;
   justify-content: flex-end;
@@ -51,14 +55,18 @@ export const Divider = styled(motion.div)`
   left: 0;
 `;
 
-export const TotalPrice = styled.div<{ isActive: boolean }>`
+export const TotalPrice = styled.div<{ isActive: boolean; isPriceHovered: boolean }>`
   display: inline-flex;
   position: relative;
   justify-content: center;
   align-items: center;
   height: 32px;
+  margin-top: ${p => p.theme.spacing.small};
+  margin-bottom: ${p => p.theme.spacing.small};
   padding: 0 ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
+  border-top-left-radius: ${p => (p.isPriceHovered ? '0px' : p.theme.borderRadius.standard)};
+  border-bottom-left-radius: ${p => (p.isPriceHovered ? '0px' : p.theme.borderRadius.standard)};
   background: ${p => p.theme.colors.white};
   color: ${p => (p.isActive ? p.theme.colors.aliases.primary : p.theme.colors.grayDarker)};
   font-family: ${p => p.theme.font.family.main};
