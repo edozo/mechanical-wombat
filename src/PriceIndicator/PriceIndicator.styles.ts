@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StylePricingContainer = styled.div`
-  transform: translateY(${p => p.theme.spacing.small});
-`;
-
 export const PriceTotalWrapper = styled(motion.div)`
   display: inline-flex;
   justify-content: flex-end;
