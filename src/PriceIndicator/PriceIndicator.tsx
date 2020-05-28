@@ -40,7 +40,7 @@ export interface Props {
 
 export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = false, children }) => {
   const [isAdditionVisible, setIsAdditionVisible] = useState(false);
-  const [isPriceHover, setIsPriceHover] = useState(false);
+  const [isPriceHovered, setIsPriceHovered] = useState(false);
 
   const formattedTotal = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(total);
   const formattedAddition = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(addition);
@@ -61,15 +61,15 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
           </PriceUpdateIndicator>
         )}
       </AnimatePresence>
-      <PriceTotalWrapper onHoverStart={() => setIsPriceHover(true)} onHoverEnd={() => setIsPriceHover(false)}>
-        {isPriceHover && (
+      <PriceTotalWrapper onHoverStart={() => setIsPriceHovered(true)} onHoverEnd={() => setIsPriceHovered(false)}>
+        {isPriceHovered && (
           <HoverContainer initial="rest" animate="hover" exit="rest" variants={hoverContentVariants}>
             {children}
           </HoverContainer>
         )}
 
-        <TotalPrice isActive={isActive} isPriceHover={isPriceHover}>
-          {isPriceHover && <Divider initial="rest" animate="hover" exit="rest" variants={hoverDividerVariants} />}
+        <TotalPrice isActive={isActive} isPriceHovered={isPriceHovered}>
+          {isPriceHovered && <Divider initial="rest" animate="hover" exit="rest" variants={hoverDividerVariants} />}
           {formattedTotal}
         </TotalPrice>
       </PriceTotalWrapper>

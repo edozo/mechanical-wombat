@@ -55,7 +55,7 @@ export const Divider = styled(motion.div)`
   left: 0;
 `;
 
-export const TotalPrice = styled.div<{ isActive: boolean; isPriceHover: boolean }>`
+export const TotalPrice = styled.div<{ isActive: boolean; isPriceHovered: boolean }>`
   display: inline-flex;
   position: relative;
   justify-content: center;
@@ -65,8 +65,8 @@ export const TotalPrice = styled.div<{ isActive: boolean; isPriceHover: boolean 
   margin-bottom: ${p => p.theme.spacing.small};
   padding: 0 ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
-  border-top-left-radius: ${p => (p.isPriceHover ? '0px' : p.theme.borderRadius.standard)};
-  border-bottom-left-radius: ${p => (p.isPriceHover ? '0px' : p.theme.borderRadius.standard)};
+  border-top-left-radius: ${p => (p.isPriceHovered ? '0px' : p.theme.borderRadius.standard)};
+  border-bottom-left-radius: ${p => (p.isPriceHovered ? '0px' : p.theme.borderRadius.standard)};
   background: ${p => p.theme.colors.white};
   color: ${p => (p.isActive ? p.theme.colors.aliases.primary : p.theme.colors.grayDarker)};
   font-family: ${p => p.theme.font.family.main};
