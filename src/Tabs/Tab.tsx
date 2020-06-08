@@ -1,18 +1,25 @@
 import React from 'react';
 import { useTabsContext } from './TabsContext';
-import { StyledTab } from './Tab.styles';
+import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
 export interface TabProps {
   tab: string;
-  tag?: string;
 }
 
-export const Tab: React.FC<TabProps> = ({ tab, tag, children, ...props }) => {
+export const Tab: React.FC<TabProps> = ({ tab, children, ...props }) => {
   const { setTab, activeTab } = useTabsContext();
   const handleClick = (): void => setTab(tab);
   return (
-    <StyledTab as={tag} onClick={handleClick} isActive={activeTab === tab} {...props}>
+    <StyledTab onClick={handleClick} isActive={activeTab === tab} {...props}>
       {children}
     </StyledTab>
   );
 };
+
+export interface TabWrapperProps {
+  stretch?: boolean;
+}
+
+export const TabWrapper: React.FC<TabWrapperProps> = ({ stretch = false, children }) => (
+  <StyledTabWrapper stretch={stretch}>{children}</StyledTabWrapper>
+);

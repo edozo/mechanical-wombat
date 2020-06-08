@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { TabsProvider } from './TabsContext';
-import { Tab, TabProps } from './Tab';
+import { TabWrapper, Tab, TabWrapperProps, TabProps } from './Tab';
 import { Panel, PanelProps } from './Panel';
 
 interface TabsProps {
-  initialTab: any;
+  initialTab: string;
 }
 
 interface TabsComposition {
   Tab: React.FC<TabProps>;
+  TabWrapper: React.FC<TabWrapperProps>;
   Panel: React.FC<PanelProps>;
 }
 
@@ -18,6 +19,7 @@ const Tabs: React.FC<TabsProps> & TabsComposition = ({ initialTab, children }) =
 };
 
 Tabs.Tab = Tab;
+Tabs.TabWrapper = TabWrapper;
 Tabs.Panel = Panel;
 
 export { Tabs };
