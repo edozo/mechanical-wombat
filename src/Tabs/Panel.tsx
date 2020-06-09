@@ -6,7 +6,7 @@ export interface PanelProps {
   whenActive: string;
 }
 
-export const Panel: React.FC<PanelProps> = ({ whenActive, children }): any => {
+export const Panel: React.FC<PanelProps> = ({ whenActive, children }) => {
   const { activeTab } = useTabsContext();
-  return whenActive === activeTab ? <StyledPanel isActive={whenActive === activeTab}>{children}</StyledPanel> : null;
+  return whenActive === activeTab ? <StyledPanel>{children}</StyledPanel> : null;
 };

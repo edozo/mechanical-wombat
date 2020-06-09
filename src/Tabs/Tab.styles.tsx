@@ -29,6 +29,7 @@ export const StyledTab = styled.span<TabStyleProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   ${p =>
     p.isActive &&

@@ -12,7 +12,7 @@ const TabsConsumer = TabsContext.Consumer;
 function useTabsContext() {
   const context = useContext(TabsContext);
   if (!context) {
-    throw new Error("Tabs compound components can't be rendered outside TabBar component");
+    throw new Error("Tab compound components can't be rendered outside Tabs component");
   }
   return context;
 }
