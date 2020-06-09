@@ -17,13 +17,13 @@ Tabs component
   <Story name="Default tabs with three options">
     <Tabs initialTab="tab-2">
       <Tabs.TabWrapper>
-        <Tabs.Tab tab="tab-1">Tab A</Tabs.Tab>
-        <Tabs.Tab tab="tab-2">Tab B</Tabs.Tab>
-        <Tabs.Tab tab="tab-3">Tab c</Tabs.Tab>
+        <Tabs.Tab tabId="tab-1">Tab A</Tabs.Tab>
+        <Tabs.Tab tabId="tab-2">Tab B</Tabs.Tab>
+        <Tabs.Tab tabId="tab-3">Tab c</Tabs.Tab>
       </Tabs.TabWrapper>
-      <Tabs.Panel whenActive="tab-1">a panel</Tabs.Panel>
-      <Tabs.Panel whenActive="tab-2">b panel</Tabs.Panel>
-      <Tabs.Panel whenActive="tab-3">c panel</Tabs.Panel>
+      <Tabs.Panel tabId="tab-1">a panel</Tabs.Panel>
+      <Tabs.Panel tabId="tab-2">b panel</Tabs.Panel>
+      <Tabs.Panel tabId="tab-3">c panel</Tabs.Panel>
     </Tabs>
   </Story>
 </Preview>
@@ -32,13 +32,13 @@ Tabs component
   <Story name="Three tabs streched">
     <Tabs initialTab="tab-1">
         <Tabs.TabWrapper stretch>
-          <Tabs.Tab tab="tab-1">Tab A</Tabs.Tab>
-          <Tabs.Tab tab="tab-2">Tab B</Tabs.Tab>
-          <Tabs.Tab tab="tab-3">Tab c</Tabs.Tab>
+          <Tabs.Tab tabId="tab-1">Tab A</Tabs.Tab>
+          <Tabs.Tab tabId="tab-2">Tab B</Tabs.Tab>
+          <Tabs.Tab tabId="tab-3">Tab c</Tabs.Tab>
         </Tabs.TabWrapper>
-        <Tabs.Panel whenActive="tab-1">a panel</Tabs.Panel>
-        <Tabs.Panel whenActive="tab-2">b panel</Tabs.Panel>
-        <Tabs.Panel whenActive="tab-3">c panel</Tabs.Panel>
+        <Tabs.Panel tabId="tab-1">a panel</Tabs.Panel>
+        <Tabs.Panel tabId="tab-2">b panel</Tabs.Panel>
+        <Tabs.Panel tabId="tab-3">c panel</Tabs.Panel>
       </Tabs>
   </Story>
 </Preview>
@@ -47,20 +47,22 @@ Tabs component
   <Story name="Nested tabs">
     <Tabs initialTab="tab-1">
       <Tabs.TabWrapper stretch>
-        <Tabs.Tab tab="tab-1">Tab A</Tabs.Tab>
-        <Tabs.Tab tab="tab-2">Tab B</Tabs.Tab>
+        <Tabs.Tab tabId="tab-1">Tab A</Tabs.Tab>
+        <Tabs.Tab tabId="tab-2">Tab B</Tabs.Tab>
       </Tabs.TabWrapper>
-      <Tabs.Panel whenActive="tab-1">
-        <Tabs initialTab="nested-tab-1">
-          <Tabs.TabWrapper>
-            <Tabs.Tab tab="nested-tab-1">Tab A</Tabs.Tab>
-            <Tabs.Tab tab="nested-tab-2">Tab B</Tabs.Tab>
-          </Tabs.TabWrapper>
-          <Tabs.Panel whenActive="nested-tab-1">a panel</Tabs.Panel>
-          <Tabs.Panel whenActive="nested-tab-2">b panel</Tabs.Panel>
-        </Tabs>
+      <Tabs.Panel tabId="tab-1">
+        <div>
+          <Tabs initialTab="nested-tab-1">
+            <Tabs.TabWrapper>
+              <Tabs.Tab tabId="nested-tab-1">Tab A</Tabs.Tab>
+              <Tabs.Tab tabId="nested-tab-2">Tab B</Tabs.Tab>
+            </Tabs.TabWrapper>
+            <Tabs.Panel tabId="nested-tab-1">a panel</Tabs.Panel>
+            <Tabs.Panel tabId="nested-tab-2">b panel</Tabs.Panel>
+          </Tabs>
+        </div>
       </Tabs.Panel>
-      <Tabs.Panel whenActive="tab-2">b panel</Tabs.Panel>
+      <Tabs.Panel tabId="tab-2">b panel</Tabs.Panel>
     </Tabs>
   </Story>
 </Preview>
@@ -69,18 +71,18 @@ Tabs component
   <Story name="Fun with Tabs strached">
     <div style={{ border: '3px solid yellow', padding: '8px' }}>
       <Tabs initialTab="tab-1">
-        <div style={{ border: '3px solid green', height: '600px', padding: '8px' }}>
+        <div style={{ border: '3px solid green', minHeight: '600px', padding: '8px' }}>
           <div style={{ border: '3px solid blue', padding: '8px' }}>
           <Tabs.TabWrapper stretch>
-            <Tabs.Tab tab="tab-1">🚀</Tabs.Tab>
-            <Tabs.Tab tab="tab-2"><Badge color="#ff0" background="#f60">I'm a Badge</Badge></Tabs.Tab>
-            <Tabs.Tab tab="tab-3"><img src="https://i2-prod.mirror.co.uk/incoming/article5657868.ece/ALTERNATES/s1200b/Boris-Johnson.jpg" width="100px" /></Tabs.Tab>
+            <Tabs.Tab tabId="tab-1">🚀</Tabs.Tab>
+            <Tabs.Tab tabId="tab-2"><Badge color="#ff0" background="#f60">I'm a Badge</Badge></Tabs.Tab>
+            <Tabs.Tab tabId="tab-3"><img src="https://i2-prod.mirror.co.uk/incoming/article5657868.ece/ALTERNATES/s1200b/Boris-Johnson.jpg" width="100px" /></Tabs.Tab>
           </Tabs.TabWrapper>
           </div>
           <div style={{ border: '3px solid red', display: 'flex', flex: '1 1 0px', flexDirection: 'column', height: '300px', padding: '8px' }}>
-            <Tabs.Panel whenActive="tab-1"><div style={{ padding: '8px' }}>A Rocket</div></Tabs.Panel>
-            <Tabs.Panel whenActive="tab-2"><div style={{ padding: '80px' }}>A Badge</div></Tabs.Panel>
-            <Tabs.Panel whenActive="tab-3"><div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', border: '3px dotted green', width: '100%' }}>A Boris</div></Tabs.Panel>
+            <Tabs.Panel tabId="tab-1"><div style={{ padding: '8px' }}>A Rocket</div></Tabs.Panel>
+            <Tabs.Panel tabId="tab-2"><div style={{ padding: '80px' }}>A Badge</div></Tabs.Panel>
+            <Tabs.Panel tabId="tab-3"><div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', border: '3px dotted green', width: '100%' }}>A Boris</div></Tabs.Panel>
           </div>
         </div>
       </Tabs>

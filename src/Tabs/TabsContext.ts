@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 
 interface State {
-  setTab: any;
+  setActiveTab: any;
   activeTab: string;
 }
 

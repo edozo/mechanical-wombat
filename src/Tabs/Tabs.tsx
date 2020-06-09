@@ -14,8 +14,8 @@ interface TabsComposition {
 }
 
 const Tabs: React.FC<TabsProps> & TabsComposition = ({ initialTab, children }) => {
-  const [tab, setTab] = useState(initialTab);
-  return <TabsProvider value={{ activeTab: tab, setTab }}>{children}</TabsProvider>;
+  const [tab, setActiveTab] = useState(initialTab);
+  return <TabsProvider value={{ activeTab: tab, setActiveTab }}>{children}</TabsProvider>;
 };
 
 Tabs.Tab = Tab;

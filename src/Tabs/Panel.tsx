@@ -3,10 +3,10 @@ import { useTabsContext } from './TabsContext';
 import { StyledPanel } from './Panel.styles';
 
 export interface PanelProps {
-  whenActive: string;
+  tabId: string;
 }
 
-export const Panel: React.FC<PanelProps> = ({ whenActive, children }) => {
+export const Panel: React.FC<PanelProps> = ({ tabId, children }) => {
   const { activeTab } = useTabsContext();
-  return whenActive === activeTab ? <StyledPanel>{children}</StyledPanel> : null;
+  return tabId === activeTab ? <StyledPanel>{children}</StyledPanel> : null;
 };

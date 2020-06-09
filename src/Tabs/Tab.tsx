@@ -3,14 +3,14 @@ import { useTabsContext } from './TabsContext';
 import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
 export interface TabProps {
-  tab: string;
+  tabId: string;
 }
 
-export const Tab: React.FC<TabProps> = ({ tab, children, ...props }) => {
-  const { setTab, activeTab } = useTabsContext();
-  const handleClick = (): void => setTab(tab);
+export const Tab: React.FC<TabProps> = ({ tabId, children, ...props }) => {
+  const { setActiveTab, activeTab } = useTabsContext();
+  const handleClick = (): void => setActiveTab(tabId);
   return (
-    <StyledTab onClick={handleClick} isActive={activeTab === tab} {...props}>
+    <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...props}>
       {children}
     </StyledTab>
   );
