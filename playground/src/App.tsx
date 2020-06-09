@@ -1,5 +1,5 @@
 import React from 'react';
-import { NotificationBar } from 'mechanical-wombat';
+import { Tabs } from 'mechanical-wombat';
 
 /**
  * This should be used as a playground for building components,
@@ -8,16 +8,15 @@ import { NotificationBar } from 'mechanical-wombat';
 
 export const App = () => {
   return (
-    <NotificationBar variant='alert'>
-      <div>
-        <span>
-          You are currently using an outdated browser, this may cause issues using our site. Upgrade to a modern browser
-          for a better experience
-        </span>
-      </div>
-      <button type="button" style={{ backgroundColor: 'red' }}>
-        upgrade
-      </button>
-    </NotificationBar>
+    <div >
+      <Tabs initialTab="tab-2">
+        <Tabs.Tab tab="tab-1">Tab A</Tabs.Tab>
+        <Tabs.Tab tab="tab-2">Tab B</Tabs.Tab>
+        <Tabs.Tab tab="tab-3">Tab c</Tabs.Tab>
+        <Tabs.Panel whenActive="tab-1">a panel</Tabs.Panel>
+        <Tabs.Panel whenActive="tab-2">b panel</Tabs.Panel>
+        <Tabs.Panel whenActive="tab-3">c panel</Tabs.Panel>
+      </Tabs>
+  </div>
   );
 };
