@@ -6,7 +6,7 @@ export interface PanelProps {
   tabId: string;
 }
 
-export const Panel: React.FC<PanelProps> = ({ tabId, children }) => {
+export const Panel: React.FC<PanelProps> = ({ tabId, children, ...rest }) => {
   const { activeTab } = useTabsContext();
-  return tabId === activeTab ? <StyledPanel>{children}</StyledPanel> : null;
+  return tabId === activeTab ? <StyledPanel {...rest}>{children}</StyledPanel> : null;
 };

@@ -6,11 +6,11 @@ export interface TabProps {
   tabId: string;
 }
 
-export const Tab: React.FC<TabProps> = ({ tabId, children, ...props }) => {
+export const Tab: React.FC<TabProps> = ({ tabId, children, ...rest }) => {
   const { setActiveTab, activeTab } = useTabsContext();
   const handleClick = (): void => setActiveTab(tabId);
   return (
-    <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...props}>
+    <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...rest}>
       {children}
     </StyledTab>
   );
