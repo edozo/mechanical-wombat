@@ -12,11 +12,9 @@ export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...re
   const handleClick = (): void => {
     if (activeTab === tabId) return;
 
-    let shouldChange = true;
-    if (beforeOnChange) {
-      shouldChange = beforeOnChange();
-    }
-    shouldChange && setActiveTab(tabId);
+    const shouldChange = beforeOnChange?.();
+    if (beforeOnChange && !shouldChange && shouldChange !== undefined) return;
+    setActiveTab(tabId);
   };
   return (
     <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...rest}>
