@@ -15,11 +15,7 @@ export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...re
   };
 
   const handleClick = (): void => {
-    if (beforeOnChange) {
-      beforeOnChange(clickCallback);
-    } else {
-      clickCallback();
-    }
+    beforeOnChange ? beforeOnChange(clickCallback) : clickCallback();
   };
   return (
     <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...rest}>
