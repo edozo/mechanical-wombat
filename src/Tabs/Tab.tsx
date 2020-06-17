@@ -4,17 +4,22 @@ import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
 export interface TabProps {
   tabId: string;
-  beforeOnChange?: () => boolean;
+  beforeOnChange?: (handleClick: () => void) => boolean;
 }
 
 export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...rest }) => {
   const { setActiveTab, activeTab } = useTabsContext();
-  const handleClick = (): void => {
+  const clickCallback = (): void => {
     if (activeTab === tabId) return;
-
-    const shouldChange = beforeOnChange?.();
-    if (beforeOnChange && !shouldChange && shouldChange !== undefined) return;
     setActiveTab(tabId);
+  };
+
+  const handleClick = (): void => {
+    if (beforeOnChange) {
+      beforeOnChange(clickCallback);
+    } else {
+      clickCallback();
+    }
   };
   return (
     <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...rest}>
