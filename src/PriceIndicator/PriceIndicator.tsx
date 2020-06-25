@@ -29,9 +29,16 @@ export interface Props {
   total: number;
   addition: number;
   isActive?: boolean;
+  additionTiming?: number;
 }
 
-export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = false, children }) => {
+export const PriceIndicator: React.FC<Props> = ({
+  total,
+  addition,
+  additionTiming = 1000,
+  isActive = false,
+  children,
+}) => {
   const [isAdditionVisible, setIsAdditionVisible] = useState(false);
   const [isPriceHovered, setIsPriceHovered] = useState(false);
 
@@ -40,7 +47,7 @@ export const PriceIndicator: React.FC<Props> = ({ total, addition, isActive = fa
 
   useEffectAfterMount(() => {
     setIsAdditionVisible(true);
-    const timer = setTimeout(() => setIsAdditionVisible(false), 400);
+    const timer = setTimeout(() => setIsAdditionVisible(false), additionTiming);
 
     return () => clearTimeout(timer);
   }, [formattedAddition]);
