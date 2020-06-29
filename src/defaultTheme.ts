@@ -119,7 +119,7 @@ const defaultTheme: DefaultTheme = {
     small: '3px',
     standard: '6px',
     large: '10px',
-    xlarge: '9999px',
+    xlarge: '16px',
   },
   boxShadow: {
     xsmall: '1px 1px 10px rgba(0, 0, 0, 0)',
