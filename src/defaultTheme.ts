@@ -122,10 +122,10 @@ const defaultTheme: DefaultTheme = {
     xlarge: '16px',
   },
   boxShadow: {
-    xsmall: '1px 1px 10px rgba(0, 0, 0, 0)',
+    xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
     small: '1px 1px 10px rgba(0, 0, 0, 0)',
     standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    large: '1px 1px 10px rgba(0, 0, 0, 0)',
+    large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
     xlarge: '1px 1px 10px rgba(0, 0, 0, 0)',
   },
   colors: {
