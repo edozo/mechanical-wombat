@@ -126,7 +126,7 @@ const defaultTheme: DefaultTheme = {
     small: '1px 1px 10px rgba(0, 0, 0, 0)',
     standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
     large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
-    xlarge: '1px 1px 10px rgba(0, 0, 0, 0)',
+    xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
   },
   colors: {
     ...colors,
