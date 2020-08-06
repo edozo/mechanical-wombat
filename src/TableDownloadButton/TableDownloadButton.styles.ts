@@ -7,8 +7,8 @@ interface Props {
 }
 
 export const TableActionButton = styled.button<Props>`
-  height: 70px;
-  width: 56px;
+  height: 100%;
+  width: 100%;
   color: white;
   ${p =>
     p.variant === 'primary' &&
@@ -31,6 +31,7 @@ export const TableActionButton = styled.button<Props>`
       &:disabled {
         background-color: ${p.theme.colors.gray};
         border: 2px solid ${p.theme.colors.gray};
+        cursor: not-allowed;
       }
     `};
 ` as React.FunctionComponent<Props>;
