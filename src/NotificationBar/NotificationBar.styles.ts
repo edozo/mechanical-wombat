@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 import { NotificationIcon, UpgradeIcon } from '../Icons';
 import { Props } from './NotificationBar';
 
@@ -9,8 +9,8 @@ export const StyledNotificationBar = styled.div<Props>`
   align-items: center;
   justify-content: space-between;
   padding: ${p => `${parseInt(p.theme.spacing.xsmall, 10) - 1}px`} ${p => p.theme.spacing.small};
-  font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.labelSmall};
+  font-size: ${p => p.theme.font.size.text.small};
+  line-height: ${p => p.theme.font.lineHeight.text.small};
   ${p =>
     p.variant === 'info' &&
     css`

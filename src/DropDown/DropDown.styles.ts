@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 export interface StyleProps {
   isOpen?: boolean;
@@ -21,7 +21,8 @@ export const StyledDownshiftPreview = styled.button`
   align-items: center;
   justify-content: space-between;
   padding: ${p => p.theme.spacing.xsmall};
-  font-size: ${p => p.theme.font.size.bodySmall};
+  font-size: ${p => p.theme.font.size.text.base};
+  line-height: ${p => p.theme.font.lineHeight.text.base};
   :focus {
     outline: none;
   }
@@ -73,7 +74,8 @@ export const StyledListItem = styled.li<StyleProps>`
   display: flex;
   align-items: center;
   justify-content: start;
-  font-size: ${p => p.theme.font.size.bodySmall};
+  font-size: ${p => p.theme.font.size.text.base};
+  line-height: ${p => p.theme.font.lineHeight.text.base};
   transition: all 200ms;
   cursor: pointer;
   ${p =>

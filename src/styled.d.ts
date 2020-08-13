@@ -71,24 +71,36 @@ declare module 'styled-components' {
       steelBlueDark: string;
       steelBlueDarker: string;
       system: {
-        yellowLighter: string;
-        yellowLight: string;
-        yellow: string;
-        redLighter: string;
-        redLight: string;
-        red: string;
-        redDark: string;
-        redDarker: string;
+        // Blue
         blueLighter: string;
         blueLight: string;
         blue: string;
         blueDark: string;
         blueDarker: string;
+        // Green
+        greenLighter: string;
+        greenLight: string;
+        green: string;
+        greenDark: string;
+        greenDarker: string;
+        // Yellow
+        yellowLighter: string;
+        yellowLight: string;
+        yellow: string;
+        yellowDark: string;
+        yellowDarker: string;
+        // Red
+        redLighter: string;
+        redLight: string;
+        red: string;
+        redDark: string;
+        redDarker: string;
       };
     };
     font: {
       family: {
         main: string;
+        secondary: string;
       };
       size: {
         h1: string;
@@ -97,10 +109,18 @@ declare module 'styled-components' {
         h4: string;
         h5: string;
         h6: string;
-        body: string;
-        bodySmall: string;
-        label: string;
-        small: string;
+        text: {
+          xlarge: string;
+          large: string;
+          base: string;
+          small: string;
+          xsmall: string;
+          xxsmall: string;
+        };
+        special: {
+          title: string;
+          subTitle: string;
+        };
       };
       lineHeight: {
         h1: string;
@@ -109,11 +129,18 @@ declare module 'styled-components' {
         h4: string;
         h5: string;
         h6: string;
-        body: string;
-        bodySmall: string;
-        label: string;
-        labelSmall: string;
-        small: string;
+        text: {
+          xlarge: string;
+          large: string;
+          base: string;
+          small: string;
+          xsmall: string;
+          xxsmall: string;
+        };
+        special: {
+          title: string;
+          subTitle: string;
+        };
       };
       letterSpacing: {
         h1: string;

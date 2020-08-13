@@ -6,10 +6,14 @@ import {
   StyledH4,
   StyledH5,
   StyledH6,
-  StyledBody,
-  StyledBodySmall,
-  StyledLabel,
-  StyledSmall,
+  StyledTextXLarge,
+  StyledTextLarge,
+  StyledTextBase,
+  StyledTextSmall,
+  StyledTextXSmall,
+  StyledTextXXSmall,
+  StyledTitle,
+  StyledSubTitle,
 } from './Typography.styles';
 
 export const H1: React.FC = props => <StyledH1 {...props}>{props.children}</StyledH1>;
@@ -19,7 +23,12 @@ export const H4: React.FC = props => <StyledH4 {...props}>{props.children}</Styl
 export const H5: React.FC = props => <StyledH5 {...props}>{props.children}</StyledH5>;
 export const H6: React.FC = props => <StyledH6 {...props}>{props.children}</StyledH6>;
 
-export const Body: React.FC = props => <StyledBody {...props}>{props.children}</StyledBody>;
-export const BodySmall: React.FC = props => <StyledBodySmall {...props}>{props.children}</StyledBodySmall>;
-export const Label: React.FC = props => <StyledLabel {...props}>{props.children}</StyledLabel>;
-export const Small: React.FC = props => <StyledSmall {...props}>{props.children}</StyledSmall>;
+export const TextXLarge: React.FC = props => <StyledTextXLarge {...props}>{props.children}</StyledTextXLarge>;
+export const TextLarge: React.FC = props => <StyledTextLarge {...props}>{props.children}</StyledTextLarge>;
+export const TextBase: React.FC = props => <StyledTextBase {...props}>{props.children}</StyledTextBase>;
+export const TextSmall: React.FC = props => <StyledTextSmall {...props}>{props.children}</StyledTextSmall>;
+export const TextXSmall: React.FC = props => <StyledTextXSmall {...props}>{props.children}</StyledTextXSmall>;
+export const TextXXSmall: React.FC = props => <StyledTextXXSmall {...props}>{props.children}</StyledTextXXSmall>;
+
+export const Title: React.FC = props => <StyledTitle {...props}>{props.children}</StyledTitle>;
+export const SubTitle: React.FC = props => <StyledSubTitle {...props}>{props.children}</StyledSubTitle>;
