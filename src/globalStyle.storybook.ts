@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components/macro';
 import { defaultTheme } from './defaultTheme';
 
 const StorybookGlobalStyle = createGlobalStyle`

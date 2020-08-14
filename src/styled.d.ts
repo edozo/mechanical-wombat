@@ -1,4 +1,4 @@
-import 'styled-components';
+import 'styled-components/macro';
 
 declare module 'styled-components' {
   interface SizeHelper {

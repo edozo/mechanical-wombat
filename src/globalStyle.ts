@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components/macro';
 import reboot from 'styled-reboot';
 import { defaultTheme } from './defaultTheme';
 
