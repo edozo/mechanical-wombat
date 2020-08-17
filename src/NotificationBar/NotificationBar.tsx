@@ -3,7 +3,7 @@ import { StyledNotificationBar } from './NotificationBar.styles';
 
 export type Props = {
   children?: React.ReactElement;
-  variant?: 'alert' | 'info';
+  variant?: 'alert' | 'info' | 'warning';
 };
 
 export const NotificationBar: React.FC<Props> = ({ children, variant = 'info', ...props }) => {
