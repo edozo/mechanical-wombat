@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { motion } from 'framer-motion';
 
 export const PriceTotalWrapper = styled(motion.div)`
@@ -17,8 +17,8 @@ export const PriceUpdateIndicator = styled(motion.div)`
   background-color: ${p => p.theme.colors.grayDark};
   color: ${p => p.theme.colors.white};
   padding: ${p => p.theme.spacing.xsmall};
-  font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.small};
+  font-size: ${p => p.theme.font.size.text.small};
+  line-height: ${p => p.theme.font.lineHeight.text.xsmall};
   position: relative;
   :after {
     content: '';
@@ -66,7 +66,7 @@ export const TotalPrice = styled.div<{ isActive: boolean; isPriceHovered: boolea
   background: ${p => p.theme.colors.white};
   color: ${p => (p.isActive ? p.theme.colors.aliases.primary : p.theme.colors.grayDarker)};
   font-family: ${p => p.theme.font.family.main};
-  font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.small};
+  font-size: ${p => p.theme.font.size.text.small};
+  line-height: ${p => p.theme.font.lineHeight.text.xsmall};
   font-weight: ${p => p.theme.font.weight.bold};
 `;

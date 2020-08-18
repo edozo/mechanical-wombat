@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 import { TabWrapperProps } from './Tab';
 
 interface TabStyleProps {
@@ -22,8 +22,8 @@ export const StyledTab = styled.span<TabStyleProps>`
   color: ${p => p.theme.colors.grayDarker};
   padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
   border-radius: ${p => p.theme.borderRadius.large} ${p => p.theme.borderRadius.large} 0 0;
-  font-size: ${p => p.theme.font.size.bodySmall};
-  line-height: ${p => p.theme.font.lineHeight.body};
+  font-size: ${p => p.theme.font.size.text.base};
+  line-height: ${p => p.theme.font.lineHeight.text.base};
   font-weight: ${p => p.theme.font.weight.semibold};
   text-align: center;
   display: flex;

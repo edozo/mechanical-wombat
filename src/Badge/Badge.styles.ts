@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Props } from './Badge';
 
 export const StyledBadge = styled.div<Props>`
@@ -11,7 +11,7 @@ export const StyledBadge = styled.div<Props>`
     p.background && (p.theme.colors.aliases[p.background] || p.theme.colors[p.background] || p.background)};
   color: ${p => p.color && (p.theme.colors.aliases[p.color] || p.theme.colors[p.color] || p.color)};
   font-family: ${p => p.theme.font.family.main};
-  font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.small};
+  font-size: ${p => p.theme.font.size.text.xsmall};
+  line-height: ${p => p.theme.font.lineHeight.text.xsmall};
   font-weight: ${p => p.theme.font.weight.bold};
 `;

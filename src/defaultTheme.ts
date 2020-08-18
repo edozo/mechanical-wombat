@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components/macro';
 
 const colors = {
   // Sky blue
@@ -7,52 +7,64 @@ const colors = {
   skyBlue: '#00B8D7',
   skyBlueDark: '#019FBA',
   skyBlueDarker: '#00859C',
-  // Red
-  redLighter: '#FCE8E8',
-  redLight: '#FFC0C0',
-  red: '#DB0010',
-  // Misc
-  white: '#FFFFFF',
-  black: '#212529',
   // Green
   greenLighter: '#C8EAAF',
   greenLight: '#A0D777',
   green: '#99C875',
   greenDark: '#8AB26B',
   greenDarker: '#75985B',
-  // Gray
-  grayLighter: '#F6F6F6',
-  grayLight: '#F2F2F2',
-  gray: '#D5D7DC',
-  grayDark: '#717171',
-  grayDarker: '#4C4C4C',
   // Steel blue
   steelBlueLighter: '#F7FAFC',
   steelBlueLight: '#F1F5FD',
   steelBlue: '#E5EEFE',
   steelBlueDark: '#ABB8C5',
   steelBlueDarker: '#818E9B',
+  // Misc
+  white: '#FFFFFF',
+  black: '#212529',
+  // Gray
+  grayLighter: '#F6F6F6',
+  grayLight: '#F2F2F2',
+  gray: '#D5D7DC',
+  grayDark: '#717171',
+  grayDarker: '#4C4C4C',
+  // Red - TODO: ask Sylvia if this is still required now that we have the system UI colours
+  redLighter: '#FCE8E8',
+  redLight: '#FFC0C0',
+  red: '#DB0010',
 
   system: {
-    yellowLighter: '#FFF8E2',
-    yellowLight: '#FAEBB8',
-    yellow: '#EFBC11',
-    redLighter: '#FDE5E2',
-    redLight: '#E38C7F',
-    red: '#D65846',
-    redDark: '#B93421',
-    redDarker: '#8C1F10',
+    // Blue
     blueLighter: '#E1E9F5',
     blueLight: '#558FE5',
     blue: '#3865A9',
     blueDark: '#1D4A8E',
     blueDarker: '#072C64',
+    // Green
+    greenLighter: '#E3F8D7',
+    greenLight: '#8ED961',
+    green: '#6AA83A',
+    greenDark: '#4A9013',
+    greenDarker: '#2F6405',
+    // Yellow
+    yellowLighter: '#FFF8E0',
+    yellowLight: '#FED64F',
+    yellow: '#F6C10D',
+    yellowDark: '#E1B212',
+    yellowDarker: '#CC9E00',
+    // Red
+    redLighter: '#FDE5E2',
+    redLight: '#E38C7F',
+    red: '#D65846',
+    redDark: '#B93421',
+    redDarker: '#8C1F10',
   },
 };
 
 const font = {
   family: {
     main: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
+    secondary: 'Poppins, Helvetica Neue, Helvetica, Arial, sans-serif',
   },
   size: {
     h1: '2.5rem',
@@ -61,23 +73,38 @@ const font = {
     h4: '1.25rem',
     h5: '1rem',
     h6: '0.75rem',
-    body: '1.125rem',
-    bodySmall: '1rem',
-    label: '0.875rem',
-    small: '0.75rem',
+    text: {
+      xlarge: '1.25rem',
+      large: '1.125rem',
+      base: '1rem',
+      small: '0.875rem',
+      xsmall: '0.75rem',
+      xxsmall: '0.625rem',
+    },
+    special: {
+      title: '1rem',
+      subTitle: '0.875rem',
+    },
   },
   lineHeight: {
     h1: '3.375rem',
     h2: '2.75rem',
     h3: '2.125rem',
-    h4: '1.75rem',
-    h5: '1.375rem',
+    h4: '1.875rem',
+    h5: '1.5rem',
     h6: '1rem',
-    body: '1.5rem',
-    bodySmall: '1.375rem',
-    label: '1.5rem',
-    labelSmall: '1.25rem',
-    small: '1rem', // TODO: confirm with Silvia
+    text: {
+      xlarge: '1.875rem',
+      large: '1.75rem',
+      base: '1.5rem',
+      small: '1.25rem',
+      xsmall: '1rem',
+      xxsmall: '0.875rem',
+    },
+    special: {
+      title: '1.5rem',
+      subTitle: '1.25rem',
+    },
   },
   letterSpacing: {
     h1: '0.02rem',

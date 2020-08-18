@@ -1,5 +1,5 @@
 // TODO: Finalize this once talked to Silvia about design system
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 export interface StyleProps {
   isActive?: boolean;
@@ -13,8 +13,8 @@ export const StyledToggleGroup = styled.div<StyleProps>`
 `;
 
 export const StyledToggleButton = styled.button<StyleProps>`
-  font-size: ${p => p.theme.font.size.label};
-  line-height: ${p => p.theme.font.lineHeight.label};
+  font-size: ${p => p.theme.font.size.text.small};
+  line-height: ${p => p.theme.font.lineHeight.text.base};
   font-weight: ${p => p.theme.font.weight.semibold};
   background-color: transparent;
   color: ${p => p.theme.colors.white};
