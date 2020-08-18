@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { TabWrapperProps } from './Tab';
 
 interface TabStyleProps {

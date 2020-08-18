@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { Props } from './Badge';
 
 export const StyledBadge = styled.div<Props>`

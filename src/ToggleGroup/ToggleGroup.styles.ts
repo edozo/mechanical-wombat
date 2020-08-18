@@ -1,5 +1,5 @@
 // TODO: Finalize this once talked to Silvia about design system
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 
 export interface StyleProps {
   isActive?: boolean;
