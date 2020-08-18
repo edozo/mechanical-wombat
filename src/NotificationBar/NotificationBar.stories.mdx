@@ -11,7 +11,7 @@ import { StyledNotificationIcon, StyledUpgradeIcon } from './NotificationBar.sty
 
 A notification bar component to display notification to the user on the page
 
-### Default
+### Info
 
 <Preview>
   <Story name="info">
@@ -31,6 +31,8 @@ A notification bar component to display notification to the user on the page
   </Story>
 </Preview>
 
+### Alert
+
 <Preview>
   <Story name="alert">
     <NotificationBar variant='alert'>
@@ -49,10 +51,22 @@ A notification bar component to display notification to the user on the page
   </Story>
 </Preview>
 
+### Default
+
 <Preview>
   <Story name="default">
     <NotificationBar>
       You are currently using an outdated browser, this may cause issues using our site. Upgrade to a modern browser for a better experience
+    </NotificationBar>
+  </Story>
+</Preview>
+
+### Warning
+
+<Preview>
+  <Story name="warning">
+    <NotificationBar variant="warning">
+      A simple warning message
     </NotificationBar>
   </Story>
 </Preview>
