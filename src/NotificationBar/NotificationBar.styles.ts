@@ -28,9 +28,9 @@ export const StyledNotificationBar = styled.div<Props>`
   ${p =>
     p.variant === 'warning' &&
     css`
-      border-color: ${p.theme.colors.system.yellow};
+      border-color: ${p.theme.colors.system.yellowDarker};
       background: ${p.theme.colors.system.yellowLighter};
-      color: ${p.theme.colors.system.yellow};
+      color: ${p.theme.colors.system.yellowDarker};
     `}
 `;
 
