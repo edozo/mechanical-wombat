@@ -1,5 +1,5 @@
 // TODO: Finalize this once talked to Silvia about design system
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { Props } from './Button';
 
 export const StyledButton = styled.button<Props>`

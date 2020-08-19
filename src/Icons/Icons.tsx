@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import trashUrl, { ReactComponent as TrashCan } from './icons/trash-can.svg';
 import zoomOutUrl, { ReactComponent as ZoomOut } from './icons/zoom-out.svg';
 import zoomInUrl, { ReactComponent as ZoomIn } from './icons/zoom-in.svg';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider, DefaultTheme } from 'styled-components/macro';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
 import { defaultTheme } from './defaultTheme';
 
 const ComponentLibThemeProvider = (props: any): JSX.Element => {
