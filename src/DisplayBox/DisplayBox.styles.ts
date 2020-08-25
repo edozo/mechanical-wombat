@@ -41,6 +41,8 @@ export const DisplayBoxSubTitle = styled.p`
   margin-bottom: 0;
   text-transform: uppercase;
   color: ${p => p.theme.colors.grayDark};
+  overflow-wrap: break-word;
+  hyphens: auto;
 `;
 export const DisplayBoxBody = styled.p`
   font-size: 12px;

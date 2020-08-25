@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { NotificationIcon, UpgradeIcon } from '../Icons';
+import { WarningIcon, UpgradeIcon } from '../Icons';
 import { Props } from './NotificationBar';
 
 export const StyledNotificationBar = styled.div<Props>`
@@ -34,7 +34,7 @@ export const StyledNotificationBar = styled.div<Props>`
     `}
 `;
 
-export const StyledNotificationIcon = styled(NotificationIcon)`
+export const StyledWarningIcon = styled(WarningIcon)`
   margin: 0 ${p => p.theme.spacing.small};
   fill: ${p => p.theme.colors.system.red};
 `;

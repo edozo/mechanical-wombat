@@ -4,7 +4,7 @@ import { StyledBadge } from './Badge.styles';
 export interface Props {
   background?: string;
   color?: string;
-  size?: 'standard'; // TODO: fill this out more one design system has caught-up
+  size?: 'standard'; // TODO: fill this out more once design system has caught-up
 }
 
 export const Badge: React.FC<Props> = ({
