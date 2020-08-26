@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { NotificationBar } from '../NotificationBar';
-import { StyledNotificationIcon, StyledUpgradeIcon } from './NotificationBar.styles';
+import { StyledWarningIcon, StyledUpgradeIcon } from './NotificationBar.styles';
 
 
 <Meta title="Components|Notification Bar" />
@@ -17,7 +17,7 @@ A notification bar component to display notification to the user on the page
   <Story name="info">
     <NotificationBar variant='info'>
       <div style={{display: 'flex', alignItems: 'center'}}>
-        <StyledNotificationIcon />
+        <StyledWarningIcon />
         <span>
           You are currently using an outdated browser, this may cause issues using our site. Upgrade to a modern browser
           for a better experience
@@ -37,7 +37,7 @@ A notification bar component to display notification to the user on the page
   <Story name="alert">
     <NotificationBar variant='alert'>
       <div style={{display: 'flex', alignItems: 'center'}}>
-        <StyledNotificationIcon />
+        <StyledWarningIcon />
         <span>
           You are currently using an outdated browser, this may cause issues using our site. Upgrade to a modern browser
           for a better experience
