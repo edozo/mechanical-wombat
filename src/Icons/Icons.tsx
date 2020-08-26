@@ -19,7 +19,6 @@ import arrowUpUrl, { ReactComponent as ArrowUp } from './icons/arrow-up.svg';
 import checkUrl, { ReactComponent as Check } from './icons/check.svg';
 import infoUrl, { ReactComponent as Info } from './icons/info.svg';
 import binUrl, { ReactComponent as Bin } from './icons/bin.svg';
-
 import autoPolygonUrl, { ReactComponent as AutoPolygon } from './icons/auto-polygon-tool.svg';
 import drawPolygonUrl, { ReactComponent as DrawPolygon } from './icons/draw-polygon-tool.svg';
 import rectangleUrl, { ReactComponent as Rectangle } from './icons/rectangle.svg';
@@ -39,6 +38,17 @@ import lockClosedUrl, { ReactComponent as LockClosed } from './icons/lock-closed
 import deleteUrl, { ReactComponent as Delete } from './icons/delete.svg';
 import drawingLibraryUrl, { ReactComponent as DrawingLibrary } from './icons/drawing-library.svg';
 import dashedRectangleUrl, { ReactComponent as DashedRectangle } from './icons/dashed-rectangle.svg';
+import boldUrl, { ReactComponent as Bold } from './icons/bold.svg';
+import italicUrl, { ReactComponent as Italic } from './icons/italic.svg';
+import hatchCDUrl, { ReactComponent as HatchCD } from './icons/hatch-cd.svg';
+import hatchCUUrl, { ReactComponent as HatchCU } from './icons/hatch-cu.svg';
+import hatchLAUrl, { ReactComponent as HatchLA } from './icons/hatch-la.svg';
+import hatchLMinusUrl, { ReactComponent as HatchLMinus } from './icons/hatch-lminus.svg';
+import hatchLPlusUrl, { ReactComponent as HatchLPlus } from './icons/hatch-lplus.svg';
+import hatchLUUrl, { ReactComponent as HatchLU } from './icons/hatch-lu.svg';
+import searchUrl, { ReactComponent as Search } from './icons/search.svg';
+import stackUrl, { ReactComponent as Stack } from './icons/stack.svg';
+import centerMapUrl, { ReactComponent as CenterMap } from './icons/center-map.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -56,135 +66,134 @@ export const IconWrapper = styled.div<Props>`
 `;
 
 // TODO: Can we iterate this? possibly from the file system?
-
 // Drawing
-const AutoPolygonIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AutoPolygon fill={fill} {...props} />
   </IconWrapper>
 );
 export { AutoPolygonIcon, autoPolygonUrl };
 
-const DrawPolygonIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DrawPolygon fill={fill} {...props} />
   </IconWrapper>
 );
 export { DrawPolygonIcon, drawPolygonUrl };
 
-const RectangleIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const RectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Rectangle fill={fill} {...props} />
   </IconWrapper>
 );
 export { RectangleIcon, rectangleUrl };
 
-const CircleIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const CircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Circle fill={fill} {...props} />
   </IconWrapper>
 );
 export { CircleIcon, circleUrl };
 
-const ArrowToolIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ArrowToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowTool fill={fill} {...props} />
   </IconWrapper>
 );
 export { ArrowToolIcon, arrowToolUrl };
 
-const LineToolIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const LineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LineTool fill={fill} {...props} />
   </IconWrapper>
 );
 export { LineToolIcon, lineToolUrl };
 
-const MeasureToolIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const MeasureToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <MeasureTool fill={fill} {...props} />
   </IconWrapper>
 );
 export { MeasureToolIcon, measureToolUrl };
 
-const EditToolIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const EditToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <EditTool fill={fill} {...props} />
   </IconWrapper>
 );
 export { EditToolIcon, editToolUrl };
 
-const ModifyToolIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ModifyToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ModifyTool fill={fill} {...props} />
   </IconWrapper>
 );
 export { ModifyToolIcon, modifyToolUrl };
 
-const TextIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const TextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Text fill={fill} {...props} />
   </IconWrapper>
 );
 export { TextIcon, textUrl };
 
-const DeleteAllIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DeleteAllIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DeleteAll fill={fill} {...props} />
   </IconWrapper>
 );
 export { DeleteAllIcon, deleteAllUrl };
 
-const SeparateIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const SeparateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Separate fill={fill} {...props} />
   </IconWrapper>
 );
 export { SeparateIcon, separateUrl };
 
-const DuplicateIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DuplicateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Duplicate fill={fill} {...props} />
   </IconWrapper>
 );
 export { DuplicateIcon, duplicateUrl };
 
-const MergeIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const MergeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Merge fill={fill} {...props} />
   </IconWrapper>
 );
 export { MergeIcon, mergeUrl };
 
-const LockOpenIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const LockOpenIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LockOpen fill={fill} {...props} />
   </IconWrapper>
 );
 export { LockOpenIcon, lockOpenUrl };
 
-const LockClosedIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const LockClosedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LockClosed fill={fill} {...props} />
   </IconWrapper>
 );
 export { LockClosedIcon, lockClosedUrl };
 
-const DeleteIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DeleteIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Delete fill={fill} {...props} />
   </IconWrapper>
 );
 export { DeleteIcon, deleteUrl };
 
-const DrawingLibraryIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DrawingLibraryIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DrawingLibrary fill={fill} {...props} />
   </IconWrapper>
 );
 export { DrawingLibraryIcon, drawingLibraryUrl };
 
-const DashedRectangleIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DashedRectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedRectangle fill={fill} {...props} />
   </IconWrapper>
@@ -192,35 +201,35 @@ const DashedRectangleIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_IC
 export { DashedRectangleIcon, dashedRectangleUrl };
 
 // Outlined
-const SaveIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const SaveIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Save fill={fill} {...props} />
   </IconWrapper>
 );
 export { SaveIcon, saveUrl };
 
-const ZoomIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ZoomIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Zoom fill={fill} {...props} />
   </IconWrapper>
 );
 export { ZoomIcon, zoomUrl };
 
-const ZoomInIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ZoomInIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ZoomIn fill={fill} {...props} />
   </IconWrapper>
 );
 export { ZoomInIcon, zoomInUrl };
 
-const ZoomOutIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ZoomOutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ZoomOut fill={fill} {...props} />
   </IconWrapper>
 );
 export { ZoomOutIcon, zoomOutUrl };
 
-const ReloadIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ReloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Reload fill={fill} {...props} />
   </IconWrapper>
@@ -228,100 +237,177 @@ const ReloadIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR,
 export { ReloadIcon, reloadUrl };
 
 // Solid
-const EditIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Edit fill={fill} {...props} />
   </IconWrapper>
 );
 export { EditIcon, editUrl };
 
-const DownloadIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const DownloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Download fill={fill} {...props} />
   </IconWrapper>
 );
 export { DownloadIcon, downloadUrl };
 
-const PlusIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const PlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Plus fill={fill} {...props} />
   </IconWrapper>
 );
 export { PlusIcon, plusUrl };
 
-const CloseIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const CloseIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Close fill={fill} {...props} />
   </IconWrapper>
 );
 export { CloseIcon, closeUrl };
 
-const MinusIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const MinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Minus fill={fill} {...props} />
   </IconWrapper>
 );
 export { MinusIcon, minusUrl };
 
-const ArrowDownIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ArrowDownIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowDown fill={fill} {...props} />
   </IconWrapper>
 );
 export { ArrowDownIcon, arrowDownUrl };
 
-const ArrowUpIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const ArrowUpIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowUp fill={fill} {...props} />
   </IconWrapper>
 );
 export { ArrowUpIcon, arrowUpUrl };
 
-const QuestionIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const QuestionIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Question fill={fill} {...props} />
   </IconWrapper>
 );
 export { QuestionIcon, questionUrl };
 
-const WarningIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const WarningIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Warning fill={fill} {...props} />
   </IconWrapper>
 );
 export { WarningIcon, warningUrl };
 
-const RefreshIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const RefreshIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Refresh fill={fill} {...props} />
   </IconWrapper>
 );
 export { RefreshIcon, refreshUrl };
 
-const UpgradeIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const UpgradeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Upgrade fill={fill} {...props} />
   </IconWrapper>
 );
 export { UpgradeIcon, upgradeUrl };
 
-const CheckIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const CheckIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Check fill={fill} {...props} />
   </IconWrapper>
 );
 export { CheckIcon, checkUrl };
 
-const InfoIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const InfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Info fill={fill} {...props} />
   </IconWrapper>
 );
 export { InfoIcon, infoUrl };
 
-const BinIcon: React.FC<Props> = ({ size = 'base', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const BinIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Bin fill={fill} {...props} />
   </IconWrapper>
 );
 export { BinIcon, binUrl };
+
+const BoldIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Bold fill={fill} {...props} />
+  </IconWrapper>
+);
+export { BoldIcon, boldUrl };
+
+const ItalicIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Italic fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ItalicIcon, italicUrl };
+
+const HatchCDIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchCD fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchCDIcon, hatchCDUrl };
+
+const HatchCUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchCU fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchCUIcon, hatchCUUrl };
+
+const HatchLAIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchLA fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchLAIcon, hatchLAUrl };
+
+const HatchLMinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchLMinus fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchLMinusIcon, hatchLMinusUrl };
+
+const HatchLPlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchLPlus fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchLPlusIcon, hatchLPlusUrl };
+
+const HatchLUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HatchLU fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HatchLUIcon, hatchLUUrl };
+
+const SearchIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Search fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SearchIcon, searchUrl };
+
+const StackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Stack fill={fill} {...props} />
+  </IconWrapper>
+);
+export { StackIcon, stackUrl };
+
+const CenterMapIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <CenterMap fill={fill} {...props} />
+  </IconWrapper>
+);
+export { CenterMapIcon, centerMapUrl };
