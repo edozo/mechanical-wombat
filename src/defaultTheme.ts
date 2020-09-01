@@ -138,8 +138,8 @@ const defaultTheme: DefaultTheme = {
     small: '16px',
     base: '20px',
     large: '24px',
-    xlarge: '48px',
-    xxlarge: '64px',
+    xlarge: '32px',
+    xxlarge: '48px',
   },
   borderRadius: {
     xsmall: '1px',
