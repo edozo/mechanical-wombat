@@ -35,7 +35,7 @@
     "framer-motion": "^1.10.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "styled-components": "^4.0.0",
+    "styled-components": "^5.0.0",
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     "@types/jest": "^24.0.23",
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
-    "@types/styled-components": "^4.4.0",
+    "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-core": "^6.26.3",
@@ -83,7 +83,7 @@
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^3.0.1",
     "storybook-addon-styled-component-theme": "~1.2.5",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.1.1",
     "styled-reboot": "^4.0.3",
     "stylelint": "^12.0.0",
     "stylelint-config-recommended": "^3.0.0",
