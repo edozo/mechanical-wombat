@@ -1,14 +1,9 @@
 import React from 'react';
-import Tippy from '@tippyjs/react';
+import Tippy, { TippyProps } from '@tippyjs/react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'tippy.js/dist/tippy.css';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'tippy.js/animations/shift-away.css';
-
-type TooltipProps = {
-  children: React.ReactNode;
-  content: React.ReactNode;
-};
 
 Tippy.defaultProps = {
   animation: 'shift-away',
@@ -17,7 +12,7 @@ Tippy.defaultProps = {
   placement: 'bottom',
 };
 
-export const Tooltip: React.FC<TooltipProps> = ({ content, children, ...rest }) => (
+export const Tooltip: React.FC<TippyProps> = ({ content, children, ...rest }) => (
   <Tippy content={content} {...rest}>
     {children}
   </Tippy>

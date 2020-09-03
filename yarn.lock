@@ -1268,10 +1268,10 @@
     style-value-types "^3.1.7"
     tslib "^1.10.0"
 
-"@popperjs/core@^2.2.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.2.1.tgz#d7d1d7fbdc1f2aa24e62f4ef4b001be7727340c5"
-  integrity sha512-BChdj3idQiLi+7vPhE6gEDiPzpozvSrUqbSMoSTlRbOQkU0p6u4si0UBydegTyphsYSZC2AUHGYYICP0gqmEVg==
+"@popperjs/core@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
+  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
 
 "@reach/router@^1.2.1":
   version "1.2.1"
@@ -1802,13 +1802,12 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@tippyjs/react@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.0.0.tgz#844ebd00fd5a8d5b5660bdf87b66b1361d6548a2"
-  integrity sha512-eve/bDljsOE4+tTtzxWr92Lhf/oQLPGSCI7r/LvtrCYv1yVsWs/9NJRd3MlIvhwkq67uZWP7FLrsC6fUVbPAlQ==
+"@tippyjs/react@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.1.0.tgz#be4e826ac198d2394a5ffed3508ca9c098c527f1"
+  integrity sha512-g6Dpm46edr9T9z+BYxd/eJZa6QMFc4T4z5xrztxVlkti7AhNYf7OaE6b3Nh+boUZZ9wn8xkNq9VrQM5K4huwnQ==
   dependencies:
-    prop-types "^15.6.2"
-    tippy.js "^6.1.1"
+    tippy.js "^6.2.0"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -15223,12 +15222,12 @@ tinycolor2@^1.4.1:
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
   integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
 
-tippy.js@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.1.1.tgz#9ed09aa4f9c47fb06a0e280e03055f898f5ddfff"
-  integrity sha512-Sk+FPihack9XFbPOc2jRbn6iRLA9my2a8qhaGY6wwD3EeW57/xY5PAPkZOutKVYDWLyNZ/laCkJqg7QJG/gqQw==
+tippy.js@^6.2.0:
+  version "6.2.6"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.2.6.tgz#4991bbe8f75e741fb92b5ccfeebcd072d71f8345"
+  integrity sha512-0tTL3WQNT0nWmpslhDryRahoBm6PT9fh1xXyDfOsvZpDzq52by2rF2nvsW0WX2j9nUZP/jSGDqfKJGjCtoGFKg==
   dependencies:
-    "@popperjs/core" "^2.2.0"
+    "@popperjs/core" "^2.4.4"
 
 tmp@^0.0.33:
   version "0.0.33"
