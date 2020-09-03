@@ -6,8 +6,8 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/shift-away.css';
 
 type TooltipProps = {
-  children: React.ReactElement;
-  content: React.ReactElement;
+  children: React.ReactNode;
+  content: React.ReactNode;
 };
 
 Tippy.defaultProps = {

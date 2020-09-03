@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledNotificationBar } from './NotificationBar.styles';
 
 export type Props = {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
   variant?: 'alert' | 'info' | 'warning';
 };
 
