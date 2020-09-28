@@ -14,43 +14,72 @@ This is my button. There are many others like it, but this one is mine. My butto
 
 <Preview>
   <Story name="Default">
-    <Button>
-      This is my button
-    </Button>
+    <Button>This is my button</Button>
   </Story>
 </Preview>
+
+## Sizes
+
+This displayes each of the different sizes available.
+
+<Story name="Sizes">
+  <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}> 
+    <Button size="xsmall">xsmall</Button>
+    <Button size="small">small</Button>
+    <Button size="base">base</Button>
+    <Button size="large">large</Button>
+    <Button size="large">xlarge</Button>
+  </div>
+</Story>
+
+## Variants
+
+This displayes each of the different colours available.
+
+<Story name="Variants">
+  <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}> 
+    <Button variant="primary">primary</Button>
+    <Button variant="secondary">secondary</Button>
+    <Button variant="tertiary">tertiary</Button>
+  </div>
+</Story>
+
+## Disabled
+
+This displayes each of the different colours available when disabled.
+
+<Story name="Disabled">
+  <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}> 
+    <Button variant ="primary" disabled>primary</Button>
+    <Button variant ="secondary" disabled>secondary</Button>
+    <Button variant ="tertiary" disabled>tertiary</Button>
+  </div>
+</Story>
 
 ## Playground
 
 Click on the 'Knobs' link in the menu and choose the 'Canvas' and 'Knobs' tab to change the appearance of this component and to see all it's different combinations.
 
 <Story name="Knobs" parameters={{ decorators: [withKnobs] }}>
-  <Button  disabled={boolean('Disabled', false)} variant={select(
-      'Variant',
-      {
-        Standard: 'standard',
-        Outline: 'outline',
-        Ghost: 'ghost',
-      },
-      'outline',
-    )} borderRadius={select(
-      'Radius',
+  <Button  disabled={boolean('Disabled', false)} size={select(
+      'Size',
       {
         'Extra Small': 'xsmall',
         Small: 'small',
-        Standard: 'standard',
+        Base: 'base',
         Large: 'large',
         'Extra Large': 'xlarge',
       },
-      'large',
-    )} color={select(
-      'Colour',
+      'small',
+    )} variant={select(
+      'Variant',
       {
         Primary: 'primary',
         Secondary: 'secondary',
+        Tertiary: 'tertiary',
       },
       'secondary',
-    )}>{text('label', 'Knobs')}</Button>
+    )}>{text('text', 'Try changing my settings in the control panel')}</Button>
 </Story>
 
 # Props

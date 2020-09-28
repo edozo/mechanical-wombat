@@ -32,12 +32,16 @@ declare module 'styled-components' {
     boxShadow: SizeHelper;
     colors: {
       aliases: {
+        primaryLighter: string;
         primaryLight: string;
         primary: string;
         primaryDark: string;
+        primaryDarker: string;
+        secondaryLighter: string;
         secondaryLight: string;
         secondary: string;
         secondaryDark: string;
+        secondaryDarker: string;
       };
       // Sky blue
       skyBlueLighter: string;

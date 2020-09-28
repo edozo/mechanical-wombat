@@ -49,8 +49,8 @@ import hatchLUUrl, { ReactComponent as HatchLU } from './icons/hatch-lu.svg';
 import searchUrl, { ReactComponent as Search } from './icons/search.svg';
 import stackUrl, { ReactComponent as Stack } from './icons/stack.svg';
 import centerMapUrl, { ReactComponent as CenterMap } from './icons/center-map.svg';
-import hMarkUrl, { ReactComponent as HMark } from './icons/H-mark.svg';
-import tMarkUrl, { ReactComponent as TMark } from './icons/T-mark.svg';
+import hMarkUrl, { ReactComponent as HMark } from './icons/h-mark.svg';
+import tMarkUrl, { ReactComponent as TMark } from './icons/t-mark.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 

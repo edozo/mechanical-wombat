@@ -158,12 +158,16 @@ const defaultTheme: DefaultTheme = {
   colors: {
     ...colors,
     aliases: {
-      primary: colors.skyBlue,
+      primaryLighter: colors.skyBlueLighter,
       primaryLight: colors.skyBlueLight,
+      primary: colors.skyBlue,
       primaryDark: colors.skyBlueDark,
-      secondary: colors.green,
+      primaryDarker: colors.skyBlueDarker,
+      secondaryLighter: colors.greenLighter,
       secondaryLight: colors.greenLight,
+      secondary: colors.green,
       secondaryDark: colors.greenDark,
+      secondaryDarker: colors.greenDarker,
     },
   },
   font,

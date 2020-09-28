@@ -2,11 +2,13 @@ import * as React from 'react';
 import { StyledButton } from './Button.styles';
 
 export interface Props {
-  color?: 'primary' | 'secondary';
-  variant?: 'standard' | 'outline' | 'ghost';
-  size?: 'small' | 'standard' | 'large';
-  borderRadius?: 'small' | 'standard' | 'large';
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  size?: 'xsmall' | 'small' | 'base' | 'large' | 'xlarge';
   disabled?: boolean;
 }
 
-export const Button: React.FC<Props> = props => <StyledButton {...props}>{props.children}</StyledButton>;
+export const Button: React.FC<Props> = ({ variant = 'primary', size = 'base', disabled, children, ...rest }) => (
+  <StyledButton variant={variant} size={size} disabled={disabled} {...rest}>
+    {children}
+  </StyledButton>
+);
