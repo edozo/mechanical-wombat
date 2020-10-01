@@ -39,11 +39,9 @@
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-backgrounds": "^5.2.8",
-    "@storybook/addon-docs": "^5.2.8",
-    "@storybook/addon-knobs": "^5.2.8",
-    "@storybook/addon-viewport": "^5.2.8",
-    "@storybook/react": "^5.2.8",
+    "@storybook/addon-essentials": "^6.0.22",
+    "@storybook/addon-knobs": "^6.0.22",
+    "@storybook/react": "^6.0.22",
     "@svgr/rollup": "^4.3.3",
     "@tippyjs/react": "^4.1.0",
     "@types/jest": "^24.0.23",
@@ -82,7 +80,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^3.0.1",
-    "storybook-addon-styled-component-theme": "~1.2.5",
+    "storybook-addon-styled-component-theme": "~1.3.0",
     "styled-components": "^5.1.1",
     "styled-reboot": "^4.0.3",
     "stylelint": "^12.0.0",

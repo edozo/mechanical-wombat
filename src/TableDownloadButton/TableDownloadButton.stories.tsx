@@ -2,7 +2,7 @@ import * as React from 'react';
 import { TableDownloadButton } from './TableDownloadButton';
 
 export default {
-  title: 'TableDownloadButton',
+  title: 'Components/TableDownloadButton',
   component: TableDownloadButton,
 };
 
