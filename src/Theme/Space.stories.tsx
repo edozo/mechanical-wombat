@@ -1,9 +1,14 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
-import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles.ts';
+import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles.ts';
 
-export const spaces = [
+export default {
+  title: 'Theme/Space',
+  // component: DropDown,
+} as Meta;
+
+const spaces = [
   { size: '4px', name: 'xxsmall' },
   { size: '8px', name: 'xsmall' },
   { size: '16px', name: 'small' },
@@ -13,13 +18,7 @@ export const spaces = [
   { size: '64px', name: 'xxlarge' },
 ];
 
-<Meta title="Theme/Space" />
-
-# Spacing
-
-This is the spacing that will be used throught all edozo apps (customer facing). The design files can be found [here](https://www.figma.com/file/OpCqZzeuBbb8NBshcsBRpc/Edozo-maps-DS?node-id=155%3A1235).
-
-<Story name="Default">
+export const Space: Story = () => (
   <DisplayBoxWrapper>
     {spaces.map(space => (
       <DisplayBox size={space.size} borderRadius="xsmall">
@@ -28,4 +27,4 @@ This is the spacing that will be used throught all edozo apps (customer facing).
       </DisplayBox>
     ))}
   </DisplayBoxWrapper>
-</Story>
+);

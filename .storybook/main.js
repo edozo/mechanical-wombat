@@ -3,8 +3,6 @@ module.exports = {
   addons: [{
               name: '@storybook/addon-essentials',
               options: {
-                actions: false,
-                controls: false,
                 toolbars: false,
               }
           }, 

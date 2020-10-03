@@ -2,7 +2,23 @@
 import React, { useState } from 'react';
 import { Switch } from './Switch';
 
-export const SwitchWrapper = ({ defaultToggleValue, size, disabled, id, onText, offText }) => {
+export interface SwitchWrapperProps {
+  defaultToggleValue: boolean;
+  size: string;
+  disabled: boolean;
+  id: string;
+  onText: string;
+  offText: string;
+}
+
+export const SwitchWrapper: React.FC<SwitchWrapperProps> = ({
+  defaultToggleValue,
+  size = 'default',
+  disabled,
+  id,
+  onText,
+  offText,
+}) => {
   const [isChecked, setIsChecked] = useState(defaultToggleValue || false);
   return (
     <Switch

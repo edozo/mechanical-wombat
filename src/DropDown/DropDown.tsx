@@ -21,13 +21,14 @@ export interface Props {
   items: Item[];
   onChange: () => void;
   selectedItem?: Item;
+  initialSelectedItem?: Item;
 }
 
 const itemToString = (item: Item): string => (item ? item.value : '');
 
 export const DropDown = (props: Props): JSX.Element => (
   <div>
-    <Downshift {...props} selectedItem={props.selectedItem} itemToString={itemToString}>
+    <Downshift {...props} itemToString={itemToString}>
       {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
         <StyledDownshiftWrapper {...getRootProps()}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>

@@ -1,8 +1,8 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
 import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles.ts';
-import { 
+import {
   ZoomIcon,
   ZoomInIcon,
   ZoomOutIcon,
@@ -53,10 +53,15 @@ import {
   StackIcon,
   CenterMapIcon,
   HMarkIcon,
-  TMarkIcon
-} from '../Icons';
+  TMarkIcon,
+} from '.';
 
-export const solidIcons = [
+export default {
+  title: 'Components/Icons',
+  component: DisplayBoxWrapper,
+} as Meta;
+
+const solidIcons = [
   { name: 'Edit', component: <EditIcon /> },
   { name: 'Download', component: <DownloadIcon /> },
   { name: 'Plus', component: <PlusIcon /> },
@@ -78,7 +83,7 @@ export const solidIcons = [
   { name: 'T Mark', component: <TMarkIcon /> },
 ];
 
-export const outlinedIcons = [
+const outlinedIcons = [
   { name: 'Save', component: <SaveIcon /> },
   { name: 'Zoom', component: <ZoomIcon /> },
   { name: 'Zoom Out', component: <ZoomOutIcon /> },
@@ -113,36 +118,24 @@ export const outlinedIcons = [
   { name: 'Center Map', component: <CenterMapIcon /> },
 ];
 
-<Meta title="Components/Icons" />
-
-# Icons
-
-## Description
-
-Icons can be used as a react component using the standard naming convetions (`<ZoomIn />` for example), or as a base64 string to be used in a HTML `img` tag (`<img src={zoomInUrl} />`)
-
-### Solid
-
-<Story name="Solid">
+export const Solid: Story = () => (
   <DisplayBoxWrapper>
     {solidIcons.map(icon => (
-      <div style={{padding: '8px', textAlign: 'center'}}>
+      <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
-        <DisplayBoxSubTitle style={{width: '60px'}}>{icon.name}</DisplayBoxSubTitle>
+        <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>
       </div>
     ))}
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Outlined
-
-<Story name="Outlined">
+export const Outline: Story = () => (
   <DisplayBoxWrapper>
     {outlinedIcons.map(icon => (
-      <div style={{padding: '8px', textAlign: 'center'}}>
+      <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
-        <DisplayBoxSubTitle style={{width: '60px'}}>{icon.name}</DisplayBoxSubTitle>
+        <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>
       </div>
     ))}
   </DisplayBoxWrapper>
-</Story>
+);

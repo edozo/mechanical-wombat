@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export interface StyleProps {
-  readonly background?: string;
-  readonly size?: string;
-  readonly borderRadius?: string;
+  background?: string;
+  size?: string;
+  borderRadius?: string;
   children?: React.ReactNode;
 }
 

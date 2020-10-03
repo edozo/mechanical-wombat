@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 interface Props {
   readonly variant: string;
   disabled?: boolean;
-  children?: React.ReactNode;
 }
 
 export const TableActionButton = styled.button<Props>`
