@@ -1,10 +1,8 @@
 import React from 'react';
 import { StyledListItem, StyleProps } from './ListItem.styles';
 
-export const ListItem: React.FC<StyleProps> = props => {
-  const { disabled, children, onClick, ...rest } = props;
-
-  return props.disabled ? (
+export const ListItem: React.FC<StyleProps> = ({ disabled, children, onClick, ...rest }) =>
+  disabled ? (
     <StyledListItem disabled={disabled} {...rest}>
       {children}
     </StyledListItem>
@@ -13,4 +11,3 @@ export const ListItem: React.FC<StyleProps> = props => {
       {children}
     </StyledListItem>
   );
-};
