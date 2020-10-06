@@ -9,7 +9,7 @@ export default {
   subcomponents: { PopoverContent },
 } as Meta;
 
-// needs to be improve
+// TODO: needs to be improve
 export const Default: Story<PopoverProps> = () => (
   <Popover isOpen setIsOpen={() => 'test'}>
     <PopoverContent radius="small">

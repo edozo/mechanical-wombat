@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 
 export interface StyleProps {
   isActive?: boolean;
-  disabled?: boolean;
 }
 
 export const StyledToggleGroup = styled.div<StyleProps>`
