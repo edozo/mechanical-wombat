@@ -13,7 +13,7 @@ const Template: Story = args => <PopoverContent {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
-  borderRadius: 'small',
+  radius: 'small',
   children: <div style={{ padding: '8px' }}>This is my popoverContent</div>,
 };
 

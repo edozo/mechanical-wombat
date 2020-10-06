@@ -12,7 +12,7 @@ const spaces = [
   { size: '8px', name: 'xsmall' },
   { size: '16px', name: 'small' },
   { size: '24px', name: 'base' },
-  { size: '32px', name: 'largel' },
+  { size: '32px', name: 'large' },
   { size: '48px', name: 'xlarge' },
   { size: '64px', name: 'xxlarge' },
 ];
