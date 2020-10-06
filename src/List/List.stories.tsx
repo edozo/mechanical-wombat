@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { List } from './List';
 import { ListItem } from './ListItem';

@@ -5,7 +5,6 @@ import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.st
 
 export default {
   title: 'Theme/Space',
-  // component: DropDown,
 } as Meta;
 
 const spaces = [

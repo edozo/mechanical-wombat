@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
-import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles.ts';
+import { DisplayBoxWrapper } from '../DisplayBox';
+import { DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles.ts';
 import {
   ZoomIcon,
   ZoomInIcon,

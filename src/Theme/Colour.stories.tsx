@@ -5,7 +5,6 @@ import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayB
 
 export default {
   title: 'Theme/Colours',
-  // component: Button,
 } as Meta;
 
 export const Primary: Story = () => (
