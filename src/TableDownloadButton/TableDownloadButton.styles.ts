@@ -1,12 +1,7 @@
 import styled, { css } from 'styled-components';
+import { TableDownloadButtonProps } from './TableDownloadButton';
 
-interface Props {
-  readonly variant: string;
-  disabled?: boolean;
-  children?: React.ReactNode;
-}
-
-export const TableActionButton = styled.button<Props>`
+export const TableActionButton = styled.button<TableDownloadButtonProps>`
   height: 100%;
   width: 100%;
   color: white;
@@ -34,4 +29,4 @@ export const TableActionButton = styled.button<Props>`
         cursor: not-allowed;
       }
     `};
-` as React.FunctionComponent<Props>;
+` as React.FunctionComponent<TableDownloadButtonProps>;

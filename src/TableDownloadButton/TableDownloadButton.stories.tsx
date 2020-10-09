@@ -1,19 +1,19 @@
 import * as React from 'react';
-import { TableDownloadButton } from './TableDownloadButton';
+import { Story, Meta } from '@storybook/react';
+import { TableDownloadButton, TableDownloadButtonProps } from './TableDownloadButton';
 
 export default {
-  title: 'TableDownloadButton',
+  title: 'Components/TableDownloadButton',
   component: TableDownloadButton,
+} as Meta;
+
+const Template: Story<TableDownloadButtonProps> = args => (
+  <TableDownloadButton {...args}>
+    <p>Icon</p>
+  </TableDownloadButton>
+);
+
+export const Controlled = Template.bind({});
+Controlled.args = {
+  variant: 'primary',
 };
-
-export const primaryVariant = (): JSX.Element => (
-  <TableDownloadButton variant="primary">
-    <p>Icon</p>
-  </TableDownloadButton>
-);
-
-export const primaryVariantDisabled = (): JSX.Element => (
-  <TableDownloadButton variant="primary" disabled>
-    <p>Icon</p>
-  </TableDownloadButton>
-);

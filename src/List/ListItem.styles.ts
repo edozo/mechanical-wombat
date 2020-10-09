@@ -31,7 +31,7 @@ export const StyledListItem = styled.div<StyleProps>`
     p.disabled &&
     css`
       opacity: 0.5;
-      cursor: default;
+      cursor: not-allowed;
       &:hover {
         background-color: transparent;
         outline: none;

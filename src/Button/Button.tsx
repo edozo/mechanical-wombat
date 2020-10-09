@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { StyledButton } from './Button.styles';
 
-export interface Props {
+export interface ButtonProps {
   color?: 'primary' | 'secondary';
   variant?: 'standard' | 'outline' | 'ghost';
-  size?: 'small' | 'standard' | 'large';
   borderRadius?: 'small' | 'standard' | 'large';
   disabled?: boolean;
 }
 
-export const Button: React.FC<Props> = props => <StyledButton {...props}>{props.children}</StyledButton>;
+export const Button: React.FC<ButtonProps> = props => <StyledButton {...props}>{props.children}</StyledButton>;

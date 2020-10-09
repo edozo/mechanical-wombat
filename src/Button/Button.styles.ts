@@ -1,8 +1,8 @@
 // TODO: Finalize this once talked to Silvia about design system
 import styled, { css } from 'styled-components';
-import { Props } from './Button';
+import { ButtonProps } from './Button';
 
-export const StyledButton = styled.button<Props>`
+export const StyledButton = styled.button<ButtonProps>`
   font-family: ${p => p.theme.font.family.main};
   border: 2px solid ${p => p.theme.colors.aliases[p.color || 'primary']};
   background-color: ${p => p.theme.colors.aliases[p.color || 'primary']};

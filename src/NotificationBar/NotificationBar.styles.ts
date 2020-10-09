@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 import { WarningIcon, UpgradeIcon } from '../Icons';
-import { Props } from './NotificationBar';
+import { NotificationBarProps } from './NotificationBar';
 
-export const StyledNotificationBar = styled.div<Props>`
+export const StyledNotificationBar = styled.div<NotificationBarProps>`
   width: 100%;
   border: 1px solid;
   display: flex;

@@ -1,19 +1,14 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
 import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles.ts';
 
-<Meta title="Theme|Colour" />
+export default {
+  title: 'Theme/Colours',
+} as Meta;
 
-# Colours
-
-This is the colours that will be used throught all edozo apps (customer facing). The design files can be found [here](https://www.figma.com/file/OpCqZzeuBbb8NBshcsBRpc/Edozo-maps-DS?node-id=155%3A1235).
-
-### Primary
-
-This colour is refered to as **Sky Blue**, it is aliased to **Primary** within the theme for ease of use and consistency
-
-<Story name="Primary">
+// TODO: Martin to add extra theme colours here
+export const Primary: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="skyBlueLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -41,13 +36,9 @@ This colour is refered to as **Sky Blue**, it is aliased to **Primary** within t
       <DisplayBoxBody>#00859C</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Secondary
-
-This colour is refered to as **Green**, it is aliased to **Secondary** within the theme for ease of use and consistency
-
-<Story name="Secondary">
+export const Secondary: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="greenLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -75,13 +66,9 @@ This colour is refered to as **Green**, it is aliased to **Secondary** within th
       <DisplayBoxBody>#75985B</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Tertiary
-
-This colour is refered to as **Green**, it is not aliased as it is used much less frequently.
-
-<Story name="Tertiary">
+export const Tertiary: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="steelBlueLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -109,13 +96,9 @@ This colour is refered to as **Green**, it is not aliased as it is used much les
       <DisplayBoxBody>#818E9B</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Gray
-
-These are the different levels of Edozo gray, they are used only as accents, borders...etc...
-
-<Story name="Gray">
+export const Gray: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="grayLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -143,13 +126,9 @@ These are the different levels of Edozo gray, they are used only as accents, bor
       <DisplayBoxBody>#4C4C4C</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Black & White
-
-Black and white have been included in the theme as they are not always full black or full white. In our case the Edozo blak is actually just a dark gray. It is used as if it were black so we call it that.
-
-<Story name="Simple">
+export const Simple: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="black">
       <DisplayBoxTitle>black</DisplayBoxTitle>
@@ -160,13 +139,9 @@ Black and white have been included in the theme as they are not always full blac
       <DisplayBoxBody>#FFFFFF</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);
 
-### Alert / UI
-
-Alert / UI colours are used for non-brand specific elements (we only have red for now), such as warnings, error and success messages.
-
-<Story name="Alert / UI">
+export const Alert: Story = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="redLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -184,4 +159,4 @@ Alert / UI colours are used for non-brand specific elements (we only have red fo
       <DisplayBoxBody>#D5D7DC</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
-</Story>
+);

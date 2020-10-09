@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Props } from './Badge';
+import { BadgeProps } from './Badge';
 
-export const StyledBadge = styled.div<Props>`
+export const StyledBadge = styled.div<BadgeProps>`
   display: inline-block;
   padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
