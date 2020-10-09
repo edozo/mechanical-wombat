@@ -43,9 +43,13 @@ const items = [
 ];
 
 export const WithImages: Story = args => (
-  <DropDown items={itemsWithImages} onChange={args.onChange} initialSelectedItem={itemsWithImages[1]} />
+  <div style={{ height: '200px' }}>
+    <DropDown items={itemsWithImages} onChange={args.onChange} initialSelectedItem={itemsWithImages[1]} />
+  </div>
 );
 
 export const WithoutImages: Story = args => (
-  <DropDown items={items} onChange={args.onChange} initialSelectedItem={items[2]} />
+  <div style={{ height: '200px' }}>
+    <DropDown items={items} onChange={args.onChange} initialSelectedItem={items[2]} />
+  </div>
 );
