@@ -25,7 +25,7 @@ export const Default: Story = () => {
   return (
     <div style={{ height: '100px' }}>
       <button type="button" onClick={() => updatePrice({ increase: Math.random() })}>
-        Increase price by random penny`&apos;`s
+        Increase price by random penny&apos;s
       </button>
       <div style={{ position: 'absolute', bottom: '24px', right: '24px' }}>
         <PriceIndicator total={priceTotal} addition={priceIncrease}>
