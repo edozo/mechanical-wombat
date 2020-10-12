@@ -54,6 +54,9 @@ import {
   CenterMapIcon,
   HMarkIcon,
   TMarkIcon,
+  DashedDrawPolygonIcon,
+  DashedModifyIcon,
+  DashedRectangleNodesIcon,
 } from '.';
 
 export default {
@@ -116,6 +119,9 @@ const outlinedIcons = [
   { name: 'Hatch LU', component: <HatchLUIcon /> },
   { name: 'Stack', component: <StackIcon /> },
   { name: 'Center Map', component: <CenterMapIcon /> },
+  { name: 'Dashed Draw Polygon', component: <DashedDrawPolygonIcon /> },
+  { name: 'Dashed Modify', component: <DashedModifyIcon /> },
+  { name: 'Dashed Rectangle with Nodes', component: <DashedRectangleNodesIcon /> },
 ];
 
 export const Solid: Story = () => (
