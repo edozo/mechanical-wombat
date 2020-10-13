@@ -26,7 +26,6 @@
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
     "lint:css": "stylelint './src/**/*.ts'",
-    "snapshot": "build-storybook -s public && percy-storybook --widths=1280",
     "chromatic": "chromatic --project-token o5cchd955j --exit-zero-on-changes"
   },
   "dependencies": {
