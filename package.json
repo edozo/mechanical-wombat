@@ -25,7 +25,8 @@
     "build-storybook": "build-storybook -s public",
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
-    "lint:css": "stylelint './src/**/*.ts'"
+    "lint:css": "stylelint './src/**/*.ts'",
+    "snapshot": "build-storybook && percy-storybook --widths=1280"
   },
   "dependencies": {
     "downshift": "^3.4.8"
@@ -39,6 +40,7 @@
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-essentials": "^6.0.22",
     "@storybook/react": "^6.0.22",
     "@svgr/rollup": "^4.3.3",
