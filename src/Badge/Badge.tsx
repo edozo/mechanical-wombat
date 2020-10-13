@@ -23,7 +23,7 @@ export const Badge: React.FC<BadgeProps> = ({
   children,
   ...props
 }) => (
-  <StyledBadge style={{ border: '3px dotted green' }} background={background} color={color} size={size} {...props}>
+  <StyledBadge background={background} color={color} size={size} {...props}>
     {children}
   </StyledBadge>
 );
