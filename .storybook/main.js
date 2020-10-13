@@ -7,6 +7,6 @@ module.exports = {
           toolbars: false,
         }
     }, 
-    "storybook-addon-styled-component-theme/dist/register"
+    "themeprovider-storybook/register"
   ]
 };

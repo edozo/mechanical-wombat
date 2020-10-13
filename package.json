@@ -26,7 +26,8 @@
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
     "lint:css": "stylelint './src/**/*.ts'",
-    "snapshot": "build-storybook && percy-storybook --widths=1280"
+    "snapshot": "build-storybook -s public && percy-storybook --widths=1280",
+    "chromatic": "chromatic --project-token o5cchd955j --exit-zero-on-changes"
   },
   "dependencies": {
     "downshift": "^3.4.8"
@@ -41,8 +42,8 @@
   },
   "devDependencies": {
     "@percy/storybook": "^3.3.1",
-    "@storybook/addon-essentials": "^6.0.22",
-    "@storybook/react": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/react": "^6.0.26",
     "@svgr/rollup": "^4.3.3",
     "@tippyjs/react": "^4.1.0",
     "@types/jest": "^24.0.23",
@@ -54,6 +55,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-runtime": "^6.26.0",
+    "chromatic": "^5.2.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
@@ -81,13 +83,13 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^3.0.1",
-    "storybook-addon-styled-component-theme": "~1.3.0",
     "styled-components": "^5.1.1",
     "styled-reboot": "^4.0.3",
     "stylelint": "^12.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.9.0",
+    "themeprovider-storybook": "^1.6.2",
     "typescript": "^3.7.3"
   },
   "files": [
