@@ -25,8 +25,7 @@
     "build-storybook": "build-storybook -s public",
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
-    "lint:css": "stylelint './src/**/*.ts'",
-    "chromatic": "npx chromatic --project-token 3t433gxz3m"
+    "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
     "downshift": "^3.4.8"
