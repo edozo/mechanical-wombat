@@ -39,7 +39,6 @@
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
-    "@percy/storybook": "^3.3.1",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/react": "^6.0.26",
     "@svgr/rollup": "^4.3.3",
