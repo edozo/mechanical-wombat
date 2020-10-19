@@ -1,5 +1,5 @@
 import { withGlobalStyles } from './custom/withGlobalStyles';
-import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import { withThemesProvider } from "themeprovider-storybook";
 import { defaultTheme } from '../src/defaultTheme';
 
 export const parameters = {
