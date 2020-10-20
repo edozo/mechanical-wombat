@@ -5,6 +5,7 @@ export const StyledBadge = styled.div<BadgeProps>`
   display: inline-block;
   padding: ${p => p.theme.spacing.xxsmall} ${p => p.theme.spacing.xsmall};
   border-radius: ${p => p.theme.borderRadius.standard};
+  border-radius: 9999px;
   border: 2px solid
     ${p => p.background && (p.theme.colors.aliases[p.background] || p.theme.colors[p.background] || p.background)};
   background-color: ${p =>
