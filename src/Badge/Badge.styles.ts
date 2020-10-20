@@ -7,8 +7,7 @@ export const StyledBadge = styled.div<BadgeProps>`
   border-radius: ${p => p.theme.borderRadius.standard};
   border: 2px solid
     ${p => p.background && (p.theme.colors.aliases[p.background] || p.theme.colors[p.background] || p.background)};
-  background-color: ${p =>
-    p.background && (p.theme.colors.aliases[p.background] || p.theme.colors[p.background] || p.background)};
+  background-color: red;
   color: ${p => p.color && (p.theme.colors.aliases[p.color] || p.theme.colors[p.color] || p.color)};
   font-family: ${p => p.theme.font.family.main};
   font-size: ${p => p.theme.font.size.text.xsmall};
