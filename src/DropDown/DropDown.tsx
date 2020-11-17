@@ -19,7 +19,7 @@ export interface Item {
 
 export interface Props {
   items: Item[];
-  onChange: (item: any) => void;
+  onChange: (item?: Item) => void;
   selectedItem?: Item;
   initialSelectedItem?: Item;
 }
