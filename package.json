@@ -39,8 +39,9 @@
     "styled-reboot": "^4.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.0.26",
-    "@storybook/react": "^6.0.26",
+    "@svgr/webpack": "^5.5.0",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/react": "^6.1.11",
     "@svgr/rollup": "^4.3.3",
     "@tippyjs/react": "^4.1.0",
     "@types/jest": "^24.0.23",
@@ -86,7 +87,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.9.0",
-    "themeprovider-storybook": "^1.6.2",
+    "themeprovider-storybook": "^1.7.1",
     "typescript": "^3.7.3"
   },
   "files": [
