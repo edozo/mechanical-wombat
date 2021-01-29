@@ -13,7 +13,7 @@ import arrow from './arrow.svg'; // TODO: Make the react SVG as component work
 
 export interface Item {
   label: string;
-  value: string;
+  value: string | number;
   thumbnail?: string;
 }
 
@@ -24,7 +24,7 @@ export interface Props {
   initialSelectedItem?: Item;
 }
 
-const itemToString = (item: Item): string => (item ? item.value : '');
+const itemToString = (item: Item): string => (item ? item.value.toString() : '');
 
 export const DropDown = (props: Props): JSX.Element => (
   <div>
