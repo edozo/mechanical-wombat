@@ -36,3 +36,14 @@ const myTheme = {
   },
 };
 ```
+
+## Releasing
+Once you have a PR that has gone in with the package JSON being bumped appropriately, you should tag the release in github and make sure it is in the list of releases.
+Next step is to push the package to the npm registry.
+In your local terminal, pull the latest code in the base branch and then run 
+`npm publish --dry-run`
+This will run the publish command but stop before actually publishing the package to check that everything will work fine.
+If this works all fine then you can just run 
+`npm publish` .
+
+You can check the publish was successful here: https://www.npmjs.com/package/mechanical-wombat
