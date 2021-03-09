@@ -20,3 +20,4 @@
 - Import the new icon like this: `import zoomInUrl, { ReactComponent as ZoomIn } from './icons/zoom-in.svg';`
 - Duplicate one of the existing code chunks for an existing icon, name and export appropriately.
 - Your new icon will be available in the `mechanical-wombat` npm package.
+- You will also need to add your new component to the list inside `Icons.stories.tsx` for now until work is done to read these automatically
