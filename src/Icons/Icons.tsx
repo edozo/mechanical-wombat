@@ -54,7 +54,7 @@ import tMarkUrl, { ReactComponent as TMark } from './icons/T-mark.svg';
 import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
-import ReopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
+import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -458,4 +458,4 @@ const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
     <ReopenPolygon fill={fill} {...props} />
   </IconWrapper>
 );
-export { ReopenPolygonIcon, ReopenPolygonUrl };
+export { ReopenPolygonIcon, reopenPolygonUrl };
