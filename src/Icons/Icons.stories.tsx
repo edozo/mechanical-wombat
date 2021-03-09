@@ -57,6 +57,7 @@ import {
   DashedDrawPolygonIcon,
   DashedModifyIcon,
   DashedRectangleNodesIcon,
+  ReopenPolygonIcon,
 } from '.';
 
 export default {
@@ -122,6 +123,7 @@ const outlinedIcons = [
   { name: 'Dashed Draw Polygon', component: <DashedDrawPolygonIcon /> },
   { name: 'Dashed Modify', component: <DashedModifyIcon /> },
   { name: 'Dashed Rectangle with Nodes', component: <DashedRectangleNodesIcon /> },
+  { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
 ];
 
 export const Solid: Story = () => (
