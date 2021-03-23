@@ -20,7 +20,7 @@ export interface Item {
 export interface Props {
   items: Item[];
   onChange: (item?: Item) => void;
-  selectedItem?: Item;
+  selectedItem: Item;
   initialSelectedItem?: Item;
 }
 
@@ -36,7 +36,7 @@ export const DropDown = (props: Props): JSX.Element => (
               {selectedItem && selectedItem.thumbnail && (
                 <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
               )}
-              {selectedItem.label}
+              {selectedItem?.label}
             </StyledDownshiftPreviewInner>
             <StyledArrow isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
           </StyledDownshiftPreview>
@@ -45,7 +45,7 @@ export const DropDown = (props: Props): JSX.Element => (
               {props.items.map((item: Item, index: number) => (
                 <StyledListItem
                   highlighted={index === highlightedIndex}
-                  selectedItem={item.value === selectedItem.value}
+                  selectedItem={item.value === selectedItem?.value}
                   {...getItemProps({
                     item,
                     key: item.value,

@@ -28,15 +28,15 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
-    "downshift": "^3.4.8"
   },
   "peerDependencies": {
-    "@tippyjs/react": "^4.1.0",
-    "framer-motion": "^1.10.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.0.0",
-    "styled-reboot": "^4.0.0"
+    "@tippyjs/react": "^4.2.4",
+    "downshift": "^6.1.0",
+    "framer-motion": "^4.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "styled-reboot": "^5.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
@@ -64,8 +64,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "framer-motion": "^1.10.2",
-    "gh-pages": "^2.1.1",
+    "framer-motion": "^4.0.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
