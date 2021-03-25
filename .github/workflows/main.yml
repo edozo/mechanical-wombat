@@ -8,10 +8,13 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Component lib PR with Node 10.x
-      uses: actions/setup-node@v1
+    - name: Get Node.js version
+      id: nvm
+      run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: "10.x"
+        node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
     - name: yarn install, and lint
       run: |
         yarn install
