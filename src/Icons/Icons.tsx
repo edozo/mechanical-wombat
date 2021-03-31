@@ -55,6 +55,7 @@ import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './ico
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
+import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -459,3 +460,10 @@ const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
   </IconWrapper>
 );
 export { ReopenPolygonIcon, reopenPolygonUrl };
+
+const FeatureOutlineIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <FeatureOutline fill={fill} {...props} />
+  </IconWrapper>
+);
+export { FeatureOutlineIcon, featureOutlineUrl };
