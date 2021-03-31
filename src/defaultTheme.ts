@@ -124,13 +124,13 @@ const font = {
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
   spacing: {
-    xxsmall: '4px',
+    xxsmall: '6px',
     xsmall: '8px',
-    small: '16px',
-    base: '24px',
-    large: '32px',
-    xlarge: '48px',
-    xxlarge: '64px',
+    small: '12px',
+    base: '16px',
+    large: '24px',
+    xlarge: '32px',
+    xxlarge: '48px',
   },
   icons: {
     xxsmall: '8px',
