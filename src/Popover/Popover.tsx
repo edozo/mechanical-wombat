@@ -1,19 +1,30 @@
-import React, { useRef } from 'react';
-import { useOnClickOutside } from '../hooks';
+import React from 'react';
+import Tippy, { TippyProps } from '@tippyjs/react';
+import { StyledPopover, StyledTitle } from './Popover.styles';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'tippy.js/dist/tippy.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'tippy.js/animations/shift-away.css';
 
-export interface PopoverProps {
-  isOpen: boolean;
-  setIsOpen: (param: boolean) => void;
+Tippy.defaultProps = {
+  animation: 'shift-away',
+  delay: [100, 0],
+  inertia: true,
+  placement: 'bottom',
+};
+
+interface PopoverComposition {
+  Title: React.FC<any>;
 }
 
-export const Popover: React.FC<PopoverProps> = props => {
-  const { isOpen, setIsOpen, children, ...rest } = props;
-  const node = useRef(null);
-  useOnClickOutside(node, () => setIsOpen(false));
+const Popover: React.FC<TippyProps & any> & PopoverComposition = ({ content, children, ...rest }) => (
+  <StyledPopover content={content} {...rest}>
+    {children}
+  </StyledPopover>
+);
 
-  return (
-    <div ref={node} {...rest}>
-      {isOpen && children}
-    </div>
-  );
-};
+const PopoverTitle: React.FC = ({ children }) => <StyledTitle>{children}</StyledTitle>;
+
+Popover.Title = PopoverTitle;
+
+export { Popover, PopoverTitle };
