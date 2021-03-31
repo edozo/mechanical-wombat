@@ -27,6 +27,7 @@ export const PopoverWithTitle: Story = () => {
             <div style={{ display: 'flex' }}>
               <Popover.Button
                 style={{ marginRight: '4px' }}
+                name="a button"
                 onClick={() => {
                   if (currentTool !== 'tool A') {
                     // eslint-disable-next-line no-restricted-globals
