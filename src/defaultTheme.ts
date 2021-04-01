@@ -126,11 +126,11 @@ const defaultTheme: DefaultTheme = {
   spacing: {
     xxsmall: '4px',
     xsmall: '8px',
-    small: '12px',
-    base: '16px',
-    large: '24px',
-    xlarge: '32px',
-    xxlarge: '48px',
+    small: '16px',
+    base: '24px',
+    large: '32px',
+    xlarge: '48px',
+    xxlarge: '64px',
   },
   icons: {
     xxsmall: '8px',
