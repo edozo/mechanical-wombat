@@ -26,6 +26,13 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  input, button, select, optgroup, textarea {
+    margin: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
   /* Simple style reset - end */
 
   body {
