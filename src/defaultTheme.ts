@@ -124,7 +124,7 @@ const font = {
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
   spacing: {
-    xxsmall: '6px',
+    xxsmall: '4px',
     xsmall: '8px',
     small: '12px',
     base: '16px',
