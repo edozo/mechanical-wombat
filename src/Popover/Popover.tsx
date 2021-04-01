@@ -2,7 +2,7 @@ import React from 'react';
 import Tippy, { TippyProps } from '@tippyjs/react';
 import { StyledPopover } from './Popover.styles';
 import { PopoverTitle } from './PopoverTitle';
-import { PopoverButton, ButtonProps } from './PopoverButton';
+import { PopoverButton } from './PopoverButton';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'tippy.js/dist/tippy.css';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -17,7 +17,7 @@ Tippy.defaultProps = {
 
 interface PopoverComposition {
   Title: React.FC;
-  Button: React.FC<ButtonProps>;
+  Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 }
 
 const Popover: React.FC<TippyProps & any> & PopoverComposition = ({ content, children, ...rest }) => (
