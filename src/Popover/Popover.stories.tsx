@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Popover } from './Popover';
-import { WarningIcon, UpgradeIcon } from '../Icons';
+import { WarningIcon } from '../Icons';
 
 export default {
   title: 'Components/Popover',
@@ -24,32 +24,37 @@ export const PopoverWithTitle: Story = () => {
         content={
           <React.Fragment>
             <Popover.Title>Tooltip</Popover.Title>
-            <button
-              type="button"
-              onClick={() => {
-                if (currentTool !== 'tool A') {
-                  // eslint-disable-next-line no-restricted-globals
-                  const result = confirm('Are you sure you want to change the tool');
-                  result && setCurrentTool('tool A');
-                  hideTooltip();
-                }
-              }}
-            >
-              <WarningIcon />
-              <div>tool A</div>
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                if (currentTool !== 'tool B') {
-                  setCurrentTool('tool B');
-                  hideTooltip();
-                }
-              }}
-            >
-              <UpgradeIcon />
-              <div>tool B</div>
-            </button>
+            <div style={{ display: 'flex' }}>
+              <Popover.Button
+                style={{ marginRight: '4px' }}
+                name="a button"
+                onClick={() => {
+                  if (currentTool !== 'tool A') {
+                    // eslint-disable-next-line no-restricted-globals
+                    const result = confirm('Are you sure you want to change the tool');
+                    result && setCurrentTool('tool A');
+                    hideTooltip();
+                  }
+                }}
+              >
+                <WarningIcon />
+                <div style={{ marginTop: '4px' }}>
+                  Freehold
+                  <br />
+                  Title
+                </div>
+              </Popover.Button>
+              <Popover.Button
+                onClick={() => {
+                  if (currentTool !== 'tool B') {
+                    setCurrentTool('tool B');
+                    hideTooltip();
+                  }
+                }}
+              >
+                text
+              </Popover.Button>
+            </div>
           </React.Fragment>
         }
       >
