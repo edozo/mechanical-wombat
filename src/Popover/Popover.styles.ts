@@ -9,7 +9,7 @@ export const StyledPopover = styled(Tippy)`
   box-shadow: ${p => p.theme.boxShadow.standard};
 
   .tippy-content {
-    padding: ${p => p.theme.spacing.xsmall};
+    padding: 0;
   }
 
   .tippy-arrow {

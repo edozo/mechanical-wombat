@@ -23,7 +23,7 @@ export const PopoverWithTitle: Story = () => {
         visible={popoverVisible}
         onClickOutside={hidePopover}
         content={
-          <React.Fragment>
+          <div style={{ padding: '8px' }}>
             <Popover.Title>Tooltip</Popover.Title>
             <div style={{ display: 'flex' }}>
               <Popover.Button
@@ -56,7 +56,7 @@ export const PopoverWithTitle: Story = () => {
                 text
               </Popover.Button>
             </div>
-          </React.Fragment>
+          </div>
         }
       >
         <button type="button" onClick={popoverVisible ? hidePopover : showPopover}>
@@ -81,7 +81,7 @@ export const PopoverWithTooltip: Story = () => {
             interactiveBorder={40}
             visible={popoverVisible}
             onClickOutside={hidePopover}
-            content="You clicked me"
+            content={<div style={{ padding: '8px' }}>You clicked me</div>}
           >
             <button type="button" onClick={popoverVisible ? hidePopover : showPopover}>
               Trigger (hover + click)
@@ -94,7 +94,7 @@ export const PopoverWithTooltip: Story = () => {
 };
 
 export const PopoverSimple: Story = () => {
-  const [popoverVisible, setTooltipVisible] = useState(false);
+  const [popoverVisible, setTooltipVisible] = useState(true);
   const showPopover = (): void => setTooltipVisible(true);
   const hidePopover = (): void => setTooltipVisible(false);
 
@@ -105,7 +105,7 @@ export const PopoverSimple: Story = () => {
         interactiveBorder={10}
         visible={popoverVisible}
         content={
-          <div>
+          <div style={{ padding: '8px' }}>
             <span>Open by default and does not close on click outside</span>
             <img
               alt="Himself"
