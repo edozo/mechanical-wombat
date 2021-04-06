@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Popover } from './Popover';
 import { WarningIcon } from '../Icons';
+import { Tooltip } from '../Tooltip';
 
 export default {
   title: 'Components/Popover',
@@ -9,9 +10,9 @@ export default {
 } as Meta;
 
 export const PopoverWithTitle: Story = () => {
-  const [tooltipVisible, setTooltipVisible] = useState(false);
-  const showTooltip = (): void => setTooltipVisible(true);
-  const hideTooltip = (): void => setTooltipVisible(false);
+  const [popoverVisible, setPopoverVisible] = useState(false);
+  const showPopover = (): void => setPopoverVisible(true);
+  const hidePopover = (): void => setPopoverVisible(false);
   const [currentTool, setCurrentTool] = useState('tool A');
 
   return (
@@ -19,10 +20,10 @@ export const PopoverWithTitle: Story = () => {
       <Popover
         interactive
         interactiveBorder={10}
-        visible={tooltipVisible}
-        onClickOutside={hideTooltip}
+        visible={popoverVisible}
+        onClickOutside={hidePopover}
         content={
-          <React.Fragment>
+          <div style={{ padding: '8px' }}>
             <Popover.Title>Tooltip</Popover.Title>
             <div style={{ display: 'flex' }}>
               <Popover.Button
@@ -33,7 +34,7 @@ export const PopoverWithTitle: Story = () => {
                     // eslint-disable-next-line no-restricted-globals
                     const result = confirm('Are you sure you want to change the tool');
                     result && setCurrentTool('tool A');
-                    hideTooltip();
+                    hidePopover();
                   }
                 }}
               >
@@ -48,17 +49,17 @@ export const PopoverWithTitle: Story = () => {
                 onClick={() => {
                   if (currentTool !== 'tool B') {
                     setCurrentTool('tool B');
-                    hideTooltip();
+                    hidePopover();
                   }
                 }}
               >
                 text
               </Popover.Button>
             </div>
-          </React.Fragment>
+          </div>
         }
       >
-        <button type="button" onClick={tooltipVisible ? hideTooltip : showTooltip}>
+        <button type="button" onClick={popoverVisible ? hidePopover : showPopover}>
           {currentTool} (click)
         </button>
       </Popover>
@@ -66,19 +67,45 @@ export const PopoverWithTitle: Story = () => {
   );
 };
 
+export const PopoverWithTooltip: Story = () => {
+  const [popoverVisible, setTooltipVisible] = useState(false);
+  const showPopover = (): void => setTooltipVisible(true);
+  const hidePopover = (): void => setTooltipVisible(false);
+
+  return (
+    <div style={{ minHeight: '200px' }}>
+      <Tooltip content="You're hovering me" disabled={popoverVisible}>
+        <span>
+          <Popover
+            interactive
+            interactiveBorder={40}
+            visible={popoverVisible}
+            onClickOutside={hidePopover}
+            content={<div style={{ padding: '8px' }}>You clicked me</div>}
+          >
+            <button type="button" onClick={popoverVisible ? hidePopover : showPopover}>
+              Trigger (hover + click)
+            </button>
+          </Popover>
+        </span>
+      </Tooltip>
+    </div>
+  );
+};
+
 export const PopoverSimple: Story = () => {
-  const [tooltipVisible, setTooltipVisible] = useState(true);
-  const showTooltip = (): void => setTooltipVisible(true);
-  const hideTooltip = (): void => setTooltipVisible(false);
+  const [popoverVisible, setTooltipVisible] = useState(true);
+  const showPopover = (): void => setTooltipVisible(true);
+  const hidePopover = (): void => setTooltipVisible(false);
 
   return (
     <div style={{ minHeight: '200px' }}>
       <Popover
         interactive
         interactiveBorder={10}
-        visible={tooltipVisible}
+        visible={popoverVisible}
         content={
-          <div>
+          <div style={{ padding: '8px' }}>
             <span>Open by default and does not close on click outside</span>
             <img
               alt="Himself"
@@ -86,13 +113,13 @@ export const PopoverSimple: Story = () => {
               width="100px"
             />
             <br />
-            <button type="button" onClick={hideTooltip}>
+            <button type="button" onClick={hidePopover}>
               close
             </button>
           </div>
         }
       >
-        <button type="button" onClick={tooltipVisible ? hideTooltip : showTooltip}>
+        <button type="button" onClick={popoverVisible ? hidePopover : showPopover}>
           trigger (click)
         </button>
       </Popover>
