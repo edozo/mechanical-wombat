@@ -21,18 +21,10 @@ export const Switch: React.FC<Props> = ({
   offText,
 }) => (
   <SwitchParent size={size}>
-    <Checkbox
-      data-testid={id}
-      type="checkbox"
-      role="checkbox"
-      id={id}
-      checked={currentValue}
-      onChange={onChange}
-      disabled={disabled}
-    />
+    <Checkbox data-testid={id} type="checkbox" id={id} checked={currentValue} onChange={onChange} disabled={disabled} />
     <Label htmlFor={id}>
       <ToggleInner data-yes={onText} data-no={offText} size={size} />
-      <Toggle disabled={disabled} size={size} />
+      <Toggle disabled={disabled} size={size} role="checkbox" />
     </Label>
   </SwitchParent>
 );
