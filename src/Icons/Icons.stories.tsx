@@ -59,6 +59,7 @@ import {
   DashedRectangleNodesIcon,
   ReopenPolygonIcon,
   FeatureOutlineIcon,
+  ArrowMarkIcon,
 } from '.';
 
 export default {
@@ -86,6 +87,7 @@ const solidIcons = [
   { name: 'Search', component: <SearchIcon /> },
   { name: 'H Mark', component: <HMarkIcon /> },
   { name: 'T Mark', component: <TMarkIcon /> },
+  { name: 'Arrow Mark', component: <ArrowMarkIcon /> },
 ];
 
 const outlinedIcons = [
