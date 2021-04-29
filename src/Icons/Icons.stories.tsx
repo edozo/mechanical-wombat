@@ -60,7 +60,7 @@ import {
   ReopenPolygonIcon,
   FeatureOutlineIcon,
   ArrowMarkIcon,
-  CrossMarkIcon
+  CrossMarkIcon,
 } from '.';
 
 export default {
