@@ -51,6 +51,8 @@ import stackUrl, { ReactComponent as Stack } from './icons/stack.svg';
 import centerMapUrl, { ReactComponent as CenterMap } from './icons/center-map.svg';
 import hMarkUrl, { ReactComponent as HMark } from './icons/H-mark.svg';
 import tMarkUrl, { ReactComponent as TMark } from './icons/T-mark.svg';
+import arrowMarkUrl, { ReactComponent as ArrowMark } from './icons/arrow-mark.svg';
+import crossMarkUrl, { ReactComponent as CrossMark } from './icons/cross-mark.svg';
 import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
@@ -467,3 +469,17 @@ const FeatureOutlineIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_IC
   </IconWrapper>
 );
 export { FeatureOutlineIcon, featureOutlineUrl };
+
+const ArrowMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <ArrowMark fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ArrowMarkIcon, arrowMarkUrl };
+
+const CrossMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <CrossMark fill={fill} {...props} />
+  </IconWrapper>
+);
+export { CrossMarkIcon, crossMarkUrl };
