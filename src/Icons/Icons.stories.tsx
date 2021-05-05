@@ -61,6 +61,7 @@ import {
   FeatureOutlineIcon,
   ArrowMarkIcon,
   CrossMarkIcon,
+  StarMarkIcon,
 } from '.';
 
 export default {
@@ -90,6 +91,7 @@ const solidIcons = [
   { name: 'T Mark', component: <TMarkIcon /> },
   { name: 'Arrow Mark', component: <ArrowMarkIcon /> },
   { name: 'Cross Mark', component: <CrossMarkIcon /> },
+  { name: 'Star Mark', component: <StarMarkIcon /> },
 ];
 
 const outlinedIcons = [

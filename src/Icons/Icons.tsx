@@ -53,6 +53,7 @@ import hMarkUrl, { ReactComponent as HMark } from './icons/H-mark.svg';
 import tMarkUrl, { ReactComponent as TMark } from './icons/T-mark.svg';
 import arrowMarkUrl, { ReactComponent as ArrowMark } from './icons/arrow-mark.svg';
 import crossMarkUrl, { ReactComponent as CrossMark } from './icons/cross-mark.svg';
+import starMarkUrl, { ReactComponent as StarMark } from './icons/star-mark.svg';
 import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
@@ -483,3 +484,10 @@ const CrossMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { CrossMarkIcon, crossMarkUrl };
+
+const StarMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <StarMark fill={fill} {...props} />
+  </IconWrapper>
+);
+export { StarMarkIcon, starMarkUrl };
