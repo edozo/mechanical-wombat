@@ -59,6 +59,7 @@ import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
+import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -491,3 +492,10 @@ const StarMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
   </IconWrapper>
 );
 export { StarMarkIcon, starMarkUrl };
+
+const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <LightBulb fill={fill} {...props} />
+  </IconWrapper>
+);
+export { LightBulbIcon, lightBulbUrl };
