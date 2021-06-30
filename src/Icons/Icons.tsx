@@ -64,7 +64,7 @@ import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.sv
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
 export interface Props {
-  fill?: 'string';
+  fill?: string;
   size?: 'xxsmall' | 'xsmall' | 'small' | 'base' | 'large' | 'xlarge';
 }
 
