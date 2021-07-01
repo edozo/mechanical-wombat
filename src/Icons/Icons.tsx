@@ -60,6 +60,7 @@ import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from 
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
+import AccessDeniedUrl, { ReactComponent as AccessDenied } from './icons/access-denied.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -499,3 +500,10 @@ const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { LightBulbIcon, lightBulbUrl };
+
+const AccessDeniedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <AccessDenied fill={fill} {...props} />
+  </IconWrapper>
+);
+export { AccessDeniedIcon, AccessDeniedUrl };
