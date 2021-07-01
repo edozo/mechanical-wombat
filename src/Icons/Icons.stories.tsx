@@ -63,7 +63,7 @@ import {
   CrossMarkIcon,
   StarMarkIcon,
   LightBulbIcon,
-  AccessDeniedIcon
+  AccessDeniedIcon,
 } from '.';
 
 export default {
