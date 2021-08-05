@@ -14,5 +14,8 @@ export { PriceIndicator } from './PriceIndicator';
 export { Tooltip } from './Tooltip';
 export { NotificationBar } from './NotificationBar';
 export { Tabs } from './Tabs';
+export { EdozoLogo } from './EdozoLogo';
+export { defaultTheme } from './defaultTheme';
+export { Collapse } from './Collapse';
 
 export { ThemeProvider } from './ThemeProvider';

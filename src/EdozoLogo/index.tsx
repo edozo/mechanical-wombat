@@ -1,0 +1,1 @@
+export { EdozoLogo } from './EdozoLogo';
