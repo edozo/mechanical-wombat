@@ -63,6 +63,8 @@ import {
   CrossMarkIcon,
   StarMarkIcon,
   LightBulbIcon,
+  RedoIcon,
+  UndoIcon,
 } from '.';
 
 export default {
@@ -134,6 +136,8 @@ const outlinedIcons = [
   { name: 'Dashed Rectangle with Nodes', component: <DashedRectangleNodesIcon /> },
   { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
+  { name: 'Redo Icon', component: <RedoIcon /> },
+  { name: 'Undo Icon', component: <UndoIcon /> },
 ];
 
 export const Solid: Story = () => (
