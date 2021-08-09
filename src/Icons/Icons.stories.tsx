@@ -96,6 +96,8 @@ const solidIcons = [
   { name: 'Cross Mark', component: <CrossMarkIcon /> },
   { name: 'Star Mark', component: <StarMarkIcon /> },
   { name: 'Light Bulb', component: <LightBulbIcon /> },
+  { name: 'Redo Icon', component: <RedoIcon /> },
+  { name: 'Undo Icon', component: <UndoIcon /> },
 ];
 
 const outlinedIcons = [
@@ -136,8 +138,6 @@ const outlinedIcons = [
   { name: 'Dashed Rectangle with Nodes', component: <DashedRectangleNodesIcon /> },
   { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
-  { name: 'Redo Icon', component: <RedoIcon /> },
-  { name: 'Undo Icon', component: <UndoIcon /> },
 ];
 
 export const Solid: Story = () => (
