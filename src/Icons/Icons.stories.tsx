@@ -96,8 +96,8 @@ const solidIcons = [
   { name: 'Cross Mark', component: <CrossMarkIcon /> },
   { name: 'Star Mark', component: <StarMarkIcon /> },
   { name: 'Light Bulb', component: <LightBulbIcon /> },
-  { name: 'Redo Icon', component: <RedoIcon /> },
-  { name: 'Undo Icon', component: <UndoIcon /> },
+  { name: 'Redo', component: <RedoIcon /> },
+  { name: 'Undo', component: <UndoIcon /> },
 ];
 
 const outlinedIcons = [
