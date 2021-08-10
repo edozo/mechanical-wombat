@@ -63,6 +63,7 @@ import {
   CrossMarkIcon,
   StarMarkIcon,
   LightBulbIcon,
+  TreeIcon,
 } from '.';
 
 export default {
@@ -94,6 +95,7 @@ const solidIcons = [
   { name: 'Cross Mark', component: <CrossMarkIcon /> },
   { name: 'Star Mark', component: <StarMarkIcon /> },
   { name: 'Light Bulb', component: <LightBulbIcon /> },
+  { name: 'Tree', component: <TreeIcon /> },
 ];
 
 const outlinedIcons = [

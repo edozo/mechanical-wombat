@@ -60,6 +60,7 @@ import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from 
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
+import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -499,3 +500,10 @@ const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { LightBulbIcon, lightBulbUrl };
+
+const TreeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Tree fill={fill} {...props} />
+  </IconWrapper>
+);
+export { TreeIcon, treeUrl };
