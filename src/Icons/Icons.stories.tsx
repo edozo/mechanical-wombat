@@ -64,6 +64,8 @@ import {
   StarMarkIcon,
   LightBulbIcon,
   TreeIcon,
+  RedoIcon,
+  UndoIcon,
 } from '.';
 
 export default {
@@ -96,6 +98,8 @@ const solidIcons = [
   { name: 'Star Mark', component: <StarMarkIcon /> },
   { name: 'Light Bulb', component: <LightBulbIcon /> },
   { name: 'Tree', component: <TreeIcon /> },
+  { name: 'Redo', component: <RedoIcon /> },
+  { name: 'Undo', component: <UndoIcon /> },
 ];
 
 const outlinedIcons = [

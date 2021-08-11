@@ -61,6 +61,8 @@ import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reope
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
 import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
+import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
+import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -507,3 +509,17 @@ const TreeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { TreeIcon, treeUrl };
+
+const RedoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Redo fill={fill} {...props} />
+  </IconWrapper>
+);
+export { RedoIcon, redoUrl };
+
+const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Undo fill={fill} {...props} />
+  </IconWrapper>
+);
+export { UndoIcon, undoUrl };
