@@ -502,7 +502,7 @@ const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { LightBulbIcon, lightBulbUrl };
-  
+
 const TreeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Tree fill={fill} {...props} />
