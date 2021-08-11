@@ -1,6 +1,6 @@
 {
   "name": "mechanical-wombat",
-  "version": "0.15.10",
+  "version": "0.15.12",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -27,7 +27,9 @@
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
     "lint:css": "stylelint './src/**/*.ts'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-collapsed": "^3.0.2"
+  },
   "peerDependencies": {
     "@tippyjs/react": "^4.2.5",
     "downshift": "^6.1.3",

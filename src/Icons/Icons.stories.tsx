@@ -63,6 +63,7 @@ import {
   CrossMarkIcon,
   StarMarkIcon,
   LightBulbIcon,
+  TreeIcon,
   RedoIcon,
   UndoIcon,
 } from '.';
@@ -96,6 +97,7 @@ const solidIcons = [
   { name: 'Cross Mark', component: <CrossMarkIcon /> },
   { name: 'Star Mark', component: <StarMarkIcon /> },
   { name: 'Light Bulb', component: <LightBulbIcon /> },
+  { name: 'Tree', component: <TreeIcon /> },
   { name: 'Redo', component: <RedoIcon /> },
   { name: 'Undo', component: <UndoIcon /> },
 ];
