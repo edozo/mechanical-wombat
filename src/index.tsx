@@ -17,5 +17,6 @@ export { Tabs } from './Tabs';
 export { EdozoLogo } from './EdozoLogo';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
+export { EmptyState } from './EmptyState';
 
 export { ThemeProvider } from './ThemeProvider';
