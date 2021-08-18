@@ -23,6 +23,5 @@ export const StyledTrigger = styled.button`
 `;
 
 export const StyledPanel = styled.div`
-  background: transparent;
-  padding: ${p => p.theme.spacing.xsmall};
+  margin: ${p => p.theme.spacing.xsmall};
 `;

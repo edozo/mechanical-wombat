@@ -26,7 +26,9 @@ export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, tr
       >
         {trigger}
       </StyledTrigger>
-      <StyledPanel {...getCollapseProps()}>{children}</StyledPanel>
+      <div {...getCollapseProps()}>
+        <StyledPanel>{children}</StyledPanel>
+      </div>
     </StyledCollapse>
   );
 };
