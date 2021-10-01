@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export interface StyleProps {
+export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
-  onClick?: () => void;
 }
 
-export const StyledListItem = styled.div<StyleProps>`
+export const StyledListItem = styled.div<ListItemProps>`
   color: ${p => p.theme.colors.grayDark};
   font-weight: 700;
   background-color: ${p => p.theme.colors.white};
