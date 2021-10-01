@@ -4,6 +4,7 @@ import { TableActionButton } from './TableDownloadButton.styles';
 export interface TableDownloadButtonProps extends React.HTMLProps<HTMLButtonElement> {
   variant: string;
   disabled?: boolean;
+  background?: string;
 }
 
 export const TableDownloadButton: React.FC<TableDownloadButtonProps> = props => {
