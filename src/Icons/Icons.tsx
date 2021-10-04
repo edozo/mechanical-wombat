@@ -63,6 +63,8 @@ import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.sv
 import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
 import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
 import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
+import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
+import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -523,3 +525,17 @@ const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { UndoIcon, undoUrl };
+
+const LogoutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Logout fill={fill} {...props} />
+  </IconWrapper>
+);
+export { LogoutIcon, logoutUrl };
+
+const SwitchAppIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <SwitchApp fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SwitchAppIcon, switchAppUrl };

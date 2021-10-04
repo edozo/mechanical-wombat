@@ -66,6 +66,8 @@ import {
   TreeIcon,
   RedoIcon,
   UndoIcon,
+  LogoutIcon,
+  SwitchAppIcon,
 } from '.';
 
 export default {
@@ -100,6 +102,8 @@ const solidIcons = [
   { name: 'Tree', component: <TreeIcon /> },
   { name: 'Redo', component: <RedoIcon /> },
   { name: 'Undo', component: <UndoIcon /> },
+  { name: 'Logout', component: <LogoutIcon /> },
+  { name: 'Switch App', component: <SwitchAppIcon /> },
 ];
 
 const outlinedIcons = [
