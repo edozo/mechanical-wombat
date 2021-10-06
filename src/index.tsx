@@ -18,5 +18,7 @@ export { EdozoLogo } from './EdozoLogo';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
+export { Header } from './Header';
+export { Menu } from './Menu';
 
 export { ThemeProvider } from './ThemeProvider';
