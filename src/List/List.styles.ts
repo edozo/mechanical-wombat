@@ -5,14 +5,13 @@ export interface StyleProps {
 }
 
 export const StyledList = styled.div<StyleProps>`
-  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
   background-color: ${p => p.theme.colors.white};
-  > :first-child {
-    border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']}
-      ${p => p.theme.borderRadius[p.radius || 'standard']} 0 0;
+  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
+  > div {
+    border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
   }
-  > :last-child {
-    border-radius: 0 0 ${p => p.theme.borderRadius[p.radius || 'standard']}
-      ${p => p.theme.borderRadius[p.radius || 'standard']};
+
+  :not(:first-child) {
+    border-radius: 0;
   }
 `;

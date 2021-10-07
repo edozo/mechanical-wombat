@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import { EdozoLogo } from './EdozoLogo';
 
 export default {
-  title: 'OccupierPlans/EdozoLogo',
+  title: 'Components/EdozoLogo',
   component: EdozoLogo,
 } as Meta;
 

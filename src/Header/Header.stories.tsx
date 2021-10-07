@@ -9,7 +9,7 @@ import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
 
 export default {
-  title: 'OccupierPlans/Header',
+  title: 'Components/Header',
   component: Header,
 } as Meta;
 
