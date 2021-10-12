@@ -38,6 +38,7 @@ import lockClosedUrl, { ReactComponent as LockClosed } from './icons/lock-closed
 import deleteUrl, { ReactComponent as Delete } from './icons/delete.svg';
 import drawingLibraryUrl, { ReactComponent as DrawingLibrary } from './icons/drawing-library.svg';
 import dashedRectangleUrl, { ReactComponent as DashedRectangle } from './icons/dashed-rectangle.svg';
+import dashedCircleUrl, { ReactComponent as DashedCircle } from './icons/dashed-circle.svg';
 import boldUrl, { ReactComponent as Bold } from './icons/bold.svg';
 import italicUrl, { ReactComponent as Italic } from './icons/italic.svg';
 import hatchCDUrl, { ReactComponent as HatchCD } from './icons/hatch-cd.svg';
@@ -57,6 +58,7 @@ import starMarkUrl, { ReactComponent as StarMark } from './icons/star-mark.svg';
 import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
+import dashedCircleNodesUrl, { ReactComponent as DashedCircleNodes } from './icons/dashed-circle-nodes.svg';
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
@@ -215,6 +217,13 @@ const DashedRectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
   </IconWrapper>
 );
 export { DashedRectangleIcon, dashedRectangleUrl };
+
+const DashedCircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DashedCircle fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DashedCircleIcon, dashedCircleUrl };
 
 // Outlined
 const SaveIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
@@ -462,6 +471,13 @@ const DashedRectangleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFA
   </IconWrapper>
 );
 export { DashedRectangleNodesIcon, dashedRectangleNodesUrl };
+
+const DashedCircleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DashedCircleNodes fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DashedCircleNodesIcon, dashedCircleNodesUrl };
 
 const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
