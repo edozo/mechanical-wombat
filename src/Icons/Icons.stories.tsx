@@ -70,6 +70,7 @@ import {
   UndoIcon,
   LogoutIcon,
   SwitchAppIcon,
+  BinocularIcon,
 } from '.';
 
 export default {
@@ -148,6 +149,7 @@ const outlinedIcons = [
   { name: 'Dashed Circle with Nodes', component: <DashedCircleNodesIcon /> },
   { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
+  { name: 'Binocular', component: <BinocularIcon /> },
 ];
 
 export const Solid: Story = () => (

@@ -67,6 +67,7 @@ import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
 import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
 import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
 import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
+import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -555,3 +556,10 @@ const SwitchAppIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { SwitchAppIcon, switchAppUrl };
+
+const BinocularIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Binocular fill={fill} {...props} />
+  </IconWrapper>
+);
+export { BinocularIcon, binocularUrl };
