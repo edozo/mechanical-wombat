@@ -27,6 +27,14 @@ export const Example: React.FC = ({ children }) => <Button {...props}>{children}
 
 ### Up and running
 
+##### Prerequisites: 
+
+* Have [NVM](https://github.com/nvm-sh/nvm) installed 
+* Be using the version of node outlined in `.nvmrc`. You can do this by running `nvm use` in the root of the project and following the instructions.
+* Be using [Yarn](https://yarnpkg.com/)
+
+##### Steps
+
 * Checkout the repo and `cd` into it.
 * Open your terminal of choice.
 * Run `yarn` to install the dependencies.
