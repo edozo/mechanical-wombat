@@ -28,7 +28,7 @@
     },
     {
       "label": "Start Storybook",
-      "command": "yarn start",
+      "command": "yarn storybook",
       "type": "shell"
     },
     {
@@ -46,7 +46,6 @@
     },
     {
       "label": "Run Storybook",
-      "dependsOrder": "sequence",
       "dependsOn":["Start server", "Start Storybook"],
     },
   ],
