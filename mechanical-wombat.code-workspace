@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.confirmSync": false,
+		"files.autoSave": "onFocusChange",
+		"git.autorefresh": true,
+		"workbench.editor.enablePreviewFromQuickOpen": false,
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#665947",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#7a7062",
+			"statusBarItem.remoteBackground": "#665947",
+			"statusBarItem.remoteForeground": "#15202b",
+			"titleBar.activeBackground": "#665947",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#66594799",
+			"titleBar.inactiveForeground": "#15202b99",
+			"activityBar.activeBackground": "#7a7062",
+			"activityBar.activeBorder": "#7a7a7a",
+			"activityBar.background": "#665947",
+			"activityBar.foreground": "#a5a5a5",
+			"activityBar.inactiveForeground": "#dfdfdf99",
+			"activityBarBadge.background": "#15202b",
+			"activityBarBadge.foreground": "#dfdfdf",
+		},
+		"diffEditor.renderSideBySide": true,
+		"[json]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.suggestSelection": "first",
+		"[javascriptreact]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
+		"editor.tabSize": 2,
+		"javascript.updateImportsOnFileMove.enabled": "always",
+		"diffEditor.ignoreTrimWhitespace": false,
+		"search.exclude": {
+			"**/build": true
+		},
+	},
+	"extensions": {
+		"recommendations": [
+			"esbenp.prettier-vscode",
+			"dbaeumer.vscode-eslint",
+			"jpoissonnier.vscode-styled-components",
+			"visualstudioexptteam.vscodeintellicode"
+		]
+	}
+}
