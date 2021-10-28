@@ -20,7 +20,6 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "build-storybook",
-    "deploy": "gh-pages -d storybook-static",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .ts --ext .tsx src && yarn lint:css",
