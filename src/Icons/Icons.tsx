@@ -68,6 +68,7 @@ import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
 import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
 import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
 import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
+import errorUrl, { ReactComponent as Error } from './icons/error-icon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -563,3 +564,10 @@ const BinocularIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
   </IconWrapper>
 );
 export { BinocularIcon, binocularUrl };
+
+const ErrorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Error fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ErrorIcon, errorUrl };

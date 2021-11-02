@@ -71,6 +71,7 @@ import {
   LogoutIcon,
   SwitchAppIcon,
   BinocularIcon,
+  ErrorIcon,
 } from '.';
 
 export default {
@@ -150,6 +151,7 @@ const outlinedIcons = [
   { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
   { name: 'Binocular', component: <BinocularIcon /> },
+  { name: 'Error', component: <ErrorIcon /> },
 ];
 
 export const Solid: Story = () => (

@@ -20,5 +20,6 @@ export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
 export { Header } from './Header';
 export { Menu } from './Menu';
+export { Error, NotFound, ErrorBoundary } from './Error';
 
 export { ThemeProvider } from './ThemeProvider';
