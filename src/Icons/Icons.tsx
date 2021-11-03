@@ -70,6 +70,20 @@ import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-ic
 import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
 import errorUrl, { ReactComponent as Error } from './icons/error-icon.svg';
 
+const importAll = (r: any): any => {
+  const icons = {};
+  r.keys().map((item: any) => (icons[item.replace('./', '')] = r(item)));
+  return icons;
+};
+
+const icons = importAll(require.context('./icons', false, /\.(png|jpe?g|svg)$/));
+
+const objKeys = Object.keys(icons);
+objKeys.forEach(i => {
+  console.log('value:', icons[i]);
+  // Process and export components and images for icons here
+});
+
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
 export interface Props {
