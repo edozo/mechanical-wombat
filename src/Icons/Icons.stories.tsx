@@ -72,6 +72,12 @@ import {
   SwitchAppIcon,
   BinocularIcon,
   ErrorIcon,
+  OneAcreIcon,
+  HalfAcreIcon,
+  OneThirdAcreIcon,
+  QuarterAcreIcon,
+  OneSixthAcreIcon,
+  OneEighthAcreIcon,
 } from '.';
 
 export default {
@@ -108,6 +114,12 @@ const solidIcons = [
   { name: 'Undo', component: <UndoIcon /> },
   { name: 'Logout', component: <LogoutIcon /> },
   { name: 'Switch App', component: <SwitchAppIcon /> },
+  { name: 'One Acre', component: <OneAcreIcon /> },
+  { name: 'Half Acre', component: <HalfAcreIcon /> },
+  { name: 'One Third Acre', component: <OneThirdAcreIcon /> },
+  { name: 'Quarter Acre', component: <QuarterAcreIcon /> },
+  { name: 'One Sixth Acre', component: <OneSixthAcreIcon /> },
+  { name: 'One Eighth Acre', component: <OneEighthAcreIcon /> },
 ];
 
 const outlinedIcons = [

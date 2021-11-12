@@ -69,6 +69,12 @@ import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
 import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
 import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
 import errorUrl, { ReactComponent as Error } from './icons/error-icon.svg';
+import oneAcreUrl, { ReactComponent as OneAcre } from './icons/one-acre.svg';
+import halfAcreUrl, { ReactComponent as HalfAcre } from './icons/half-acre.svg';
+import oneThirdAcreUrl, { ReactComponent as OneThirdAcre } from './icons/one-third-acre.svg';
+import quarterAcreUrl, { ReactComponent as QuarterAcre } from './icons/quarter-acre.svg';
+import oneSixthAcreUrl, { ReactComponent as OneSixthAcre } from './icons/one-sixth-acre.svg';
+import oneEighthAcreUrl, { ReactComponent as OneEighthAcre } from './icons/one-eighth-acre.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -571,3 +577,45 @@ const ErrorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
   </IconWrapper>
 );
 export { ErrorIcon, errorUrl };
+
+const OneAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneAcreIcon, oneAcreUrl };
+
+const HalfAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HalfAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HalfAcreIcon, halfAcreUrl };
+
+const OneThirdAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneThirdAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneThirdAcreIcon, oneThirdAcreUrl };
+
+const QuarterAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <QuarterAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { QuarterAcreIcon, quarterAcreUrl };
+
+const OneSixthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneSixthAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneSixthAcreIcon, oneSixthAcreUrl };
+
+const OneEighthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneEighthAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneEighthAcreIcon, oneEighthAcreUrl };
