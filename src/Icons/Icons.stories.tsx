@@ -78,6 +78,11 @@ import {
   QuarterAcreIcon,
   OneSixthAcreIcon,
   OneEighthAcreIcon,
+  HouseFootprint1Icon,
+  HouseFootprint2Icon,
+  HouseFootprint3Icon,
+  SingleGarageIcon,
+  DoubleGarageIcon,
 } from '.';
 
 export default {
@@ -120,6 +125,11 @@ const solidIcons = [
   { name: 'Quarter Acre', component: <QuarterAcreIcon /> },
   { name: 'One Sixth Acre', component: <OneSixthAcreIcon /> },
   { name: 'One Eighth Acre', component: <OneEighthAcreIcon /> },
+  { name: 'House Footprint 1', component: <HouseFootprint1Icon /> },
+  { name: 'House Footprint 2', component: <HouseFootprint2Icon /> },
+  { name: 'House Footprint 3', component: <HouseFootprint3Icon /> },
+  { name: 'Single Garage', component: <SingleGarageIcon /> },
+  { name: 'Double Garage', component: <DoubleGarageIcon /> },
 ];
 
 const outlinedIcons = [
