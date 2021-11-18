@@ -75,6 +75,11 @@ import oneThirdAcreUrl, { ReactComponent as OneThirdAcre } from './icons/one-thi
 import quarterAcreUrl, { ReactComponent as QuarterAcre } from './icons/quarter-acre.svg';
 import oneSixthAcreUrl, { ReactComponent as OneSixthAcre } from './icons/one-sixth-acre.svg';
 import oneEighthAcreUrl, { ReactComponent as OneEighthAcre } from './icons/one-eighth-acre.svg';
+import houseFootprint1Url, { ReactComponent as HouseFootprint1 } from './icons/house-footprint-1.svg';
+import houseFootprint2Url, { ReactComponent as HouseFootprint2 } from './icons/house-footprint-2.svg';
+import houseFootprint3Url, { ReactComponent as HouseFootprint3 } from './icons/house-footprint-3.svg';
+import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-garage.svg';
+import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -619,3 +624,38 @@ const OneEighthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
   </IconWrapper>
 );
 export { OneEighthAcreIcon, oneEighthAcreUrl };
+
+const HouseFootprint1Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint1 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint1Icon, houseFootprint1Url };
+
+const HouseFootprint2Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint2 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint2Icon, houseFootprint2Url };
+
+const HouseFootprint3Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint3 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint3Icon, houseFootprint3Url };
+
+const SingleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <SingleGarage fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SingleGarageIcon, singleGarageUrl };
+
+const DoubleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DoubleGarage fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DoubleGarageIcon, doubleGarageUrl };
