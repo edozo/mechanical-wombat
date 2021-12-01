@@ -83,6 +83,7 @@ import {
   HouseFootprint3Icon,
   SingleGarageIcon,
   DoubleGarageIcon,
+  ScissorsIcon,
 } from '.';
 
 export default {
@@ -174,6 +175,7 @@ const outlinedIcons = [
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
   { name: 'Binocular', component: <BinocularIcon /> },
   { name: 'Error', component: <ErrorIcon /> },
+  { name: 'Split Polygon', component: <ScissorsIcon /> },
 ];
 
 export const Solid: Story = () => (

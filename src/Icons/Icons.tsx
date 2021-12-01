@@ -80,6 +80,7 @@ import houseFootprint2Url, { ReactComponent as HouseFootprint2 } from './icons/h
 import houseFootprint3Url, { ReactComponent as HouseFootprint3 } from './icons/house-footprint-3.svg';
 import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-garage.svg';
 import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
+import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -659,3 +660,10 @@ const DoubleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
   </IconWrapper>
 );
 export { DoubleGarageIcon, doubleGarageUrl };
+
+const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Scissors fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ScissorsIcon, scissorsUrl };
