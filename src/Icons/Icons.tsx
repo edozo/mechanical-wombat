@@ -63,6 +63,7 @@ import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.sv
 import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
 import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
 import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
+import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -523,3 +524,10 @@ const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { UndoIcon, undoUrl };
+
+const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Scissors fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ScissorsIcon, scissorsUrl };

@@ -66,6 +66,7 @@ import {
   TreeIcon,
   RedoIcon,
   UndoIcon,
+  ScissorsIcon,
 } from '.';
 
 export default {
@@ -140,6 +141,7 @@ const outlinedIcons = [
   { name: 'Dashed Rectangle with Nodes', component: <DashedRectangleNodesIcon /> },
   { name: 'Reopen Polygon', component: <ReopenPolygonIcon /> },
   { name: 'Feature Outline', component: <FeatureOutlineIcon /> },
+  { name: 'Split Polygon', component: <ScissorsIcon /> },
 ];
 
 export const Solid: Story = () => (
