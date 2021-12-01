@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Checkout",
+      "command": "git checkout ${input:branchName}",
+      "type": "shell"
+    },
+    {
+      "label": "Pull",
+      "command": "git pull",
+      "type": "shell"
+    },
+    {
+      "label": "Install",
+      "command": "yarn",
+      "type": "shell"
+    },
+    {
+      "label": "Start server",
+      "command": "yarn start",
+      "type": "shell"
+    },
+    {
+      "label": "Start Storybook",
+      "command": "yarn storybook",
+      "type": "shell"
+    },
+    {
+      "label": "yalc install",
+      "command": "yarn global add yalc",
+      "type": "shell"
+    },
+    {
+      "label": "yalc publish",
+      "command": "yalc publish",
+      "type": "shell"
+    },
+    {
+      "label": "Init",
+      "dependsOrder": "sequence",
+      "dependsOn":["Checkout", "Pull", "Install"],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Run Storybook",
+      "dependsOn":["Start server", "Start Storybook"],
+    },
+  ],
+  "inputs": [
+    {
+      "id": "branchName",
+      "type": "promptString",
+      "description": "Checkout branch name",
+      "default": "main"
+    }
+  ]
+}

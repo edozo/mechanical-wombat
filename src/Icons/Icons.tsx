@@ -38,6 +38,7 @@ import lockClosedUrl, { ReactComponent as LockClosed } from './icons/lock-closed
 import deleteUrl, { ReactComponent as Delete } from './icons/delete.svg';
 import drawingLibraryUrl, { ReactComponent as DrawingLibrary } from './icons/drawing-library.svg';
 import dashedRectangleUrl, { ReactComponent as DashedRectangle } from './icons/dashed-rectangle.svg';
+import dashedCircleUrl, { ReactComponent as DashedCircle } from './icons/dashed-circle.svg';
 import boldUrl, { ReactComponent as Bold } from './icons/bold.svg';
 import italicUrl, { ReactComponent as Italic } from './icons/italic.svg';
 import hatchCDUrl, { ReactComponent as HatchCD } from './icons/hatch-cd.svg';
@@ -57,12 +58,28 @@ import starMarkUrl, { ReactComponent as StarMark } from './icons/star-mark.svg';
 import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
 import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
 import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
+import dashedCircleNodesUrl, { ReactComponent as DashedCircleNodes } from './icons/dashed-circle-nodes.svg';
 import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
 import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
 import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
 import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
 import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
 import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
+import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
+import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
+import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
+import errorUrl, { ReactComponent as Error } from './icons/error-icon.svg';
+import oneAcreUrl, { ReactComponent as OneAcre } from './icons/one-acre.svg';
+import halfAcreUrl, { ReactComponent as HalfAcre } from './icons/half-acre.svg';
+import oneThirdAcreUrl, { ReactComponent as OneThirdAcre } from './icons/one-third-acre.svg';
+import quarterAcreUrl, { ReactComponent as QuarterAcre } from './icons/quarter-acre.svg';
+import oneSixthAcreUrl, { ReactComponent as OneSixthAcre } from './icons/one-sixth-acre.svg';
+import oneEighthAcreUrl, { ReactComponent as OneEighthAcre } from './icons/one-eighth-acre.svg';
+import houseFootprint1Url, { ReactComponent as HouseFootprint1 } from './icons/house-footprint-1.svg';
+import houseFootprint2Url, { ReactComponent as HouseFootprint2 } from './icons/house-footprint-2.svg';
+import houseFootprint3Url, { ReactComponent as HouseFootprint3 } from './icons/house-footprint-3.svg';
+import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-garage.svg';
+import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
 import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
@@ -214,6 +231,13 @@ const DashedRectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
   </IconWrapper>
 );
 export { DashedRectangleIcon, dashedRectangleUrl };
+
+const DashedCircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DashedCircle fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DashedCircleIcon, dashedCircleUrl };
 
 // Outlined
 const SaveIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
@@ -462,6 +486,13 @@ const DashedRectangleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFA
 );
 export { DashedRectangleNodesIcon, dashedRectangleNodesUrl };
 
+const DashedCircleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DashedCircleNodes fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DashedCircleNodesIcon, dashedCircleNodesUrl };
+
 const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ReopenPolygon fill={fill} {...props} />
@@ -524,6 +555,111 @@ const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { UndoIcon, undoUrl };
+
+const LogoutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Logout fill={fill} {...props} />
+  </IconWrapper>
+);
+export { LogoutIcon, logoutUrl };
+
+const SwitchAppIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <SwitchApp fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SwitchAppIcon, switchAppUrl };
+
+const BinocularIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Binocular fill={fill} {...props} />
+  </IconWrapper>
+);
+export { BinocularIcon, binocularUrl };
+
+const ErrorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Error fill={fill} {...props} />
+  </IconWrapper>
+);
+export { ErrorIcon, errorUrl };
+
+const OneAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneAcreIcon, oneAcreUrl };
+
+const HalfAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HalfAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HalfAcreIcon, halfAcreUrl };
+
+const OneThirdAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneThirdAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneThirdAcreIcon, oneThirdAcreUrl };
+
+const QuarterAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <QuarterAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { QuarterAcreIcon, quarterAcreUrl };
+
+const OneSixthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneSixthAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneSixthAcreIcon, oneSixthAcreUrl };
+
+const OneEighthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <OneEighthAcre fill={fill} {...props} />
+  </IconWrapper>
+);
+export { OneEighthAcreIcon, oneEighthAcreUrl };
+
+const HouseFootprint1Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint1 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint1Icon, houseFootprint1Url };
+
+const HouseFootprint2Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint2 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint2Icon, houseFootprint2Url };
+
+const HouseFootprint3Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <HouseFootprint3 fill={fill} {...props} />
+  </IconWrapper>
+);
+export { HouseFootprint3Icon, houseFootprint3Url };
+
+const SingleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <SingleGarage fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SingleGarageIcon, singleGarageUrl };
+
+const DoubleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <DoubleGarage fill={fill} {...props} />
+  </IconWrapper>
+);
+export { DoubleGarageIcon, doubleGarageUrl };
 
 const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>

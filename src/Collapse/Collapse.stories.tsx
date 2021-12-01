@@ -5,10 +5,6 @@ import { Collapse, CollapseProps } from './Collapse';
 export default {
   title: 'OccupierPlans/Collapse',
   component: Collapse,
-  argTypes: {
-    trigger: { text: 'color' },
-    //   background: { control: 'color' },
-  },
 } as Meta;
 
 const Template: Story<CollapseProps> = args => <Collapse {...args} />;

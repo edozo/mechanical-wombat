@@ -9,10 +9,10 @@ export const StyledCollapse = styled.div`
   flex-direction: column;
   background: ${p => p.theme.colors.white};
   border-radius: ${p => p.theme.borderRadius.small};
-  padding: ${p => p.theme.spacing.xsmall};
 `;
 
 export const StyledTrigger = styled.button`
+  padding: ${p => p.theme.spacing.xsmall};
   background: transparent;
   border: none;
   text-align: left;
@@ -20,9 +20,8 @@ export const StyledTrigger = styled.button`
   font-weight: ${p => p.theme.font.weight.semibold};
   display: block;
   cursor: pointer;
-  padding: 0;
 `;
 
 export const StyledPanel = styled.div`
-  background: transparent;
+  margin: ${p => p.theme.spacing.xsmall};
 `;

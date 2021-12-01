@@ -38,3 +38,9 @@ export const DefaultList: Story = args => (
     <DisabledListItem {...DisabledListItem.args} />
   </List>
 );
+
+export const SingleItemList: Story = args => (
+  <List {...args}>
+    <ControlledListItem {...ControlledListItem.args} />
+  </List>
+);
