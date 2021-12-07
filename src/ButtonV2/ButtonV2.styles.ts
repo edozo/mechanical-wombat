@@ -57,11 +57,11 @@ export const StyledButton = styled.button<ButtonV2Props>`
       background: ${p.theme.colors.system.red};
     `}
 
-  :hover {
+  &:hover {
     opacity: 0.85;
   }
 
-  :disabled {
+  &:disabled {
     background: ${p => p.theme.colors.gray};
     cursor: not-allowed;
   }
