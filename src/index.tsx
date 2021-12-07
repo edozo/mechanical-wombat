@@ -1,5 +1,6 @@
 export { GlobalStyle } from './globalStyle';
 export { Button } from './Button';
+export { ButtonV2 } from './ButtonV2';
 export * from './Typography';
 export * from './Icons';
 export { TableDownloadButton } from './TableDownloadButton';
