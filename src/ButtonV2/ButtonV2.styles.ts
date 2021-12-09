@@ -27,11 +27,11 @@ export const StyledButton = styled.button<ButtonV2Props>`
     css`
       border-radius: 6px;
     `}
-      ${p =>
-        p.radius === 'round' &&
-        css`
-          border-radius: 50px;
-        `}
+  ${p =>
+    p.radius === 'round' &&
+    css`
+      border-radius: 50px;
+    `}
       
   /* VARIANT */
   ${p =>
