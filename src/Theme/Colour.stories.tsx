@@ -13,27 +13,27 @@ export const Primary: Story = () => (
     <DisplayBox background="skyBlueLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
       <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
-      <DisplayBoxBody>#B4EEF9</DisplayBoxBody>
+      <DisplayBoxBody>#A5F0FF</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="skyBlueLight">
       <DisplayBoxSubTitle>Light</DisplayBoxSubTitle>
       <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
-      <DisplayBoxBody>#1DCEEC</DisplayBoxBody>
+      <DisplayBoxBody>#49E0FF</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="skyBlue">
       <DisplayBoxSubTitle>Base</DisplayBoxSubTitle>
       <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
-      <DisplayBoxBody>#00B8D7</DisplayBoxBody>
+      <DisplayBoxBody>#00D4FF</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="skyBlueDark">
       <DisplayBoxSubTitle>Dark</DisplayBoxSubTitle>
       <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
-      <DisplayBoxBody>#019FBA</DisplayBoxBody>
+      <DisplayBoxBody>#02A6E1</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="skyBlueDarker">
       <DisplayBoxSubTitle>Darker</DisplayBoxSubTitle>
       <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
-      <DisplayBoxBody>#00859C</DisplayBoxBody>
+      <DisplayBoxBody>#0086B6</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
 );
@@ -43,27 +43,27 @@ export const Secondary: Story = () => (
     <DisplayBox background="greenLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
       <DisplayBoxTitle>green</DisplayBoxTitle>
-      <DisplayBoxBody>#C8EAAF</DisplayBoxBody>
+      <DisplayBoxBody>#BAF58C</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="greenLight">
       <DisplayBoxSubTitle>Light</DisplayBoxSubTitle>
       <DisplayBoxTitle>green</DisplayBoxTitle>
-      <DisplayBoxBody>#A0D777</DisplayBoxBody>
+      <DisplayBoxBody>#95EF50</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="green">
       <DisplayBoxSubTitle>Base</DisplayBoxSubTitle>
       <DisplayBoxTitle>green</DisplayBoxTitle>
-      <DisplayBoxBody>#99C875</DisplayBoxBody>
+      <DisplayBoxBody>#85DC42</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="greenDark">
       <DisplayBoxSubTitle>Dark</DisplayBoxSubTitle>
       <DisplayBoxTitle>green</DisplayBoxTitle>
-      <DisplayBoxBody>#8AB26B</DisplayBoxBody>
+      <DisplayBoxBody>#66AB37</DisplayBoxBody>
     </DisplayBox>
     <DisplayBox background="greenDarker">
       <DisplayBoxSubTitle>Darker</DisplayBoxSubTitle>
       <DisplayBoxTitle>green</DisplayBoxTitle>
-      <DisplayBoxBody>#75985B</DisplayBoxBody>
+      <DisplayBoxBody>#51842E</DisplayBoxBody>
     </DisplayBox>
   </DisplayBoxWrapper>
 );
