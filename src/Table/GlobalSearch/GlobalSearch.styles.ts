@@ -1,24 +1,6 @@
 import styled from 'styled-components/macro';
 import { searchUrl } from '../../Icons';
 
-export const SearchInputWrapper = styled.div`
-  max-width: 440px;
-  position: relative;
-  button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 32px;
-    border: none;
-    background: ${p => p.theme.colors.white};
-    :hover {
-      background: ${p => p.theme.colors.grayLighter};
-      color: ${p => p.theme.colors.grayDark};
-    }
-  }
-`;
-
 export const SearchInput = styled.input`
   padding: 16px 32px 16px 16px;
   width: 100%;
@@ -36,5 +18,23 @@ export const SearchInput = styled.input`
   :disabled {
     cursor: not-allowed;
     opacity: 0.6;
+  }
+`;
+
+export const SearchInputWrapper = styled.div`
+  max-width: 440px;
+  position: relative;
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    border: none;
+    background: ${p => p.theme.colors.white};
+    :hover {
+      background: ${p => p.theme.colors.grayLighter};
+      color: ${p => p.theme.colors.grayDark};
+    }
   }
 `;
