@@ -1,14 +1,21 @@
 import React from 'react';
 import { SearchInput, SearchInputWrapper } from './GlobalSearch.styles';
 
-interface Props extends React.HTMLAttributes<HTMLInputElement> {
+export interface GlobalSearchProps extends React.HTMLAttributes<HTMLInputElement> {
   value: string;
   disabled: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   reset: () => void;
 }
 
-export const GlobalSearch: React.FC<Props> = ({ value, disabled, onChange, reset, placeholder, ...rest }) => (
+export const GlobalSearch: React.FC<GlobalSearchProps> = ({
+  value,
+  disabled,
+  onChange,
+  reset,
+  placeholder,
+  ...rest
+}) => (
   <SearchInputWrapper>
     <SearchInput
       type="text"
