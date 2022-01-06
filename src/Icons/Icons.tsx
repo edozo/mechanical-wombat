@@ -276,7 +276,7 @@ const ReloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { ReloadIcon, reloadUrl };
 
-const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = 'none', ...props }) => (
+const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SplitPolygon fill={fill} {...props} />
   </IconWrapper>
