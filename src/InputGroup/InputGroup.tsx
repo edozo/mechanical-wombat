@@ -1,5 +1,8 @@
 import React, { createContext } from 'react';
-import { StyledInput, StyledInputGroup, StyledItem } from './InputGroup.styles';
+import { StyledInputGroup } from './InputGroup.styles';
+import { Item } from './Item';
+import { Button } from './Button';
+import { Input } from './Input';
 
 export interface Context extends React.HTMLAttributes<HTMLInputElement> {
   radius?: 'standard' | 'round';
@@ -7,7 +10,7 @@ export interface Context extends React.HTMLAttributes<HTMLInputElement> {
 
 const InputGroupContext = createContext<Context>({ radius: 'standard' });
 
-const useInputGroupContext = (): any => {
+export const useInputGroupContext = (): any => {
   const context = React.useContext(InputGroupContext);
   if (!context) {
     throw new Error(`InputGroup compound components cannot be rendered outside the InputGroup component`);
@@ -15,27 +18,17 @@ const useInputGroupContext = (): any => {
   return context;
 };
 
-const InputGroup = (props: Context): any => {
-  return (
-    <InputGroupContext.Provider value={props}>
-      <StyledInputGroup radius={props.radius}>{props.children}</StyledInputGroup>
-    </InputGroupContext.Provider>
-  );
-};
+const InputGroup = (props: Context): any => (
+  <InputGroupContext.Provider value={props}>
+    <StyledInputGroup radius={props.radius}>{props.children}</StyledInputGroup>
+  </InputGroupContext.Provider>
+);
 
 InputGroup.defaultProps = {
   radius: 'standard',
 };
 
-const Input: React.FC = () => {
-  const { id, value, onChange, placeholder } = useInputGroupContext();
-  return <StyledInput id={id} value={value} onChange={onChange} placeholder={placeholder} />;
-};
-
-const Item: React.FC = ({ children }) => {
-  return <StyledItem>{children}</StyledItem>;
-};
-
+InputGroup.Button = Button;
 InputGroup.Item = Item;
 InputGroup.Input = Input;
 

@@ -17,7 +17,7 @@ export const StyledInputGroup = styled.div<Context>`
       css`
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
-      `}
+      `};
   }
   > * :last-child {
     border-right: ${p => `1px solid ${p.theme.colors.grayDark}`};
@@ -34,23 +34,4 @@ export const StyledInputGroup = styled.div<Context>`
         border-bottom-right-radius: 50px;
       `}
   }
-`;
-
-export const StyledInput = styled.input`
-  flex: 1;
-  border: 0;
-  background: white;
-  padding: 12px;
-  border-top: ${p => `1px solid ${p.theme.colors.grayDark}`};
-  border-bottom: ${p => `1px solid ${p.theme.colors.grayDark}`};
-  :focus {
-    outline: none;
-  }
-`;
-
-export const StyledItem = styled.div`
-  padding-right: 4px;
-  background: white;
-  border-top: ${p => `1px solid ${p.theme.colors.grayDark}`};
-  border-bottom: ${p => `1px solid ${p.theme.colors.grayDark}`};
 `;
