@@ -8,7 +8,8 @@ export const StyledItem = styled.div<ItemProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${p => p.backgroundColor || 'white'}; // take me form a prop - default to white
+  background-color: white;
+  background-color: ${p => p.backgroundColor};
   border-top: ${p => `1px solid ${p.theme.colors.grayDark}`};
   border-bottom: ${p => `1px solid ${p.theme.colors.grayDark}`};
   svg {
