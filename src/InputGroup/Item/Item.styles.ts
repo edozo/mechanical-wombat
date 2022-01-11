@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export interface ItemProps {
-  readonly backgroundColor?: string;
+  backgroundColor?: string;
 }
 
 export const StyledItem = styled.div<ItemProps>`
