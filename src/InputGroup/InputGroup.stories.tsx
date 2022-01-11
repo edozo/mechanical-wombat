@@ -57,7 +57,7 @@ const TemplateKitchenSink: Story = args => (
     <InputGroup.Item>
       <SearchIcon />
     </InputGroup.Item>
-    <InputGroup.Input placeholder="Placeholder fromt he input props" />
+    <InputGroup.Input placeholder="Placeholder from the input props" />
     <InputGroup.Item>
       <InputGroup.Button onClick={() => console.log('123')}>Submit</InputGroup.Button>
     </InputGroup.Item>
