@@ -23,5 +23,6 @@ export { EmptyState } from './EmptyState';
 export { Header } from './Header';
 export { Menu } from './Menu';
 export { Error, NotFound, ErrorBoundary } from './Error';
+export { GlobalSearch, InputGroup } from './InputGroup';
 
 export { ThemeProvider } from './ThemeProvider';
