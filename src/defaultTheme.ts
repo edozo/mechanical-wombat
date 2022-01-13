@@ -2,17 +2,17 @@ import { DefaultTheme } from 'styled-components';
 
 const colors = {
   // Sky blue
-  skyBlueLighter: '#B4EEF9',
-  skyBlueLight: '#1DCEEC',
-  skyBlue: '#00B8D7',
-  skyBlueDark: '#019FBA',
-  skyBlueDarker: '#00859C',
+  skyBlueLighter: '#A5F0FF',
+  skyBlueLight: '#49E0FF',
+  skyBlue: '#00D4FF',
+  skyBlueDark: '#02A6E1',
+  skyBlueDarker: '#0086B6',
   // Green
-  greenLighter: '#C8EAAF',
-  greenLight: '#A0D777',
-  green: '#99C875',
-  greenDark: '#8AB26B',
-  greenDarker: '#75985B',
+  greenLighter: '#BAF58C',
+  greenLight: '#95EF50',
+  green: '#85DC42',
+  greenDark: '#66AB37',
+  greenDarker: '#51842E',
   // Steel blue
   steelBlueLighter: '#F7FAFC',
   steelBlueLight: '#F1F5FD',
