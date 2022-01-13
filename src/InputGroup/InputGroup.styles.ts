@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { Context } from './InputGroup';
 
 export const StyledInputGroup = styled.div<Context>`
