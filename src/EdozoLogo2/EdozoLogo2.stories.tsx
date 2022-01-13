@@ -16,9 +16,20 @@ WithName.args = {
   appName: 'Occupiers',
 };
 
-export const WithColourAndSmall = Template.bind({});
-WithColourAndSmall.args = {
+export const WithOccupiersColor = Template.bind({});
+WithOccupiersColor.args = {
+  appName: 'Occupiers',
+  size: 'standard',
+};
+
+export const WithHelpCentreColor = Template.bind({});
+WithHelpCentreColor.args = {
+  appName: 'Help centre',
+  size: 'standard',
+};
+
+export const WithInsightColorAndSmall = Template.bind({});
+WithInsightColorAndSmall.args = {
   appName: 'Insight',
-  colour: 'Insight',
   size: 'small',
 };

@@ -4,17 +4,12 @@ import { ReactComponent as Logo } from './edozo-logo.svg';
 
 export interface Props {
   appName?: string;
-  colour?: 'Maps' | 'Occupiers' | 'Insight';
   size?: 'small' | 'standard';
 }
 
-export const EdozoLogo2: React.FC<Props> = ({ appName, colour = 'Maps', size = 'standard' }) => (
+export const EdozoLogo2: React.FC<Props> = ({ appName, size = 'standard' }) => (
   <div>
     <Logo data-testid="edozoLogo" />
-    {appName && (
-      <ProductName colour={colour} size={size}>
-        {appName}
-      </ProductName>
-    )}
+    {appName && <ProductName size={size}>{appName}</ProductName>}
   </div>
 );

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Props } from './EdozoLogo2';
 
 export const ProductName = styled.span<Props>`  
+  color: ${p => p.theme.colors.aliases.primary};
   ${p =>
     p.size === 'standard' &&
     css`
@@ -15,20 +16,26 @@ export const ProductName = styled.span<Props>`
         margin-left: ${p.theme.spacing.xxsmall};
       `}
     ${p =>
-      p.colour === 'Maps' &&
+      p.appName === 'Maps' &&
       css`
         color: ${p.theme.colors.aliases.primary};
       `} 
     ${p =>
-      p.colour === 'Insight' &&
+      p.appName === 'Insight' &&
       css`
-        color: #ff8955;
+        color: ${p.theme.colors.appColors.insight};
       `} 
     ${p =>
-      p.colour === 'Occupiers' &&
+      p.appName === 'Occupiers' &&
       css`
         color: #7e0bc2;
       `} 
+    ${p =>
+      p.appName?.toLowerCase() === 'help centre' &&
+      css`
+        ${p.theme.colors.appColors.helpCentre};
+      `} 
+  
   font-weight: ${p => p.theme.font.weight.semibold};
   font-family: ${p => p.theme.font.family.main};
 `;

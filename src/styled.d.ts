@@ -96,6 +96,11 @@ declare module 'styled-components' {
         redDark: string;
         redDarker: string;
       };
+      appColors: {
+        occupiers: string;
+        insight: string;
+        helpCentre: string;
+      };
     };
     font: {
       family: {
