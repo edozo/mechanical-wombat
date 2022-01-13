@@ -81,6 +81,7 @@ import houseFootprint3Url, { ReactComponent as HouseFootprint3 } from './icons/h
 import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-garage.svg';
 import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
 import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
+import splitPolygonUrl, { ReactComponent as SplitPolygon } from './icons/split-polygon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -274,6 +275,13 @@ const ReloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
   </IconWrapper>
 );
 export { ReloadIcon, reloadUrl };
+
+const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <SplitPolygon fill={fill} {...props} />
+  </IconWrapper>
+);
+export { SplitPolygonIcon, splitPolygonUrl };
 
 // Solid
 const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (

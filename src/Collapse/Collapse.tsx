@@ -14,7 +14,12 @@ export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, tr
   });
 
   useEffect(() => {
-    setExpanded(isOpen);
+    let mounted = true;
+    mounted && setExpanded(isOpen);
+
+    return () => {
+      mounted = false;
+    };
   }, [isOpen, setExpanded]);
 
   return (
