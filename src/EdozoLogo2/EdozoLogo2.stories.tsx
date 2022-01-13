@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 
 export const WithName = Template.bind({});
 WithName.args = {
-  appName: 'Occupiers',
+  appName: 'Maps',
 };
 
 export const WithOccupiersColor = Template.bind({});

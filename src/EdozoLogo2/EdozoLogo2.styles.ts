@@ -12,7 +12,7 @@ export const ProductName = styled.span<Props>`
     ${p =>
       p.size === 'small' &&
       css`
-        font-size: ${p.theme.font.size.text.large};
+        font-size: ${p.theme.font.size.text.xlarge};
         margin-left: ${p.theme.spacing.xxsmall};
       `}
     ${p =>
@@ -28,12 +28,12 @@ export const ProductName = styled.span<Props>`
     ${p =>
       p.appName === 'Occupiers' &&
       css`
-        color: #7e0bc2;
+        color: ${p.theme.colors.appColors.occupiers};
       `} 
     ${p =>
-      p.appName?.toLowerCase() === 'help centre' &&
+      p.appName === 'Help centre' &&
       css`
-        ${p.theme.colors.appColors.helpCentre};
+        color: ${p.theme.colors.appColors.helpCentre};
       `} 
   
   font-weight: ${p => p.theme.font.weight.semibold};
