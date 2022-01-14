@@ -82,6 +82,8 @@ import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-
 import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
 import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
 import splitPolygonUrl, { ReactComponent as SplitPolygon } from './icons/split-polygon.svg';
+import eyeUrl, { ReactComponent as Eye } from './icons/eye.svg';
+import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -675,3 +677,17 @@ const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
   </IconWrapper>
 );
 export { ScissorsIcon, scissorsUrl };
+
+const EyeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Eye fill={fill} {...props} />
+  </IconWrapper>
+);
+export { EyeIcon, eyeUrl };
+
+const FiltersIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Filters fill={fill} {...props} />
+  </IconWrapper>
+);
+export { FiltersIcon, filtersUrl };
