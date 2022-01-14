@@ -85,6 +85,8 @@ import {
   DoubleGarageIcon,
   ScissorsIcon,
   SplitPolygonIcon,
+  EyeIcon,
+  FiltersIcon,
 } from '.';
 
 export default {
@@ -132,6 +134,8 @@ const solidIcons = [
   { name: 'House Footprint 3', component: <HouseFootprint3Icon /> },
   { name: 'Single Garage', component: <SingleGarageIcon /> },
   { name: 'Double Garage', component: <DoubleGarageIcon /> },
+  { name: 'Eye', component: <EyeIcon /> },
+  { name: 'Filters', component: <FiltersIcon /> },
 ];
 
 const outlinedIcons = [
