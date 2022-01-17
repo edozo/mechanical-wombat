@@ -1,19 +1,33 @@
 import React from 'react';
-import { ProductName } from './EdozoLogo2.styles';
-import { ReactComponent as Logo } from './edozo-logo.svg';
+// import { Logo } from './EdozoLogo2.styles';
+import { ReactComponent as EdozoLogo } from './edozo-logo.svg';
+import { ReactComponent as InsightLogo } from './insight-logo.svg';
+import { ReactComponent as OccupiersLogo } from './occupiers-logo.svg';
+import { ReactComponent as MapsLogo } from './maps-logo.svg';
+import { ReactComponent as HelpCentreLogo } from './help-centre-logo.svg';
 
 export interface Props {
-  appName?: 'Maps' | 'Insight' | 'Occupiers' | 'Help centre' | '';
-  size?: 'small' | 'standard';
+  appName?: 'maps' | 'insight' | 'occupiers' | 'helpCentre' | 'edozo';
 }
 
-export const EdozoLogo2: React.FC<Props> = ({ appName, size = 'standard' }) => (
+const switchLogo = (appName: Props): any => {
+  switch (appName) {
+    case 'maps':
+      return <MapsLogo />;
+    case 'occupiers':
+      return <OccupiersLogo />;
+    case 'insight':
+      return <InsightLogo />;
+    case 'helpCentre':
+      return <HelpCentreLogo />;
+    default:
+      return <EdozoLogo />;
+  }
+};
+
+export const EdozoLogo2: React.FC<Props> = ({ appName = 'edozo' }: Props) => (
   <div>
-    <Logo data-testid="edozoLogo" />
-    {appName && (
-      <ProductName size={size} appName={appName}>
-        {appName}
-      </ProductName>
-    )}
+    {/* <Logo data-testid="edozoLogo" /> */}
+    {switchLogo(appName)}
   </div>
 );
