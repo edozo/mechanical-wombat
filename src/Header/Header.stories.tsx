@@ -20,18 +20,18 @@ LogoOnly.args = {
   children: <EdozoLogo appName="Unicorns" />,
 };
 
-export const WithMenu = Template.bind({});
-WithMenu.args = {
+export const MapsWithMenu = Template.bind({});
+MapsWithMenu.args = {
   children: (
     <Fragment>
       <EdozoLogo appName="Unicorns" />
       <Menu>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Maps">
           <a className="active" href="">
             Create a unicorn
           </a>
         </Menu.ItemWrapper>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Maps">
           <a href="">My unicorns</a>
         </Menu.ItemWrapper>
         <Menu.PlatformMenu>
@@ -48,18 +48,90 @@ WithMenu.args = {
   ),
 };
 
-export const WithMenuPopover = Template.bind({});
-WithMenuPopover.args = {
+export const MapsWithMenuPopover = Template.bind({});
+MapsWithMenuPopover.args = {
   children: (
     <Fragment>
       <EdozoLogo appName="Unicorns" />
       <Menu>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Maps">
           <a className="active" href="">
             Create a unicorn
           </a>
         </Menu.ItemWrapper>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Maps">
+          <a href="">My unicorns</a>
+        </Menu.ItemWrapper>
+        <Menu.PlatformMenu>
+          <div>
+            <Popover
+              placement="top-end"
+              interactive
+              interactiveBorder={10}
+              visible
+              content={
+                <List>
+                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
+                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
+                </List>
+              }
+            >
+              <div>
+                <Menu.PlatformButton onClick={() => console.log('click')}>
+                  <SwitchAppIcon size="small" />
+                </Menu.PlatformButton>
+              </div>
+            </Popover>
+          </div>
+          <Menu.PlatformButton onClick={() => console.log('click')}>
+            <LogoutIcon size="small" />
+          </Menu.PlatformButton>
+        </Menu.PlatformMenu>
+      </Menu>
+    </Fragment>
+  ),
+};
+
+export const OccupiersWithMenu = Template.bind({});
+OccupiersWithMenu.args = {
+  children: (
+    <Fragment>
+      <EdozoLogo appName="Unicorns" />
+      <Menu>
+        <Menu.ItemWrapper variant="Occupiers">
+          <a className="active" href="">
+            Create a unicorn
+          </a>
+        </Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Occupiers">
+          <a href="">My unicorns</a>
+        </Menu.ItemWrapper>
+        <Menu.PlatformMenu>
+          <Menu.PlatformButton onClick={() => console.log('click')}>
+            <SwitchAppIcon size="small" />
+          </Menu.PlatformButton>
+
+          <Menu.PlatformButton onClick={() => console.log('click')}>
+            <LogoutIcon size="small" />
+          </Menu.PlatformButton>
+        </Menu.PlatformMenu>
+      </Menu>
+    </Fragment>
+  ),
+};
+
+export const OccupiersWithMenuPopover = Template.bind({});
+OccupiersWithMenuPopover.args = {
+  children: (
+    <Fragment>
+      <EdozoLogo appName="Unicorns" />
+      <Menu>
+        <Menu.ItemWrapper variant="Occupiers">
+          <a className="active" href="">
+            Create a unicorn
+          </a>
+        </Menu.ItemWrapper>
+        <Menu.ItemWrapper variant="Occupiers">
           <a href="">My unicorns</a>
         </Menu.ItemWrapper>
         <Menu.PlatformMenu>

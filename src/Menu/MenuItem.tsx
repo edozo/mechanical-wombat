@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { StyledMenuItemWrapper } from './MenuItem.styles';
 
-export const MenuItemWrapper: React.FC = ({ children }) => {
-  return <StyledMenuItemWrapper>{children}</StyledMenuItemWrapper>;
+export interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
+  variant?: 'Maps' | 'Occupiers' | 'Insight' | 'Help centre';
+}
+
+export const MenuItemWrapper: React.FC<MenuItemProps> = ({ children, variant }) => {
+  return <StyledMenuItemWrapper variant={variant}>{children}</StyledMenuItemWrapper>;
 };
