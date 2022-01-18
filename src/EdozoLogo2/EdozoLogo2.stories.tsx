@@ -11,25 +11,22 @@ const Template: Story = args => <EdozoLogo2 {...args} />;
 
 export const Default = Template.bind({});
 
-export const WithName = Template.bind({});
-WithName.args = {
-  appName: 'Maps',
+export const WithOccupiers = Template.bind({});
+WithOccupiers.args = {
+  appName: 'occupiers',
 };
 
-export const WithOccupiersColor = Template.bind({});
-WithOccupiersColor.args = {
-  appName: 'Occupiers',
-  size: 'standard',
+export const WithMaps = Template.bind({});
+WithMaps.args = {
+  appName: 'maps',
 };
 
-export const WithHelpCentreColor = Template.bind({});
-WithHelpCentreColor.args = {
-  appName: 'Help centre',
-  size: 'standard',
+export const WithInsight = Template.bind({});
+WithInsight.args = {
+  appName: 'insight',
 };
 
-export const WithInsightColorAndSmall = Template.bind({});
-WithInsightColorAndSmall.args = {
-  appName: 'Insight',
-  size: 'small',
+export const WithHelpCentre = Template.bind({});
+WithHelpCentre.args = {
+  appName: 'helpCentre',
 };
