@@ -74,4 +74,4 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
       height: 6px;
     }
   }
-}`;
+`;
