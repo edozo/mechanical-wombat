@@ -71,8 +71,8 @@ export const StyledButton = styled.button<ButtonV2Props>`
           height: 12px;
           width: 26px;
           background: #2818f9;
-          font-family: ${p => p.theme.font.family.main};
-          font-size: ${p => p.theme.spacing.xsmall};
+          font-family: ${p.theme.font.family.main};
+          font-size: ${p.theme.spacing.xsmall};
           font-weight: 800;
           line-height: 12px;
           color: ${p.theme.colors.white};
