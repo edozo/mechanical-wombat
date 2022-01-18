@@ -17,3 +17,11 @@ export const StyledHeader = styled.div`
     text-decoration: none;
   }
 `;
+
+export const StyledButtonTitle = styled.div`
+  font-family: ${p => p.theme.font.family.main};
+  font-size: ${p => p.theme.spacing.small};
+  font-weight: ${p => p.theme.font.weight.bold};
+  line-height: ${p => p.theme.spacing.base};
+  color: #060048;
+`;

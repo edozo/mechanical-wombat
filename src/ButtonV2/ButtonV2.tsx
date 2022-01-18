@@ -5,7 +5,7 @@ import { StyledButton } from './ButtonV2.styles';
 export interface ButtonV2Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'standard';
   radius?: 'standard' | 'round';
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger' | 'white';
 }
 
 export const ButtonV2: React.FC<ButtonV2Props> = ({
