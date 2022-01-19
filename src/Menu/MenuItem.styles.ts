@@ -79,4 +79,5 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
     :hover:after {
       height: 6px;
     }
+  }
 `;
