@@ -2,9 +2,9 @@ import React, { HTMLAttributes } from 'react';
 import { StyledMenuItemWrapper } from './MenuItem.styles';
 
 export interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
-  variant?: 'Maps' | 'Occupiers' | 'Insight' | 'Help centre';
+  appName?: 'maps' | 'occupiers' | 'insight' | 'helpCentre';
 }
 
-export const MenuItemWrapper: React.FC<MenuItemProps> = ({ children, variant }) => {
-  return <StyledMenuItemWrapper variant={variant}>{children}</StyledMenuItemWrapper>;
+export const MenuItemWrapper: React.FC<MenuItemProps> = ({ children, appName }) => {
+  return <StyledMenuItemWrapper appName={appName}>{children}</StyledMenuItemWrapper>;
 };

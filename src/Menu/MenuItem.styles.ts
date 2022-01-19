@@ -16,30 +16,36 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
       height: 6px;
     }
 
+    ${p =>
+      p.appName === 'helpCentre' &&
+      css`
+        padding: 0 ${p => p.theme.spacing.large} 0 ${p => p.theme.spacing.large};
+      `} 
+
     &:after {
       content: '';
       transition: height 0.2s ease-out;
       height: 0px;
       width: 100%;
       ${p =>
-        p.variant === 'Maps' &&
+        p.appName === 'maps' &&
         css`
           background: ${p.theme.colors.aliases.primary};
+        `}
+      ${p =>
+        p.appName === 'occupiers' &&
+        css`
+          background: ${p.theme.colors.appColors.occupiers};
         `} 
       ${p =>
-        p.variant === 'Insight' &&
+        p.appName === 'insight' &&
         css`
-          background: #ff8955;
+          background: ${p.theme.colors.appColors.insight};
         `} 
       ${p =>
-        p.variant === 'Occupiers' &&
+        p.appName === 'helpCentre' &&
         css`
-          background: #7e0bc2;
-        `} 
-      ${p =>
-        p.variant === 'Help centre' &&
-        css`
-          background: #2818f9;
+          background: ${p.theme.colors.appColors.helpCentre};
         `} 
       position: absolute;
       bottom: 0;
@@ -49,29 +55,28 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
     :hover {
       text-decoration: none;
       ${p =>
-        p.variant === 'Maps' &&
+        p.appName === 'maps' &&
         css`
           color: ${p.theme.colors.aliases.primary};
         `} 
       ${p =>
-        p.variant === 'Insight' &&
+        p.appName === 'occupiers' &&
         css`
-          color: #ff8955;
+          color: ${p.theme.colors.appColors.occupiers};
         `} 
       ${p =>
-        p.variant === 'Occupiers' &&
+        p.appName === 'insight' &&
         css`
-          color: #7e0bc2;
+          color: ${p.theme.colors.appColors.insight};
         `} 
       ${p =>
-        p.variant === 'Help centre' &&
+        p.appName === 'helpCentre' &&
         css`
-          color: #2818f9;
+          color: ${p.theme.colors.appColors.helpCentre};
         `}
     }
 
     :hover:after {
       height: 6px;
     }
-  }
 `;
