@@ -25,7 +25,6 @@ const switchLogo = ({ appName, size }: Props): React.ReactNode => {
         default:
           return <MapsLogo />;
       }
-      break;
     case 'occupiers':
       switch (size) {
         case 'small':
@@ -35,7 +34,6 @@ const switchLogo = ({ appName, size }: Props): React.ReactNode => {
         default:
           return <OccupiersLogo />;
       }
-      break;
     case 'insight':
       switch (size) {
         case 'small':
@@ -45,7 +43,6 @@ const switchLogo = ({ appName, size }: Props): React.ReactNode => {
         default:
           return <InsightLogo />;
       }
-      break;
     case 'helpCentre':
       switch (size) {
         case 'small':
@@ -55,7 +52,6 @@ const switchLogo = ({ appName, size }: Props): React.ReactNode => {
         default:
           return <HelpCentreLogo />;
       }
-      break;
     default:
       return <EdozoLogo />;
   }
