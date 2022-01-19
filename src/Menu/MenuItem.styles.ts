@@ -19,7 +19,7 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
     ${p =>
       p.appName === 'helpCentre' &&
       css`
-        padding: 0 ${p => p.theme.spacing.large} 0 ${p => p.theme.spacing.large};
+        padding: 0 ${p.theme.spacing.large} 0 ${p.theme.spacing.large};
       `} 
 
     &:after {
