@@ -22,28 +22,40 @@ const switchLogo = ({ appName, size }: Props): React.ReactNode => {
           return <MapsLogoSmall />;
         case 'standard':
           return <MapsLogo />;
+        default:
+          return <MapsLogo />;
       }
+      break;
     case 'occupiers':
       switch (size) {
         case 'small':
           return <OccupiersLogoSmall />;
         case 'standard':
           return <OccupiersLogo />;
+        default:
+          return <OccupiersLogo />;
       }
+      break;
     case 'insight':
       switch (size) {
         case 'small':
           return <InsightLogoSmall />;
         case 'standard':
           return <InsightLogo />;
+        default:
+          return <InsightLogo />;
       }
+      break;
     case 'helpCentre':
       switch (size) {
         case 'small':
           return <HelpCentreLogoSmall />;
         case 'standard':
           return <HelpCentreLogo />;
+        default:
+          return <HelpCentreLogo />;
       }
+      break;
     default:
       return <EdozoLogo />;
   }
