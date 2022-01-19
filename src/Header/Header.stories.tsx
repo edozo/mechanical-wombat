@@ -7,10 +7,10 @@ import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
-import { TextSmall } from '../Typography';
 import { ButtonV2 } from '../ButtonV2';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
-import { StyledButtonTitle } from './Header.styles';
+import { ItemWrapper, ListItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './Header.styles';
+import { EdozoLogo2 } from '../EdozoLogo2';
 
 export default {
   title: 'Components/Header',
@@ -119,29 +119,45 @@ WithNewMenuPopover.args = {
               visible
               content={
                 <List>
+                  <ListItemWrapper>
+                    <ListItem onClick={() => console.log('Do a thing')}>
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="maps" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                  </ListItemWrapper>
+                  <ListItemWrapper>
+                    <ListItem onClick={() => console.log('Do a thing')}>
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="occupiers" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                  </ListItemWrapper>
+                  <ListItemWrapper>
+                    <ListItem onClick={() => console.log('Do a thing')}>
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="insight" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                  </ListItemWrapper>
                   <ListItem onClick={() => console.log('Do a thing')}>
-                    <EdozoLogo appName="Maps" />
-                    <TextSmall>Text</TextSmall>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>
-                    <EdozoLogo appName="Occupiers" />
-                    <TextSmall>Text</TextSmall>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>
-                    <EdozoLogo appName="Insight" />
-                    <TextSmall>Text</TextSmall>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>
-                    <EdozoLogo appName="Help centre" />
-                    <TextSmall>Text</TextSmall>
+                    <ItemWrapper>
+                      <EdozoLogo2 appName="helpCentre" />
+                      <StyledText>Text</StyledText>
+                    </ItemWrapper>
                   </ListItem>
                 </List>
               }
             >
               <div>
                 <ButtonV2 onClick={() => console.log('click')} variant="white" size="small" radius="round">
-                  <SwitchAppIconColour />
-                  <StyledButtonTitle>Products</StyledButtonTitle>
+                  <SwitchAppWrapper>
+                    <SwitchAppIconColour />
+                    <StyledButtonTitle>Products</StyledButtonTitle>
+                  </SwitchAppWrapper>
                 </ButtonV2>
               </div>
             </Popover>
