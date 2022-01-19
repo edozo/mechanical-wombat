@@ -37,7 +37,7 @@ export const ItemWrapper = styled.span`
   grid-template-columns: 220px auto;
   align-items: center;
   font-family: ${p => p.theme.font.family.main};
-  font-size: ${p => p.theme.font.size.text.small};
+  font-size: ${p => p.theme.font.size.text.xsmall};
   font-weight: ${p => p.theme.font.weight.regular};
 `;
 

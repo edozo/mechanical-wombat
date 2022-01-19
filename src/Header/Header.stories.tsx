@@ -100,7 +100,7 @@ export const WithNewMenuPopover = Template.bind({});
 WithNewMenuPopover.args = {
   children: (
     <Fragment>
-      <EdozoLogo appName="Unicorns" />
+      <EdozoLogo2 appName="maps" size="standard" />
       <Menu>
         <Menu.ItemWrapper>
           <a className="active" href="">
@@ -122,7 +122,7 @@ WithNewMenuPopover.args = {
                   <ListItemWrapper>
                     <ListItem onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
-                        <EdozoLogo2 appName="maps" />
+                        <EdozoLogo2 appName="maps" size="small" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
                     </ListItem>
@@ -130,7 +130,7 @@ WithNewMenuPopover.args = {
                   <ListItemWrapper>
                     <ListItem onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
-                        <EdozoLogo2 appName="occupiers" />
+                        <EdozoLogo2 appName="occupiers" size="small" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
                     </ListItem>
@@ -138,14 +138,14 @@ WithNewMenuPopover.args = {
                   <ListItemWrapper>
                     <ListItem onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
-                        <EdozoLogo2 appName="insight" />
+                        <EdozoLogo2 appName="insight" size="small" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
                     </ListItem>
                   </ListItemWrapper>
                   <ListItem onClick={() => console.log('Do a thing')}>
                     <ItemWrapper>
-                      <EdozoLogo2 appName="helpCentre" />
+                      <EdozoLogo2 appName="helpCentre" size="small" />
                       <StyledText>Text</StyledText>
                     </ItemWrapper>
                   </ListItem>

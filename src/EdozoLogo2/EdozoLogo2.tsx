@@ -1,27 +1,52 @@
 import React, { Fragment } from 'react';
 import { ReactComponent as EdozoLogo } from './edozo-logo.svg';
 import { ReactComponent as InsightLogo } from './insight-logo.svg';
+import { ReactComponent as InsightLogoSmall } from './insight-logo-small.svg';
 import { ReactComponent as OccupiersLogo } from './occupiers-logo.svg';
+import { ReactComponent as OccupiersLogoSmall } from './occupiers-logo-small.svg';
 import { ReactComponent as MapsLogo } from './maps-logo.svg';
+import { ReactComponent as MapsLogoSmall } from './maps-logo-small.svg';
 import { ReactComponent as HelpCentreLogo } from './help-centre-logo.svg';
+import { ReactComponent as HelpCentreLogoSmall } from './help-centre-logo-small.svg';
 
 export interface Props {
   appName?: 'maps' | 'insight' | 'occupiers' | 'helpCentre';
+  size?: 'standard' | 'small';
 }
 
-const switchLogo = ({ appName }: Props): React.ReactNode => {
+const switchLogo = ({ appName, size }: Props): React.ReactNode => {
   switch (appName) {
     case 'maps':
-      return <MapsLogo />;
+      switch (size) {
+        case 'small':
+          return <MapsLogoSmall />;
+        case 'standard':
+          return <MapsLogo />;
+      }
     case 'occupiers':
-      return <OccupiersLogo />;
+      switch (size) {
+        case 'small':
+          return <OccupiersLogoSmall />;
+        case 'standard':
+          return <OccupiersLogo />;
+      }
     case 'insight':
-      return <InsightLogo />;
+      switch (size) {
+        case 'small':
+          return <InsightLogoSmall />;
+        case 'standard':
+          return <InsightLogo />;
+      }
     case 'helpCentre':
-      return <HelpCentreLogo />;
+      switch (size) {
+        case 'small':
+          return <HelpCentreLogoSmall />;
+        case 'standard':
+          return <HelpCentreLogo />;
+      }
     default:
       return <EdozoLogo />;
   }
 };
 
-export const EdozoLogo2: React.FC<Props> = ({ appName }) => <Fragment>{switchLogo({ appName })}</Fragment>;
+export const EdozoLogo2: React.FC<Props> = ({ appName, size }) => <Fragment>{switchLogo({ appName, size })}</Fragment>;
