@@ -2,7 +2,6 @@
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';
 import { SwitchAppIcon, LogoutIcon } from '../Icons';
-import { EdozoLogo } from '../EdozoLogo';
 import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
@@ -21,14 +20,14 @@ const Template: Story = args => <Header {...args} />;
 
 export const LogoOnly = Template.bind({});
 LogoOnly.args = {
-  children: <EdozoLogo appName="Unicorns" />,
+  children: <EdozoLogo2 appName="Unicorns" />,
 };
 
 export const WithMenu = Template.bind({});
 WithMenu.args = {
   children: (
     <Fragment>
-      <EdozoLogo appName="Unicorns" />
+      <EdozoLogo2 appName="Unicorns" />
       <Menu>
         <Menu.ItemWrapper>
           <a className="active" href="">
@@ -56,7 +55,7 @@ export const WithMenuPopover = Template.bind({});
 WithMenuPopover.args = {
   children: (
     <Fragment>
-      <EdozoLogo appName="Unicorns" />
+      <EdozoLogo2 appName="Unicorns" />
       <Menu>
         <Menu.ItemWrapper>
           <a className="active" href="">
@@ -110,6 +109,11 @@ WithNewMenuPopover.args = {
         <Menu.ItemWrapper>
           <a href="">My unicorns</a>
         </Menu.ItemWrapper>
+        <Menu.ItemWrapper>
+          <a href="" onClick={() => console.log('Do a thing')}>
+            Unicorn centre
+          </a>
+        </Menu.ItemWrapper>
         <Menu.PlatformMenu>
           <div>
             <Popover
@@ -134,12 +138,6 @@ WithNewMenuPopover.args = {
                   <ListItem onClick={() => console.log('Do a thing')} platform>
                     <ItemWrapper>
                       <EdozoLogo2 appName="insight" size="small" />
-                      <StyledText>Text</StyledText>
-                    </ItemWrapper>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')} platform>
-                    <ItemWrapper>
-                      <EdozoLogo2 appName="helpCentre" size="small" />
                       <StyledText>Text</StyledText>
                     </ItemWrapper>
                   </ListItem>
