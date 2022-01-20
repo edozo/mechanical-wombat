@@ -16,12 +16,6 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
       height: 6px;
     }
 
-    ${p =>
-      p.appName === 'helpCentre' &&
-      css`
-        padding: 0 ${p.theme.spacing.large} 0 ${p.theme.spacing.large};
-      `} 
-
     &:after {
       content: '';
       transition: height 0.2s ease-out;
@@ -41,12 +35,7 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
         p.appName === 'insight' &&
         css`
           background: ${p.theme.colors.appColors.insight};
-        `} 
-      ${p =>
-        p.appName === 'helpCentre' &&
-        css`
-          background: ${p.theme.colors.appColors.helpCentre};
-        `} 
+        `}
       position: absolute;
       bottom: 0;
       left: 0;
@@ -68,11 +57,6 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
         p.appName === 'insight' &&
         css`
           color: ${p.theme.colors.appColors.insight};
-        `} 
-      ${p =>
-        p.appName === 'helpCentre' &&
-        css`
-          color: ${p.theme.colors.appColors.helpCentre};
         `}
     }
 

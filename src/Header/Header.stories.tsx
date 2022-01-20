@@ -240,29 +240,3 @@ InsightWithMenuPopover.args = {
     </Fragment>
   ),
 };
-
-export const HelpCentre = Template.bind({});
-HelpCentre.args = {
-  appName: 'helpCentre',
-  children: (
-    <Fragment>
-      <EdozoLogo2 appName="helpCentre" />
-      <Menu>
-        <Menu.ItemWrapper appName="helpCentre">
-          <a className="active" href="">
-            Unicorn Updates
-          </a>
-        </Menu.ItemWrapper>
-        <Menu.ItemWrapper appName="helpCentre">
-          <a href="">FAQ</a>
-        </Menu.ItemWrapper>
-        <Menu.ItemWrapper appName="helpCentre">
-          <a href="">Unicorn Training</a>
-        </Menu.ItemWrapper>
-        <Menu.ItemWrapper appName="helpCentre">
-          <a href="">More...</a>
-        </Menu.ItemWrapper>
-      </Menu>
-    </Fragment>
-  ),
-};
