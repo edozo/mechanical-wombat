@@ -17,11 +17,11 @@ export const StyledListItem = styled.div<ListItemProps>`
     p.platform &&
     css`
       :not(:last-child) {
-        border-bottom: 1px solid ${p => p.theme.colors.gray};
+        border-bottom: 1px solid ${p.theme.colors.gray};
       }
-      font-family: ${p => p.theme.font.family.main};
-      font-size: ${p => p.theme.font.size.text.xsmall};
-      font-weight: ${p => p.theme.font.weight.regular};
+      font-family: ${p.theme.font.family.main};
+      font-size: ${p.theme.font.size.text.xsmall};
+      font-weight: ${p.theme.font.weight.regular};
     `};
 
   ${p =>
@@ -46,7 +46,6 @@ export const StyledListItem = styled.div<ListItemProps>`
       &:hover {
         background-color: ${p.theme.colors.grayLighter};
       }
-
       &:focus,
       &:active {
         color: ${p.theme.colors.grayDark};
