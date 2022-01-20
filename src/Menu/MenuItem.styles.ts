@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { MenuItemProps } from './MenuItem';
 
-export const StyledMenuItemWrapper = styled.div`
+export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
   > a {
     position: relative;
     display: flex;
@@ -20,7 +21,21 @@ export const StyledMenuItemWrapper = styled.div`
       transition: height 0.2s ease-out;
       height: 0px;
       width: 100%;
-      background: ${p => p.theme.colors.aliases.primary};
+      ${p =>
+        p.appName === 'maps' &&
+        css`
+          background: ${p.theme.colors.aliases.primary};
+        `}
+      ${p =>
+        p.appName === 'occupiers' &&
+        css`
+          background: ${p.theme.colors.appColors.occupiers};
+        `} 
+      ${p =>
+        p.appName === 'insight' &&
+        css`
+          background: ${p.theme.colors.appColors.insight};
+        `}
       position: absolute;
       bottom: 0;
       left: 0;
@@ -28,7 +43,21 @@ export const StyledMenuItemWrapper = styled.div`
 
     :hover {
       text-decoration: none;
-      color: ${p => p.theme.colors.aliases.primary};
+      ${p =>
+        p.appName === 'maps' &&
+        css`
+          color: ${p.theme.colors.aliases.primary};
+        `} 
+      ${p =>
+        p.appName === 'occupiers' &&
+        css`
+          color: ${p.theme.colors.appColors.occupiers};
+        `} 
+      ${p =>
+        p.appName === 'insight' &&
+        css`
+          color: ${p.theme.colors.appColors.insight};
+        `}
     }
 
     :hover:after {

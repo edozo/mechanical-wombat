@@ -3,10 +3,10 @@ import { PlatformMenuButtonProps } from '../PlatformMenu/PlatformButton.styles';
 import { PlatformButton } from '../PlatformMenu/PlatformButton';
 import { PlatformMenu } from '../PlatformMenu';
 import { StyledMenu } from './Menu.styles';
-import { MenuItemWrapper } from './MenuItem';
+import { MenuItemProps, MenuItemWrapper } from './MenuItem';
 
 interface MenuComposition {
-  ItemWrapper: React.FC;
+  ItemWrapper: React.FC<MenuItemProps>;
   PlatformMenu: React.FC;
   PlatformButton: React.FC<PlatformMenuButtonProps>;
 }
