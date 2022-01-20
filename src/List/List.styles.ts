@@ -10,8 +10,6 @@ export const StyledList = styled.div<StyleProps>`
   border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
   > div {
     border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
-  }
-  > div {
     ${p =>
       p.platform &&
       css`
