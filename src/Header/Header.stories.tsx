@@ -10,7 +10,6 @@ import { List, ListItem } from '../List';
 import { ButtonV2 } from '../ButtonV2';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
 import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './Header.styles';
-import { EdozoLogo2 } from '../EdozoLogo2';
 
 export default {
   title: 'Components/Header',
@@ -251,15 +250,15 @@ WithNewMenuPopover.args = {
     <Fragment>
       <EdozoLogo2 appName="maps" size="standard" />
       <Menu>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper appName="maps">
           <a className="active" href="">
             Create a unicorn
           </a>
         </Menu.ItemWrapper>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper appName="maps">
           <a href="">My unicorns</a>
         </Menu.ItemWrapper>
-        <Menu.ItemWrapper>
+        <Menu.ItemWrapper appName="maps">
           <a href="" onClick={() => console.log('Do a thing')}>
             Unicorn centre
           </a>
