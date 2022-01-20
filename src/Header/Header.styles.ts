@@ -30,19 +30,14 @@ export const StyledButtonTitle = styled.div`
 
 export const StyledText = styled.span`
   font-family: ${p => p.theme.font.family.main};
+  font-size: ${p => p.theme.font.size.text.xsmall};
+  font-weight: ${p => p.theme.font.weight.regular};
 `;
 
 export const ItemWrapper = styled.span`
   display: grid;
   grid-template-columns: 150px auto;
   align-items: center;
-  font-family: ${p => p.theme.font.family.main};
-  font-size: ${p => p.theme.font.size.text.xsmall};
-  font-weight: ${p => p.theme.font.weight.regular};
-`;
-
-export const ListItemWrapper = styled.div`
-  border-bottom: 1px solid ${p => p.theme.colors.gray};
 `;
 
 export const SwitchAppWrapper = styled.span`

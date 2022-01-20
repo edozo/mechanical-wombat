@@ -26,3 +26,17 @@ DisabledListItem.args = {
   disabled: true,
   children: 'I am disabled',
 };
+
+export const ControlledPlatformListItem = Template.bind({});
+ControlledPlatformListItem.args = {
+  disabled: false,
+  platform: true,
+  children: 'This is a platform list item',
+};
+
+export const DisabledPlatformListItem = Template.bind({});
+DisabledPlatformListItem.args = {
+  disabled: true,
+  platform: true,
+  children: 'I am a disabled platform list item',
+};

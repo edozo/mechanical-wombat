@@ -9,7 +9,7 @@ import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
 import { ButtonV2 } from '../ButtonV2';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
-import { ItemWrapper, ListItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './Header.styles';
+import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './Header.styles';
 import { EdozoLogo2 } from '../EdozoLogo2';
 
 export default {
@@ -118,32 +118,26 @@ WithNewMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <List>
-                  <ListItemWrapper>
-                    <ListItem onClick={() => console.log('Do a thing')}>
-                      <ItemWrapper>
-                        <EdozoLogo2 appName="maps" size="small" />
-                        <StyledText>Text</StyledText>
-                      </ItemWrapper>
-                    </ListItem>
-                  </ListItemWrapper>
-                  <ListItemWrapper>
-                    <ListItem onClick={() => console.log('Do a thing')}>
-                      <ItemWrapper>
-                        <EdozoLogo2 appName="occupiers" size="small" />
-                        <StyledText>Text</StyledText>
-                      </ItemWrapper>
-                    </ListItem>
-                  </ListItemWrapper>
-                  <ListItemWrapper>
-                    <ListItem onClick={() => console.log('Do a thing')}>
-                      <ItemWrapper>
-                        <EdozoLogo2 appName="insight" size="small" />
-                        <StyledText>Text</StyledText>
-                      </ItemWrapper>
-                    </ListItem>
-                  </ListItemWrapper>
-                  <ListItem onClick={() => console.log('Do a thing')}>
+                <List platform>
+                  <ListItem onClick={() => console.log('Do a thing')} platform disabled>
+                    <ItemWrapper>
+                      <EdozoLogo2 appName="maps" size="small" />
+                      <StyledText>Text</StyledText>
+                    </ItemWrapper>
+                  </ListItem>
+                  <ListItem onClick={() => console.log('Do a thing')} platform>
+                    <ItemWrapper>
+                      <EdozoLogo2 appName="occupiers" size="small" />
+                      <StyledText>Text</StyledText>
+                    </ItemWrapper>
+                  </ListItem>
+                  <ListItem onClick={() => console.log('Do a thing')} platform>
+                    <ItemWrapper>
+                      <EdozoLogo2 appName="insight" size="small" />
+                      <StyledText>Text</StyledText>
+                    </ItemWrapper>
+                  </ListItem>
+                  <ListItem onClick={() => console.log('Do a thing')} platform>
                     <ItemWrapper>
                       <EdozoLogo2 appName="helpCentre" size="small" />
                       <StyledText>Text</StyledText>
