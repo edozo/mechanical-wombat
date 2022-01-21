@@ -24,5 +24,7 @@ export { Header } from './Header';
 export { Menu } from './Menu';
 export { Error, NotFound, ErrorBoundary } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
+export { ButtonWithBadge } from './ButtonWithBadge';
+export { ProductSwitch } from './ProductSwitch';
 
 export { ThemeProvider } from './ThemeProvider';
