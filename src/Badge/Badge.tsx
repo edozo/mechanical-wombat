@@ -13,7 +13,7 @@ export interface BadgeProps {
   /**
    * TODO: fill this out more once design system has caught-up
    */
-  size?: 'standard';
+  size?: 'small' | 'standard';
 }
 
 export const Badge: React.FC<BadgeProps> = ({

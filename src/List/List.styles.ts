@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export interface StyleProps {
   radius?: 'small' | 'standard';
+  variant?: 'menu' | 'platform';
 }
 
 export const StyledList = styled.div<StyleProps>`

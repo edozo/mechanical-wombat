@@ -56,7 +56,13 @@ export const StyledButton = styled.button<ButtonV2Props>`
     css`
       background: ${p.theme.colors.system.red};
     `}
-
+    ${p =>
+      p.variant === 'white' &&
+      css`
+        background: ${p.theme.colors.white};
+        color: ${p.theme.colors.black};
+      `}
+  
   &:hover {
     opacity: 0.85;
   }

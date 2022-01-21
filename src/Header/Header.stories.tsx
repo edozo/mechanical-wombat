@@ -7,6 +7,9 @@ import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
+import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
+import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from '../ProductSwitch/ProductSwitch.styles';
+import { ButtonWithBadge } from '../ButtonWithBadge';
 
 export default {
   title: 'Components/Header',
@@ -229,6 +232,76 @@ InsightWithMenuPopover.args = {
                 <Menu.PlatformButton onClick={() => console.log('click')}>
                   <SwitchAppIcon size="small" />
                 </Menu.PlatformButton>
+              </div>
+            </Popover>
+          </div>
+          <Menu.PlatformButton onClick={() => console.log('click')}>
+            <LogoutIcon size="small" />
+          </Menu.PlatformButton>
+        </Menu.PlatformMenu>
+      </Menu>
+    </Fragment>
+  ),
+};
+
+export const WithNewMenuPopover = Template.bind({});
+WithNewMenuPopover.args = {
+  children: (
+    <Fragment>
+      <EdozoLogo2 appName="maps" />
+      <Menu>
+        <Menu.ItemWrapper appName="maps">
+          <a className="active" href="">
+            Create a unicorn
+          </a>
+        </Menu.ItemWrapper>
+        <Menu.ItemWrapper appName="maps">
+          <a href="">My unicorns</a>
+        </Menu.ItemWrapper>
+        <Menu.ItemWrapper appName="maps">
+          <a href="" onClick={() => console.log('Do a thing')}>
+            Unicorn centre
+          </a>
+        </Menu.ItemWrapper>
+        <Menu.PlatformMenu>
+          <div>
+            <Popover
+              placement="top-end"
+              interactive
+              interactiveBorder={10}
+              visible
+              content={
+                <div style={{ margin: '10px 0' }}>
+                  <List variant="platform">
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform" disabled>
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="maps" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="occupiers" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="insight" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                  </List>
+                </div>
+              }
+            >
+              <div>
+                <ButtonWithBadge onClick={() => console.log('click')} badge="NEW">
+                  <SwitchAppWrapper>
+                    <SwitchAppIconColour />
+                    <StyledButtonTitle>Products</StyledButtonTitle>
+                  </SwitchAppWrapper>
+                </ButtonWithBadge>
               </div>
             </Popover>
           </div>

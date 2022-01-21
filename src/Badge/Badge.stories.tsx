@@ -22,26 +22,26 @@ export const Primary = Template.bind({});
 Primary.args = {
   color: 'grayLighter',
   background: 'primary',
-  children: 'Theme colours',
+  children: 'Theme',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   color: 'grayLighter',
   background: 'secondary',
-  children: 'Theme colours',
+  children: 'Theme',
 };
 
 export const RandomHex = Template.bind({});
 RandomHex.args = {
   color: '#ff0',
   background: '#f60',
-  children: 'Random colours',
+  children: 'Random',
 };
 
 export const RandomNamed = Template.bind({});
 RandomNamed.args = {
   color: 'dodgerblue',
   background: 'greenyellow',
-  children: 'Random colours',
+  children: 'Random',
 };
