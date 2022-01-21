@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { StyledButton, StyledNewBadge } from './ButtonWithBadge.styles';
 
 export interface ButtonWithBadgeProps {
@@ -8,12 +8,12 @@ export interface ButtonWithBadgeProps {
 }
 
 export const ButtonWithBadge: React.FC<ButtonWithBadgeProps> = ({ children, badge, onClick }) => (
-  <div role="button" onClick={onClick}>
-    <StyledButton variant="white" size="standard" radius="round">
+  <Fragment>
+    <StyledButton onClick={onClick} variant="white" size="standard" radius="round">
       {children}
     </StyledButton>
     <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
       {badge}
     </StyledNewBadge>
-  </div>
+  </Fragment>
 );
