@@ -248,7 +248,7 @@ export const WithNewMenuPopover = Template.bind({});
 WithNewMenuPopover.args = {
   children: (
     <Fragment>
-      <EdozoLogo2 appName="maps" size="standard" />
+      <EdozoLogo2 appName="maps" />
       <Menu>
         <Menu.ItemWrapper appName="maps">
           <a className="active" href="">

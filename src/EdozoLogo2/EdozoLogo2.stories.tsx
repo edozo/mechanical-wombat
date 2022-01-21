@@ -14,23 +14,19 @@ export const Default = Template.bind({});
 export const WithOccupiers = Template.bind({});
 WithOccupiers.args = {
   appName: 'occupiers',
-  size: 'standard',
 };
 
 export const WithMaps = Template.bind({});
 WithMaps.args = {
   appName: 'maps',
-  size: 'standard',
 };
 
 export const WithInsight = Template.bind({});
 WithInsight.args = {
   appName: 'insight',
-  size: 'standard',
 };
 
 export const WithHelpCentre = Template.bind({});
 WithHelpCentre.args = {
   appName: 'helpCentre',
-  size: 'standard',
 };
