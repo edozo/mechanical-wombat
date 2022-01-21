@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export interface StyleProps {
   radius?: 'small' | 'standard';
-  platform?: true | false;
+  variant?: 'menu' | 'platform';
 }
 
 export const StyledList = styled.div<StyleProps>`
@@ -10,11 +10,6 @@ export const StyledList = styled.div<StyleProps>`
   border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
   > div {
     border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
-    ${p =>
-      p.platform &&
-      css`
-        border-radius: 0;
-      `};
   }
 
   :not(:first-child) {

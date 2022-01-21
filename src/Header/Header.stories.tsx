@@ -7,9 +7,9 @@ import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
-import { ButtonV2 } from '../ButtonV2';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
-import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './Header.styles';
+import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from '../ProductSwitch/ProductSwitch.styles';
+import { ButtonWithBadge } from '../ButtonWithBadge';
 
 export default {
   title: 'Components/Header',
@@ -271,35 +271,37 @@ WithNewMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <List platform>
-                  <ListItem onClick={() => console.log('Do a thing')} platform disabled>
-                    <ItemWrapper>
-                      <EdozoLogo2 appName="maps" size="small" />
-                      <StyledText>Text</StyledText>
-                    </ItemWrapper>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')} platform>
-                    <ItemWrapper>
-                      <EdozoLogo2 appName="occupiers" size="small" />
-                      <StyledText>Text</StyledText>
-                    </ItemWrapper>
-                  </ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')} platform>
-                    <ItemWrapper>
-                      <EdozoLogo2 appName="insight" size="small" />
-                      <StyledText>Text</StyledText>
-                    </ItemWrapper>
-                  </ListItem>
-                </List>
+                <div style={{ margin: '10px 0' }}>
+                  <List variant="platform">
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform" disabled>
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="maps" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="occupiers" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                      <ItemWrapper>
+                        <EdozoLogo2 appName="insight" />
+                        <StyledText>Text</StyledText>
+                      </ItemWrapper>
+                    </ListItem>
+                  </List>
+                </div>
               }
             >
               <div>
-                <ButtonV2 onClick={() => console.log('click')} variant="white" size="small" radius="round">
+                <ButtonWithBadge onClick={() => console.log('click')} badge="NEW">
                   <SwitchAppWrapper>
                     <SwitchAppIconColour />
                     <StyledButtonTitle>Products</StyledButtonTitle>
                   </SwitchAppWrapper>
-                </ButtonV2>
+                </ButtonWithBadge>
               </div>
             </Popover>
           </div>

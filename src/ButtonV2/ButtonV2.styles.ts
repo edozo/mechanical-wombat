@@ -59,29 +59,8 @@ export const StyledButton = styled.button<ButtonV2Props>`
     ${p =>
       p.variant === 'white' &&
       css`
-        position: relative;
         background: ${p.theme.colors.white};
         color: ${p.theme.colors.black};
-        &:before {
-          background: ${p.theme.colors.aliases.primary};
-        }
-        &:after {
-          position: absolute;
-          content: 'NEW';
-          height: 12px;
-          width: 26px;
-          background: #2818f9;
-          font-family: ${p.theme.font.family.main};
-          font-size: ${p.theme.spacing.xsmall};
-          font-weight: 800;
-          line-height: 12px;
-          color: ${p.theme.colors.white};
-          border-radius: 3px;
-          text-align: center;
-          letter-spacing: 0.1em;
-          top: -5px;
-          right: 0;
-        }
       `}
   
   &:hover {

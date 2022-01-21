@@ -12,7 +12,7 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
     margin-left: ${p => p.theme.spacing.small};
     color: ${p => p.theme.colors.grayDarker};
 
-    &.active:after {
+    &:active:after {
       height: 6px;
     }
 

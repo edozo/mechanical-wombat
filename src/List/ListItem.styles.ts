@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
-  platform?: boolean;
+  variant?: string;
   name?: string;
 }
 
@@ -14,10 +14,14 @@ export const StyledListItem = styled.div<ListItemProps>`
   padding: ${p => p.theme.spacing.xsmall};
 
   ${p =>
-    p.platform &&
+    p.variant === 'platform' &&
     css`
       :not(:last-child) {
         border-bottom: 1px solid ${p.theme.colors.gray};
+        border-radius: 0;
+      }
+      :first-child {
+        border-radius: 3px 3px 0 0;
       }
       font-family: ${p.theme.font.family.main};
       font-size: ${p.theme.font.size.text.xsmall};
@@ -26,21 +30,34 @@ export const StyledListItem = styled.div<ListItemProps>`
 
   ${p =>
     p.onClick &&
-    p.platform &&
+    p.variant === 'platform' &&
     css`
       cursor: pointer;
       &:hover {
         background-color: #f2f6f9;
+        :first-child {
+          border-radius: 3px 3px 0 0;
+        }
+        :last-child {
+          border-radius: 0 0 3px 3px;
+        }
       }
       &:focus,
       &:active {
         background-color: #d6e1eb;
+        border-radius: 0;
+        :first-child {
+          border-radius: 3px 3px 0 0;
+        }
+        :last-child {
+          border-radius: 0 0 3px 3px;
+        }
       }
     `};
 
   ${p =>
     p.onClick &&
-    !p.platform &&
+    !(p.variant === 'platform') &&
     css`
       cursor: pointer;
       &:hover {
@@ -56,15 +73,21 @@ export const StyledListItem = styled.div<ListItemProps>`
 
   ${p =>
     p.disabled &&
-    p.platform &&
+    p.variant === 'platform' &&
     css`
       cursor: not-allowed;
       background-color: #d6e1eb;
+      :first-child {
+        border-radius: 3px 3px 0 0;
+      }
+      :last-child {
+        border-radius: 0 0 3px 3px;
+      }
     `};
 
   ${p =>
     p.disabled &&
-    !p.platform &&
+    !(p.variant === 'platform') &&
     css`
       opacity: 0.5;
       cursor: not-allowed;

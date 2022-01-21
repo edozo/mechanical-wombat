@@ -17,12 +17,3 @@ Controlled.args = {
   radius: 'standard',
   children: 'This is my button',
 };
-
-export const ControlledNew = Template.bind({});
-ControlledNew.args = {
-  disabled: false,
-  variant: 'white',
-  size: 'standard',
-  radius: 'round',
-  children: 'This is my new button',
-};
