@@ -8,7 +8,7 @@ export interface ButtonWithBadgeProps {
 }
 
 export const ButtonWithBadge: React.FC<ButtonWithBadgeProps> = ({ children, badge, onClick }) => (
-  <div onClick={onClick}>
+  <div role="button" onClick={onClick}>
     <StyledButton variant="white" size="standard" radius="round">
       {children}
     </StyledButton>
