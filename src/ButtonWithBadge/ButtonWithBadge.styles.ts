@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { ButtonV2 } from '../ButtonV2';
 import { Badge } from '../Badge';
 
-export const StyledContainer = styled.div`
+export const StyledButton = styled(ButtonV2)`
   position: relative;
 `;
 
