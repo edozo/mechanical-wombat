@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonV2 } from '../ButtonV2';
-import { StyledNewBadge, StyledContainer } from './ButtonWithBadge.styles';
+import { StyledNewBadge } from './ButtonWithBadge.styles';
 
 export interface ButtonWithBadgeProps {
   disabled?: boolean;
@@ -9,12 +9,10 @@ export interface ButtonWithBadgeProps {
 }
 
 export const ButtonWithBadge: React.FC<ButtonWithBadgeProps> = ({ children, badge, onClick }) => (
-  <StyledContainer>
-    <ButtonV2 onClick={onClick} variant="white" size="standard" radius="round">
-      {children}
-    </ButtonV2>
+  <ButtonV2 onClick={onClick} variant="white" size="standard" radius="round">
+    {children}
     <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
       {badge}
     </StyledNewBadge>
-  </StyledContainer>
+  </ButtonV2>
 );
