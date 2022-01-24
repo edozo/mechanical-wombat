@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 import { StyledInputGroup } from './InputGroup.styles';
 import { Item } from './Item';
-import { Button } from './Button';
+import { Button } from '../Button';
 import { Input } from './Input';
 
 export interface Context extends React.HTMLAttributes<HTMLInputElement> {
