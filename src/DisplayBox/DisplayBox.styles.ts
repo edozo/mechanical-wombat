@@ -24,6 +24,9 @@ export const StyledDisplayBoxWrapper = styled.div<StyleProps>`
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: ${p => p.theme.spacing.base};
+  @media ${p => p.theme.minMedia.xl} {
+    border: 2px dashed red;
+  }
 `;
 
 export const DisplayBoxTitle = styled.p`
