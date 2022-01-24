@@ -127,6 +127,9 @@ const font = {
   },
 };
 
+/**
+ * NOTE: Please use breakpoints sparingly for now, they may hlp us out in some cases. But I do want us to consider container queries (with a polyfill) as it should lend itself to atomic design better: https://css-tricks.com/a-new-container-query-polyfill-that-just-works/
+ */
 const breakpoints = {
   sm: '640px',
   md: '768px',
