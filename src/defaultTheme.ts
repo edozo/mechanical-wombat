@@ -127,6 +127,25 @@ const font = {
   },
 };
 
+/**
+ * NOTE: Please use breakpoints sparingly for now, they may hlp us out in some cases. But I do want us to consider container queries (with a polyfill) as it should lend itself to atomic design better: https://css-tricks.com/a-new-container-query-polyfill-that-just-works/
+ */
+const breakpoints = {
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  '2xl': '1536px',
+};
+
+const minMedia = {
+  sm: `(min-width: ${breakpoints.sm})`,
+  md: `(min-width: ${breakpoints.md})`,
+  lg: `(min-width: ${breakpoints.lg})`,
+  xl: `(min-width: ${breakpoints.xl})`,
+  '2xl': `(min-width: ${breakpoints['2xl']})`,
+};
+
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
   spacing: {
@@ -173,6 +192,8 @@ const defaultTheme: DefaultTheme = {
     },
   },
   font,
+  breakpoints,
+  minMedia,
 };
 
 export { defaultTheme };

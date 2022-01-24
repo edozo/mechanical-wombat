@@ -161,5 +161,19 @@ declare module 'styled-components' {
         regular: number;
       };
     };
+    breakpoints: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+    };
+    minMedia: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+    };
   }
 }
