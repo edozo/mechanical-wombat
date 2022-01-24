@@ -7,12 +7,12 @@ export const StyledButton = styled(ButtonV2)`
 `;
 
 export const StyledNewBadge = styled(Badge)`
-  position: relative;
+  position: absolute;
   background: #2818f9;
   color: ${p => p.theme.colors.white};
   font-size: ${p => p.theme.spacing.xsmall};
   letter-spacing: 0.1em;
   font-weight: 800;
-  top: -26px;
-  right: 26px;
+  top: 0;
+  right: 0;
 `;
