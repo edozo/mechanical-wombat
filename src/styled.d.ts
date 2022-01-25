@@ -97,9 +97,9 @@ declare module 'styled-components' {
         redDarker: string;
       };
       appColors: {
+        maps: string;
         occupiers: string;
         insight: string;
-        helpCentre: string;
       };
     };
     font: {

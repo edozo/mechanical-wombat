@@ -59,12 +59,6 @@ const colors = {
     redDark: '#B93421',
     redDarker: '#8C1F10',
   },
-
-  appColors: {
-    occupiers: '#7e0bc2',
-    insight: '#ff8955',
-    helpCentre: '#2818f9',
-  },
 };
 
 const font = {
@@ -189,6 +183,12 @@ const defaultTheme: DefaultTheme = {
       secondary: colors.green,
       secondaryLight: colors.greenLight,
       secondaryDark: colors.greenDark,
+    },
+    appColors: {
+      maps: colors.skyBlue,
+      occupiers: '#7e0bc2',
+      insight: '#ff8955',
+      helpCentre: '#2818f9',
     },
   },
   font,
