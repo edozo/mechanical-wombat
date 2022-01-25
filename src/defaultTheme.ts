@@ -188,7 +188,6 @@ const defaultTheme: DefaultTheme = {
       maps: colors.skyBlue,
       occupiers: '#7e0bc2',
       insight: '#ff8955',
-      helpCentre: '#2818f9',
     },
   },
   font,
