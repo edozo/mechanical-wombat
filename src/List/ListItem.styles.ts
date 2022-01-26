@@ -17,11 +17,11 @@ export const StyledListItem = styled.div<ListItemProps>`
     p.variant === 'platform' &&
     css`
       :not(:last-child) {
-        border-bottom: 1px solid ${p.theme.colors.gray};
+        border-bottom: 1px solid ${p.theme.colors.gray}80;
         border-radius: 0;
       }
       :first-child {
-        border-radius: 3px 3px 0 0;
+        border-radius: 4px 4px 0 0;
       }
       font-family: ${p.theme.font.family.main};
       font-size: ${p.theme.font.size.text.xsmall};
@@ -36,10 +36,10 @@ export const StyledListItem = styled.div<ListItemProps>`
       &:hover {
         background-color: #f2f6f9;
         :first-child {
-          border-radius: 3px 3px 0 0;
+          border-radius: 4px 4px 0 0;
         }
         :last-child {
-          border-radius: 0 0 3px 3px;
+          border-radius: 0 0 4px 4px;
         }
       }
       &:focus,
@@ -47,10 +47,10 @@ export const StyledListItem = styled.div<ListItemProps>`
         background-color: #d6e1eb;
         border-radius: 0;
         :first-child {
-          border-radius: 3px 3px 0 0;
+          border-radius: 4px 4px 0 0;
         }
         :last-child {
-          border-radius: 0 0 3px 3px;
+          border-radius: 0 0 4px 4px;
         }
       }
     `};
@@ -78,10 +78,10 @@ export const StyledListItem = styled.div<ListItemProps>`
       cursor: not-allowed;
       background-color: #d6e1eb;
       :first-child {
-        border-radius: 3px 3px 0 0;
+        border-radius: 4px 4px 0 0;
       }
       :last-child {
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 4px 4px;
       }
     `};
 

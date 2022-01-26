@@ -6,9 +6,9 @@ import { Menu } from '../Menu';
 import { Popover } from '../Popover';
 import { List, ListItem } from '../List';
 import { ReactComponent as SwitchAppIconColour } from '../Header/switch-app-icon-color.svg';
-import { ItemWrapper, StyledButtonTitle, StyledText, SwitchAppWrapper } from './ProductSwitch.styles';
+import { ItemWrapper, StyledButtonTitle, StyledNewBadge, StyledText, SwitchAppWrapper } from './ProductSwitch.styles';
 import { EdozoLogo2 } from '../EdozoLogo2';
-import { ButtonWithBadge } from '../ButtonWithBadge';
+import { ButtonV2 } from '../ButtonV2';
 
 export default {
   title: 'Components/ProductSwitch',
@@ -55,12 +55,15 @@ ProductSwitchWithPopover.args = {
               }
             >
               <div>
-                <ButtonWithBadge onClick={() => console.log('click')} badge="NEW">
+                <ButtonV2 onClick={() => console.log('click')} radius="round" variant="white">
                   <SwitchAppWrapper>
                     <SwitchAppIconColour />
                     <StyledButtonTitle>Products</StyledButtonTitle>
                   </SwitchAppWrapper>
-                </ButtonWithBadge>
+                  <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
+                    NEW
+                  </StyledNewBadge>
+                </ButtonV2>
               </div>
             </Popover>
           </div>

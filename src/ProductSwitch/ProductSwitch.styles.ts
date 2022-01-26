@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Badge } from '../Badge';
 
 export const StyledButtonTitle = styled.div`
   font-family: ${p => p.theme.font.family.main};
@@ -32,4 +33,10 @@ export const SwitchAppWrapper = styled.div`
     margin-top: 4px;
     margin-left: -6px;
   }
+`;
+
+export const StyledNewBadge = styled(Badge)`
+  font-size: ${p => p.theme.spacing.xsmall};
+  letter-spacing: 0.1em;
+  font-weight: 800;
 `;
