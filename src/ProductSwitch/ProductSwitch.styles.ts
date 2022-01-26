@@ -30,7 +30,7 @@ export const SwitchAppWrapper = styled.div`
   display: grid;
   grid-template-columns: 10px auto;
   svg {
-    margin-top: 4px;
+    margin-top: ${p => p.theme.spacing.xxsmall};
     margin-left: -6px;
   }
 `;
