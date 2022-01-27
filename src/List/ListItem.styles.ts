@@ -23,6 +23,9 @@ export const StyledListItem = styled.div<ListItemProps>`
       :first-child {
         border-radius: ${p.theme.spacing.xxsmall} ${p.theme.spacing.xxsmall} 0 0;
       }
+      :last-child {
+        border-radius: 0 0 ${p.theme.spacing.xxsmall} ${p.theme.spacing.xxsmall};
+      }
       font-family: ${p.theme.font.family.main};
       font-size: ${p.theme.font.size.text.xsmall};
       font-weight: ${p.theme.font.weight.regular};
