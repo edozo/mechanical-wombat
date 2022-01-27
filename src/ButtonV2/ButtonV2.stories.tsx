@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { ButtonV2, ButtonV2Props } from './ButtonV2';
+import { Badge } from '../Badge';
 
 export default {
   title: 'Components/ButtonV2',
@@ -16,4 +17,18 @@ Controlled.args = {
   size: 'standard',
   radius: 'standard',
   children: 'This is my button',
+};
+
+export const WithBadge = Template.bind({});
+WithBadge.args = {
+  disabled: false,
+  variant: 'secondary',
+  size: 'standard',
+  radius: 'standard',
+  children: [
+    'This is my button with a badge',
+    <Badge color="#ffffff" background="#2818f9" size="small">
+      new
+    </Badge>,
+  ],
 };

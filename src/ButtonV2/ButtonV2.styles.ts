@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components';
 import { ButtonV2Props } from './ButtonV2';
+import { StyledBadge } from '../Badge/Badge.styles';
 
 export const StyledButton = styled.button<ButtonV2Props>`
   border: none;
   color: white;
+  position: relative;
 
   /* SIZE */
   ${p =>
@@ -71,4 +73,16 @@ export const StyledButton = styled.button<ButtonV2Props>`
     background: ${p => p.theme.colors.gray};
     cursor: not-allowed;
   }
+
+  & > ${StyledBadge} {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    ${p =>
+      p.radius === 'round' &&
+      css`
+        top: -7px;
+        right: 0;
+      `}
+	}
 `;
