@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   variant?: string;
+  radius?: string;
   name?: string;
 }
 

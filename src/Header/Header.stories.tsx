@@ -6,7 +6,7 @@ import { EdozoLogo2 } from '../EdozoLogo2';
 import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
-import { List, ListItem } from '../List';
+import { ListGroup } from '../List';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
 import {
   ItemWrapper,
@@ -80,10 +80,10 @@ MapsWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
-                </List>
+                <ListGroup>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
+                </ListGroup>
               }
             >
               <div>
@@ -154,10 +154,10 @@ OccupiersWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
-                </List>
+                <ListGroup>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
+                </ListGroup>
               }
             >
               <div>
@@ -228,10 +228,10 @@ InsightWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
-                </List>
+                <ListGroup>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
+                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
+                </ListGroup>
               }
             >
               <div>
@@ -278,26 +278,26 @@ WithNewMenuPopover.args = {
               visible
               content={
                 <div style={{ margin: '10px 0' }}>
-                  <List variant="platform">
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform" disabled>
+                  <ListGroup variant="platform">
+                    <ListGroup.Item onClick={() => console.log('Do a thing')} disabled>
                       <ItemWrapper>
                         <EdozoLogo2 appName="maps" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                    </ListGroup.Item>
+                    <ListGroup.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="occupiers" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                    </ListGroup.Item>
+                    <ListGroup.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="insight" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
-                  </List>
+                    </ListGroup.Item>
+                  </ListGroup>
                 </div>
               }
             >

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { Context } from './ListGroup';
 
-export interface StyleProps {
+export interface StyleProps extends Context {
   radius?: 'small' | 'standard';
-  variant?: 'menu' | 'platform';
 }
 
 export const StyledList = styled.div<StyleProps>`
