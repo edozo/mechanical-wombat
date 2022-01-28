@@ -1,10 +1,10 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { ListGroup } from './ListGroup';
+import { List } from './List';
 
 export default {
   title: 'Components/List',
-  component: ListGroup,
+  component: List,
   argTypes: { onClick: { action: 'clicked' } },
   parameters: {
     backgrounds: {
@@ -14,11 +14,11 @@ export default {
 } as Meta;
 
 const Template: Story = ({ children, ...args }) => (
-  <ListGroup {...args}>
+  <List {...args}>
     {children.map((child: React.ReactNode) => (
-      <ListGroup.Item key={Math.random()}>{child}</ListGroup.Item>
+      <List.Item key={Math.random()}>{child}</List.Item>
     ))}
-  </ListGroup>
+  </List>
 );
 
 export const Controlled = Template.bind({});
@@ -38,20 +38,3 @@ DisabledListItem.args = {
   disabled: true,
   children: ['I am disabled'],
 };
-
-export const DefaultList: Story = args => (
-  <ListGroup {...args}>
-    <ListGroup.Item key={Math.random()}>
-      <ControlledListItem {...ControlledListItem.args} />
-      <DisabledListItem {...DisabledListItem.args} />
-    </ListGroup.Item>
-  </ListGroup>
-);
-
-export const SingleItemList: Story = args => (
-  <ListGroup {...args}>
-    <ListGroup.Item key={Math.random()}>
-      <ControlledListItem {...ControlledListItem.args} />
-    </ListGroup.Item>
-  </ListGroup>
-);

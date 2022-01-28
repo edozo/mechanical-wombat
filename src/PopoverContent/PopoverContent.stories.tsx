@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { PopoverContent } from './PopoverContent';
-import { ListGroup } from '../List';
+import { List } from '../List';
 
 export default {
   title: 'Components/PopoverContent',
@@ -21,9 +21,9 @@ Simple.args = {
 export const ListContent = Template.bind({});
 ListContent.args = {
   children: (
-    <ListGroup>
-      <ListGroup.Item>Non-clicky item</ListGroup.Item>
-      <ListGroup.Item disabled>Disabled item</ListGroup.Item>
-    </ListGroup>
+    <List>
+      <List.Item>Non-clicky item</List.Item>
+      <List.Item disabled>Disabled item</List.Item>
+    </List>
   ),
 };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Context } from './ListGroup';
+import { Context } from './List';
 
 export interface StyleProps extends Context {
   radius?: 'small' | 'standard';

@@ -6,7 +6,7 @@ import { EdozoLogo2 } from '../EdozoLogo2';
 import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
-import { ListGroup } from '../List';
+import { List } from '../List';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
 import {
   ItemWrapper,
@@ -80,10 +80,10 @@ MapsWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <ListGroup>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
-                </ListGroup>
+                <List>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
+                </List>
               }
             >
               <div>
@@ -154,10 +154,10 @@ OccupiersWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <ListGroup>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
-                </ListGroup>
+                <List>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
+                </List>
               }
             >
               <div>
@@ -228,10 +228,10 @@ InsightWithMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <ListGroup>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Edozo Comps</ListGroup.Item>
-                  <ListGroup.Item onClick={() => console.log('Do a thing')}>Help centre</ListGroup.Item>
-                </ListGroup>
+                <List>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
+                </List>
               }
             >
               <div>
@@ -278,26 +278,26 @@ WithNewMenuPopover.args = {
               visible
               content={
                 <div style={{ margin: '10px 0' }}>
-                  <ListGroup variant="platform">
-                    <ListGroup.Item onClick={() => console.log('Do a thing')} disabled>
+                  <List variant="platform">
+                    <List.Item onClick={() => console.log('Do a thing')} disabled>
                       <ItemWrapper>
                         <EdozoLogo2 appName="maps" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListGroup.Item>
-                    <ListGroup.Item onClick={() => console.log('Do a thing')}>
+                    </List.Item>
+                    <List.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="occupiers" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListGroup.Item>
-                    <ListGroup.Item onClick={() => console.log('Do a thing')}>
+                    </List.Item>
+                    <List.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="insight" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListGroup.Item>
-                  </ListGroup>
+                    </List.Item>
+                  </List>
                 </div>
               }
             >

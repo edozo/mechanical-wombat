@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { StyledList } from './ListGroup.styles';
+import { StyledList } from './List.styles';
 import { ListItem } from './ListItem/ListItem';
 
 export interface Context extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,7 +17,7 @@ export const useListContext: Function = (): any => {
   return context;
 };
 
-const ListGroup = (props: Context): any => {
+const List = (props: Context): any => {
   return (
     <ListContext.Provider value={props}>
       <StyledList disabled={props.disabled} variant={props.variant}>
@@ -27,11 +27,11 @@ const ListGroup = (props: Context): any => {
   );
 };
 
-ListGroup.defaultProps = {
+List.defaultProps = {
   variant: 'menu',
   disabled: false,
 };
 
-ListGroup.Item = ListItem;
+List.Item = ListItem;
 
-export { ListGroup };
+export { List };

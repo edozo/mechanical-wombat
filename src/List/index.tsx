@@ -1,1 +1,1 @@
-export { ListGroup } from './ListGroup';
+export { List } from './List';
