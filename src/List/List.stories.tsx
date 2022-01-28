@@ -40,5 +40,3 @@ DisabledListItem.args = {
     { node: 'Third', disabled: false },
   ],
 };
-
-export const DisabledItemOnly: Story = () => <List.Item disabled>You can&#39;t click me</List.Item>;
