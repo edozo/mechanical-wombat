@@ -3,13 +3,22 @@ import styled from 'styled-components';
 import Tippy from '@tippyjs/react';
 import { TextXXSmall } from '../Typography';
 
-export const StyledPopover = styled(Tippy)`
+export interface StylePopoverProps {
+  radius: 'xsmall' | 'small' | 'standard' | 'large' | 'xlarge';
+}
+
+export const StyledPopover = styled(Tippy)<StylePopoverProps>`
   background-color: ${p => p.theme.colors.white};
   color: ${p => p.theme.colors.grayDarker};
   box-shadow: ${p => p.theme.boxShadow.standard};
+  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
 
   .tippy-content {
     padding: 0;
+    border-radius: inherit;
+    > div {
+      border-radius: inherit;
+    }
   }
 
   .tippy-arrow {

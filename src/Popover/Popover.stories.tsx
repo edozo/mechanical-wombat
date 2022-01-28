@@ -3,10 +3,16 @@ import { Story, Meta } from '@storybook/react';
 import { Popover } from './Popover';
 import { WarningIcon } from '../Icons';
 import { Tooltip } from '../Tooltip';
+import { List } from '../List';
 
 export default {
   title: 'Components/Popover',
   component: Popover,
+  parameters: {
+    backgrounds: {
+      default: 'dark blue',
+    },
+  },
 } as Meta;
 
 export const PopoverWithTitle: Story = () => {
@@ -125,4 +131,41 @@ export const PopoverSimple: Story = () => {
       </Popover>
     </div>
   );
+};
+
+export const PopoverList: Story = ({ ...args }) => {
+  const elements = [
+    { node: 'Element 1' },
+    { node: 'Element 2', disabled: true },
+    { node: 'Element 3' },
+    { node: 'Element 4' },
+    { node: 'Element 5' },
+    { node: 'Element 6' },
+  ];
+  return (
+    <div style={{ minHeight: '200px' }}>
+      <Popover
+        interactive
+        interactiveBorder={10}
+        visible
+        // Tippy logs a warning here, we can find a fix later as it doesn't effect anything
+        {...args}
+        content={
+          <List {...args}>
+            {elements.map(element => (
+              <List.Item disabled={element.disabled} key={element.node}>
+                {element.node}
+              </List.Item>
+            ))}
+          </List>
+        }
+      >
+        <span>some element</span>
+      </Popover>
+    </div>
+  );
+};
+PopoverList.args = {
+  radius: 'xlarge',
+  variant: 'standard',
 };

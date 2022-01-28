@@ -1,13 +1,10 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { List } from './List';
-import { ListItem } from './ListItem';
-import { ControlledListItem, DisabledListItem } from './ListItem.stories';
 
 export default {
   title: 'Components/List',
   component: List,
-  subcomponents: { ListItem },
   argTypes: { onClick: { action: 'clicked' } },
   parameters: {
     backgrounds: {
@@ -17,30 +14,29 @@ export default {
 } as Meta;
 
 const Template: Story = ({ children, ...args }) => (
-  <List>
-    {children.map((child: React.ReactNode) => (
-      <ListItem key={Math.random()} {...args}>
-        {child}
-      </ListItem>
+  <List {...args}>
+    {children.map(({ node, disabled = false }: { node: React.ReactNode; disabled: boolean }) => (
+      <List.Item disabled={disabled} key={Math.random()}>
+        {node}
+      </List.Item>
     ))}
   </List>
 );
 
 export const Controlled = Template.bind({});
 Controlled.args = {
-  disabled: false,
-  children: ['First', 'Second', 'Third'],
+  children: [
+    { node: 'First', disabled: false },
+    { node: 'Second', disabled: false },
+    { node: 'Third', disabled: false },
+  ],
 };
 
-export const DefaultList: Story = args => (
-  <List {...args}>
-    <ControlledListItem {...ControlledListItem.args} />
-    <DisabledListItem {...DisabledListItem.args} />
-  </List>
-);
-
-export const SingleItemList: Story = args => (
-  <List {...args}>
-    <ControlledListItem {...ControlledListItem.args} />
-  </List>
-);
+export const DisabledListItem = Template.bind({});
+DisabledListItem.args = {
+  children: [
+    { node: 'First', disabled: false },
+    { node: 'Second', disabled: true },
+    { node: 'Third', disabled: false },
+  ],
+};

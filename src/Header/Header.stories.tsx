@@ -6,7 +6,7 @@ import { EdozoLogo2 } from '../EdozoLogo2';
 import { Header } from './Header';
 import { Menu } from '../Menu';
 import { Popover } from '../Popover';
-import { List, ListItem } from '../List';
+import { List } from '../List';
 import { ReactComponent as SwitchAppIconColour } from './switch-app-icon-color.svg';
 import {
   ItemWrapper,
@@ -81,8 +81,8 @@ MapsWithMenuPopover.args = {
               visible
               content={
                 <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
                 </List>
               }
             >
@@ -155,8 +155,8 @@ OccupiersWithMenuPopover.args = {
               visible
               content={
                 <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
                 </List>
               }
             >
@@ -229,8 +229,8 @@ InsightWithMenuPopover.args = {
               visible
               content={
                 <List>
-                  <ListItem onClick={() => console.log('Do a thing')}>Edozo Comps</ListItem>
-                  <ListItem onClick={() => console.log('Do a thing')}>Help centre</ListItem>
+                  <List.Item onClick={() => console.log('Do a thing')}>Edozo Comps</List.Item>
+                  <List.Item onClick={() => console.log('Do a thing')}>Help centre</List.Item>
                 </List>
               }
             >
@@ -277,26 +277,26 @@ WithNewMenuPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <div style={{ margin: '10px 0' }}>
+                <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
                   <List variant="platform">
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform" disabled>
+                    <List.Item onClick={() => console.log('Do a thing')} disabled>
                       <ItemWrapper>
                         <EdozoLogo2 appName="maps" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                    </List.Item>
+                    <List.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="occupiers" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
-                    <ListItem onClick={() => console.log('Do a thing')} variant="platform">
+                    </List.Item>
+                    <List.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>
                         <EdozoLogo2 appName="insight" />
                         <StyledText>Text</StyledText>
                       </ItemWrapper>
-                    </ListItem>
+                    </List.Item>
                   </List>
                 </div>
               }
