@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   variant?: string;
+  name?: string;
 }
 
 export const StyledListItem = styled.div<ListItemProps>`
