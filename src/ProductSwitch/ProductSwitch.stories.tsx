@@ -30,7 +30,7 @@ ProductSwitchWithPopover.args = {
               interactiveBorder={10}
               visible
               content={
-                <div style={{ margin: '10px 0' }}>
+                <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
                   <List variant="platform">
                     <List.Item onClick={() => console.log('Do a thing')}>
                       <ItemWrapper>

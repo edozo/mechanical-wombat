@@ -15,26 +15,30 @@ export default {
 
 const Template: Story = ({ children, ...args }) => (
   <List {...args}>
-    {children.map((child: React.ReactNode) => (
-      <List.Item key={Math.random()}>{child}</List.Item>
+    {children.map(({ node, disabled = false }: { node: React.ReactNode; disabled: boolean }) => (
+      <List.Item disabled={disabled} key={Math.random()}>
+        {node}
+      </List.Item>
     ))}
   </List>
 );
 
 export const Controlled = Template.bind({});
 Controlled.args = {
-  disabled: false,
-  children: ['First', 'Second', 'Third'],
-};
-
-export const ControlledListItem = Template.bind({});
-ControlledListItem.args = {
-  disabled: false,
-  children: ['This is a list item'],
+  children: [
+    { node: 'First', disabled: false },
+    { node: 'Second', disabled: false },
+    { node: 'Third', disabled: false },
+  ],
 };
 
 export const DisabledListItem = Template.bind({});
 DisabledListItem.args = {
-  disabled: true,
-  children: ['I am disabled'],
+  children: [
+    { node: 'First', disabled: false },
+    { node: 'Second', disabled: true },
+    { node: 'Third', disabled: false },
+  ],
 };
+
+export const DisabledItemOnly: Story = () => <List.Item disabled>You can&#39;t click me</List.Item>;

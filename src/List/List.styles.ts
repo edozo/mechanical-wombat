@@ -1,18 +1,7 @@
 import styled from 'styled-components';
 import { Context } from './List';
 
-export interface StyleProps extends Context {
-  radius?: 'small' | 'standard';
-}
-
-export const StyledList = styled.div<StyleProps>`
+export const StyledList = styled.div<Context>`
   background-color: ${p => p.theme.colors.white};
-  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
-  > div {
-    border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
-  }
-
-  :not(:first-child) {
-    border-radius: 0;
-  }
+  border-radius: inherit;
 `;

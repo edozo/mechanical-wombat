@@ -2,8 +2,9 @@ import React from 'react';
 import { useListContext } from '../List';
 import { StyledListItem, ListItemProps } from './ListItem.styles';
 
-export const ListItem: React.FC<ListItemProps> = ({ children, onClick, ...rest }) => {
-  const { disabled, variant } = useListContext();
+export const ListItem: React.FC<ListItemProps> = ({ disabled, children, onClick, ...rest }) => {
+  const { variant } = useListContext();
+
   return disabled ? (
     <StyledListItem disabled={disabled} variant={variant} {...rest}>
       {children}

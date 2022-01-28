@@ -3,11 +3,10 @@ import { StyledList } from './List.styles';
 import { ListItem } from './ListItem/ListItem';
 
 export interface Context extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'menu' | 'platform';
-  disabled?: true | false;
+  variant?: 'standard' | 'platform';
 }
 
-const ListContext = createContext<Context>({ variant: 'menu', disabled: false });
+const ListContext = createContext<Context>({ variant: 'standard' });
 
 export const useListContext: Function = (): any => {
   const context = useContext(ListContext);
@@ -17,20 +16,11 @@ export const useListContext: Function = (): any => {
   return context;
 };
 
-const List = (props: Context): any => {
-  return (
-    <ListContext.Provider value={props}>
-      <StyledList disabled={props.disabled} variant={props.variant}>
-        {props.children}
-      </StyledList>
-    </ListContext.Provider>
-  );
-};
-
-List.defaultProps = {
-  variant: 'menu',
-  disabled: false,
-};
+const List = (props: Context): any => (
+  <ListContext.Provider value={props}>
+    <StyledList {...props}>{props.children}</StyledList>
+  </ListContext.Provider>
+);
 
 List.Item = ListItem;
 
