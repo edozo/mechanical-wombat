@@ -4,7 +4,7 @@ import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
 export interface TabProps {
   tabId: string;
-  beforeOnChange?: (handleClick: () => void) => boolean;
+  beforeOnChange?: (handleClick: () => void) => void;
 }
 
 export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...rest }) => {
