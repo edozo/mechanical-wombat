@@ -22,6 +22,6 @@ export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
 export { Error, NotFound, ErrorBoundary } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
-export { Header, Menu } from './Header';
+export { Header, AppHeader, Menu, AppName } from './Header';
 
 export { ThemeProvider } from './ThemeProvider';

@@ -23,6 +23,12 @@ export interface ProductInfo {
 
 const defaultProducts: ProductInfo[] = [
   {
+    appName: '',
+    description: '',
+    productionUrl: 'https://dashboard.edozo.com/',
+    stageUrl: 'https://dashboard.edozo.co/',
+  },
+  {
     appName: 'maps',
     description: 'Create best in class OS mapping with single click technology',
     productionUrl: 'https://maps.edozo.com/',
@@ -44,18 +50,26 @@ const defaultProducts: ProductInfo[] = [
 
 export interface AppHeaderProps extends Context {
   logout: () => void;
+  logoSection: React.ReactNode;
+  isAuthenticated?: boolean;
   edozoProducts?: ProductInfo[];
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({
-  appName = 'maps',
+  appName = '',
+  logoSection,
   logout,
+  isAuthenticated,
   edozoProducts = defaultProducts,
   children,
 }) => {
   const [platformAppPopover, setPlatformAppPopover] = useState(false);
   const showPopover = (): void => setPlatformAppPopover(true);
   const hidePopover = (): void => setPlatformAppPopover(false);
+  const [, , topLevelDomain] = window.location.hostname.split('.');
+  const isStage = topLevelDomain === 'co';
+
+  // const currentApp = defaultProducts.find(product => product.appName === appName);
 
   const linkHandler = (product: ProductInfo): boolean | void => {
     const { stageUrl, productionUrl } = product;
@@ -66,62 +80,62 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
       return false;
     }
 
-    const [, , topLevelDomain] = hostname.split('.');
-
-    topLevelDomain === 'co' ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
+    isStage ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
     hidePopover();
   };
 
   return (
     <Header appName={appName}>
-      <EdozoLogo2 appName={appName} />
-      <Menu>
-        {children}
-        <Menu.PlatformMenu>
-          <div>
-            <Popover
-              placement="top-end"
-              interactive
-              interactiveBorder={10}
-              visible={platformAppPopover}
-              onClickOutside={hidePopover}
-              content={
-                <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
-                  <List variant="platform">
-                    {edozoProducts.map(product => (
-                      <List.Item
-                        key={product.productionUrl}
-                        onClick={() => linkHandler(product)}
-                        disabled={appName === product.appName}
-                      >
-                        <ItemWrapper>
-                          <EdozoLogo2 appName={product.appName} />
-                          <StyledText>{product.description}</StyledText>
-                        </ItemWrapper>
-                      </List.Item>
-                    ))}
-                  </List>
+      {logoSection}
+      {isAuthenticated && (
+        <Menu>
+          {children}
+          <Menu.PlatformMenu>
+            <div>
+              <Popover
+                placement="top-end"
+                interactive
+                interactiveBorder={10}
+                visible={platformAppPopover}
+                onClickOutside={hidePopover}
+                content={
+                  <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
+                    <List variant="platform">
+                      {edozoProducts.map(product => (
+                        <List.Item
+                          key={product.productionUrl}
+                          onClick={() => linkHandler(product)}
+                          disabled={appName === product.appName}
+                        >
+                          <ItemWrapper>
+                            <EdozoLogo2 appName={product.appName} />
+                            <StyledText>{product.description}</StyledText>
+                          </ItemWrapper>
+                        </List.Item>
+                      ))}
+                    </List>
+                  </div>
+                }
+              >
+                <div>
+                  <ButtonV2 onClick={platformAppPopover ? hidePopover : showPopover} radius="round" variant="white">
+                    <SwitchAppWrapper>
+                      <SwitchAppIconColour size="small" />
+                      <StyledButtonTitle>Products</StyledButtonTitle>
+                    </SwitchAppWrapper>
+                    <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
+                      NEW
+                    </StyledNewBadge>
+                  </ButtonV2>
                 </div>
-              }
-            >
-              <div>
-                <ButtonV2 onClick={platformAppPopover ? hidePopover : showPopover} radius="round" variant="white">
-                  <SwitchAppWrapper>
-                    <SwitchAppIconColour />
-                    <StyledButtonTitle>Products</StyledButtonTitle>
-                  </SwitchAppWrapper>
-                  <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
-                    NEW
-                  </StyledNewBadge>
-                </ButtonV2>
-              </div>
-            </Popover>
-          </div>
-          <Menu.PlatformButton onClick={logout}>
-            <LogoutIcon size="small" />
-          </Menu.PlatformButton>
-        </Menu.PlatformMenu>
-      </Menu>
+              </Popover>
+            </div>
+            <Menu.PlatformButton onClick={logout}>
+              <LogoutIcon size="small" />
+            </Menu.PlatformButton>
+          </Menu.PlatformMenu>
+        </Menu>
+      )}
     </Header>
   );
 };

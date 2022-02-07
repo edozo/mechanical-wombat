@@ -19,7 +19,16 @@ LogoOnly.args = {
 };
 
 export const ControlledAppHeader: Story<AppHeaderProps> = args => (
-  <AppHeader appName={args.appName} logout={args.logout}>
+  <AppHeader
+    logoSection={
+      <a>
+        <EdozoLogo2 appName={args.appName} />
+      </a>
+    }
+    isAuthenticated={args.isAuthenticated}
+    appName={args.appName}
+    logout={args.logout}
+  >
     <Fragment>
       <Menu.Item>
         <a className="active">Create a unicorn</a>
@@ -36,5 +45,6 @@ export const ControlledAppHeader: Story<AppHeaderProps> = args => (
 
 ControlledAppHeader.args = {
   appName: 'maps',
+  isAuthenticated: true,
   logout: () => console.log('app specific logout method'),
 };
