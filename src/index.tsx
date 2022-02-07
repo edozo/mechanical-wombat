@@ -16,7 +16,6 @@ export { Tooltip } from './Tooltip';
 export { NotificationBar } from './NotificationBar';
 export { Tabs } from './Tabs';
 export { EdozoLogo } from './EdozoLogo';
-export { EdozoLogo2 } from './EdozoLogo2';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';

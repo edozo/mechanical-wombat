@@ -1,14 +1,34 @@
-import React from 'react';
-import { ReactComponent as Logo } from './edozo-logo.svg';
-import { ProductName } from './EdozoLogo.styles';
+import React, { Fragment } from 'react';
+import { ReactComponent as EdozoLogoSvg } from './assets/edozo-logo.svg';
+import { ReactComponent as InsightLogo } from './assets/insight-logo.svg';
+import { ReactComponent as OccupiersLogo } from './assets/occupiers-logo.svg';
+import { ReactComponent as MapsLogo } from './assets/maps-logo.svg';
+import { ReactComponent as HelpCentreLogo } from './assets/help-centre-logo.svg';
+import { BetaBadge } from './EdozoLogo.styles'; // TODO: Replace me with Badge component once it has correct sizes
 
-interface Props {
-  appName?: string;
+export interface Props {
+  appName?: 'maps' | 'insight' | 'occupiers' | 'helpCentre' | '';
+  beta?: boolean;
 }
 
-export const EdozoLogo: React.FC<Props> = ({ appName }) => (
-  <div>
-    <Logo data-testid="edozoLogo" />
-    {appName && <ProductName>{appName}</ProductName>}
-  </div>
+const switchLogo = ({ appName }: Props): React.ReactNode => {
+  switch (appName) {
+    case 'maps':
+      return <MapsLogo />;
+    case 'occupiers':
+      return <OccupiersLogo />;
+    case 'insight':
+      return <InsightLogo />;
+    case 'helpCentre':
+      return <HelpCentreLogo />;
+    default:
+      return <EdozoLogoSvg />;
+  }
+};
+
+export const EdozoLogo: React.FC<Props> = ({ appName, beta = false }) => (
+  <Fragment>
+    {switchLogo({ appName })}
+    {beta && <BetaBadge>beta</BetaBadge>}
+  </Fragment>
 );

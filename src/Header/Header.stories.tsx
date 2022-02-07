@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';
-import { EdozoLogo2 } from '../EdozoLogo2';
+import { EdozoLogo } from '../EdozoLogo';
 import { Context, Header } from './Header';
 import { Menu } from './Menu';
 import { AppHeader, AppHeaderProps } from './AppHeader';
@@ -15,14 +15,14 @@ const Template: Story<Context> = args => <Header {...args} />;
 
 export const LogoOnly = Template.bind({});
 LogoOnly.args = {
-  children: <EdozoLogo2 appName="Unicorns" />,
+  children: <EdozoLogo appName="Unicorns" />,
 };
 
 export const ControlledAppHeader: Story<AppHeaderProps> = args => (
   <AppHeader
     logoSection={
       <a>
-        <EdozoLogo2 appName={args.appName} />
+        <EdozoLogo appName={args.appName} />
       </a>
     }
     isAuthenticated={args.isAuthenticated}

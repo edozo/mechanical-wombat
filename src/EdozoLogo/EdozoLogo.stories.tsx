@@ -10,8 +10,6 @@ export default {
 const Template: Story = args => <EdozoLogo {...args} />;
 
 export const Default = Template.bind({});
-
-export const WithName = Template.bind({});
-WithName.args = {
-  appName: 'Occupiers',
+Default.args = {
+  appName: '',
 };

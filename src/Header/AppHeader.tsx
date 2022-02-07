@@ -10,7 +10,7 @@ import {
 } from './ProductSwitch/ProductSwitch.styles'; // TODO: ProductSwitcher still needs some work, will do another PR
 import { List } from '../List';
 import { Popover } from '../Popover';
-import { EdozoLogo2 } from '../EdozoLogo2';
+import { EdozoLogo } from '../EdozoLogo';
 import { Menu } from './Menu';
 import { Context, Header } from './Header';
 
@@ -104,7 +104,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                           disabled={appName === product.appName}
                         >
                           <ItemWrapper>
-                            <EdozoLogo2 appName={product.appName} />
+                            <EdozoLogo appName={product.appName} />
                             <StyledText>{product.description}</StyledText>
                           </ItemWrapper>
                         </List.Item>
