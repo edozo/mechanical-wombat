@@ -130,7 +130,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
                 </div>
               </Popover>
             </div>
-            <Menu.PlatformButton onClick={logout}>
+            <Menu.PlatformButton onClick={logout} data-testid="logoutButton">
               <LogoutIcon size="small" />
             </Menu.PlatformButton>
           </Menu.PlatformMenu>
