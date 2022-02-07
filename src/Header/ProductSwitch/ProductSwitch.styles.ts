@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Badge } from '../Badge';
+import { Badge } from '../../Badge';
 
 export const StyledButtonTitle = styled.div`
   font-family: ${p => p.theme.font.family.main};

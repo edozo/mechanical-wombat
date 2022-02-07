@@ -39,10 +39,7 @@
     {
       "label": "Init",
       "dependsOrder": "sequence",
-      "dependsOn":["Checkout", "Pull", "Install"],
-      "runOptions": {
-        "runOn": "folderOpen"
-      }
+      "dependsOn":["Checkout", "Pull", "Install"]
     },
     {
       "label": "Run Storybook",
