@@ -66,10 +66,6 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
   const [platformAppPopover, setPlatformAppPopover] = useState(false);
   const showPopover = (): void => setPlatformAppPopover(true);
   const hidePopover = (): void => setPlatformAppPopover(false);
-  const [, , topLevelDomain] = window.location.hostname.split('.');
-  const isStage = topLevelDomain === 'co';
-
-  // const currentApp = defaultProducts.find(product => product.appName === appName);
 
   const linkHandler = (product: ProductInfo): boolean | void => {
     const { stageUrl, productionUrl } = product;
@@ -79,8 +75,8 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
       window.open(stageUrl, '_blank');
       return false;
     }
-
-    isStage ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
+    const [, , topLevelDomain] = hostname.split('.');
+    topLevelDomain === 'co' ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
     hidePopover();
   };
 
