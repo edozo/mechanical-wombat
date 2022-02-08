@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Context } from './List';
+import { ListState } from './ListContext';
 
-export const StyledList = styled.div<Context>`
+export const StyledList = styled.div<ListState>`
   background-color: ${p => p.theme.colors.white};
   border-radius: inherit;
 `;
