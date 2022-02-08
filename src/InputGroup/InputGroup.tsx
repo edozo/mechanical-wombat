@@ -1,24 +1,17 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import { StyledInputGroup } from './InputGroup.styles';
-import { Item } from './Item';
-import { Button } from '../Button';
-import { Input } from './Input';
+import { Item, ItemProps } from './Item';
+import { Button, ButtonProps } from './Button';
+import { Input, InputProps } from './Input';
+import { InputGroupContext, InputGroupState } from './InputGroupContext';
 
-export interface Context extends React.HTMLAttributes<HTMLInputElement> {
-  radius?: 'standard' | 'round';
+interface ListComposition {
+  Button: React.FC<ButtonProps>;
+  Item: React.FC<ItemProps>;
+  Input: React.FC<InputProps>;
 }
 
-const InputGroupContext = createContext<Context>({ radius: 'standard' });
-
-export const useInputGroupContext = (): any => {
-  const context = React.useContext(InputGroupContext);
-  if (!context) {
-    throw new Error(`InputGroup compound components cannot be rendered outside the InputGroup component`);
-  }
-  return context;
-};
-
-const InputGroup = (props: Context): any => (
+const InputGroup: React.FC<InputGroupState> & ListComposition = props => (
   <InputGroupContext.Provider value={props}>
     <StyledInputGroup radius={props.radius}>{props.children}</StyledInputGroup>
   </InputGroupContext.Provider>
