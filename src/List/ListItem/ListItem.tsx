@@ -1,5 +1,5 @@
 import React from 'react';
-import { useListContext } from '../List';
+import { useListContext } from '../ListContext';
 import { StyledListItem, ListItemProps } from './ListItem.styles';
 
 export const ListItem: React.FC<ListItemProps> = ({ disabled, children, onClick, ...rest }) => {

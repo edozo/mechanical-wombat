@@ -1,22 +1,13 @@
-import React, { createContext, useContext } from 'react';
+import React from 'react';
+import { ListContext, ListState } from './ListContext';
 import { StyledList } from './List.styles';
 import { ListItem } from './ListItem/ListItem';
 
-export interface Context extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'standard' | 'platform';
+interface ListComposition {
+  Item: React.FC;
 }
 
-const ListContext = createContext<Context>({ variant: 'standard' });
-
-export const useListContext: Function = (): any => {
-  const context = useContext(ListContext);
-  if (!context) {
-    throw new Error("List compound components can't be rendered outside List component");
-  }
-  return context;
-};
-
-const List = (props: Context): any => (
+const List: React.FC<ListState> & ListComposition = props => (
   <ListContext.Provider value={props}>
     <StyledList {...props}>{props.children}</StyledList>
   </ListContext.Provider>
