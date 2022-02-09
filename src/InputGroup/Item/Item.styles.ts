@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-export interface ItemProps {
-  backgroundColor?: string;
-}
+import { ItemProps } from './Item';
 
 export const StyledItem = styled.div<ItemProps>`
   display: flex;
