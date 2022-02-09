@@ -7,9 +7,10 @@ export default {
   component: EdozoLogo,
 } as Meta;
 
-const Template: Story = args => <EdozoLogo {...args} />;
+const Template: Story = args => <EdozoLogo variant={args.variant} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  appName: '',
+  variant: 'edozo',
+  beta: false,
 };

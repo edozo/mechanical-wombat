@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';
+import { LogoVariants } from '../EdozoLogo/EdozoLogo';
 import { EdozoLogo } from '../EdozoLogo';
-import { Context, Header } from './Header';
+import { Header } from './Header';
 import { Menu } from './Menu';
 import { AppHeader, AppHeaderProps } from './AppHeader';
 
@@ -11,18 +12,11 @@ export default {
   component: Header,
 } as Meta;
 
-const Template: Story<Context> = args => <Header {...args} />;
-
-export const LogoOnly = Template.bind({});
-LogoOnly.args = {
-  children: <EdozoLogo appName="Unicorns" />,
-};
-
 export const ControlledAppHeader: Story<AppHeaderProps> = args => (
   <AppHeader
     logoSection={
       <a>
-        <EdozoLogo appName={args.appName} />
+        <EdozoLogo variant={args.appName as LogoVariants} />
       </a>
     }
     isAuthenticated={args.isAuthenticated}
