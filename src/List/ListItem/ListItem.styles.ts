@@ -4,6 +4,7 @@ export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   variant?: string;
   name?: string;
+  onClick?: () => void;
 }
 
 export const StyledListItem = styled.div<ListItemProps>`
