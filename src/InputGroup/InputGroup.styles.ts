@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { Context } from './InputGroup';
+import { InputGroupState } from './InputGroupContext';
 
-export const StyledInputGroup = styled.div<Context>`
+export const StyledInputGroup = styled.div<InputGroupState>`
   display: flex;
   width: 100%;
   > * :first-child {
