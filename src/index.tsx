@@ -16,14 +16,11 @@ export { Tooltip } from './Tooltip';
 export { NotificationBar } from './NotificationBar';
 export { Tabs } from './Tabs';
 export { EdozoLogo } from './EdozoLogo';
-export { EdozoLogo2 } from './EdozoLogo2';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
-export { Header } from './Header';
-export { Menu } from './Menu';
 export { Error, NotFound, ErrorBoundary } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
-export { ProductSwitch } from './ProductSwitch';
+export { Header, AppHeader, Menu, AppName } from './Header';
 
 export { ThemeProvider } from './ThemeProvider';

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { MenuItemProps } from './MenuItem';
+import { Context } from '../Header';
 
-export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
+export const StyledMenuItem = styled.div<Context>`
   > a {
     position: relative;
     display: flex;
@@ -21,6 +21,7 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
       transition: height 0.2s ease-out;
       height: 0px;
       width: 100%;
+      background: ${p => p.theme.colors.aliases.primary};
       ${p =>
         p.appName === 'maps' &&
         css`
@@ -43,6 +44,7 @@ export const StyledMenuItemWrapper = styled.div<MenuItemProps>`
 
     :hover {
       text-decoration: none;
+      color: ${p => p.theme.colors.aliases.primary};
       ${p =>
         p.appName === 'maps' &&
         css`

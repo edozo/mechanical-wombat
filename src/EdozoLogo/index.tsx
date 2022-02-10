@@ -1,1 +1,1 @@
-export { EdozoLogo } from './EdozoLogo';
+export { EdozoLogo } from './EdozoLogo.tsx';

@@ -6,6 +6,7 @@ export const StyledButton = styled.button<ButtonV2Props>`
   border: none;
   color: white;
   position: relative;
+  cursor: pointer;
 
   /* SIZE */
   ${p =>

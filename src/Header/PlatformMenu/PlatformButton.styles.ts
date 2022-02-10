@@ -6,6 +6,7 @@ export interface PlatformMenuButtonProps {
 }
 
 export const StylePlatformButton = styled(motion.button)<PlatformMenuButtonProps>`
+  cursor: pointer;
   border: none;
   border-radius: 50px;
   width: 32px;
