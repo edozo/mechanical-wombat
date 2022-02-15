@@ -4,7 +4,7 @@ import { InputGroupState } from './InputGroupContext';
 export const StyledInputGroup = styled.div<InputGroupState>`
   display: flex;
   width: 100%;
-  > * :first-child {
+  > *:first-child {
     border-left: ${p => `1px solid ${p.theme.colors.grayDark}`};
     ${p =>
       p.radius === 'standard' &&
@@ -19,7 +19,7 @@ export const StyledInputGroup = styled.div<InputGroupState>`
         border-bottom-left-radius: 50px;
       `};
   }
-  > * :last-child {
+  > *:last-child {
     border-right: ${p => `1px solid ${p.theme.colors.grayDark}`};
     ${p =>
       p.radius === 'standard' &&

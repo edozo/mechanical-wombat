@@ -13,14 +13,8 @@ interface Props {
 export const GlobalSearch: React.FC<Props> = props => (
   <InputGroup {...props}>
     <InputGroup.Input placeholder={props.placeholder} />
-    {props.value ? (
-      <InputGroup.Item>
-        <InputGroup.Button onClick={() => props.reset}>&times;</InputGroup.Button>
-      </InputGroup.Item>
-    ) : (
-      <InputGroup.Item>
-        <SearchIcon />
-      </InputGroup.Item>
-    )}
+    <InputGroup.Item>
+      {props.value ? <InputGroup.Button onClick={() => props.reset}>&times;</InputGroup.Button> : <SearchIcon />}
+    </InputGroup.Item>
   </InputGroup>
 );
