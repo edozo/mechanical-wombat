@@ -9,12 +9,13 @@ export const StyledTextarea = styled.textarea<InputGroupState>`
   font-size: ${p => p.theme.font.size.text.base};
   line-height: ${p => p.theme.font.lineHeight.text.base};
 
-  ${p =>
-      p.size === 'large' &&
-      css`
-        padding: ${p.theme.spacing.small};
-      `}
-    :focus {
+  :focus {
     outline: none;
   }
+
+  ${p =>
+    p.size === 'large' &&
+    css`
+      padding: ${p.theme.spacing.small};
+    `}
 `;
