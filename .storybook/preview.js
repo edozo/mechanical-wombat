@@ -7,6 +7,7 @@ export const parameters = {
     values: [
       { name: 'orange', value: '#e67b17' },
       { name: 'dark blue', value: '#3b5998' },
+      { name: 'light gray', value: '#e6e6e6' },
     ],
   },
 }

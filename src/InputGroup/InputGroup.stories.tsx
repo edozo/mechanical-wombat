@@ -14,19 +14,19 @@ export default {
   },
   parameters: {
     backgrounds: {
-      default: 'orange',
+      default: 'light gray',
     },
   },
 } as Meta;
 
 const Template: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
   </InputGroup>
 );
 
 const TemplateWithIconEnd: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
       <SearchIcon />
@@ -35,7 +35,7 @@ const TemplateWithIconEnd: Story = args => (
 );
 
 const TemplateWithIconStart: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
     </InputGroup.Item>
@@ -44,7 +44,7 @@ const TemplateWithIconStart: Story = args => (
 );
 
 const TemplateWithIconButton: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
       <InputGroup.Button onClick={() => console.log('123')}>&times;</InputGroup.Button>
@@ -53,11 +53,11 @@ const TemplateWithIconButton: Story = args => (
 );
 
 const TemplateKitchenSink: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup placeholder="Placeholder from the input props" onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
     </InputGroup.Item>
-    <InputGroup.Input placeholder="Placeholder from the input props" />
+    <InputGroup.Input />
     <InputGroup.Item>
       <InputGroup.Button onClick={() => console.log('123')}>Submit</InputGroup.Button>
     </InputGroup.Item>
@@ -65,7 +65,7 @@ const TemplateKitchenSink: Story = args => (
 );
 
 const TemplateWithItemEnd: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
       <TextSmall>item</TextSmall>
@@ -74,7 +74,7 @@ const TemplateWithItemEnd: Story = args => (
 );
 
 const TemplateWithItemStart: Story = args => (
-  <InputGroup {...args}>
+  <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item backgroundColor="red">
       <strong style={{ border: '1px solid green', margin: '0 36px' }}>
         <em>item</em>
@@ -92,9 +92,16 @@ const GlobalSearchTemplate: Story = () => {
       disabled={false}
       value={value}
       onChange={event => setValue(event.target.value)}
+      reset={() => setValue('')}
     />
   );
 };
+
+const TextareaTemplate: Story = args => (
+  <InputGroup onChange={() => null} {...args}>
+    <InputGroup.Textarea />
+  </InputGroup>
+);
 
 export const WithIconEnd = TemplateWithIconEnd.bind({});
 export const WithIconStart = TemplateWithIconStart.bind({});
@@ -103,6 +110,18 @@ export const KitchenSink = TemplateKitchenSink.bind({});
 export const WithItemEnd = TemplateWithItemEnd.bind({});
 export const WithItemStart = TemplateWithItemStart.bind({});
 export const WithoutItem = Template.bind({});
+WithoutItem.args = {
+  radius: 'standard',
+  size: 'standard',
+  border: true,
+};
+export const Textarea = TextareaTemplate.bind({});
+WithoutItem.args = {
+  radius: 'standard',
+  size: 'standard',
+  border: true,
+};
+
 export const RoundedItem = TemplateWithItemEnd.bind({});
 RoundedItem.args = {
   radius: 'round',
