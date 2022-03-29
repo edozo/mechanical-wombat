@@ -29,6 +29,9 @@ import measureToolUrl, { ReactComponent as MeasureTool } from './icons/measure-t
 import editToolUrl, { ReactComponent as EditTool } from './icons/edit-tool.svg';
 import modifyToolUrl, { ReactComponent as ModifyTool } from './icons/modify-tool.svg';
 import textUrl, { ReactComponent as Text } from './icons/text.svg';
+import streetNameTextUrl, { ReactComponent as StreetNameText } from './icons/street-name-text.svg';
+import buildingNumberTextUrl, { ReactComponent as BuildingNumberText } from './icons/building-number-text.svg';
+import notesTextUrl, { ReactComponent as NotesText } from './icons/notes-text.svg';
 import deleteAllUrl, { ReactComponent as DeleteAll } from './icons/delete-all.svg';
 import separateUrl, { ReactComponent as Separate } from './icons/separate.svg';
 import duplicateUrl, { ReactComponent as Duplicate } from './icons/duplicate.svg';
@@ -172,6 +175,27 @@ const TextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { TextIcon, textUrl };
+
+const StreetNameTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <StreetNameText fill={fill} {...props} />
+  </IconWrapper>
+);
+export { StreetNameTextIcon, streetNameTextUrl };
+
+const BuildingNumberTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <BuildingNumberText fill={fill} {...props} />
+  </IconWrapper>
+);
+export { BuildingNumberTextIcon, buildingNumberTextUrl };
+
+const NotesTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <NotesText fill={fill} {...props} />
+  </IconWrapper>
+);
+export { NotesTextIcon, notesTextUrl };
 
 const DeleteAllIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
