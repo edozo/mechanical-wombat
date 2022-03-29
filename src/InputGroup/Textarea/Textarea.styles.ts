@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { InputGroupState } from '../InputGroupContext';
 
-export const StyledInput = styled.input<InputGroupState>`
+export const StyledTextarea = styled.textarea<InputGroupState>`
   flex: 1;
   border: 0;
   background: white;
