@@ -12,7 +12,7 @@ import {
 import arrow from './arrow.svg'; // TODO: Make the react SVG as component work
 
 export interface Item {
-  label: string;
+  label: React.ReactNode;
   value: string | number;
   thumbnail?: string;
 }
