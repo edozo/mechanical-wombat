@@ -28,6 +28,7 @@ import {
   CircleIcon,
   ArrowToolIcon,
   LineToolIcon,
+  NewLineToolIcon,
   MeasureToolIcon,
   EditToolIcon,
   ModifyToolIcon,
@@ -91,6 +92,7 @@ import {
   SplitPolygonIcon,
   EyeIcon,
   FiltersIcon,
+  StandardArrowIcon,
 } from '.';
 
 export default {
@@ -141,6 +143,7 @@ const solidIcons = [
   { name: 'Double Garage', component: <DoubleGarageIcon /> },
   { name: 'Eye', component: <EyeIcon /> },
   { name: 'Filters', component: <FiltersIcon /> },
+  { name: 'Standard Arrow', component: <StandardArrowIcon /> },
 ];
 
 const outlinedIcons = [
@@ -155,6 +158,7 @@ const outlinedIcons = [
   { name: 'Circle', component: <CircleIcon /> },
   { name: 'Arrow Tool', component: <ArrowToolIcon /> },
   { name: 'Line Tool', component: <LineToolIcon /> },
+  { name: 'New Line Tool', component: <NewLineToolIcon /> },
   { name: 'Measure Tool', component: <MeasureToolIcon /> },
   { name: 'Edit Tool', component: <EditToolIcon /> },
   { name: 'Modify Tool', component: <ModifyToolIcon /> },

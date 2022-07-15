@@ -25,6 +25,7 @@ import rectangleUrl, { ReactComponent as Rectangle } from './icons/rectangle.svg
 import circleUrl, { ReactComponent as Circle } from './icons/circle.svg';
 import arrowToolUrl, { ReactComponent as ArrowTool } from './icons/arrow-tool.svg';
 import lineToolUrl, { ReactComponent as LineTool } from './icons/line-tool.svg';
+import newLineToolUrl, { ReactComponent as NewLineTool } from './icons/new-line-tool.svg';
 import measureToolUrl, { ReactComponent as MeasureTool } from './icons/measure-tool.svg';
 import editToolUrl, { ReactComponent as EditTool } from './icons/edit-tool.svg';
 import modifyToolUrl, { ReactComponent as ModifyTool } from './icons/modify-tool.svg';
@@ -88,6 +89,7 @@ import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
 import splitPolygonUrl, { ReactComponent as SplitPolygon } from './icons/split-polygon.svg';
 import eyeUrl, { ReactComponent as Eye } from './icons/eye.svg';
 import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
+import standardArrowUrl, { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -147,6 +149,13 @@ const LineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
   </IconWrapper>
 );
 export { LineToolIcon, lineToolUrl };
+
+const NewLineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <NewLineTool fill={fill} {...props} />
+  </IconWrapper>
+);
+export { NewLineToolIcon, newLineToolUrl };
 
 const MeasureToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
@@ -723,3 +732,10 @@ const FiltersIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
   </IconWrapper>
 );
 export { FiltersIcon, filtersUrl };
+
+const StandardArrowIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <StandardArrow fill={fill} {...props} />
+  </IconWrapper>
+);
+export { StandardArrowIcon, standardArrowUrl };
