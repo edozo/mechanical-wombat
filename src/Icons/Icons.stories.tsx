@@ -93,7 +93,7 @@ import {
   EyeIcon,
   FiltersIcon,
   StandardArrowIcon,
-  SendToFrontIcon,
+  BringToFrontIcon,
   SendToBackIcon,
 } from '.';
 
@@ -196,7 +196,7 @@ const outlinedIcons = [
   { name: 'Error', component: <ErrorIcon /> },
   { name: 'Scissors', component: <ScissorsIcon /> },
   { name: 'Split Polygon', component: <SplitPolygonIcon /> },
-  { name: 'Send to Front', component: <SendToFrontIcon /> },
+  { name: 'Bring to Front', component: <BringToFrontIcon /> },
   { name: 'Send to Back', component: <SendToBackIcon /> },
 ];
 

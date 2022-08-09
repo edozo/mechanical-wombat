@@ -90,7 +90,7 @@ import splitPolygonUrl, { ReactComponent as SplitPolygon } from './icons/split-p
 import eyeUrl, { ReactComponent as Eye } from './icons/eye.svg';
 import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
 import standardArrowUrl, { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
-import sendToFrontUrl, { ReactComponent as SendToFront } from './icons/send-to-front.svg';
+import bringToFrontUrl, { ReactComponent as BringToFront } from './icons/bring-to-front.svg';
 import sendToBackUrl, { ReactComponent as SendToBack } from './icons/send-to-back.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
@@ -742,12 +742,12 @@ const StandardArrowIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
 );
 export { StandardArrowIcon, standardArrowUrl };
 
-const SendToFrontIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const BringToFrontIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
-    <SendToFront fill={fill} {...props} />
+    <BringToFront fill={fill} {...props} />
   </IconWrapper>
 );
-export { SendToFrontIcon, sendToFrontUrl };
+export { BringToFrontIcon, bringToFrontUrl };
 
 const SendToBackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
