@@ -95,6 +95,9 @@ import {
   StandardArrowIcon,
   BringToFrontIcon,
   SendToBackIcon,
+  AlignLeftIcon,
+  AlignCenterIcon,
+  AlignRightIcon,
   VerifiedIcon,
   GoToIcon,
 } from '.';
@@ -148,6 +151,9 @@ const solidIcons = [
   { name: 'Eye', component: <EyeIcon /> },
   { name: 'Filters', component: <FiltersIcon /> },
   { name: 'Standard Arrow', component: <StandardArrowIcon /> },
+  { name: 'Align left', component: <AlignLeftIcon /> },
+  { name: 'Align center', component: <AlignCenterIcon /> },
+  { name: 'Align right', component: <AlignRightIcon /> },
   { name: 'Go To', component: <GoToIcon /> },
 ];
 

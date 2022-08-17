@@ -27,3 +27,5 @@ settings.json
 .out
 storybook-static
 build-storybook.log
+
+.idea
