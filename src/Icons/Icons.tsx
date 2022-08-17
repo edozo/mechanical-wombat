@@ -94,7 +94,7 @@ import bringToFrontUrl, { ReactComponent as BringToFront } from './icons/bring-t
 import sendToBackUrl, { ReactComponent as SendToBack } from './icons/send-to-back.svg';
 import alignLeftUrl, { ReactComponent as AlignLeft } from './icons/left-align.svg';
 import alignCenterUrl, { ReactComponent as AlignCenter } from './icons/center-align.svg';
-import alignrightUrl, { ReactComponent as Alignright } from './icons/right-align.svg';
+import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -775,7 +775,7 @@ export { AlignCenterIcon, alignCenterUrl };
 
 const AlignRightIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
-    <Alignright fill={fill} {...props} />
+    <AlignRight fill={fill} {...props} />
   </IconWrapper>
 );
-export { AlignRightIcon, alignrightUrl };
+export { AlignRightIcon, alignRightUrl };
