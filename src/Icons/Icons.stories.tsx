@@ -95,6 +95,9 @@ import {
   StandardArrowIcon,
   BringToFrontIcon,
   SendToBackIcon,
+  AlignLeftIcon,
+  AlignCenterIcon,
+  AlignRightIcon,
 } from '.';
 
 export default {
@@ -146,6 +149,9 @@ const solidIcons = [
   { name: 'Eye', component: <EyeIcon /> },
   { name: 'Filters', component: <FiltersIcon /> },
   { name: 'Standard Arrow', component: <StandardArrowIcon /> },
+  { name: 'Align left', component: <AlignLeftIcon /> },
+  { name: 'Align center', component: <AlignCenterIcon /> },
+  { name: 'Align right', component: <AlignRightIcon /> },
 ];
 
 const outlinedIcons = [
