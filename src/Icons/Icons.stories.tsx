@@ -95,6 +95,8 @@ import {
   StandardArrowIcon,
   BringToFrontIcon,
   SendToBackIcon,
+  VerifiedIcon,
+  GoToIcon,
 } from '.';
 
 export default {
@@ -146,6 +148,7 @@ const solidIcons = [
   { name: 'Eye', component: <EyeIcon /> },
   { name: 'Filters', component: <FiltersIcon /> },
   { name: 'Standard Arrow', component: <StandardArrowIcon /> },
+  { name: 'Go To', component: <GoToIcon /> },
 ];
 
 const outlinedIcons = [
@@ -198,6 +201,7 @@ const outlinedIcons = [
   { name: 'Split Polygon', component: <SplitPolygonIcon /> },
   { name: 'Bring to Front', component: <BringToFrontIcon /> },
   { name: 'Send to Back', component: <SendToBackIcon /> },
+  { name: 'Verified', component: <VerifiedIcon /> },
 ];
 
 export const Solid: Story = () => (

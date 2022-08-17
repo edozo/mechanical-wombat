@@ -92,6 +92,8 @@ import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
 import standardArrowUrl, { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
 import bringToFrontUrl, { ReactComponent as BringToFront } from './icons/bring-to-front.svg';
 import sendToBackUrl, { ReactComponent as SendToBack } from './icons/send-to-back.svg';
+import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
+import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -320,6 +322,13 @@ const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
   </IconWrapper>
 );
 export { SplitPolygonIcon, splitPolygonUrl };
+
+const VerifiedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Verified fill={fill} {...props} />
+  </IconWrapper>
+);
+export { VerifiedIcon, verifiedUrl };
 
 // Solid
 const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
@@ -755,3 +764,10 @@ const SendToBackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
   </IconWrapper>
 );
 export { SendToBackIcon, sendToBackUrl };
+
+const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <GoTo fill={fill} {...props} />
+  </IconWrapper>
+);
+export { GoToIcon, goToUrl };
