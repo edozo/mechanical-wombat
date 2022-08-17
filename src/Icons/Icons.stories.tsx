@@ -98,6 +98,8 @@ import {
   AlignLeftIcon,
   AlignCenterIcon,
   AlignRightIcon,
+  VerifiedIcon,
+  GoToIcon,
 } from '.';
 
 export default {
@@ -152,6 +154,7 @@ const solidIcons = [
   { name: 'Align left', component: <AlignLeftIcon /> },
   { name: 'Align center', component: <AlignCenterIcon /> },
   { name: 'Align right', component: <AlignRightIcon /> },
+  { name: 'Go To', component: <GoToIcon /> },
 ];
 
 const outlinedIcons = [
@@ -204,6 +207,7 @@ const outlinedIcons = [
   { name: 'Split Polygon', component: <SplitPolygonIcon /> },
   { name: 'Bring to Front', component: <BringToFrontIcon /> },
   { name: 'Send to Back', component: <SendToBackIcon /> },
+  { name: 'Verified', component: <VerifiedIcon /> },
 ];
 
 export const Solid: Story = () => (
