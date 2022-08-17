@@ -92,6 +92,9 @@ import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
 import standardArrowUrl, { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
 import bringToFrontUrl, { ReactComponent as BringToFront } from './icons/bring-to-front.svg';
 import sendToBackUrl, { ReactComponent as SendToBack } from './icons/send-to-back.svg';
+import alignLeftUrl, { ReactComponent as AlignLeft } from './icons/left-align.svg';
+import alignCenterUrl, { ReactComponent as AlignCenter } from './icons/center-align.svg';
+import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align.svg';
 import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
 
@@ -764,6 +767,27 @@ const SendToBackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
   </IconWrapper>
 );
 export { SendToBackIcon, sendToBackUrl };
+
+const AlignLeftIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <AlignLeft fill={fill} {...props} />
+  </IconWrapper>
+);
+export { AlignLeftIcon, alignLeftUrl };
+
+const AlignCenterIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <AlignCenter fill={fill} {...props} />
+  </IconWrapper>
+);
+export { AlignCenterIcon, alignCenterUrl };
+
+const AlignRightIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <AlignRight fill={fill} {...props} />
+  </IconWrapper>
+);
+export { AlignRightIcon, alignRightUrl };
 
 const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
