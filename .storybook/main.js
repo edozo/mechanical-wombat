@@ -1,4 +1,8 @@
 module.exports = {
+  babel: async (options) => ({
+    ...options,
+    plugins: [['@babel/plugin-proposal-class-properties', { loose: true }]],
+  }),
   stories: ["../src/**/*.stories.@(tsx|mdx)"],
   addons: [
     {
@@ -6,7 +10,7 @@ module.exports = {
         options: {
           toolbars: false,
         }
-    }, 
+    },
     "themeprovider-storybook/register"
   ]
 };

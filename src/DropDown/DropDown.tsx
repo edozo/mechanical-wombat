@@ -29,7 +29,15 @@ const itemToString = (item: Item): string => (item ? item.value.toString() : '')
 export const DropDown = (props: Props): JSX.Element => (
   <div>
     <Downshift {...props} itemToString={itemToString}>
-      {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
+      {({
+        getMenuProps,
+        getItemProps,
+        getToggleButtonProps,
+        highlightedIndex,
+        selectedItem,
+        isOpen,
+        getRootProps,
+      }: any) => (
         <StyledDownshiftWrapper {...getRootProps()}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>
             <StyledDownshiftPreviewInner>

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { PlatformMenuButtonProps } from '../PlatformMenu/PlatformButton.styles';
 import { PlatformButton } from '../PlatformMenu/PlatformButton';
 import { PlatformMenu } from '../PlatformMenu';
 import { StyledMenu } from './Menu.styles';
 import { MenuItem } from './MenuItem';
 
-interface MenuComposition {
-  Item: React.FC;
+interface MenuComposition extends PropsWithChildren<any> {
+  Item: React.FC<PropsWithChildren<any>>;
   PlatformMenu: React.FC;
   PlatformButton: React.FC<PlatformMenuButtonProps>;
 }

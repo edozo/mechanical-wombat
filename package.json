@@ -29,7 +29,8 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
-    "react-collapsed": "^3.0.2"
+    "react-collapsed": "^3.0.2",
+    "downshift": "^6.1.9"
   },
   "peerDependencies": {
     "@tippyjs/react": "^4.2.5",
@@ -42,8 +43,8 @@
     "styled-reboot": "^5.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/react": "^6.1.21",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/react": "^6.5.10",
     "@svgr/rollup": "^5.5.0",
     "@svgr/webpack": "^5.5.0",
     "@tippyjs/react": "^4.2.5",
@@ -54,7 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.5",
     "babel-runtime": "^6.26.0",
     "chromatic": "^5.8.0",
     "cross-env": "^7.0.3",
@@ -90,7 +91,7 @@
     "stylelint-config-recommended": "^4.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
-    "themeprovider-storybook": "^1.7.1",
+    "themeprovider-storybook": "^1.8.0",
     "typescript": "^4.2.4"
   },
   "resolutions": {
