@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, PropsWithChildren } from 'react';
 import { BinocularIcon } from '../../Icons';
 import { Ring } from '../Ring';
 import { ErrorColumn } from '../ErrorColumn';
 import { ErrorInfo } from '../ErrorInfo';
 
-export const NotFound: React.FC = ({
+export const NotFound: React.FC<PropsWithChildren<any>> = ({
   children = "This page doesn't exist or is no longer available, please go back home.",
 }) => (
   <Fragment>

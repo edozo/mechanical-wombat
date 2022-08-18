@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import Tippy, { TippyProps } from '@tippyjs/react';
 import { StyledPopover } from './Popover.styles';
 import { PopoverTitle } from './PopoverTitle';
@@ -20,7 +20,11 @@ interface PopoverComposition {
   Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 }
 
-const Popover: React.FC<TippyProps & any> & PopoverComposition = ({ content, children, ...rest }) => (
+const Popover: React.FC<PropsWithChildren<TippyProps & any>> & PopoverComposition = ({
+  content,
+  children,
+  ...rest
+}) => (
   <StyledPopover content={content} {...rest}>
     {children}
   </StyledPopover>
