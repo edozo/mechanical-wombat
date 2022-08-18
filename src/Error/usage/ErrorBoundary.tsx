@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, PropsWithChildren } from 'react';
 import { ErrorIcon } from '../../Icons';
 import { Ring } from '../Ring';
 import { ErrorColumn } from '../ErrorColumn';
 import { ErrorInfo } from '../ErrorInfo';
 
-export const ErrorBoundary: React.FC = ({
+export const ErrorBoundary: React.FC<PropsWithChildren<any>> = ({
   children = "This page doesn't exist or is no longer available, please go back home.",
 }) => (
   <Fragment>

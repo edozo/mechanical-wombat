@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { BackgroundMessage, ForegroundMessage, ErrorInfoWrapper } from './ErrorInfo.styles';
 
-interface Props {
+interface Props extends PropsWithChildren<any> {
   foregroundMessage?: string;
   backgroundMessage?: string;
 }

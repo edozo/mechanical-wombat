@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { PropsWithChildren, useEffect, useState } from 'react';
 import useCollapse from 'react-collapsed';
 import { StyledCollapse, StyledPanel, StyledTrigger } from './Collapse.styles';
 
-export interface CollapseProps {
+export interface CollapseProps extends PropsWithChildren {
   isOpen?: boolean;
   trigger: React.ReactNode;
 }

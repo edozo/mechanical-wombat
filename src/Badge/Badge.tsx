@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { PropsWithChildren } from 'react';
 import { StyledBadge } from './Badge.styles';
 
 export interface BadgeProps {
@@ -16,7 +17,7 @@ export interface BadgeProps {
   size?: 'small' | 'standard';
 }
 
-export const Badge: React.FC<BadgeProps> = ({
+export const Badge: React.FC<PropsWithChildren<BadgeProps>> = ({
   background = 'grayLight',
   color = 'grayDarker',
   size = 'standard',
