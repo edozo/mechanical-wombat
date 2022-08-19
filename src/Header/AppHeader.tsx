@@ -24,7 +24,6 @@ const defaultProducts: ProductInfo[] = [
     description: 'Create plans and see occupiers for all use classes',
     productionUrl: 'https://occupiers.edozo.com/',
     stageUrl: 'https://occupiers.edozo.co/',
-    disabled: true,
   },
   {
     appName: 'insight',
