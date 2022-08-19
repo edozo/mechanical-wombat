@@ -97,6 +97,7 @@ import alignCenterUrl, { ReactComponent as AlignCenter } from './icons/center-al
 import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align.svg';
 import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
+import purchasedUrl, { ReactComponent as Purchased } from './icons/purchased.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -795,3 +796,10 @@ const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
   </IconWrapper>
 );
 export { GoToIcon, goToUrl };
+
+const PurchasedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Purchased fill={fill} {...props} />
+  </IconWrapper>
+);
+export { PurchasedIcon, purchasedUrl };

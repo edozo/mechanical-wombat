@@ -100,6 +100,7 @@ import {
   AlignRightIcon,
   VerifiedIcon,
   GoToIcon,
+  PurchasedIcon,
 } from '.';
 
 export default {
@@ -155,6 +156,7 @@ const solidIcons = [
   { name: 'Align center', component: <AlignCenterIcon /> },
   { name: 'Align right', component: <AlignRightIcon /> },
   { name: 'Go To', component: <GoToIcon /> },
+  { name: 'Purchased', component: <PurchasedIcon /> },
 ];
 
 const outlinedIcons = [
