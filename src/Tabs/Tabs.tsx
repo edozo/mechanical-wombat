@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 import { TabsProvider } from './TabsContext';
 import { TabWrapper, Tab, TabWrapperProps, TabProps } from './Tab';
 import { Panel, PanelProps } from './Panel';
 
-interface TabsProps {
+interface TabsProps extends PropsWithChildren<any> {
   initialTab: string;
 }
 

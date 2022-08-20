@@ -11,6 +11,7 @@ const ComponentLibThemeProvider = (props: any): JSX.Element => {
       ...props.theme.colors,
     },
   };
+
   return <ThemeProvider theme={mergedTheme}>{props.children}</ThemeProvider>;
 };
 

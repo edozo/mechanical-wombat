@@ -16,7 +16,7 @@ Tippy.defaultProps = {
 };
 
 interface PopoverComposition {
-  Title: React.FC;
+  Title: React.FC<PropsWithChildren<any>>;
   Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 }
 

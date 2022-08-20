@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { PropsWithChildren } from 'react';
 import { StyledButton } from './Button.styles';
 
-export interface ButtonProps {
+export interface ButtonProps extends PropsWithChildren<any> {
   color?: 'primary' | 'secondary';
   variant?: 'standard' | 'outline' | 'ghost';
   borderRadius?: 'small' | 'standard' | 'large';

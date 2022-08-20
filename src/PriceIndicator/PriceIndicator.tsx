@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useEffectAfterMount } from '../hooks';
 import { PriceUpdateIndicator, PriceTotalWrapper, HoverContainer, TotalPrice, Divider } from './PriceIndicator.styles';
@@ -25,7 +25,7 @@ const hoverDividerVariants = {
   hover: { opacity: 1, transition: { duration: 0.1, delay: 0.5, ease: 'easeIn' } },
 };
 
-export interface Props {
+export interface Props extends PropsWithChildren<any> {
   total: number;
   addition: number;
   isActive?: boolean;

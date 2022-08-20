@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { useTabsContext } from './TabsContext';
 import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
-export interface TabProps {
+export interface TabProps extends PropsWithChildren<any> {
   tabId: string;
   beforeOnChange?: (handleClick: () => void) => void;
 }
@@ -24,7 +24,7 @@ export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...re
   );
 };
 
-export interface TabWrapperProps {
+export interface TabWrapperProps extends PropsWithChildren<any> {
   stretch?: boolean;
 }
 

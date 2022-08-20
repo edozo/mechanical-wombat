@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { useTabsContext } from './TabsContext';
 import { StyledPanel } from './Panel.styles';
 
-export interface PanelProps {
+export interface PanelProps extends PropsWithChildren<any> {
   tabId: string;
 }
 
