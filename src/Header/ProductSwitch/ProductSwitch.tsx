@@ -43,7 +43,7 @@ export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
                 <List.Item
                   key={product.productionUrl}
                   onClick={() => linkHandler(product)}
-                  disabled={appName === product.appName}
+                  disabled={product.disabled || appName === product.appName}
                 >
                   <ItemWrapper>
                     <EdozoLogo size="small" variant={product.appName} />
