@@ -9,6 +9,7 @@ export interface ProductInfo {
   description: string;
   productionUrl: string;
   stageUrl: string;
+  disabled?: boolean;
 }
 
 const defaultProducts: ProductInfo[] = [
