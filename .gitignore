@@ -29,3 +29,6 @@ storybook-static
 build-storybook.log
 
 .idea
+
+.yalc
+yalc.lock
