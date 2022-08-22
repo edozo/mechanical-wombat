@@ -15,12 +15,15 @@ export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, tr
 
   useEffect(() => {
     let mounted = true;
+
     mounted && setExpanded(isOpen);
 
     return () => {
       mounted = false;
     };
   }, [isOpen, setExpanded]);
+
+  // const height = getCollapseProps().style.height === '0px' ? 0 : 'auto';
 
   return (
     <StyledCollapse {...rest}>
@@ -31,7 +34,7 @@ export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, tr
       >
         {trigger}
       </StyledTrigger>
-      <div {...getCollapseProps()}>
+      <div {...getCollapseProps()} style={{ ...getCollapseProps().style }}>
         <StyledPanel>{children}</StyledPanel>
       </div>
     </StyledCollapse>

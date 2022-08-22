@@ -29,7 +29,7 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
-    "react-collapsed": "^3.3.2",
+    "react-collapsed": "^3.3.0",
     "downshift": "^6.1.3"
   },
   "peerDependencies": {
