@@ -97,6 +97,7 @@ import alignCenterUrl, { ReactComponent as AlignCenter } from './icons/center-al
 import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align.svg';
 import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
+import moreInfoUrl, { ReactComponent as MoreInfo } from './icons/more-info.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -332,6 +333,13 @@ const VerifiedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
   </IconWrapper>
 );
 export { VerifiedIcon, verifiedUrl };
+
+const MoreInfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <MoreInfo fill={fill} {...props} />
+  </IconWrapper>
+);
+export { MoreInfoIcon, moreInfoUrl };
 
 // Solid
 const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (

@@ -100,6 +100,7 @@ import {
   AlignRightIcon,
   VerifiedIcon,
   GoToIcon,
+  MoreInfoIcon,
 } from '.';
 
 export default {
@@ -208,6 +209,7 @@ const outlinedIcons = [
   { name: 'Bring to Front', component: <BringToFrontIcon /> },
   { name: 'Send to Back', component: <SendToBackIcon /> },
   { name: 'Verified', component: <VerifiedIcon /> },
+  { name: 'More Info', component: <MoreInfoIcon /> },
 ];
 
 export const Solid: Story = () => (
