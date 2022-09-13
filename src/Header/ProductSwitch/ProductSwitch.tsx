@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProductInfo } from '../AppHeader';
 import { SwitchAppIconColour } from '../../Icons';
-import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledNewBadge, StyledText } from './ProductSwitch.styles';
+import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from './ProductSwitch.styles';
 import { List } from '../../List';
 import { Popover } from '../../Popover';
 import { EdozoLogo } from '../../EdozoLogo';
