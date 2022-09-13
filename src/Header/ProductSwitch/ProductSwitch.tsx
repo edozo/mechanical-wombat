@@ -59,9 +59,6 @@ export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
           <StyledButtonV2 onClick={platformAppPopover ? hidePopover : showPopover} radius="round" variant="white">
             <SwitchAppIconColour size="small" />
             <StyledButtonTitle>Products</StyledButtonTitle>
-            <StyledNewBadge color="#ffffff" background="#2818f9" size="small">
-              NEW
-            </StyledNewBadge>
           </StyledButtonV2>
         </div>
       </Popover>
