@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const GlobalSearch: React.FC<Props> = props => (
-  <InputGroup border={false} size="large" {...props}>
+  <InputGroup border={false} inputSize="large" {...props}>
     <InputGroup.Input />
     <InputGroup.Item>
       {props.value ? <InputGroup.Button onClick={props.reset}>&times;</InputGroup.Button> : <SearchIcon />}

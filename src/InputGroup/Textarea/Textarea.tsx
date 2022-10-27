@@ -3,7 +3,7 @@ import { useInputGroupContext } from '../InputGroupContext';
 import { StyledTextarea } from './Textarea.styles';
 
 export const Textarea: React.FC = () => {
-  const { placeholder, size, id, value, onChange } = useInputGroupContext();
+  const { placeholder, inputSize, id, value, onChange } = useInputGroupContext();
 
-  return <StyledTextarea size={size} id={id} value={value} onChange={onChange} placeholder={placeholder} />;
+  return <StyledTextarea inputSize={inputSize} id={id} value={value} onChange={onChange} placeholder={placeholder} />;
 };

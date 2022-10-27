@@ -20,7 +20,7 @@ const InputGroup: React.FC<InputGroupState> & ListComposition = props => (
 );
 
 InputGroup.defaultProps = {
-  size: 'standard',
+  inputSize: 'standard',
   radius: 'standard',
   border: true,
   placeholder: '',
