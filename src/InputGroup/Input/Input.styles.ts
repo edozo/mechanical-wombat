@@ -14,7 +14,7 @@ export const StyledInput = styled.input<InputGroupState>`
   }
 
   ${p =>
-    p.size === 'large' &&
+    p.inputSize === 'large' &&
     css`
       padding: ${p.theme.spacing.small};
     `}

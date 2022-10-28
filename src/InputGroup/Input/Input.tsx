@@ -3,7 +3,19 @@ import { useInputGroupContext } from '../InputGroupContext';
 import { StyledInput } from './Input.styles';
 
 export const Input: React.FC = () => {
-  const { placeholder, size, id, value, onChange } = useInputGroupContext();
+  const { placeholder, inputSize, id, value, onChange, type, min, max, step } = useInputGroupContext();
 
-  return <StyledInput size={size} id={id} value={value} onChange={onChange} placeholder={placeholder} />;
+  return (
+    <StyledInput
+      type={type}
+      min={min}
+      max={max}
+      step={step}
+      inputSize={inputSize}
+      id={id}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+    />
+  );
 };

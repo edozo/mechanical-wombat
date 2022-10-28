@@ -20,7 +20,7 @@ export default {
 } as Meta;
 
 const Template: Story = args => (
-  <InputGroup onChange={() => null} {...args}>
+  <InputGroup type={args.type} onChange={() => null} {...args}>
     <InputGroup.Input />
   </InputGroup>
 );
@@ -103,6 +103,13 @@ const TextareaTemplate: Story = args => (
   </InputGroup>
 );
 
+export const Number = Template.bind({});
+Number.args = {
+  type: 'number',
+  min: -1,
+  max: 3,
+  step: 0.01,
+};
 export const WithIconEnd = TemplateWithIconEnd.bind({});
 export const WithIconStart = TemplateWithIconStart.bind({});
 export const WithIconButton = TemplateWithIconButton.bind({});
@@ -112,13 +119,13 @@ export const WithItemStart = TemplateWithItemStart.bind({});
 export const WithoutItem = Template.bind({});
 WithoutItem.args = {
   radius: 'standard',
-  size: 'standard',
+  inputSize: 'standard',
   border: true,
 };
 export const Textarea = TextareaTemplate.bind({});
-WithoutItem.args = {
+Textarea.args = {
   radius: 'standard',
-  size: 'standard',
+  inputSize: 'standard',
   border: true,
 };
 
