@@ -6,22 +6,21 @@ export const TableActionButton = styled.button<TableDownloadButtonProps>`
   width: 100%;
   color: white;
   ${p =>
-    p.variant === 'primary' &&
     css`
-      border: 2px solid ${p.theme.colors.aliases.primary};
-      background-color: ${p.theme.colors.aliases.primary};
+      border: 2px solid ${p.theme.colors.aliases[p.variant]};
+      background-color: ${p.theme.colors.aliases[p.variant]};
       outline: none;
       &:hover {
-        background-color: ${p.theme.colors.aliases.primaryLight};
-        border: 2px solid ${p.theme.colors.aliases.primaryLight};
+        background-color: ${p.theme.colors.aliases[`${p.variant}Light`]};
+        border: 2px solid ${p.theme.colors.aliases[`${p.variant}Light`]};
       }
       &:focus {
-        background-color: ${p.theme.colors.aliases.primaryLight};
-        border: 2px solid ${p.theme.colors.aliases.primaryDark};
+        background-color: ${p.theme.colors.aliases[`${p.variant}Light`]};
+        border: 2px solid ${p.theme.colors.aliases[`${p.variant}Dark`]};
         outline: none;
       }
       &:active {
-        background-color: ${p.theme.colors.aliases.primaryDark};
+        background-color: ${p.theme.colors.aliases[`${p.variant}Dark`]};
       }
       &:disabled {
         background-color: ${p.theme.colors.gray};
