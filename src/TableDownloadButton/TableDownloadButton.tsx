@@ -2,7 +2,7 @@ import * as React from 'react';
 import { TableActionButton } from './TableDownloadButton.styles';
 
 export interface TableDownloadButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  variant: string;
+  variant: 'primary' | 'secondary';
   disabled?: boolean;
   background?: string;
 }
