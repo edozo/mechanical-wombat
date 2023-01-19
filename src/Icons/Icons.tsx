@@ -98,6 +98,7 @@ import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align
 import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
 import moreInfoUrl, { ReactComponent as MoreInfo } from './icons/more-info.svg';
+import copyIconUrl, { ReactComponent as Copy } from './icons/copy-icon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -802,4 +803,12 @@ const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
     <GoTo fill={fill} {...props} />
   </IconWrapper>
 );
+
+const CopyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <Copy fill={fill} {...props} />
+  </IconWrapper>
+);
+export { CopyIcon, copyIconUrl };
+
 export { GoToIcon, goToUrl };

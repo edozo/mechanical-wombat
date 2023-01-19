@@ -101,6 +101,7 @@ import {
   VerifiedIcon,
   GoToIcon,
   MoreInfoIcon,
+  CopyIcon
 } from '.';
 
 export default {
@@ -210,6 +211,7 @@ const outlinedIcons = [
   { name: 'Send to Back', component: <SendToBackIcon /> },
   { name: 'Verified', component: <VerifiedIcon /> },
   { name: 'More Info', component: <MoreInfoIcon /> },
+  {name: 'Copy', component: <CopyIcon/>}
 ];
 
 export const Solid: Story = () => (
