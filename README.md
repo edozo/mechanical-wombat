@@ -48,7 +48,7 @@ export const Example: React.FC = ({ children }) => <Button {...props}>{children}
 ### Contributing
 
 - All changes must be raised as a PR, and reviewed by the team
-- PR must contain an update `package.json` version
+- PRs must contain an updated `package.json` version
 - To add a new Icon, [follow these steps](https://github.com/edozo/mechanical-wombat/blob/main/src/Icons/preparing-svgs.md) before creating a PR
 
 ## Publishing
@@ -60,6 +60,6 @@ export const Example: React.FC = ({ children }) => <Button {...props}>{children}
 - Merge your PR into the `main` branch
 - Tag and create a release in Github
 - To publish, you will need access to NPM. If you don't have access, please speak to a member of the team
-- In your terminal, run `npm publish --dry-run` to ensure there are no errors.
+- In your terminal, run `npm publish --dry-run` to ensure there are no errors
 - In your terminal, run `npm publish`
 - Check that the version has been published [here](https://www.npmjs.com/package/mechanical-wombat)
