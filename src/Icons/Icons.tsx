@@ -99,6 +99,8 @@ import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
 import moreInfoUrl, { ReactComponent as MoreInfo } from './icons/more-info.svg';
 import copyIconUrl, { ReactComponent as Copy } from './icons/copy-icon.svg';
+import freeholdAutoPolygonUrl, { ReactComponent as FreeholdAutoPolygon } from './icons/freehold-autopolygon.svg';
+import leaseholdAutoPolygonUrl, { ReactComponent as LeaseholdAutoPolygon } from './icons/auto-polygon-tool.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -123,6 +125,20 @@ const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
   </IconWrapper>
 );
 export { AutoPolygonIcon, autoPolygonUrl };
+
+const LeaseholdPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <LeaseholdAutoPolygon fill={fill} {...props} />
+  </IconWrapper>
+);
+export { LeaseholdPolygonIcon, leaseholdAutoPolygonUrl };
+
+const FreeholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <FreeholdAutoPolygon fill={fill} {...props} />
+  </IconWrapper>
+);
+export { FreeholdAutoPolygonIcon, freeholdAutoPolygonUrl };
 
 const DrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
