@@ -102,6 +102,8 @@ import {
   GoToIcon,
   MoreInfoIcon,
   CopyIcon,
+  FreeholdAutoPolygonIcon,
+  LeaseholdAutoPolygonIcon,
 } from '.';
 
 export default {
@@ -166,6 +168,8 @@ const outlinedIcons = [
   { name: 'Zoom In', component: <ZoomInIcon /> },
   { name: 'Reload', component: <ReloadIcon /> },
   { name: 'Auto-Polygon', component: <AutoPolygonIcon /> },
+  { name: 'Freehold Auto-Polygon', component: <FreeholdAutoPolygonIcon /> },
+  { name: 'Leasehold Auto-Polygon', component: <LeaseholdAutoPolygonIcon /> },
   { name: 'Draw Polygon', component: <DrawPolygonIcon /> },
   { name: 'Rectangle', component: <RectangleIcon /> },
   { name: 'Circle', component: <CircleIcon /> },

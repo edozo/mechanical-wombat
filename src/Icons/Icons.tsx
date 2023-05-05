@@ -19,7 +19,10 @@ import arrowUpUrl, { ReactComponent as ArrowUp } from './icons/arrow-up.svg';
 import checkUrl, { ReactComponent as Check } from './icons/check.svg';
 import infoUrl, { ReactComponent as Info } from './icons/info.svg';
 import binUrl, { ReactComponent as Bin } from './icons/bin.svg';
-import autoPolygonUrl, { ReactComponent as AutoPolygon } from './icons/auto-polygon-tool.svg';
+import autoPolygonUrl, {
+  ReactComponent as AutoPolygon,
+  ReactComponent as LeaseholdAutoPolygon,
+} from './icons/auto-polygon-tool.svg';
 import drawPolygonUrl, { ReactComponent as DrawPolygon } from './icons/draw-polygon-tool.svg';
 import rectangleUrl, { ReactComponent as Rectangle } from './icons/rectangle.svg';
 import circleUrl, { ReactComponent as Circle } from './icons/circle.svg';
@@ -99,6 +102,7 @@ import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
 import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
 import moreInfoUrl, { ReactComponent as MoreInfo } from './icons/more-info.svg';
 import copyIconUrl, { ReactComponent as Copy } from './icons/copy-icon.svg';
+import freeholdAutoPolygonUrl, { ReactComponent as FreeholdAutoPolygon } from './icons/freehold-autopolygon.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
@@ -123,6 +127,20 @@ const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
   </IconWrapper>
 );
 export { AutoPolygonIcon, autoPolygonUrl };
+
+const LeaseholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <LeaseholdAutoPolygon fill={fill} {...props} />
+  </IconWrapper>
+);
+export { LeaseholdAutoPolygonIcon, autoPolygonUrl as leaseholdAutoPolygonUrl };
+
+const FreeholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <FreeholdAutoPolygon fill={fill} {...props} />
+  </IconWrapper>
+);
+export { FreeholdAutoPolygonIcon, freeholdAutoPolygonUrl };
 
 const DrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
