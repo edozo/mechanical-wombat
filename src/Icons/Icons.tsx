@@ -128,12 +128,12 @@ const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { AutoPolygonIcon, autoPolygonUrl };
 
-const LeaseholdPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+const LeaseholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LeaseholdAutoPolygon fill={fill} {...props} />
   </IconWrapper>
 );
-export { LeaseholdPolygonIcon, autoPolygonUrl as leaseholdAutoPolygonUrl };
+export { LeaseholdAutoPolygonIcon, autoPolygonUrl as leaseholdAutoPolygonUrl };
 
 const FreeholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
