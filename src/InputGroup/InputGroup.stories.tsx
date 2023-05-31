@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import * as React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { TextSmall } from '../Typography';

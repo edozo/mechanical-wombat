@@ -3,15 +3,19 @@ import { PlatformMenuButtonProps } from '../PlatformMenu/PlatformButton.styles';
 import { PlatformButton } from '../PlatformMenu/PlatformButton';
 import { PlatformMenu } from '../PlatformMenu';
 import { StyledMenu } from './Menu.styles';
-import { MenuItem } from './MenuItem';
+import { MenuItem, MenuItemProps } from './MenuItem';
 
 interface MenuComposition {
-  Item: React.FC;
+  Item: React.FC<MenuItemProps>;
   PlatformMenu: React.FC;
   PlatformButton: React.FC<PlatformMenuButtonProps>;
 }
 
-const Menu: React.FC & MenuComposition = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Menu: React.FC<Props> & MenuComposition = ({ children }) => {
   return <StyledMenu>{children}</StyledMenu>;
 };
 
