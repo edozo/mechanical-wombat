@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';
 import { StackIcon } from '../Icons';

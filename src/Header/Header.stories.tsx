@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';

@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Popover } from './Popover';
