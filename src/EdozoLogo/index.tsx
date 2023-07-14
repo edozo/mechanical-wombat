@@ -1,1 +1,1 @@
-export { EdozoLogo } from './EdozoLogo.tsx';
+export { EdozoLogo, LogoVariants } from './EdozoLogo';
