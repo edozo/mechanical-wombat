@@ -104,6 +104,7 @@ import {
   CopyIcon,
   FreeholdAutoPolygonIcon,
   LeaseholdAutoPolygonIcon,
+  ActionsIndicatorIcon,
 } from '.';
 
 export default {
@@ -216,6 +217,7 @@ const outlinedIcons = [
   { name: 'Verified', component: <VerifiedIcon /> },
   { name: 'More Info', component: <MoreInfoIcon /> },
   { name: 'Copy', component: <CopyIcon /> },
+  { name: 'Actions Indicator', component: <ActionsIndicatorIcon /> },
 ];
 
 export const Solid: Story = () => (
