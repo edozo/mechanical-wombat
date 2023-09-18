@@ -63,3 +63,5 @@ export const Example: React.FC = ({ children }) => <Button {...props}>{children}
 - In your terminal, run `npm publish --dry-run` to ensure there are no errors
 - In your terminal, run `npm publish`
 - Check that the version has been published [here](https://www.npmjs.com/package/mechanical-wombat)
+
+**You will need access to the NPM account attached**
