@@ -4,9 +4,10 @@ import { ReactComponent as InsightLogo } from './assets/insight-logo.svg';
 import { ReactComponent as OccupiersLogo } from './assets/occupiers-logo.svg';
 import { ReactComponent as MapsLogo } from './assets/maps-logo.svg';
 import { ReactComponent as HelpCentreLogo } from './assets/help-centre-logo.svg';
-import { BetaBadge, LogoWrapper, StyledLogo } from './EdozoLogo.styles'; // TODO: Replace me with Badge component once it has correct sizes
+import { ReactComponent as ReportsLogo } from './assets/reports-logo.svg';
+import { BetaBadge, LogoWrapper, StyledLogo } from './EdozoLogo.styles';
 
-export type LogoVariants = 'edozo' | 'maps' | 'insight' | 'occupiers' | 'helpCentre';
+export type LogoVariants = 'edozo' | 'maps' | 'insight' | 'occupiers' | 'helpCentre' | 'reports';
 
 export interface EdozoLogoProps extends React.HTMLAttributes<HTMLDivElement> {
   variant: LogoVariants;
@@ -24,6 +25,8 @@ const switchLogo = ({ variant }: EdozoLogoProps): ReactNode => {
       return <InsightLogo />;
     case 'helpCentre':
       return <HelpCentreLogo />;
+    case 'reports':
+      return <ReportsLogo />;
     default:
       return <EdozoLogoSvg />;
   }
