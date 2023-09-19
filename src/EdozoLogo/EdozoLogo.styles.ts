@@ -79,6 +79,22 @@ export const StyledLogo = styled.div<EdozoLogoProps>`
           width: 209px;
           height: 26px;
         `}
+
+      /* REPORTS */
+      ${({ size, variant }) =>
+        size === 'small' &&
+        variant === 'reports' &&
+        css`
+          width: 99px;
+          height: 17px;
+        `}
+      ${({ size, variant }) =>
+        size === 'standard' &&
+        variant === 'reports' &&
+        css`
+          width: 163px;
+          height: 26px;
+        `}
         
       /* EDOZO */
       ${({ size, variant }) =>
