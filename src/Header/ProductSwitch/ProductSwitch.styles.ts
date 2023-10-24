@@ -21,6 +21,7 @@ export const ItemWrapper = styled.div`
   grid-template-columns: 134px auto;
   align-items: center;
   margin: ${p => p.theme.spacing.xsmall};
+  min-height: 34px;
 `;
 
 export const StyledButtonV2 = styled(ButtonV2)`

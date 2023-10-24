@@ -31,6 +31,12 @@ const defaultProducts: ProductInfo[] = [
     productionUrl: 'https://app.edozo.com/',
     stageUrl: 'https://stage-rails.edozo.co/search',
   },
+  {
+    appName: 'reports',
+    description: 'Create automated valuation reports',
+    productionUrl: 'https://reports.edozo.com/',
+    stageUrl: 'https://reports.edozo.co/',
+  },
 ];
 
 export interface AppHeaderProps extends Context {
