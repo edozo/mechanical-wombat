@@ -100,6 +100,7 @@ declare module 'styled-components' {
         maps: string;
         occupiers: string;
         insight: string;
+        reports: string;
       };
     };
     font: {

@@ -37,6 +37,11 @@ export const StyledMenuItem = styled.div<Context>`
         css`
           background: ${p.theme.colors.appColors.insight};
         `}
+      ${p =>
+        p.appName === 'reports' &&
+        css`
+          background: ${p.theme.colors.appColors.reports};
+        `}
       position: absolute;
       bottom: 0;
       left: 0;
@@ -59,6 +64,11 @@ export const StyledMenuItem = styled.div<Context>`
         p.appName === 'insight' &&
         css`
           color: ${p.theme.colors.appColors.insight};
+        `}
+      ${p =>
+        p.appName === 'reports' &&
+        css`
+          color: ${p.theme.colors.appColors.reports};
         `}
     }
 
