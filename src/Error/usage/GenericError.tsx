@@ -4,7 +4,11 @@ import { Ring } from '../Ring';
 import { ErrorColumn } from '../ErrorColumn';
 import { ErrorInfo } from '../ErrorInfo';
 
-export const ErrorBoundary: React.FC = ({
+interface Props {
+  children: React.ReactNode;
+}
+
+export const GenericError: React.FC<Props> = ({
   children = "This page doesn't exist or is no longer available, please go back home.",
 }) => (
   <Fragment>
