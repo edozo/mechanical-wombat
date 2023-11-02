@@ -5,7 +5,7 @@ import { ErrorColumn } from './ErrorColumn';
 import { Ring } from './Ring';
 import { ErrorInfo } from './ErrorInfo';
 import { NotFound as NotFoundUI } from './usage/NotFound';
-import { ErrorBoundary as ErrorBoundaryUI } from './usage/ErrorBoundary';
+import { GenericError as GenericErrorUI } from './usage/GenericError';
 import { Button } from '../Button';
 
 export default {
@@ -93,5 +93,5 @@ NotFound.args = {
 
 export const ErrorBoundary = Template.bind({});
 ErrorBoundary.args = {
-  children: <ErrorBoundaryUI />,
+  children: <GenericErrorUI />,
 };
