@@ -19,7 +19,7 @@ export { EdozoLogo } from './EdozoLogo';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
-export { Error, NotFound, ErrorBoundary } from './Error';
+export { Error, NotFound, GenericError } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
 export { Header, AppHeader, Menu, AppName } from './Header';
 
