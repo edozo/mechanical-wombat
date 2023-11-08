@@ -21,12 +21,12 @@ export const StyledToggleButton = styled.button<StyleProps>`
   border-radius: ${p => p.theme.borderRadius.standard};
   padding: 0 ${p => p.theme.spacing.small};
   margin: ${p => p.theme.spacing.xxsmall};
-  :hover {
+  &:hover {
     background-color: ${p => p.theme.colors.white};
     color: ${p => p.theme.colors.aliases.primary};
     opacity: 0.8;
   }
-  :focus {
+  &:focus {
     outline: none;
   }
   ${p =>

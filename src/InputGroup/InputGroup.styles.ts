@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components';
-import { InputGroupState } from './InputGroupContext';
 
-export const StyledInputGroup = styled.div<InputGroupState>`
+interface StyledInputGroupProps {
+  $border?: boolean;
+  radius?: 'standard' | 'round';
+}
+
+export const StyledInputGroup = styled.div<StyledInputGroupProps>`
   display: flex;
   width: 100%;
-  border: ${p => p.border && `1px solid ${p.theme.colors.grayDark}`};
+  border: ${p => p.$border && `1px solid ${p.theme.colors.grayDark}`};
   background: white;
   overflow: auto;
   ${p =>

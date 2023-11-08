@@ -37,7 +37,7 @@ export const StyledButton = styled.button`
   padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
   font-weight: ${p => p.theme.font.weight.semibold};
   font-size: ${p => p.theme.font.size.text.xxsmall};
-  :hover {
+  &:hover {
     background-color: ${p => p.theme.colors.steelBlueLighter};
     border-color: ${p => p.theme.colors.steelBlueDark};
     color: ${p => p.theme.colors.aliases.primary};
@@ -45,7 +45,7 @@ export const StyledButton = styled.button`
       fill: ${p => p.theme.colors.aliases.primary};
     }
   }
-  :focus {
+  &:focus {
     outline: none;
     border-color: ${p => p.theme.colors.steelBlueDark};
   }

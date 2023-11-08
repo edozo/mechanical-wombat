@@ -15,7 +15,9 @@ interface ListComposition {
 
 const InputGroup: React.FC<InputGroupState> & ListComposition = props => (
   <InputGroupContext.Provider value={props}>
-    <StyledInputGroup {...props}>{props.children}</StyledInputGroup>
+    <StyledInputGroup $border={props.border} radius={props.radius}>
+      {props.children}
+    </StyledInputGroup>
   </InputGroupContext.Provider>
 );
 
