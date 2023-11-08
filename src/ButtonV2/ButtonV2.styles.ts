@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 import { ButtonV2Props } from './ButtonV2';
 import { StyledBadge } from '../Badge/Badge.styles';
 
-export const StyledButton = styled.button.withConfig<ButtonV2Props>({
+export const StyledButton = styled.button.withConfig({
   shouldForwardProp: (prop: any) => prop,
-})`
+})<ButtonV2Props>`
   border: none;
   color: white;
   position: relative;
