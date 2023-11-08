@@ -10,7 +10,7 @@ interface ListComposition {
 
 const List: React.FC<ListState> & ListComposition = props => (
   <ListContext.Provider value={props}>
-    <StyledList {...props}>{props.children}</StyledList>
+    <StyledList>{props.children}</StyledList>
   </ListContext.Provider>
 );
 
