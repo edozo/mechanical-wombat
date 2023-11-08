@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { Context } from '../Header';
 
-export const StyledMenuItem = styled.div.withConfig<Context>({
+export const StyledMenuItem = styled.div.withConfig({
   shouldForwardProp: (prop: any) => prop !== 'appName',
-})`
+})<Context>`
   > a {
     position: relative;
     display: flex;

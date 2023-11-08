@@ -7,16 +7,16 @@ export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
 }
 
-export const StyledListItem = styled.div.withConfig<ListItemProps>({
+export const StyledListItem = styled.div.withConfig({
   shouldForwardProp: (prop: any) => prop,
-})`
+})<ListItemProps>`
   cursor: pointer;
   color: ${p => p.theme.colors.grayDark};
   font-weight: 700;
   background-color: ${p => p.theme.colors.white};
   position: relative;
   padding: ${p => p.theme.spacing.xsmall};
-  :not(:last-child) {
+  &:not(:last-child) {
     border-bottom: 1px solid ${p => p.theme.colors.gray};
   }
   &:first-of-type {
