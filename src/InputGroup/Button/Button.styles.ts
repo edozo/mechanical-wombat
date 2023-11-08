@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   padding: 0 12px;
   border-radius: inherit;
 
-  :hover {
+  &:hover {
     background: ${p => p.theme.colors.gray};
   }
 `;

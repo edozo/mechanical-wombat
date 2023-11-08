@@ -17,12 +17,12 @@ export const StylePlatformButton = styled.button<PlatformMenuButtonProps>`
   transition: all 100ms;
   animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 
-  :hover {
+  &:hover {
     background: ${p => p.theme.colors.gray};
     transform: scale(1.1);
   }
 
-  :active {
+  &:active {
     transform: scale(0.9) rotate(-90deg);
   }
 `;

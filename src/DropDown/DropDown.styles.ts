@@ -23,7 +23,7 @@ export const StyledDownshiftPreview = styled.button`
   padding: ${p => p.theme.spacing.xsmall};
   font-size: ${p => p.theme.font.size.text.base};
   line-height: ${p => p.theme.font.lineHeight.text.base};
-  :focus {
+  &:focus {
     outline: none;
   }
 `;

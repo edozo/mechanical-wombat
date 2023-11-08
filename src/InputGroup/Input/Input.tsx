@@ -11,7 +11,7 @@ export const Input: React.FC = () => {
       min={min}
       max={max}
       step={step}
-      inputSize={inputSize}
+      $inputSize={inputSize}
       id={id}
       value={value}
       onChange={onChange}
