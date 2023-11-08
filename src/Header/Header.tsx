@@ -18,7 +18,7 @@ export const useHeaderContext: Function = (): any => {
 
 const Header = (props: Context): any => (
   <HeaderContext.Provider value={props}>
-    <StyledHeader {...props}>{props.children}</StyledHeader>
+    <StyledHeader>{props.children}</StyledHeader>
   </HeaderContext.Provider>
 );
 

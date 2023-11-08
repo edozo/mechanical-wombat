@@ -39,7 +39,7 @@ export const ControlledAppHeader: Story<AppHeaderProps> = args => (
 );
 
 ControlledAppHeader.args = {
-  appName: 'maps',
+  appName: 'insight',
   isAuthenticated: true,
   logout: () => console.log('app specific logout method'),
 };

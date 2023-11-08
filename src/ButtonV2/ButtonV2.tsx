@@ -14,10 +14,8 @@ export const ButtonV2: React.FC<ButtonV2Props> = ({
   size = 'standard',
   radius = 'standard',
   ...rest
-}) => {
-  return (
-    <StyledButton variant={variant} size={size} radius={radius} {...rest}>
-      {children}
-    </StyledButton>
-  );
-};
+}) => (
+  <StyledButton variant={variant} size={size} radius={radius} {...rest}>
+    {children}
+  </StyledButton>
+);

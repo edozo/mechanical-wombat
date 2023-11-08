@@ -15,7 +15,9 @@ export const LogoWrapper = styled.div`
   display: inline-flex;
 `;
 
-export const StyledLogo = styled.div<EdozoLogoProps>`
+export const StyledLogo = styled.div.withConfig<EdozoLogoProps>({
+  shouldForwardProp: (prop: any) => prop,
+})`
   /* MAPS */
   ${({ size, variant }) =>
     size === 'small' &&

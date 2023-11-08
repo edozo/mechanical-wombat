@@ -7,7 +7,9 @@ export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
 }
 
-export const StyledListItem = styled.div<ListItemProps>`
+export const StyledListItem = styled.div.withConfig<ListItemProps>({
+  shouldForwardProp: (prop: any) => prop,
+})`
   cursor: pointer;
   color: ${p => p.theme.colors.grayDark};
   font-weight: 700;

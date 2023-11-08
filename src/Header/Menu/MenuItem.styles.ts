@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components';
 import { Context } from '../Header';
 
-export const StyledMenuItem = styled.div<Context>`
+export const StyledMenuItem = styled.div.withConfig<Context>({
+  shouldForwardProp: (prop: any) => prop !== 'appName',
+})`
   > a {
     position: relative;
     display: flex;
@@ -47,7 +49,7 @@ export const StyledMenuItem = styled.div<Context>`
       left: 0;
     }
 
-    :hover {
+    &:hover {
       text-decoration: none;
       color: ${p => p.theme.colors.aliases.primary};
       ${p =>
@@ -72,7 +74,7 @@ export const StyledMenuItem = styled.div<Context>`
         `}
     }
 
-    :hover:after {
+    &:hover:after {
       height: 6px;
     }
   }
