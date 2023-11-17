@@ -11,7 +11,6 @@ export * from './List';
 export { ToggleGroup } from './ToggleGroup';
 export { Switch } from './Switch';
 export { Badge } from './Badge';
-export { PriceIndicator } from './PriceIndicator';
 export { Tooltip } from './Tooltip';
 export { NotificationBar } from './NotificationBar';
 export { Tabs } from './Tabs';
