@@ -89,6 +89,7 @@ const GlobalSearchTemplate: Story = () => {
   const [value, setValue] = React.useState<string>('');
   return (
     <GlobalSearch
+      name="global-search"
       placeholder="Search by Plan name or Address"
       disabled={false}
       value={value}

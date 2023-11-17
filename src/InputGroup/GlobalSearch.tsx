@@ -6,6 +6,7 @@ interface Props {
   value: string;
   placeholder: string;
   disabled: boolean;
+  name: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   reset: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
