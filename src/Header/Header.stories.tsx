@@ -2,8 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import { Story, Meta } from '@storybook/react';
-import { LogoVariants } from '../EdozoLogo/EdozoLogo';
-import { EdozoLogo } from '../EdozoLogo';
+import { EdozoLogo, LogoVariants } from '../EdozoLogo';
 import { Header } from './Header';
 import { Menu } from './Menu';
 import { AppHeader, AppHeaderProps } from './AppHeader';

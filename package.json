@@ -1,6 +1,6 @@
 {
   "name": "mechanical-wombat",
-  "version": "1.4.7",
+  "version": "1.5.0",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -34,7 +34,6 @@
   "peerDependencies": {
     "@tippyjs/react": "^4.2.5",
     "downshift": "^6.1.3",
-    "framer-motion": "^4.1.14",
     "polished": "^4.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -67,7 +66,6 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "framer-motion": "^4.0.0",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
     "polished": "^4.1.3",
