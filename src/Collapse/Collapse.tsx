@@ -5,6 +5,7 @@ import { StyledCollapse, StyledPanel, StyledTrigger } from './Collapse.styles';
 export interface CollapseProps {
   isOpen?: boolean;
   trigger: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, trigger, ...rest }) => {
