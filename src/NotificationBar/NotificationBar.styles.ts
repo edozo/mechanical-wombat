@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
 import { WarningIcon, UpgradeIcon } from '../Icons';
-import { NotificationBarProps } from './NotificationBar';
 
-export const StyledNotificationBar = styled.div<NotificationBarProps>`
+interface Props {
+  $variant: 'alert' | 'info' | 'warning';
+}
+
+export const StyledNotificationBar = styled.div<Props>`
   width: 100%;
   border: 1px solid;
   display: flex;
@@ -12,21 +15,21 @@ export const StyledNotificationBar = styled.div<NotificationBarProps>`
   font-size: ${p => p.theme.font.size.text.small};
   line-height: ${p => p.theme.font.lineHeight.text.small};
   ${p =>
-    p.variant === 'info' &&
+    p.$variant === 'info' &&
     css`
       border-color: ${p.theme.colors.system.blue};
       background: ${p.theme.colors.system.blueLighter};
       color: ${p.theme.colors.system.blue};
     `}
   ${p =>
-    p.variant === 'alert' &&
+    p.$variant === 'alert' &&
     css`
       border-color: ${p.theme.colors.system.red};
       background: ${p.theme.colors.system.redLighter};
       color: ${p.theme.colors.system.red};
     `}
   ${p =>
-    p.variant === 'warning' &&
+    p.$variant === 'warning' &&
     css`
       border-color: ${p.theme.colors.system.yellowDarker};
       background: ${p.theme.colors.system.yellowLighter};
