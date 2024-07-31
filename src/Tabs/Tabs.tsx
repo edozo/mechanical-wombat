@@ -5,6 +5,7 @@ import { Panel, PanelProps } from './Panel';
 
 interface TabsProps {
   initialTab: string;
+  children: React.ReactNode;
 }
 
 interface TabsComposition {

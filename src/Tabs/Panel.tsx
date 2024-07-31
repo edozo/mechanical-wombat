@@ -4,6 +4,7 @@ import { StyledPanel } from './Panel.styles';
 
 export interface PanelProps {
   tabId: string;
+  children: React.ReactNode;
 }
 
 export const Panel: React.FC<PanelProps> = ({ tabId, children, ...rest }) => {
