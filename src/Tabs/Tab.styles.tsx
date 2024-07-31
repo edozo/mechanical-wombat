@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 import { TabWrapperProps } from './Tab';
 
 interface TabStyleProps {
-  isActive: boolean;
+  $isActive: boolean;
+  $disabled?: boolean;
 }
 
 export const StyledTabWrapper = styled.div<TabWrapperProps>`
@@ -32,10 +33,20 @@ export const StyledTab = styled.span<TabStyleProps>`
   cursor: pointer;
 
   ${p =>
-    p.isActive &&
+    p.$isActive &&
     css`
       font-weight: ${p.theme.font.weight.bold};
       background: ${p.theme.colors.grayLight};
       color: ${p.theme.colors.black};
+    `}
+
+  ${p =>
+    p.$disabled &&
+    css`
+      font-weight: ${p.theme.font.weight.regular};
+      font-size: ${p.theme.font.size.text.small};
+      background: ${p.theme.colors.grayLighter};
+      color: ${p.theme.colors.grayDark};
+      cursor: not-allowed;
     `}
 `;

@@ -5,10 +5,11 @@ import { StyledTab, StyledTabWrapper } from './Tab.styles';
 export interface TabProps {
   tabId: string;
   children: React.ReactNode;
+  disabled?: boolean;
   beforeOnChange?: (handleClick: () => void) => void;
 }
 
-export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...rest }) => {
+export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, disabled, ...rest }) => {
   const { setActiveTab, activeTab } = useTabsContext();
   const clickCallback = (): void => {
     if (activeTab === tabId) return;
@@ -16,10 +17,12 @@ export const Tab: React.FC<TabProps> = ({ tabId, beforeOnChange, children, ...re
   };
 
   const handleClick = (): void => {
+    if (disabled) return;
     beforeOnChange ? beforeOnChange(clickCallback) : clickCallback();
   };
+
   return (
-    <StyledTab onClick={handleClick} isActive={activeTab === tabId} {...rest}>
+    <StyledTab $disabled={disabled} onClick={handleClick} $isActive={activeTab === tabId} {...rest}>
       {children}
     </StyledTab>
   );
