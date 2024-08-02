@@ -1,15 +1,18 @@
 import styled, { css } from 'styled-components';
-import { TabWrapperProps } from './Tab';
 
 interface TabStyleProps {
   $isActive: boolean;
   $disabled?: boolean;
 }
 
+interface TabWrapperProps {
+  $stretch?: boolean;
+}
+
 export const StyledTabWrapper = styled.div<TabWrapperProps>`
   display: flex;
   ${p =>
-    p.stretch &&
+    p.$stretch &&
     css`
       justify-content: stretch;
       * {

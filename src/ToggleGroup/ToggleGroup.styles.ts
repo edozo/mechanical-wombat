@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components';
 
 export interface StyleProps {
-  isActive?: boolean;
+  $isActive?: boolean;
 }
 
 export const StyledToggleGroup = styled.div<StyleProps>`
@@ -30,7 +30,7 @@ export const StyledToggleButton = styled.button<StyleProps>`
     outline: none;
   }
   ${p =>
-    p.isActive &&
+    p.$isActive &&
     css`
       background-color: ${p.theme.colors.white};
       color: ${p.theme.colors.aliases.primary};

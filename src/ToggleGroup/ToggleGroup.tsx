@@ -40,7 +40,7 @@ class ToggleGroup extends React.Component<Props, State> {
             key={item.value}
             type="button"
             onClick={() => this.handleClick(item)}
-            isActive={this.state.activeItem.value === item.value}
+            $isActive={this.state.activeItem.value === item.value}
           >
             {item.label}
           </StyledToggleButton>

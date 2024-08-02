@@ -34,5 +34,5 @@ export interface TabWrapperProps {
 }
 
 export const TabWrapper: React.FC<TabWrapperProps> = ({ stretch = false, children }) => (
-  <StyledTabWrapper stretch={stretch}>{children}</StyledTabWrapper>
+  <StyledTabWrapper $stretch={stretch}>{children}</StyledTabWrapper>
 );
