@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface StyledInputGroupProps {
   $border?: boolean;
-  radius?: 'standard' | 'round';
+  $radius?: 'standard' | 'round';
 }
 
 export const StyledInputGroup = styled.div<StyledInputGroupProps>`
@@ -12,12 +12,12 @@ export const StyledInputGroup = styled.div<StyledInputGroupProps>`
   background: white;
   overflow: auto;
   ${p =>
-    p.radius === 'standard' &&
+    p.$radius === 'standard' &&
     css`
       border-radius: 6px;
     `}
   ${p =>
-    p.radius === 'round' &&
+    p.$radius === 'round' &&
     css`
       border-radius: 50px;
     `};

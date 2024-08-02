@@ -13,19 +13,23 @@ interface ListComposition {
   Textarea: React.FC;
 }
 
-const InputGroup: React.FC<InputGroupState> & ListComposition = props => (
-  <InputGroupContext.Provider value={props}>
-    <StyledInputGroup $border={props.border} radius={props.radius}>
-      {props.children}
-    </StyledInputGroup>
-  </InputGroupContext.Provider>
-);
-
-InputGroup.defaultProps = {
+const defaultProps: InputGroupState = {
   inputSize: 'standard',
   radius: 'standard',
   border: true,
   placeholder: '',
+};
+
+const InputGroup: React.FC<InputGroupState> & ListComposition = props => {
+  const mergedProps = { ...defaultProps, ...props };
+
+  return (
+    <InputGroupContext.Provider value={mergedProps}>
+      <StyledInputGroup $border={mergedProps.border} $radius={mergedProps.radius}>
+        {mergedProps.children}
+      </StyledInputGroup>
+    </InputGroupContext.Provider>
+  );
 };
 
 InputGroup.Button = Button;
