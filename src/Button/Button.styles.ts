@@ -1,6 +1,9 @@
 // TODO: Finalize this once talked to Silvia about design system
 import styled, { css } from 'styled-components';
+import { defaultTheme } from '../defaultTheme';
 import { ButtonProps } from './Button';
+
+type ColorAliasKey = keyof typeof defaultTheme.colors.aliases;
 
 export const StyledButton = styled.button<ButtonProps>`
   font-family: ${p => p.theme.font.family.main};
@@ -12,17 +15,18 @@ export const StyledButton = styled.button<ButtonProps>`
   font-size: 1.2em; /* Get from theme */
   transition: all 0.2s; /* Get from theme */
   &:hover {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
+    background-color: ${p => p.theme.colors.aliases[p.color ? (`${p.color}Light` as ColorAliasKey) : 'primaryLight']};
+    border-color: ${p => p.theme.colors.aliases[p.color ? (`${p.color}Light` as ColorAliasKey) : 'primaryLight']};
   }
   &:focus {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Light`) || 'primaryLight']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
+    background-color: ${p =>
+      p.theme.colors.aliases[(p.color && (`${p.color}Light` as ColorAliasKey)) || 'primaryLight']};
+    border-color: ${p => p.theme.colors.aliases[(p.color && (`${p.color}Dark` as ColorAliasKey)) || 'primaryDark']};
     outline: none;
   }
   &:active {
-    background-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
-    border-color: ${p => p.theme.colors.aliases[(p.color && `${p.color}Dark`) || 'primaryDark']};
+    background-color: ${p => p.theme.colors.aliases[(p.color && (`${p.color}Dark` as ColorAliasKey)) || 'primaryDark']};
+    border-color: ${p => p.theme.colors.aliases[(p.color && (`${p.color}Dark` as ColorAliasKey)) || 'primaryDark']};
     outline: none;
   }
 

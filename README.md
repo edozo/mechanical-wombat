@@ -21,7 +21,8 @@ import { MyComponent } from 'mechanical-wombat';
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
 
-[Hosted Storybook](https://5f86b8bef322ef002224b643-dyvtiddehm.chromatic.com/) to find a list of currently available components
+~~[Hosted Storybook](https://5f86b8bef322ef002224b643-dyvtiddehm.chromatic.com/) to find a list of currently available components~~
+[Hosted Storybook](https://edozo.github.io/mechanical-wombat/) to find a list of currently available components
 
 [Default theme values](https://github.com/edozo/mechanical-wombat/blob/main/src/defaultTheme.ts)
 

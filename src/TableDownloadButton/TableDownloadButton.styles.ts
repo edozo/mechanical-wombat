@@ -1,31 +1,39 @@
 import styled, { css } from 'styled-components';
 import { TableDownloadButtonProps } from './TableDownloadButton';
 
+type BaseColor = 'primary' | 'secondary';
+type ColorVariant = BaseColor | `${BaseColor}Light` | `${BaseColor}Dark`;
+
 export const TableActionButton = styled.button<TableDownloadButtonProps>`
   height: 100%;
   width: 100%;
   color: white;
-  ${p =>
-    css`
-      border: 2px solid ${p.theme.colors.aliases[p.variant]};
-      background-color: ${p.theme.colors.aliases[p.variant]};
+  ${p => {
+    const { variant } = p;
+    const main = p.theme.colors.aliases[variant];
+    const light = p.theme.colors.aliases[`${variant}Light` as ColorVariant];
+    const dark = p.theme.colors.aliases[`${variant}Dark` as ColorVariant];
+    return css`
+      border: 2px solid ${main};
+      background-color: ${main};
       outline: none;
       &:hover {
-        background-color: ${p.theme.colors.aliases[`${p.variant}Light`]};
-        border: 2px solid ${p.theme.colors.aliases[`${p.variant}Light`]};
+        background-color: ${light};
+        border: 2px solid ${light};
       }
       &:focus {
-        background-color: ${p.theme.colors.aliases[`${p.variant}Light`]};
-        border: 2px solid ${p.theme.colors.aliases[`${p.variant}Dark`]};
+        background-color: ${light};
+        border: 2px solid ${dark};
         outline: none;
       }
       &:active {
-        background-color: ${p.theme.colors.aliases[`${p.variant}Dark`]};
+        background-color: ${dark};
       }
       &:disabled {
         background-color: ${p.theme.colors.gray};
         border: 2px solid ${p.theme.colors.gray};
         cursor: not-allowed;
       }
-    `};
-` as React.FunctionComponent<TableDownloadButtonProps>;
+    `;
+  }};
+`;

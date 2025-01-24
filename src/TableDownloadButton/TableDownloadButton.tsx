@@ -7,7 +7,10 @@ export interface TableDownloadButtonProps extends React.HTMLProps<HTMLButtonElem
   background?: string;
 }
 
-export const TableDownloadButton: React.FC<TableDownloadButtonProps> = props => {
-  const { children, ...rest } = props;
-  return <TableActionButton {...rest}>{children}</TableActionButton>;
+export const TableDownloadButton: React.FC<TableDownloadButtonProps> = ({ children, variant, background }) => {
+  return (
+    <TableActionButton variant={variant} background={background}>
+      {children}
+    </TableActionButton>
+  );
 };

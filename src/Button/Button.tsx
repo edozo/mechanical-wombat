@@ -9,4 +9,17 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = props => <StyledButton {...props}>{props.children}</StyledButton>;
+/**
+ * @deprecated This Button component is deprecated and will be removed in the next major version.
+ * Please use the new ButtonV2 component instead.
+ */
+export const Button: React.FC<ButtonProps> = props => {
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.warn('Button component is deprecated. Please use ButtonV2 instead.');
+    }
+  }, []);
+
+  return <StyledButton {...props}>{props.children}</StyledButton>;
+};
