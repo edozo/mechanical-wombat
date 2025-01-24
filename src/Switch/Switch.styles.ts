@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Props } from './Switch';
 
 export const Checkbox = styled.input`
   display: none;
@@ -13,7 +14,7 @@ export const Label = styled.label`
   margin: 0;
 `;
 
-export const ToggleInner = styled.span`
+export const ToggleInner = styled.span<Partial<Props>>`
   display: block;
   width: 200%;
   margin-left: -100%;
@@ -70,7 +71,7 @@ export const ToggleInner = styled.span`
     `}
 `;
 
-export const Toggle = styled.span`
+export const Toggle = styled.span<Partial<Props>>`
   display: block;
   width: 18px;
   margin: 4px;
@@ -100,7 +101,7 @@ export const Toggle = styled.span`
     `}
 `;
 
-export const SwitchParent = styled.div`
+export const SwitchParent = styled.div<Partial<Props>>`
   position: relative;
   width: 56px;
   display: inline-block;

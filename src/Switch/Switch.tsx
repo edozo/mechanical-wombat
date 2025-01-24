@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox, Label, Toggle, ToggleInner, SwitchParent } from './Switch.styles';
 
-type Props = {
+export interface Props {
   disabled?: boolean;
   id: string;
   currentValue: boolean;
@@ -9,7 +9,7 @@ type Props = {
   onChange: () => void;
   onText?: string;
   offText?: string;
-};
+}
 
 export const Switch: React.FC<Props> = ({
   disabled,
