@@ -19,8 +19,8 @@ export const ToggleInner = styled.span<Partial<Props>>`
   width: 200%;
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: inline-flex;
     float: left;
     width: 50%;
@@ -33,8 +33,8 @@ export const ToggleInner = styled.span<Partial<Props>>`
     align-items: center;
     justify-content: center;
   }
-  &:before {
-    content: attr(data-yes);
+  &::before {
+    content: '';
     text-transform: uppercase;
     padding-left: 6px;
     padding-right: 24px;
@@ -42,8 +42,8 @@ export const ToggleInner = styled.span<Partial<Props>>`
     color: #fff;
   }
 
-  :after {
-    content: attr(data-no);
+  &::after {
+    content: '';
     text-transform: uppercase;
     padding-right: 6px;
     padding-left: 24px;
@@ -87,7 +87,7 @@ export const Toggle = styled.span<Partial<Props>>`
     css`
       background-color: #ccc;
       cursor: not-allowed;
-      &:before {
+      &::before {
         background-color: #ccc;
         cursor: not-allowed;
       }
