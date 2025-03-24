@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes } from 'react';
 import { StyledButton } from './ButtonV2.styles';
 
 export interface ButtonV2Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: 'small' | 'standard';
+  size?: 'small' | 'standard' | 'large';
   radius?: 'standard' | 'round';
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger' | 'white';
 }

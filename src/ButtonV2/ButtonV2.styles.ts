@@ -25,6 +25,14 @@ export const StyledButton = styled.button.withConfig({
       line-height: ${p.theme.font.lineHeight.text.xsmall};
       padding: ${p.theme.spacing.xxsmall} ${p.theme.spacing.small};
     `}
+  ${p =>
+    p.size === 'large' &&
+    css`
+      font-size: ${p.theme.font.size.text.large};
+      line-height: ${p.theme.font.lineHeight.text.large};
+      padding: ${p.theme.spacing.small} ${p.theme.spacing.large};
+    `}
+  
       
   /* RADIUS */
   ${p =>
