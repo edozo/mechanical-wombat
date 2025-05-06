@@ -45,3 +45,17 @@ RandomNamed.args = {
   background: 'greenyellow',
   children: 'Random',
 };
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  children: 'Small',
+  background: '#E5EEFE',
+};
+
+export const XSmall = Template.bind({});
+XSmall.args = {
+  size: 'xxsmall',
+  children: 'XSmall',
+  background: '#E5EEFE',
+};

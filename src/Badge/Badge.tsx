@@ -11,9 +11,13 @@ export interface BadgeProps {
    */
   color?: string;
   /**
-   * TODO: fill this out more once design system has caught-up
+   * The size of the badge
    */
-  size?: 'small' | 'standard';
+  size?: 'xxsmall' | 'small' | 'standard';
+  /**
+   * The children of the badge
+   */
+  children: React.ReactNode;
 }
 
 export const Badge: React.FC<BadgeProps> = ({
