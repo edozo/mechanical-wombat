@@ -22,6 +22,7 @@ export interface Props {
   onChange: (item?: DropDownItem) => void;
   selectedItem: DropDownItem;
   initialSelectedItem?: DropDownItem;
+  refKey: string;
 }
 
 const itemToString = (item: DropDownItem): string => (item ? item.value.toString() : '');
@@ -30,7 +31,7 @@ export const DropDown = (props: Props): JSX.Element => (
   <div>
     <Downshift {...props} itemToString={itemToString}>
       {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
-        <StyledDownshiftWrapper {...getRootProps()}>
+        <StyledDownshiftWrapper {...getRootProps({ refKey: props.refKey })}>
           <StyledDownshiftPreview {...getToggleButtonProps()}>
             <StyledDownshiftPreviewInner>
               {selectedItem && selectedItem.thumbnail && (
@@ -38,11 +39,12 @@ export const DropDown = (props: Props): JSX.Element => (
               )}
               {selectedItem?.label}
             </StyledDownshiftPreviewInner>
-            <StyledArrow isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
+            <StyledArrow $isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
           </StyledDownshiftPreview>
-          {isOpen && (
-            <StyledList {...getMenuProps()}>
-              {props.items.map((item: DropDownItem, index: number) => (
+          {/* Always render the menu root so Downshift can attach refs/aria correctly */}
+          <StyledList {...getMenuProps({ refKey: 'ref' })} hidden={!isOpen}>
+            {isOpen &&
+              props.items.map((item: DropDownItem, index: number) => (
                 <StyledListItem
                   highlighted={index === highlightedIndex}
                   selectedItem={item.value === selectedItem?.value}
@@ -55,8 +57,7 @@ export const DropDown = (props: Props): JSX.Element => (
                   {item.label}
                 </StyledListItem>
               ))}
-            </StyledList>
-          )}
+          </StyledList>
         </StyledDownshiftWrapper>
       )}
     </Downshift>

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export interface StyleProps {
-  isOpen?: boolean;
+  $isOpen?: boolean;
   highlighted?: boolean;
   selectedItem?: boolean;
 }
@@ -100,6 +100,6 @@ export const StyledListItemImage = styled.img`
 `;
 
 export const StyledArrow = styled.img<StyleProps>`
-  transform: rotate(${p => (p.isOpen ? '180deg' : '0deg')});
+  transform: rotate(${p => (p.$isOpen ? '180deg' : '0deg')});
   transition: transform 200ms;
 `;

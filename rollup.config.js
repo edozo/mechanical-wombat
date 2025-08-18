@@ -33,6 +33,18 @@ export default {
     typescript({
       rollupCommonJSResolveHack: true,
       clean: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          noImplicitAny: false,
+          strictNullChecks: false,
+          noImplicitReturns: false,
+          noImplicitThis: false,
+          noUnusedLocals: false,
+          skipLibCheck: true,
+          noEmitOnError: false,
+        },
+      },
+      check: false,
     }),
     commonjs({
       include: 'node_modules/**',

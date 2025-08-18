@@ -1,6 +1,6 @@
 {
   "name": "mechanical-wombat",
-  "version": "1.5.12",
+  "version": "1.5.21",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -29,15 +29,15 @@
     "lint:css": "stylelint './src/**/*.ts'"
   },
   "dependencies": {
-    "react-collapsed": "^3.0.2"
+    "react-collapsed": "2.0.0"
   },
   "peerDependencies": {
     "@tippyjs/react": "^4.2.5",
     "downshift": "^6.1.3",
     "polished": "^4.1.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.0",
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20",
+    "styled-components": "^6.1.19",
     "styled-reboot": "^5.0.0"
   },
   "devDependencies": {
@@ -47,15 +47,16 @@
     "@svgr/webpack": "^5.5.0",
     "@tippyjs/react": "^4.2.5",
     "@types/jest": "^26.0.23",
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.4",
-    "@types/styled-components": "^5.1.9",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-runtime": "^6.26.0",
     "cross-env": "^7.0.3",
+    "downshift": "^6.1.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.7.0",
@@ -71,8 +72,8 @@
     "postcss": "^8.2.8",
     "prettier": "^1.19.1",
     "pretty-quick": "^3.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts-ts": "^3.1.0",
     "rollup": "^2.41.5",
     "rollup-plugin-babel": "^4.4.0",
@@ -82,7 +83,7 @@
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.32.1",
     "rollup-plugin-url": "^3.0.1",
-    "styled-components": "^5.3.0",
+    "styled-components": "^6.1.19",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^4.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -103,5 +104,6 @@
       "eslint",
       "git add"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

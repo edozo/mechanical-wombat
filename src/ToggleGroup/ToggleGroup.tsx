@@ -32,7 +32,7 @@ class ToggleGroup extends React.Component<Props, State> {
     this.props.onChange(item);
   };
 
-  render(): JSX.Element {
+  render(): React.ReactElement {
     return (
       <StyledToggleGroup>
         {this.props.items.map((item: Item) => (
