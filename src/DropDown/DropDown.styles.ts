@@ -4,6 +4,7 @@ export interface StyleProps {
   $isOpen?: boolean;
   highlighted?: boolean;
   selectedItem?: boolean;
+  $disabled?: boolean;
 }
 
 export const StyledDownshiftWrapper = styled.div`
@@ -79,13 +80,24 @@ export const StyledListItem = styled.li<StyleProps>`
   transition: all 200ms;
   cursor: pointer;
   ${p =>
+    p.$disabled &&
+    css`
+      color: ${p.theme.colors.gray};
+      opacity: 0.6;
+      cursor: not-allowed;
+      pointer-events: none;
+    `};
+
+  ${p =>
     p.highlighted &&
+    !p.$disabled &&
     css`
       background: ${p.theme.colors.grayLighter};
     `};
 
   ${p =>
     p.selectedItem &&
+    !p.$disabled &&
     css`
       background: ${p.theme.colors.gray};
     `};
