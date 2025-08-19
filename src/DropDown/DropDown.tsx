@@ -9,7 +9,7 @@ import {
   StyledListItemImage,
   StyledArrow,
 } from './DropDown.styles';
-import arrow from './arrow.svg'; // TODO: Make the react SVG as component work
+import { ReactComponent as ArrowIcon } from './arrow.svg';
 
 export interface DropDownItem {
   label: React.ReactNode;
@@ -57,7 +57,9 @@ export const DropDown = (props: Props): JSX.Element => (
                 )}
                 {selectedItem?.label}
               </StyledDownshiftPreviewInner>
-              <StyledArrow $isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
+              <StyledArrow $isOpen={isOpen} aria-hidden>
+                <ArrowIcon />
+              </StyledArrow>
             </StyledDownshiftPreview>
             {/* Always render the menu root so Downshift can attach refs/aria correctly */}
             <StyledList {...getMenuProps({ refKey: 'ref' })} hidden={!isOpen}>

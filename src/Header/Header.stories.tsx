@@ -1,18 +1,22 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
-import { Story, Meta } from '@storybook/react';
-import { EdozoLogo, LogoVariants } from '../EdozoLogo';
-import { Header } from './Header';
-import { Menu } from './Menu';
+import { Meta, StoryFn } from '@storybook/react';
 import { AppHeader, AppHeaderProps } from './AppHeader';
+import { EdozoLogo } from '../EdozoLogo';
+import type { LogoVariants } from '../EdozoLogo';
+import { Menu } from './Menu';
 
 export default {
   title: 'Components/Header',
-  component: Header,
+  component: AppHeader,
 } as Meta;
 
-export const ControlledAppHeader: Story<AppHeaderProps> = args => (
+export const Default: StoryFn = () => (
+  <AppHeader appName="edozo" logoSection={<EdozoLogo variant={"edozo" as LogoVariants} size="small" />} logout={() => {}} />
+);
+
+export const ControlledAppHeader: StoryFn<AppHeaderProps> = args => (
   <AppHeader
     logoSection={
       <a>

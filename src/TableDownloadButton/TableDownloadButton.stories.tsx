@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { TableDownloadButton, TableDownloadButtonProps } from './TableDownloadButton';
 
 export default {
@@ -7,7 +6,7 @@ export default {
   component: TableDownloadButton,
 } as Meta;
 
-const Template: Story<TableDownloadButtonProps> = args => (
+const Template: StoryFn<TableDownloadButtonProps> = args => (
   <TableDownloadButton {...args}>
     <p>Icon</p>
   </TableDownloadButton>

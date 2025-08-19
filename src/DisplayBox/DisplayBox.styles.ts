@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 
 export interface StyleProps {
-  background?: string;
+  background?: keyof DefaultTheme['colors'] | 'gray';
   size?: string;
-  borderRadius?: string;
+  borderRadius?: keyof DefaultTheme['borderRadius'] | 'small';
   children?: React.ReactNode;
 }
 

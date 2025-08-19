@@ -2,7 +2,7 @@ import React from 'react';
 import { useTabsContext } from './TabsContext';
 import { StyledTab, StyledTabWrapper } from './Tab.styles';
 
-export interface TabProps {
+export interface TabProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   tabId: string;
   children: React.ReactNode;
   disabled?: boolean;

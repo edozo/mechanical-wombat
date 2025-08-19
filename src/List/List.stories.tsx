@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { List } from './List';
 
 export default {
@@ -13,7 +12,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story = ({ children, ...args }) => (
+const Template: StoryFn = ({ children, ...args }) => (
   <List {...args}>
     {children.map(({ node, disabled = false }: { node: React.ReactNode; disabled: boolean }) => (
       <List.Item disabled={disabled} key={Math.random()}>

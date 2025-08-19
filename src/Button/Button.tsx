@@ -7,6 +7,7 @@ export interface ButtonProps {
   borderRadius?: 'small' | 'standard' | 'large';
   disabled?: boolean;
   onClick?: () => void;
+  children?: React.ReactNode;
 }
 
 /**

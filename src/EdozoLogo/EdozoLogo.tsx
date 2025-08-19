@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+// Fix these svg's
 import { ReactComponent as EdozoLogoSvg } from './assets/edozo-logo.svg';
 import { ReactComponent as InsightLogo } from './assets/insight-logo.svg';
 import { ReactComponent as OccupiersLogo } from './assets/occupiers-logo.svg';

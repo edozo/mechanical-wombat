@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import * as React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
+import { useState } from 'react';
 import { TextSmall } from '../Typography';
 import { SearchIcon } from '../Icons';
 import { InputGroup } from './InputGroup';
@@ -20,13 +20,13 @@ export default {
   },
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <InputGroup type={args.type} onChange={() => null} {...args}>
     <InputGroup.Input />
   </InputGroup>
 );
 
-const TemplateWithIconEnd: Story = args => (
+const TemplateWithIconEnd: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -35,7 +35,7 @@ const TemplateWithIconEnd: Story = args => (
   </InputGroup>
 );
 
-const TemplateWithIconStart: Story = args => (
+const TemplateWithIconStart: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
@@ -44,7 +44,7 @@ const TemplateWithIconStart: Story = args => (
   </InputGroup>
 );
 
-const TemplateWithIconButton: Story = args => (
+const TemplateWithIconButton: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -53,7 +53,7 @@ const TemplateWithIconButton: Story = args => (
   </InputGroup>
 );
 
-const TemplateKitchenSink: Story = args => (
+const TemplateKitchenSink: StoryFn = args => (
   <InputGroup placeholder="Placeholder from the input props" onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
@@ -65,7 +65,7 @@ const TemplateKitchenSink: Story = args => (
   </InputGroup>
 );
 
-const TemplateWithItemEnd: Story = args => (
+const TemplateWithItemEnd: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -74,7 +74,7 @@ const TemplateWithItemEnd: Story = args => (
   </InputGroup>
 );
 
-const TemplateWithItemStart: Story = args => (
+const TemplateWithItemStart: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item backgroundColor="red">
       <strong style={{ border: '1px solid green', margin: '0 36px' }}>
@@ -85,8 +85,8 @@ const TemplateWithItemStart: Story = args => (
   </InputGroup>
 );
 
-const GlobalSearchTemplate: Story = () => {
-  const [value, setValue] = React.useState<string>('');
+const GlobalSearchTemplate: StoryFn = () => {
+  const [value, setValue] = useState<string>('');
   return (
     <GlobalSearch
       name="global-search"
@@ -99,7 +99,7 @@ const GlobalSearchTemplate: Story = () => {
   );
 };
 
-const TextareaTemplate: Story = args => (
+const TextareaTemplate: StoryFn = args => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Textarea />
   </InputGroup>

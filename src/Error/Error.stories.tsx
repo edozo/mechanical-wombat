@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Fragment } from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Error } from './Error';
 import { ErrorColumn } from './ErrorColumn';
 import { Ring } from './Ring';
@@ -14,7 +14,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <div
     style={{
       display: 'flex',
@@ -88,10 +88,10 @@ Permissions.args = {
 
 export const NotFound = Template.bind({});
 NotFound.args = {
-  children: <NotFoundUI />,
+  children: <NotFoundUI children={undefined} />,
 };
 
 export const ErrorBoundary = Template.bind({});
 ErrorBoundary.args = {
-  children: <GenericErrorUI />,
+  children: <GenericErrorUI children={undefined} />,
 };

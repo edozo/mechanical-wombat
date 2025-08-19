@@ -5,9 +5,15 @@
     "prettier/react",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
   ],
-  "plugins": ["jest", "prettier", "@typescript-eslint", "react-hooks"],
+  "plugins": [
+    "jest",
+    "prettier",
+    "@typescript-eslint",
+    "react-hooks"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -25,7 +31,17 @@
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
     "react/forbid-prop-types": 0,
     "react/no-string-refs": 0,
     "arrow-parens": 0,
@@ -33,17 +49,31 @@
     "react/jsx-props-no-spreading": "off",
     "react/state-in-constructor": "off",
     "consistent-return": 0,
-    "no-param-reassign": ["error", { "props": false }],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
     "no-unused-expressions": 0,
     "comma-dangle": "off",
     "react/jsx-fragments": "off",
     "import/prefer-default-export": 0,
-    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-plusplus": [
+      2,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": ["Link"],
-        "specialLink": ["to"]
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ]
       }
     ],
     "jsx-a11y/no-autofocus": 0,
@@ -51,7 +81,11 @@
     "no-underscore-dangle": [
       "warn",
       {
-        "allow": ["_original", "removeFeature_", "_chatlio"]
+        "allow": [
+          "_original",
+          "removeFeature_",
+          "_chatlio"
+        ]
       }
     ],
     "react/destructuring-assignment": 0,
@@ -76,7 +110,9 @@
       2,
       {
         "required": {
-          "every": ["id"]
+          "every": [
+            "id"
+          ]
         }
       }
     ],
@@ -90,7 +126,12 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     },
     "react": {
@@ -99,7 +140,9 @@
   },
   "overrides": [
     {
-      "files": ["*.tsx"],
+      "files": [
+        "*.tsx"
+      ],
       "rules": {
         "react/prop-types": "off",
         "@typescript-eslint/explicit-function-return-type": [

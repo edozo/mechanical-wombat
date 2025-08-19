@@ -4,6 +4,7 @@ import { BackgroundMessage, ForegroundMessage, ErrorInfoWrapper } from './ErrorI
 interface Props {
   foregroundMessage?: string;
   backgroundMessage?: string;
+  children?: React.ReactNode;
 }
 
 export const ErrorInfo: React.FC<Props> = ({ foregroundMessage, backgroundMessage, children }) => {
