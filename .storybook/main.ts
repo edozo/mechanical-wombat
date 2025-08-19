@@ -3,12 +3,13 @@ import svgr from 'vite-plugin-svgr';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: ['@storybook/addon-docs'],
+
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: { autodocs: 'tag' },
+
   viteFinal: async (viteConfig) => {
     const svgrPlugin = svgr({
       svgrOptions: { exportType: 'named' },
@@ -19,7 +20,7 @@ const config: StorybookConfig = {
     // run SVGR before other plugins so it intercepts SVG imports
     viteConfig.plugins = [svgrPlugin, ...(viteConfig.plugins || [])];
     return viteConfig;
-  },
+  }
 };
 
 export default config;
