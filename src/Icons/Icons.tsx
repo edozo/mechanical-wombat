@@ -59,7 +59,8 @@ import binUrl from './icons/bin.svg?url';
 import { ReactComponent as Bin } from './icons/bin.svg';
 
 import autoPolygonUrl from './icons/auto-polygon-tool.svg?url';
-import { ReactComponent as AutoPolygon, ReactComponent as LeaseholdAutoPolygon } from './icons/auto-polygon-tool.svg';
+import { ReactComponent as AutoPolygon } from './icons/auto-polygon-tool.svg';
+import { ReactComponent as LeaseholdAutoPolygon } from './icons/auto-polygon-tool.svg';
 
 import drawPolygonUrl from './icons/draw-polygon-tool.svg?url';
 import { ReactComponent as DrawPolygon } from './icons/draw-polygon-tool.svg';
