@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { PopoverContent } from './PopoverContent';
 import { List } from '../List';
 
@@ -9,7 +8,7 @@ export default {
   component: PopoverContent,
 } as Meta;
 
-const Template: Story = args => <PopoverContent {...args} />;
+const Template: StoryFn = args => <PopoverContent {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import React, { Fragment } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Fragment } from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import { StackIcon } from '../Icons';
 import { EmptyState } from './EmptyState';
 
@@ -9,7 +9,7 @@ export default {
   component: EmptyState,
 } as Meta;
 
-const Template: Story = args => <EmptyState {...args} />;
+const Template: StoryFn = args => <EmptyState children={undefined} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

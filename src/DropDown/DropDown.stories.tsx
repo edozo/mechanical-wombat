@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DropDown } from './DropDown';
 
 export default {
@@ -42,14 +41,14 @@ const items = [
   },
 ];
 
-export const WithImages: Story = args => (
+export const WithImages: StoryFn = args => (
   <div style={{ height: '200px' }}>
-    <DropDown items={itemsWithImages} onChange={args.onChange} initialSelectedItem={itemsWithImages[1]} />
+    <DropDown selectedItem={itemsWithImages[1]} items={itemsWithImages} onChange={args.onChange} />
   </div>
 );
 
-export const WithoutImages: Story = args => (
+export const WithoutImages: StoryFn = args => (
   <div style={{ height: '200px' }}>
-    <DropDown items={items} onChange={args.onChange} initialSelectedItem={items[2]} />
+    <DropDown selectedItem={items[2]} items={items} onChange={args.onChange} />
   </div>
 );

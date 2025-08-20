@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ToggleGroup } from './ToggleGroup';
 
 export default {
@@ -23,4 +22,4 @@ const items = [
   },
 ];
 
-export const Default: Story = args => <ToggleGroup items={items} onChange={args.onChange} selectedItem={items[1]} />;
+export const Default: StoryFn = args => <ToggleGroup items={items} onChange={args.onChange} selectedItem={items[1]} />;

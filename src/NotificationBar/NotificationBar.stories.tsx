@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { NotificationBar, NotificationBarProps } from './NotificationBar';
 import { StyledWarningIcon } from './NotificationBar.styles';
 
@@ -8,7 +7,7 @@ export default {
   component: NotificationBar,
 } as Meta;
 
-const Template: Story<NotificationBarProps> = args => (
+const Template: StoryFn<NotificationBarProps> = args => (
   <NotificationBar {...args}>
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <StyledWarningIcon />

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
-import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles.ts';
+import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles';
 
 export default {
   title: 'Theme/Space',
@@ -17,7 +16,7 @@ const spaces = [
   { size: '64px', name: 'xxlarge' },
 ];
 
-export const Space: Story = () => (
+export const Space: StoryFn = () => (
   <DisplayBoxWrapper>
     {spaces.map(space => (
       <DisplayBox size={space.size} borderRadius="xsmall">

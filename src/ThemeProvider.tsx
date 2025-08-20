@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import { defaultTheme } from './defaultTheme';
 

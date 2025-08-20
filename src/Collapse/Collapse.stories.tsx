@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Collapse, CollapseProps } from './Collapse';
 
 export default {
@@ -7,7 +6,7 @@ export default {
   component: Collapse,
 } as Meta;
 
-const Template: Story<CollapseProps> = args => <Collapse {...args} />;
+const Template: StoryFn<CollapseProps> = args => <Collapse {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

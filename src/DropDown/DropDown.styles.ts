@@ -111,7 +111,9 @@ export const StyledListItemImage = styled.img`
   border-radius: ${p => p.theme.borderRadius.small};
 `;
 
-export const StyledArrow = styled.img<StyleProps>`
+export const StyledArrow = styled.span<StyleProps>`
+  display: inline-flex;
   transform: rotate(${p => (p.$isOpen ? '180deg' : '0deg')});
   transition: transform 200ms;
+  line-height: 0;
 `;

@@ -8,11 +8,30 @@ declare module '*.css' {
   export default content;
 }
 
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
-
 declare module '*.svg' {
-  const svgUrl: string;
-  const svgComponent: SvgrComponent;
-  export default svgUrl;
-  export { svgComponent as ReactComponent };
+  import * as React from 'react';
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
+}
+
+declare module '*.svg?url' {
+  const src: string;
+  export default src;
+}
+
+declare module '*.svg?react' {
+  import * as React from 'react';
+  const Component: React.FC<React.SVGProps<SVGSVGElement>>;
+  export default Component;
+}
+
+declare module 'react-collapsed' {
+  import * as React from 'react';
+  export interface CollapseProps {
+    isExpanded?: boolean;
+    children?: React.ReactNode;
+  }
+  const useCollapse: (options?: any) => any;
+  export default useCollapse;
 }

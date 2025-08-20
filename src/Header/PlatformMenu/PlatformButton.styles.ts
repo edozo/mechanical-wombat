@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export interface PlatformMenuButtonProps {
   onClick: () => void;
+  children?: React.ReactNode;
 }
 
 export const StylePlatformButton = styled.button<PlatformMenuButtonProps>`

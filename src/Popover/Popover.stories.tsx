@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
-import React, { useState } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { useState } from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Popover } from './Popover';
 import { WarningIcon } from '../Icons';
 import { Tooltip } from '../Tooltip';
@@ -16,7 +16,7 @@ export default {
   },
 } as Meta;
 
-export const PopoverWithTitle: Story = () => {
+export const PopoverWithTitle: StoryFn = () => {
   const [popoverVisible, setPopoverVisible] = useState(false);
   const showPopover = (): void => setPopoverVisible(true);
   const hidePopover = (): void => setPopoverVisible(false);
@@ -74,7 +74,7 @@ export const PopoverWithTitle: Story = () => {
   );
 };
 
-export const PopoverWithTooltip: Story = () => {
+export const PopoverWithTooltip: StoryFn = () => {
   const [popoverVisible, setTooltipVisible] = useState(false);
   const showPopover = (): void => setTooltipVisible(true);
   const hidePopover = (): void => setTooltipVisible(false);
@@ -100,7 +100,7 @@ export const PopoverWithTooltip: Story = () => {
   );
 };
 
-export const PopoverSimple: Story = () => {
+export const PopoverSimple: StoryFn = () => {
   const [popoverVisible, setTooltipVisible] = useState(true);
   const showPopover = (): void => setTooltipVisible(true);
   const hidePopover = (): void => setTooltipVisible(false);
@@ -134,7 +134,7 @@ export const PopoverSimple: Story = () => {
   );
 };
 
-export const PopoverList: Story = ({ ...args }) => {
+export const PopoverList: StoryFn = ({ ...args }) => {
   const elements = [
     { node: 'Element 1' },
     { node: 'Element 2', disabled: true },

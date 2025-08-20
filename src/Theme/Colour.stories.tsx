@@ -1,14 +1,13 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
-import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles.ts';
+import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles';
 
 export default {
   title: 'Theme/Colours',
 } as Meta;
 
 // TODO: Martin to add extra theme colours here
-export const Primary: Story = () => (
+export const Primary: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="skyBlueLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -38,7 +37,7 @@ export const Primary: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Secondary: Story = () => (
+export const Secondary: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="greenLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -68,7 +67,7 @@ export const Secondary: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Tertiary: Story = () => (
+export const Tertiary: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="steelBlueLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -98,7 +97,7 @@ export const Tertiary: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Gray: Story = () => (
+export const Gray: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="grayLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>
@@ -128,7 +127,7 @@ export const Gray: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Simple: Story = () => (
+export const Simple: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="black">
       <DisplayBoxTitle>black</DisplayBoxTitle>
@@ -141,7 +140,7 @@ export const Simple: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Alert: Story = () => (
+export const Alert: StoryFn = () => (
   <DisplayBoxWrapper>
     <DisplayBox background="redLighter">
       <DisplayBoxSubTitle>Lighter</DisplayBoxSubTitle>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   H1,
   H2,
@@ -16,8 +15,8 @@ import {
   Title,
   SubTitle,
 } from './Typography';
-import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles.ts';
-import { DisplayWrapper } from './Typography.styles.ts';
+import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles';
+import { DisplayWrapper } from './Typography.styles';
 
 export default {
   title: 'Theme/Typography',
@@ -34,6 +33,7 @@ interface InfoBlockProps {
   fontSize: string;
   lineHeight: string;
   letterSpacing?: string;
+  children?: React.ReactNode;
 }
 const InfoBlock: React.FC<InfoBlockProps> = ({
   fontWeight,
@@ -42,7 +42,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
   lineHeight,
   letterSpacing,
   children,
-}) => (
+}: React.PropsWithChildren<InfoBlockProps>) => (
   <DisplayWrapper>
     {children}
     <hr />
@@ -54,86 +54,86 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
   </DisplayWrapper>
 );
 
-export const H1Block: Story = () => (
+export const H1Block: StoryFn = () => (
   <InfoBlock fontWeight="Bold" fontSize="2.5rem" lineHeight="3.375rem" letterSpacing="0.02em">
     <H1>{previewTitle}</H1>
   </InfoBlock>
 );
 
-export const H2Block: Story = () => (
+export const H2Block: StoryFn = () => (
   <InfoBlock fontWeight="Semi-Bold" fontSize="2rem" lineHeight="2.75rem" letterSpacing="0.01em">
     <H2>{previewTitle}</H2>
   </InfoBlock>
 );
 
-export const H3Block: Story = () => (
+export const H3Block: StoryFn = () => (
   <InfoBlock fontWeight="Bold" fontSize="1.5rem" lineHeight="2.125rem" letterSpacing="0.01em">
     <H3>{previewTitle}</H3>
   </InfoBlock>
 );
 
-export const H4Block: Story = () => (
+export const H4Block: StoryFn = () => (
   <InfoBlock fontWeight="Semi-Bold" fontSize="1.25rem" lineHeight="1.875rem" letterSpacing="0.01em">
     <H4>{previewTitle}</H4>
   </InfoBlock>
 );
 
-export const H5Block: Story = () => (
+export const H5Block: StoryFn = () => (
   <InfoBlock fontWeight="Semi-Bold" fontSize="1rem" lineHeight="1.5rem" letterSpacing="0.01em">
     <H5>{previewTitle}</H5>
   </InfoBlock>
 );
 
-export const H6Block: Story = () => (
+export const H6Block: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="0.75rem" lineHeight="1rem" letterSpacing="0.08em">
     <H6>{previewTitle}</H6>
   </InfoBlock>
 );
 
-export const TextXLargeBlock: Story = () => (
+export const TextXLargeBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="1.25rem" lineHeight="1.875rem">
     <TextXLarge>{previewBody}</TextXLarge>
   </InfoBlock>
 );
 
-export const TextLargeBlock: Story = () => (
+export const TextLargeBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="1.125rem" lineHeight="1.75rem">
     <TextLarge>{previewBody}</TextLarge>
   </InfoBlock>
 );
 
-export const TextBaseBlock: Story = () => (
+export const TextBaseBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="1rem" lineHeight="1.5rem">
     <TextBase>{previewBody}</TextBase>
   </InfoBlock>
 );
 
-export const TextSmallBlock: Story = () => (
+export const TextSmallBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="0.875rem" lineHeight="1.25rem">
     <TextSmall>{previewBody}</TextSmall>
   </InfoBlock>
 );
 
-export const TextXSmallBlock: Story = () => (
+export const TextXSmallBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="0.75rem" lineHeight="1rem">
     <TextXSmall>{previewBody}</TextXSmall>
   </InfoBlock>
 );
 
-export const TextXXSmallBlock: Story = () => (
+export const TextXXSmallBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="0.625" lineHeight="0.875rem">
     <TextXLarge>{previewBody}</TextXLarge>
     <TextXXSmall>{previewBody}</TextXXSmall>
   </InfoBlock>
 );
 
-export const TitleBlock: Story = () => (
+export const TitleBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="1rem" lineHeight="1.5rem">
     <Title>{previewBody}</Title>
   </InfoBlock>
 );
 
-export const SubtitleBlock: Story = () => (
+export const SubtitleBlock: StoryFn = () => (
   <InfoBlock fontWeight="Regular" fontSize="0.875rem" lineHeight="1.25rem">
     <SubTitle>{previewBody}</SubTitle>
   </InfoBlock>

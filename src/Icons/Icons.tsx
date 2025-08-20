@@ -1,109 +1,307 @@
 import React from 'react';
 import styled from 'styled-components';
-import zoomOutUrl, { ReactComponent as ZoomOut } from './icons/zoom-out.svg';
-import zoomInUrl, { ReactComponent as ZoomIn } from './icons/zoom-in.svg';
-import zoomUrl, { ReactComponent as Zoom } from './icons/zoom.svg';
-import saveUrl, { ReactComponent as Save } from './icons/save.svg';
-import warningUrl, { ReactComponent as Warning } from './icons/warning.svg';
-import upgradeUrl, { ReactComponent as Upgrade } from './icons/upgrade.svg';
-import refreshUrl, { ReactComponent as Refresh } from './icons/refresh.svg';
-import questionUrl, { ReactComponent as Question } from './icons/question.svg';
-import reloadUrl, { ReactComponent as Reload } from './icons/reload.svg';
-import editUrl, { ReactComponent as Edit } from './icons/edit.svg';
-import downloadUrl, { ReactComponent as Download } from './icons/download.svg';
-import plusUrl, { ReactComponent as Plus } from './icons/plus.svg';
-import closeUrl, { ReactComponent as Close } from './icons/close.svg';
-import minusUrl, { ReactComponent as Minus } from './icons/minus.svg';
-import arrowDownUrl, { ReactComponent as ArrowDown } from './icons/arrow-down.svg';
-import arrowUpUrl, { ReactComponent as ArrowUp } from './icons/arrow-up.svg';
-import checkUrl, { ReactComponent as Check } from './icons/check.svg';
-import infoUrl, { ReactComponent as Info } from './icons/info.svg';
-import binUrl, { ReactComponent as Bin } from './icons/bin.svg';
-import autoPolygonUrl, {
-  ReactComponent as AutoPolygon,
-  ReactComponent as LeaseholdAutoPolygon,
-} from './icons/auto-polygon-tool.svg';
-import drawPolygonUrl, { ReactComponent as DrawPolygon } from './icons/draw-polygon-tool.svg';
-import rectangleUrl, { ReactComponent as Rectangle } from './icons/rectangle.svg';
-import circleUrl, { ReactComponent as Circle } from './icons/circle.svg';
-import arrowToolUrl, { ReactComponent as ArrowTool } from './icons/arrow-tool.svg';
-import lineToolUrl, { ReactComponent as LineTool } from './icons/line-tool.svg';
-import newLineToolUrl, { ReactComponent as NewLineTool } from './icons/new-line-tool.svg';
-import measureToolUrl, { ReactComponent as MeasureTool } from './icons/measure-tool.svg';
-import editToolUrl, { ReactComponent as EditTool } from './icons/edit-tool.svg';
-import modifyToolUrl, { ReactComponent as ModifyTool } from './icons/modify-tool.svg';
-import textUrl, { ReactComponent as Text } from './icons/text.svg';
-import streetNameTextUrl, { ReactComponent as StreetNameText } from './icons/street-name-text.svg';
-import buildingNumberTextUrl, { ReactComponent as BuildingNumberText } from './icons/building-number-text.svg';
-import notesTextUrl, { ReactComponent as NotesText } from './icons/notes-text.svg';
-import deleteAllUrl, { ReactComponent as DeleteAll } from './icons/delete-all.svg';
-import separateUrl, { ReactComponent as Separate } from './icons/separate.svg';
-import duplicateUrl, { ReactComponent as Duplicate } from './icons/duplicate.svg';
-import mergeUrl, { ReactComponent as Merge } from './icons/merge.svg';
-import lockOpenUrl, { ReactComponent as LockOpen } from './icons/lock-open.svg';
-import lockClosedUrl, { ReactComponent as LockClosed } from './icons/lock-closed.svg';
-import deleteUrl, { ReactComponent as Delete } from './icons/delete.svg';
-import drawingLibraryUrl, { ReactComponent as DrawingLibrary } from './icons/drawing-library.svg';
-import dashedRectangleUrl, { ReactComponent as DashedRectangle } from './icons/dashed-rectangle.svg';
-import dashedCircleUrl, { ReactComponent as DashedCircle } from './icons/dashed-circle.svg';
-import boldUrl, { ReactComponent as Bold } from './icons/bold.svg';
-import italicUrl, { ReactComponent as Italic } from './icons/italic.svg';
-import hatchCDUrl, { ReactComponent as HatchCD } from './icons/hatch-cd.svg';
-import hatchCUUrl, { ReactComponent as HatchCU } from './icons/hatch-cu.svg';
-import hatchLAUrl, { ReactComponent as HatchLA } from './icons/hatch-la.svg';
-import hatchLMinusUrl, { ReactComponent as HatchLMinus } from './icons/hatch-lminus.svg';
-import hatchLPlusUrl, { ReactComponent as HatchLPlus } from './icons/hatch-lplus.svg';
-import hatchLUUrl, { ReactComponent as HatchLU } from './icons/hatch-lu.svg';
-import searchUrl, { ReactComponent as Search } from './icons/search.svg';
-import stackUrl, { ReactComponent as Stack } from './icons/stack.svg';
-import centerMapUrl, { ReactComponent as CenterMap } from './icons/center-map.svg';
-import hMarkUrl, { ReactComponent as HMark } from './icons/H-mark.svg';
-import tMarkUrl, { ReactComponent as TMark } from './icons/T-mark.svg';
-import arrowMarkUrl, { ReactComponent as ArrowMark } from './icons/arrow-mark.svg';
-import crossMarkUrl, { ReactComponent as CrossMark } from './icons/cross-mark.svg';
-import starMarkUrl, { ReactComponent as StarMark } from './icons/star-mark.svg';
-import dashedDrawPolygonUrl, { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
-import dashedModifyUrl, { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
-import dashedRectangleNodesUrl, { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
-import dashedCircleNodesUrl, { ReactComponent as DashedCircleNodes } from './icons/dashed-circle-nodes.svg';
-import reopenPolygonUrl, { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
-import featureOutlineUrl, { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
-import lightBulbUrl, { ReactComponent as LightBulb } from './icons/light-bulb.svg';
-import treeUrl, { ReactComponent as Tree } from './icons/tree.svg';
-import redoUrl, { ReactComponent as Redo } from './icons/redo.svg';
-import undoUrl, { ReactComponent as Undo } from './icons/undo.svg';
-import logoutUrl, { ReactComponent as Logout } from './icons/logout-icon.svg';
-import switchAppUrl, { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
-import switchAppColourUrl, { ReactComponent as SwitchAppColour } from './icons/switch-app-icon-color.svg';
-import binocularUrl, { ReactComponent as Binocular } from './icons/binocular.svg';
-import errorUrl, { ReactComponent as Error } from './icons/error-icon.svg';
-import oneAcreUrl, { ReactComponent as OneAcre } from './icons/one-acre.svg';
-import halfAcreUrl, { ReactComponent as HalfAcre } from './icons/half-acre.svg';
-import oneThirdAcreUrl, { ReactComponent as OneThirdAcre } from './icons/one-third-acre.svg';
-import quarterAcreUrl, { ReactComponent as QuarterAcre } from './icons/quarter-acre.svg';
-import oneSixthAcreUrl, { ReactComponent as OneSixthAcre } from './icons/one-sixth-acre.svg';
-import oneEighthAcreUrl, { ReactComponent as OneEighthAcre } from './icons/one-eighth-acre.svg';
-import houseFootprint1Url, { ReactComponent as HouseFootprint1 } from './icons/house-footprint-1.svg';
-import houseFootprint2Url, { ReactComponent as HouseFootprint2 } from './icons/house-footprint-2.svg';
-import houseFootprint3Url, { ReactComponent as HouseFootprint3 } from './icons/house-footprint-3.svg';
-import singleGarageUrl, { ReactComponent as SingleGarage } from './icons/single-garage.svg';
-import doubleGarageUrl, { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
-import scissorsUrl, { ReactComponent as Scissors } from './icons/scissors.svg';
-import splitPolygonUrl, { ReactComponent as SplitPolygon } from './icons/split-polygon.svg';
-import eyeUrl, { ReactComponent as Eye } from './icons/eye.svg';
-import filtersUrl, { ReactComponent as Filters } from './icons/filters.svg';
-import standardArrowUrl, { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
-import bringToFrontUrl, { ReactComponent as BringToFront } from './icons/bring-to-front.svg';
-import sendToBackUrl, { ReactComponent as SendToBack } from './icons/send-to-back.svg';
-import alignLeftUrl, { ReactComponent as AlignLeft } from './icons/left-align.svg';
-import alignCenterUrl, { ReactComponent as AlignCenter } from './icons/center-align.svg';
-import alignRightUrl, { ReactComponent as AlignRight } from './icons/right-align.svg';
-import verifiedUrl, { ReactComponent as Verified } from './icons/verified.svg';
-import goToUrl, { ReactComponent as GoTo } from './icons/go-to.svg';
-import moreInfoUrl, { ReactComponent as MoreInfo } from './icons/more-info.svg';
-import copyIconUrl, { ReactComponent as Copy } from './icons/copy-icon.svg';
-import freeholdAutoPolygonUrl, { ReactComponent as FreeholdAutoPolygon } from './icons/freehold-autopolygon.svg';
-import actionsIndicatorUrl, { ReactComponent as ActionsIndicator } from './icons/actions-indicator.svg';
+
+import zoomOutUrl from './icons/zoom-out.svg?url';
+import { ReactComponent as ZoomOut } from './icons/zoom-out.svg';
+
+import zoomInUrl from './icons/zoom-in.svg?url';
+import { ReactComponent as ZoomIn } from './icons/zoom-in.svg';
+
+import zoomUrl from './icons/zoom.svg?url';
+import { ReactComponent as Zoom } from './icons/zoom.svg';
+
+import saveUrl from './icons/save.svg?url';
+import { ReactComponent as Save } from './icons/save.svg';
+
+import warningUrl from './icons/warning.svg?url';
+import { ReactComponent as Warning } from './icons/warning.svg';
+
+import upgradeUrl from './icons/upgrade.svg?url';
+import { ReactComponent as Upgrade } from './icons/upgrade.svg';
+
+import refreshUrl from './icons/refresh.svg?url';
+import { ReactComponent as Refresh } from './icons/refresh.svg';
+
+import questionUrl from './icons/question.svg?url';
+import { ReactComponent as Question } from './icons/question.svg';
+
+import reloadUrl from './icons/reload.svg?url';
+import { ReactComponent as Reload } from './icons/reload.svg';
+
+import editUrl from './icons/edit.svg?url';
+import { ReactComponent as Edit } from './icons/edit.svg';
+
+import downloadUrl from './icons/download.svg?url';
+import { ReactComponent as Download } from './icons/download.svg';
+
+import plusUrl from './icons/plus.svg?url';
+import { ReactComponent as Plus } from './icons/plus.svg';
+
+import closeUrl from './icons/close.svg?url';
+import { ReactComponent as Close } from './icons/close.svg';
+
+import minusUrl from './icons/minus.svg?url';
+import { ReactComponent as Minus } from './icons/minus.svg';
+
+import arrowDownUrl from './icons/arrow-down.svg?url';
+import { ReactComponent as ArrowDown } from './icons/arrow-down.svg';
+
+import arrowUpUrl from './icons/arrow-up.svg?url';
+import { ReactComponent as ArrowUp } from './icons/arrow-up.svg';
+
+import checkUrl from './icons/check.svg?url';
+import { ReactComponent as Check } from './icons/check.svg';
+
+import infoUrl from './icons/info.svg?url';
+import { ReactComponent as Info } from './icons/info.svg';
+
+import binUrl from './icons/bin.svg?url';
+import { ReactComponent as Bin } from './icons/bin.svg';
+
+import autoPolygonUrl from './icons/auto-polygon-tool.svg?url';
+import { ReactComponent as AutoPolygon, ReactComponent as LeaseholdAutoPolygon } from './icons/auto-polygon-tool.svg';
+
+import drawPolygonUrl from './icons/draw-polygon-tool.svg?url';
+import { ReactComponent as DrawPolygon } from './icons/draw-polygon-tool.svg';
+
+import rectangleUrl from './icons/rectangle.svg?url';
+import { ReactComponent as Rectangle } from './icons/rectangle.svg';
+
+import circleUrl from './icons/circle.svg?url';
+import { ReactComponent as Circle } from './icons/circle.svg';
+
+import arrowToolUrl from './icons/arrow-tool.svg?url';
+import { ReactComponent as ArrowTool } from './icons/arrow-tool.svg';
+
+import lineToolUrl from './icons/line-tool.svg?url';
+import { ReactComponent as LineTool } from './icons/line-tool.svg';
+
+import newLineToolUrl from './icons/new-line-tool.svg?url';
+import { ReactComponent as NewLineTool } from './icons/new-line-tool.svg';
+
+import measureToolUrl from './icons/measure-tool.svg?url';
+import { ReactComponent as MeasureTool } from './icons/measure-tool.svg';
+
+import editToolUrl from './icons/edit-tool.svg?url';
+import { ReactComponent as EditTool } from './icons/edit-tool.svg';
+
+import modifyToolUrl from './icons/modify-tool.svg?url';
+import { ReactComponent as ModifyTool } from './icons/modify-tool.svg';
+
+import textUrl from './icons/text.svg?url';
+import { ReactComponent as Text } from './icons/text.svg';
+
+import streetNameTextUrl from './icons/street-name-text.svg?url';
+import { ReactComponent as StreetNameText } from './icons/street-name-text.svg';
+
+import buildingNumberTextUrl from './icons/building-number-text.svg?url';
+import { ReactComponent as BuildingNumberText } from './icons/building-number-text.svg';
+
+import notesTextUrl from './icons/notes-text.svg?url';
+import { ReactComponent as NotesText } from './icons/notes-text.svg';
+
+import deleteAllUrl from './icons/delete-all.svg?url';
+import { ReactComponent as DeleteAll } from './icons/delete-all.svg';
+
+import separateUrl from './icons/separate.svg?url';
+import { ReactComponent as Separate } from './icons/separate.svg';
+
+import duplicateUrl from './icons/duplicate.svg?url';
+import { ReactComponent as Duplicate } from './icons/duplicate.svg';
+
+import mergeUrl from './icons/merge.svg?url';
+import { ReactComponent as Merge } from './icons/merge.svg';
+
+import lockOpenUrl from './icons/lock-open.svg?url';
+import { ReactComponent as LockOpen } from './icons/lock-open.svg';
+
+import lockClosedUrl from './icons/lock-closed.svg?url';
+import { ReactComponent as LockClosed } from './icons/lock-closed.svg';
+
+import deleteUrl from './icons/delete.svg?url';
+import { ReactComponent as Delete } from './icons/delete.svg';
+
+import drawingLibraryUrl from './icons/drawing-library.svg?url';
+import { ReactComponent as DrawingLibrary } from './icons/drawing-library.svg';
+
+import dashedRectangleUrl from './icons/dashed-rectangle.svg?url';
+import { ReactComponent as DashedRectangle } from './icons/dashed-rectangle.svg';
+
+import dashedCircleUrl from './icons/dashed-circle.svg?url';
+import { ReactComponent as DashedCircle } from './icons/dashed-circle.svg';
+
+import boldUrl from './icons/bold.svg?url';
+import { ReactComponent as Bold } from './icons/bold.svg';
+
+import italicUrl from './icons/italic.svg?url';
+import { ReactComponent as Italic } from './icons/italic.svg';
+
+import hatchCDUrl from './icons/hatch-cd.svg?url';
+import { ReactComponent as HatchCD } from './icons/hatch-cd.svg';
+
+import hatchCUUrl from './icons/hatch-cu.svg?url';
+import { ReactComponent as HatchCU } from './icons/hatch-cu.svg';
+
+import hatchLAUrl from './icons/hatch-la.svg?url';
+import { ReactComponent as HatchLA } from './icons/hatch-la.svg';
+
+import hatchLMinusUrl from './icons/hatch-lminus.svg?url';
+import { ReactComponent as HatchLMinus } from './icons/hatch-lminus.svg';
+
+import hatchLPlusUrl from './icons/hatch-lplus.svg?url';
+import { ReactComponent as HatchLPlus } from './icons/hatch-lplus.svg';
+import hatchLUUrl from './icons/hatch-lu.svg?url';
+import { ReactComponent as HatchLU } from './icons/hatch-lu.svg';
+
+import searchUrl from './icons/search.svg?url';
+import { ReactComponent as Search } from './icons/search.svg';
+
+import stackUrl from './icons/stack.svg?url';
+import { ReactComponent as Stack } from './icons/stack.svg';
+
+import centerMapUrl from './icons/center-map.svg?url';
+import { ReactComponent as CenterMap } from './icons/center-map.svg';
+
+import hMarkUrl from './icons/H-mark.svg?url';
+import { ReactComponent as HMark } from './icons/H-mark.svg';
+
+import tMarkUrl from './icons/T-mark.svg?url';
+import { ReactComponent as TMark } from './icons/T-mark.svg';
+
+import arrowMarkUrl from './icons/arrow-mark.svg?url';
+import { ReactComponent as ArrowMark } from './icons/arrow-mark.svg';
+
+import crossMarkUrl from './icons/cross-mark.svg?url';
+import { ReactComponent as CrossMark } from './icons/cross-mark.svg';
+
+import starMarkUrl from './icons/star-mark.svg?url';
+import { ReactComponent as StarMark } from './icons/star-mark.svg';
+
+import dashedDrawPolygonUrl from './icons/dashed-draw-polygon.svg?url';
+import { ReactComponent as DashedDrawPolygon } from './icons/dashed-draw-polygon.svg';
+
+import dashedModifyUrl from './icons/dashed-modify.svg?url';
+import { ReactComponent as DashedModify } from './icons/dashed-modify.svg';
+
+import dashedRectangleNodesUrl from './icons/dashed-rectangle-nodes.svg?url';
+import { ReactComponent as DashedRectangleNodes } from './icons/dashed-rectangle-nodes.svg';
+
+import dashedCircleNodesUrl from './icons/dashed-circle-nodes.svg?url';
+import { ReactComponent as DashedCircleNodes } from './icons/dashed-circle-nodes.svg';
+
+import reopenPolygonUrl from './icons/reopen-polygon.svg?url';
+import { ReactComponent as ReopenPolygon } from './icons/reopen-polygon.svg';
+
+import featureOutlineUrl from './icons/feature-outline-polygon-tool.svg?url';
+import { ReactComponent as FeatureOutline } from './icons/feature-outline-polygon-tool.svg';
+
+import lightBulbUrl from './icons/light-bulb.svg?url';
+import { ReactComponent as LightBulb } from './icons/light-bulb.svg';
+
+import treeUrl from './icons/tree.svg?url';
+import { ReactComponent as Tree } from './icons/tree.svg';
+
+import redoUrl from './icons/redo.svg?url';
+import { ReactComponent as Redo } from './icons/redo.svg';
+
+import undoUrl from './icons/undo.svg?url';
+import { ReactComponent as Undo } from './icons/undo.svg';
+
+import logoutUrl from './icons/logout-icon.svg?url';
+import { ReactComponent as Logout } from './icons/logout-icon.svg';
+
+import switchAppUrl from './icons/switch-app-icon.svg?url';
+import { ReactComponent as SwitchApp } from './icons/switch-app-icon.svg';
+
+import switchAppColourUrl from './icons/switch-app-icon-color.svg?url';
+import { ReactComponent as SwitchAppColour } from './icons/switch-app-icon-color.svg';
+
+import binocularUrl from './icons/binocular.svg?url';
+import { ReactComponent as Binocular } from './icons/binocular.svg';
+
+import errorUrl from './icons/error-icon.svg?url';
+import { ReactComponent as Error } from './icons/error-icon.svg';
+
+import oneAcreUrl from './icons/one-acre.svg?url';
+import { ReactComponent as OneAcre } from './icons/one-acre.svg';
+
+import halfAcreUrl from './icons/half-acre.svg?url';
+import { ReactComponent as HalfAcre } from './icons/half-acre.svg';
+
+import oneThirdAcreUrl from './icons/one-third-acre.svg?url';
+import { ReactComponent as OneThirdAcre } from './icons/one-third-acre.svg';
+
+import quarterAcreUrl from './icons/quarter-acre.svg?url';
+import { ReactComponent as QuarterAcre } from './icons/quarter-acre.svg';
+
+import oneSixthAcreUrl from './icons/one-sixth-acre.svg?url';
+import { ReactComponent as OneSixthAcre } from './icons/one-sixth-acre.svg';
+
+import oneEighthAcreUrl from './icons/one-eighth-acre.svg?url';
+import { ReactComponent as OneEighthAcre } from './icons/one-eighth-acre.svg';
+
+import houseFootprint1Url from './icons/house-footprint-1.svg?url';
+import { ReactComponent as HouseFootprint1 } from './icons/house-footprint-1.svg';
+
+import houseFootprint2Url from './icons/house-footprint-2.svg?url';
+import { ReactComponent as HouseFootprint2 } from './icons/house-footprint-2.svg';
+
+import houseFootprint3Url from './icons/house-footprint-3.svg?url';
+import { ReactComponent as HouseFootprint3 } from './icons/house-footprint-3.svg';
+
+import singleGarageUrl from './icons/single-garage.svg?url';
+import { ReactComponent as SingleGarage } from './icons/single-garage.svg';
+
+import doubleGarageUrl from './icons/double-garage.svg?url';
+import { ReactComponent as DoubleGarage } from './icons/double-garage.svg';
+
+import scissorsUrl from './icons/scissors.svg?url';
+import { ReactComponent as Scissors } from './icons/scissors.svg';
+
+import splitPolygonUrl from './icons/split-polygon.svg?url';
+import { ReactComponent as SplitPolygon } from './icons/split-polygon.svg';
+
+import eyeUrl from './icons/eye.svg?url';
+import { ReactComponent as Eye } from './icons/eye.svg';
+
+import filtersUrl from './icons/filters.svg?url';
+import { ReactComponent as Filters } from './icons/filters.svg';
+
+import standardArrowUrl from './icons/standard-arrow.svg?url';
+import { ReactComponent as StandardArrow } from './icons/standard-arrow.svg';
+
+import bringToFrontUrl from './icons/bring-to-front.svg?url';
+import { ReactComponent as BringToFront } from './icons/bring-to-front.svg';
+
+import sendToBackUrl from './icons/send-to-back.svg?url';
+import { ReactComponent as SendToBack } from './icons/send-to-back.svg';
+
+import alignLeftUrl from './icons/left-align.svg?url';
+import { ReactComponent as AlignLeft } from './icons/left-align.svg';
+
+import alignCenterUrl from './icons/center-align.svg?url';
+import { ReactComponent as AlignCenter } from './icons/center-align.svg';
+
+import alignRightUrl from './icons/right-align.svg?url';
+import { ReactComponent as AlignRight } from './icons/right-align.svg';
+
+import verifiedUrl from './icons/verified.svg?url';
+import { ReactComponent as Verified } from './icons/verified.svg';
+
+import goToUrl from './icons/go-to.svg?url';
+import { ReactComponent as GoTo } from './icons/go-to.svg';
+
+import moreInfoUrl from './icons/more-info.svg?url';
+import { ReactComponent as MoreInfo } from './icons/more-info.svg';
+
+import copyIconUrl from './icons/copy-icon.svg?url';
+import { ReactComponent as Copy } from './icons/copy-icon.svg';
+
+import freeholdAutoPolygonUrl from './icons/freehold-autopolygon.svg?url';
+import { ReactComponent as FreeholdAutoPolygon } from './icons/freehold-autopolygon.svg';
+
+import actionsIndicatorUrl from './icons/actions-indicator.svg?url';
+import { ReactComponent as ActionsIndicator } from './icons/actions-indicator.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 

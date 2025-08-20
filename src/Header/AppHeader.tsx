@@ -44,6 +44,7 @@ export interface AppHeaderProps extends Context {
   logoSection: React.ReactNode;
   isAuthenticated?: boolean;
   edozoProducts?: ProductInfo[];
+  children?: React.ReactNode;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({
