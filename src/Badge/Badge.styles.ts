@@ -1,23 +1,28 @@
 import styled, { css } from 'styled-components';
-import { BadgeProps } from './Badge';
 
 const resolveColor = (theme: any, color?: string): string | undefined => {
   if (!color) return undefined;
   return theme.colors.aliases[color] || theme.colors[color] || color;
 };
 
-export const StyledBadge = styled.div<BadgeProps>`
+interface StyledBadgeProps {
+  $background?: string;
+  $color?: string;
+  $size?: 'xxsmall' | 'small' | 'standard';
+}
+
+export const StyledBadge = styled.div<StyledBadgeProps>`
   display: inline-block;
   font-family: ${p => p.theme.font.family.main};
   font-weight: ${p => p.theme.font.weight.bold};
-  color: ${p => resolveColor(p.theme, p.color)};
-  background-color: ${p => resolveColor(p.theme, p.background)};
+  color: ${p => resolveColor(p.theme, p.$color)};
+  background-color: ${p => resolveColor(p.theme, p.$background)};
   text-align: center;
 
   ${p => {
-    const backgroundColor = resolveColor(p.theme, p.background);
+    const backgroundColor = resolveColor(p.theme, p.$background);
     return (
-      p.size === 'standard' &&
+      p.$size === 'standard' &&
       css`
         padding: ${p.theme.spacing.xxsmall} ${p.theme.spacing.xsmall};
         border-radius: ${p.theme.borderRadius.standard};
@@ -29,9 +34,9 @@ export const StyledBadge = styled.div<BadgeProps>`
   }}
 
   ${p => {
-    const backgroundColor = resolveColor(p.theme, p.background);
+    const backgroundColor = resolveColor(p.theme, p.$background);
     return (
-      p.size === 'small' &&
+      p.$size === 'small' &&
       css`
         padding: 2px ${p.theme.spacing.xxsmall};
         border-radius: ${p.theme.borderRadius.small};
@@ -43,9 +48,9 @@ export const StyledBadge = styled.div<BadgeProps>`
   }}
 
   ${p => {
-    const backgroundColor = resolveColor(p.theme, p.background);
+    const backgroundColor = resolveColor(p.theme, p.$background);
     return (
-      p.size === 'xxsmall' &&
+      p.$size === 'xxsmall' &&
       css`
         padding: 0 2px;
         border-radius: ${p.theme.borderRadius.small};

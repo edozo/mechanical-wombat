@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledBadge } from './Badge.styles';
 
-export interface BadgeProps {
+interface BadgeProps {
   /**
    * The background colour
    */
@@ -27,7 +27,7 @@ export const Badge: React.FC<BadgeProps> = ({
   children,
   ...props
 }) => (
-  <StyledBadge background={background} color={color} size={size} {...props}>
+  <StyledBadge $background={background} $color={color} $size={size} {...props}>
     {children}
   </StyledBadge>
 );
