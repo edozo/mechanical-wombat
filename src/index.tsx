@@ -21,5 +21,7 @@ export { EmptyState } from './EmptyState';
 export { Error, NotFound, GenericError } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
 export { Header, AppHeader, Menu, AppName } from './Header';
-
+export { Skeleton } from './Skeleton';
+export { SkeletonLine } from './Skeleton/SkeletonLine';
+export { SkeletonGroup } from './Skeleton/SkeletonGroup';
 export { ThemeProvider } from './ThemeProvider';
