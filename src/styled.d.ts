@@ -95,18 +95,6 @@ declare module 'styled-components' {
         green: string;
         greenDark: string;
         greenDarker: string;
-        // Orange
-        orangeLighter: string;
-        orangeLight: string;
-        orange: string;
-        orangeDark: string;
-        orangeDarker: string;
-        // Purple
-        purpleLighter: string;
-        purpleLight: string;
-        purple: string;
-        purpleDark: string;
-        purpleDarker: string;
         // Yellow
         yellowLighter: string;
         yellowLight: string;

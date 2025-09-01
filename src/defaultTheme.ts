@@ -13,6 +13,18 @@ const colors = {
   green: '#85DC42',
   greenDark: '#66AB37',
   greenDarker: '#51842E',
+  // Orange
+  orangeLighter: '#FFBDA0',
+  orangeLight: '#FFA178',
+  orange: '#FF8955',
+  orangeDark: '#DE571B',
+  orangeDarker: '#B4542B',
+  // Purple
+  purpleLighter: '#CC8DF1',
+  purpleLight: '#A52CED',
+  purple: '#7E0AC2',
+  purpleDark: '#4E0A76',
+  purpleDarker: '#2E0845',
   // Steel blue
   steelBlueLighter: '#F7FAFC',
   steelBlueLight: '#F1F5FD',
