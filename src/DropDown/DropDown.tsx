@@ -9,7 +9,7 @@ import {
   StyledListItemImage,
   StyledArrow,
 } from './DropDown.styles';
-import { ReactComponent as ArrowIcon } from './arrow.svg';
+import ArrowIcon from './arrow.svg';
 
 export interface DropDownItem {
   label: React.ReactNode;

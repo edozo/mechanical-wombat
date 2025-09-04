@@ -14,9 +14,14 @@ export default defineConfig({
   platform: 'browser',
   target: 'es2020',
   shims: false,
+  loader: {
+    '.svg': 'tsx',
+  },
   esbuildPlugins: [
     svgr({
       exportType: 'named',
+      namedExport: 'ReactComponent',
+      typescript: true,
       runtimeConfig: true,
     }),
   ],

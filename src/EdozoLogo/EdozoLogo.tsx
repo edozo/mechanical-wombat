@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
-import { ReactComponent as EdozoLogoSvg } from './assets/edozo-logo.svg';
-import { ReactComponent as InsightLogo } from './assets/insight-logo.svg';
-import { ReactComponent as OccupiersLogo } from './assets/occupiers-logo.svg';
-import { ReactComponent as MapsLogo } from './assets/maps-logo.svg';
-import { ReactComponent as HelpCentreLogo } from './assets/help-centre-logo.svg';
-import { ReactComponent as ReportsLogo } from './assets/reports-logo.svg';
+import EdozoLogoSvg from './assets/edozo-logo.svg';
+import InsightLogo from './assets/insight-logo.svg';
+import OccupiersLogo from './assets/occupiers-logo.svg';
+import MapsLogo from './assets/maps-logo.svg';
+import HelpCentreLogo from './assets/help-centre-logo.svg';
+import ReportsLogo from './assets/reports-logo.svg';
 import { BetaBadge, LogoWrapper, StyledLogo } from './EdozoLogo.styles';
 
 export type LogoVariants = 'edozo' | 'maps' | 'insight' | 'occupiers' | 'helpCentre' | 'reports';
