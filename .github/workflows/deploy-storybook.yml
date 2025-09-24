@@ -18,6 +18,8 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - name: Install dependencies
         run: yarn install
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Storybook
         run: yarn build-storybook
       - name: Deploy to GitHub Pages
