@@ -12,7 +12,7 @@ const config: StorybookConfig = {
 
   viteFinal: async (viteConfig) => {
     const svgrPlugin = svgr({
-      svgrOptions: { exportType: 'named' },
+      svgrOptions: { exportType: 'default' },
       // ensure all svgs are handled
       include: '**/*.svg',
     }) as any;
