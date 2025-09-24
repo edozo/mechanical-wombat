@@ -19,8 +19,7 @@ export default defineConfig({
   },
   esbuildPlugins: [
     svgr({
-      exportType: 'named',
-      namedExport: 'ReactComponent',
+      exportType: 'default',
       typescript: true,
       runtimeConfig: true,
     }),
