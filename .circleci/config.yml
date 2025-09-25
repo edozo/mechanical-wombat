@@ -1,6 +1,24 @@
 version: 2.1
 
 jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:20.10
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Test
+          command: yarn test
+
+      - run:
+          name: Build
+          command: yarn build
+
   build-and-publish:
     docker:
       - image: cimg/node:20.10
@@ -28,12 +46,47 @@ jobs:
           name: Publish
           command: npm publish
 
+  deploy-storybook:
+    docker:
+      - image: cimg/node:20.10
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Build Storybook
+          command: yarn build-storybook
+
+      - run:
+          name: Deploy Storybook to GitHub Pages
+          command: |
+            git config --global user.email "ci@circleci.com"
+            git config --global user.name "CircleCI"
+            yarn gh-pages -d storybook-static -b gh-pages
+
 workflows:
   build_and_deploy:
     jobs:
+      - build-and-test:
+          context:
+            - GithubPackages
+      - deploy-storybook:
+          requires:
+            - build-and-test
+          # filters:
+          #   branches:
+          #     only: main
+          context:
+            - GithubPackages
       - build-and-publish:
+          requires:
+            - deploy-storybook
           filters:
             branches:
               only: main
           context:
             - GithubPackages
+      
