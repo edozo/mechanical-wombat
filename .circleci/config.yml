@@ -76,7 +76,7 @@ workflows:
             - GithubPackages
       - publish:
           requires:
-            - deploy-storybook
+            - build-and-test
           filters:
             branches:
               only: main
