@@ -1,0 +1,1 @@
+import{j as e}from"./iframe-ND4VGsRZ.js";import{i as o}from"./shift-away-yoSIhqAF.js";o.defaultProps={animation:"shift-away",delay:[100,0],inertia:!0,placement:"bottom"};const s=({content:t,children:i,...a})=>e.jsx(o,{content:t,...a,children:i});s.__docgenInfo={description:"",methods:[],displayName:"Tooltip"};export{s as T};
