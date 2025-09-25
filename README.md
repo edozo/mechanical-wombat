@@ -2,21 +2,16 @@
 
 > React UI component lib
 
-[![NPM](https://img.shields.io/npm/v/mechanical-wombat.svg)](https://www.npmjs.com/package/mechanical-wombat)
-[![NPM](https://badgen.net/bundlephobia/minzip/mechanical-wombat)](https://badgen.net/bundlephobia/minzip/mechanical-wombat)
+## Installation
 
-## Usage in projects
+`yarn add @edozo/mechanical-wombat`
 
-### Install
-
-```bash
-yarn add mechanical-wombat
-```
+Please make sure you have set the `GH_TOKEN` environment variable on your machine, which should be your personal GitHub token with access to Edozo's packages. See more [here](https://edozohq.atlassian.net/wiki/spaces/DEV/pages/2629238785/Dev+environmen.t+set+up#Access-to-Github-Packages).
 
 ### Usage
 
 ```tsx
-import { MyComponent } from 'mechanical-wombat';
+import { MyComponent } from '@edozo/mechanical-wombat';
 
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
@@ -46,23 +41,21 @@ export const Example: React.FC = ({ children }) => <Button {...props}>{children}
 - In the second run `yarn storybook` this will open your browser at localhost port 9009.
 - You are now ready to start developing reusable components.
 
-### Contributing
+## Testing changes to this library with another application before publishing it
 
-- All changes must be raised as a PR, and reviewed by the team
-- PRs must contain an updated `package.json` version
-- To add a new Icon, [follow these steps](https://github.com/edozo/mechanical-wombat/blob/main/src/Icons/preparing-svgs.md) before creating a PR
+You might want to make sure your changes work when used in another application/library locally before publishing a new version of the library. To do this, you can run `yarn pack`, which will package the library and create a `tgz` file in the project root directory. In your consuming app, you can then run `yarn add ./path/to/package-name-version.tgz`
 
-## Publishing
+## Contributing and publishing
 
-**Only ever release from the main branch, this means all code has been reviewed and approved. If you are unsure, don't release.**
+When making changes to this library, please make sure you:
 
-### Steps
+1. Add tests and run them
+2. Update the version number in `package.json`
+3. Commit changes to a branch, open a PR and get it reviewed
+4. Once approved, merge to the `main` branch
 
-- Merge your PR into the `main` branch
-- Tag and create a release in Github
-- To publish, you will need access to NPM. If you don't have access, please speak to a member of the team
-- In your terminal, run `npm publish --dry-run` to ensure there are no errors
-- In your terminal, run `npm publish`
-- Check that the version has been published [here](https://www.npmjs.com/package/mechanical-wombat)
+All changes to `main` will trigger a build/publish in CircleCI (`GH_TOKEN` will be changed to `GH_PACKAGE_WRITE`, which is a token with permissions to write to GH packages). Once published, you can then upgrade the version of the library in the consuming application. You can check that the version has been published [here](https://github.com/edozo/mechanical-wombat/pkgs/npm/mechanical-wombat).
 
-**You will need access to the NPM account attached**
+### Adding icons
+
+To add a new Icon, [follow these steps](https://github.com/edozo/mechanical-wombat/blob/main/src/Icons/preparing-svgs.md) before creating a PR
