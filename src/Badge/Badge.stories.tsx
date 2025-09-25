@@ -52,10 +52,9 @@ Small.args = {
   background: '#E5EEFE',
 };
 
-// Temporarily removing this to test that Storybook deploy works in CircleCI - will add this back later
-// export const XSmall = Template.bind({});
-// XSmall.args = {
-//   size: 'xxsmall',
-//   children: 'XSmall',
-//   background: '#E5EEFE',
-// };
+export const XSmall = Template.bind({});
+XSmall.args = {
+  size: 'xxsmall',
+  children: 'XSmall',
+  background: '#E5EEFE',
+};
