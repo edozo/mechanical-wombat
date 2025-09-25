@@ -19,7 +19,7 @@ jobs:
           name: Build
           command: yarn build
 
-  build-and-publish:
+  publish:
     docker:
       - image: cimg/node:20.10
     steps:
@@ -63,6 +63,8 @@ jobs:
       - run:
           name: Deploy Storybook to GitHub Pages
           command: |
+            git config --global user.email "ci@circleci.com"
+            git config --global user.name "CircleCI"
             git remote set-url origin https://$GH_PACKAGE_WRITE@github.com/edozo/mechanical-wombat.git
             yarn gh-pages -d storybook-static -b gh-pages
 
@@ -72,15 +74,7 @@ workflows:
       - build-and-test:
           context:
             - GithubPackages
-      - deploy-storybook:
-          requires:
-            - build-and-test
-          # filters:
-          #   branches:
-          #     only: main
-          context:
-            - GithubPackages
-      - build-and-publish:
+      - publish:
           requires:
             - deploy-storybook
           filters:
@@ -88,4 +82,11 @@ workflows:
               only: main
           context:
             - GithubPackages
-      
+      - deploy-storybook:
+          requires:
+            - publish
+          filters:
+            branches:
+              only: main
+          context:
+            - GithubPackages
