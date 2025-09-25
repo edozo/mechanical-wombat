@@ -4,7 +4,7 @@
 
 ## Installation
 
-`yarn add @edozo/mechanical/wombat`
+`yarn add @edozo/mechanical-wombat`
 
 Please make sure you have set the `GH_TOKEN` environment variable on your machine, which should be your personal GitHub token with access to Edozo's packages. See more [here](https://edozohq.atlassian.net/wiki/spaces/DEV/pages/2629238785/Dev+environmen.t+set+up#Access-to-Github-Packages).
 
