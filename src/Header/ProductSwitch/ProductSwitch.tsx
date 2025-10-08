@@ -5,25 +5,31 @@ import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from './Pr
 import { List } from '../../List';
 import { Popover } from '../../Popover';
 import { EdozoLogo } from '../../EdozoLogo';
+import { AppName } from 'Header/Header';
 
-export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
+interface Props {
+  edozoProducts: ProductInfo[];
+  appName: AppName;
+}
+
+export const ProductSwitch: React.FC<Props> = ({ edozoProducts, appName }) => {
   const [platformAppPopover, setPlatformAppPopover] = useState(false);
   const showPopover = (): void => setPlatformAppPopover(true);
   const hidePopover = (): void => setPlatformAppPopover(false);
 
   const linkHandler = (product: ProductInfo): boolean | void => {
-    const { stageUrl, productionUrl } = product;
+    const { url } = product;
     const { hostname } = window.location;
     if (hostname === 'localhost') {
       // eslint-disable-next-line no-restricted-globals, no-alert
       if (confirm('You are being taken away from your local environment')) {
-        window.open(stageUrl, '_blank');
+        window.open(url, '_blank');
         return false;
       }
       return false;
     }
-    const [, , topLevelDomain] = hostname.split('.');
-    topLevelDomain === 'co' ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
+
+    window.open(url, '_blank');
     hidePopover();
   };
 
@@ -39,9 +45,9 @@ export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
         content={
           <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
             <List variant="platform">
-              {edozoProducts.map((product: any) => (
+              {edozoProducts.map(product => (
                 <List.Item
-                  key={product.productionUrl}
+                  key={product.url}
                   onClick={() => linkHandler(product)}
                   disabled={product.disabled || appName === product.appName}
                 >
