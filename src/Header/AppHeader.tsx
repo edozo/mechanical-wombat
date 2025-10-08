@@ -52,14 +52,16 @@ export const AppHeader: React.FC<AppHeaderProps> = ({
 }) => (
   <Header appName={appName}>
     {logoSection}
-    <Menu>
-      {isAuthenticated && children}
-      <Menu.PlatformMenu>
-        <ProductSwitch edozoProducts={edozoProducts} appName={appName} />
-        <Menu.PlatformButton onClick={logout} data-testid="logoutButton">
-          <LogoutIcon size="small" />
-        </Menu.PlatformButton>
-      </Menu.PlatformMenu>
-    </Menu>
+    {isAuthenticated && (
+      <Menu>
+        {children}
+        <Menu.PlatformMenu>
+          <ProductSwitch edozoProducts={edozoProducts} appName={appName} />
+          <Menu.PlatformButton onClick={logout} data-testid="logoutButton">
+            <LogoutIcon size="small" />
+          </Menu.PlatformButton>
+        </Menu.PlatformMenu>
+      </Menu>
+    )}
   </Header>
 );
