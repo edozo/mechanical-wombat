@@ -135,4 +135,8 @@ export const RoundedItem = TemplateWithItemEnd.bind({});
 RoundedItem.args = {
   radius: 'round',
 };
+
 export const GlobalSearchExample = GlobalSearchTemplate.bind({});
+GlobalSearchExample.args = {
+  inputSize: 'standard',
+};
