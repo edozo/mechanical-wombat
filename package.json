@@ -1,6 +1,6 @@
 {
   "name": "@edozo/mechanical-wombat",
-  "version": "3.0.0",
+  "version": "3.1.1",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -43,7 +43,9 @@
     "lintfix": "eslint --ext .ts --ext .tsx src --fix && yarn lint:css",
     "lint:css": "stylelint './src/**/*.ts'",
     "test": "echo \"No tests configured\" && exit 0",
-    "test:watch": "echo \"No tests configured\" && exit 0"
+    "test:watch": "echo \"No tests configured\" && exit 0",
+    "martin": "yarn build-storybook && aws s3 sync storybook-static/ s3://martin-test.edozo.co/",
+    "harry": "yarn build-storybook && aws s3 sync storybook-static/ s3://harry-test.edozo.co/ --delete"
   },
   "dependencies": {
     "react-collapsed": "2.0.0"
