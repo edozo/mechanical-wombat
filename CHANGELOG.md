@@ -9,3 +9,7 @@
 
 - Add `small` size option for the DropDown component.
 - Add `small` size option for the GlobalSearch component.
+
+## v3.1.1
+
+- Add reach scripts to push to s3
