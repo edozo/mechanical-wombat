@@ -23,6 +23,7 @@ export interface Props {
   onChange: (item?: DropDownItem) => void;
   selectedItem: DropDownItem;
   initialSelectedItem?: DropDownItem;
+  size?: 'small' | 'standard';
 }
 
 const itemToString = (item: DropDownItem): string => (item ? item.value.toString() : '');
@@ -44,45 +45,64 @@ const preventDisabledSelection: DownshiftProps<DropDownItem>['stateReducer'] = (
   return changes;
 };
 
-export const DropDown = (props: Props): JSX.Element => (
-  <div>
-    <Downshift {...props} itemToString={itemToString} stateReducer={preventDisabledSelection}>
-      {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
-        <div {...getRootProps()}>
-          <StyledDownshiftWrapper>
-            <StyledDownshiftPreview {...getToggleButtonProps()}>
-              <StyledDownshiftPreviewInner>
-                {selectedItem && selectedItem.thumbnail && (
-                  <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
-                )}
-                {selectedItem?.label}
-              </StyledDownshiftPreviewInner>
-              <StyledArrow $isOpen={isOpen} aria-hidden>
-                <ArrowIcon />
-              </StyledArrow>
-            </StyledDownshiftPreview>
-            {/* Always render the menu root so Downshift can attach refs/aria correctly */}
-            <StyledList {...getMenuProps({ refKey: 'ref' })} hidden={!isOpen}>
-              {isOpen &&
-                props.items.map((item: DropDownItem, index: number) => (
-                  <StyledListItem
-                    highlighted={highlightedIndex !== undefined && index === highlightedIndex}
-                    selectedItem={item.value === selectedItem?.value}
-                    $disabled={!!item.disabled}
-                    {...getItemProps({
-                      item,
-                      key: item.value,
-                      disabled: item.disabled,
-                    })}
-                  >
-                    {item.thumbnail && <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />}
-                    {item.label}
-                  </StyledListItem>
-                ))}
-            </StyledList>
-          </StyledDownshiftWrapper>
-        </div>
-      )}
-    </Downshift>
-  </div>
-);
+export const DropDown = (props: Props): JSX.Element => {
+  const { size = 'standard', ...downshiftProps } = props;
+
+  return (
+    <div>
+      <Downshift {...downshiftProps} itemToString={itemToString} stateReducer={preventDisabledSelection}>
+        {({
+          getMenuProps,
+          getItemProps,
+          getToggleButtonProps,
+          highlightedIndex,
+          selectedItem,
+          isOpen,
+          getRootProps,
+        }) => (
+          <div {...getRootProps()}>
+            <StyledDownshiftWrapper>
+              <StyledDownshiftPreview $size={size} {...getToggleButtonProps()}>
+                <StyledDownshiftPreviewInner>
+                  {selectedItem && selectedItem.thumbnail && (
+                    <StyledListItemImage
+                      $size={size}
+                      alt={`${selectedItem.label} - thumbnail`}
+                      src={selectedItem.thumbnail}
+                    />
+                  )}
+                  {selectedItem?.label}
+                </StyledDownshiftPreviewInner>
+                <StyledArrow $size={size} $isOpen={isOpen} aria-hidden>
+                  <ArrowIcon />
+                </StyledArrow>
+              </StyledDownshiftPreview>
+              {/* Always render the menu root so Downshift can attach refs/aria correctly */}
+              <StyledList {...getMenuProps({ refKey: 'ref' })} hidden={!isOpen}>
+                {isOpen &&
+                  props.items.map((item: DropDownItem, index: number) => (
+                    <StyledListItem
+                      $size={size}
+                      highlighted={highlightedIndex !== undefined && index === highlightedIndex}
+                      selectedItem={item.value === selectedItem?.value}
+                      $disabled={!!item.disabled}
+                      {...getItemProps({
+                        item,
+                        key: item.value,
+                        disabled: item.disabled,
+                      })}
+                    >
+                      {item.thumbnail && (
+                        <StyledListItemImage $size={size} alt={`${item.label} - thumbnail`} src={item.thumbnail} />
+                      )}
+                      {item.label}
+                    </StyledListItem>
+                  ))}
+              </StyledList>
+            </StyledDownshiftWrapper>
+          </div>
+        )}
+      </Downshift>
+    </div>
+  );
+};

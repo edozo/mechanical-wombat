@@ -5,13 +5,14 @@ export interface StyleProps {
   highlighted?: boolean;
   selectedItem?: boolean;
   $disabled?: boolean;
+  $size?: 'small' | 'standard';
 }
 
 export const StyledDownshiftWrapper = styled.div`
   position: relative;
 `;
 
-export const StyledDownshiftPreview = styled.button`
+export const StyledDownshiftPreview = styled.button<StyleProps>`
   border: 1px solid ${p => p.theme.colors.steelBlueDark};
   border-radius: ${p => p.theme.borderRadius.small};
   background: white;
@@ -21,9 +22,9 @@ export const StyledDownshiftPreview = styled.button`
   font-weight: 700;
   align-items: center;
   justify-content: space-between;
-  padding: ${p => p.theme.spacing.xsmall};
-  font-size: ${p => p.theme.font.size.text.base};
-  line-height: ${p => p.theme.font.lineHeight.text.base};
+  padding: ${p => (p.$size === 'small' ? p.theme.spacing.xxsmall : p.theme.spacing.xsmall)};
+  font-size: ${p => (p.$size === 'small' ? p.theme.font.size.text.small : p.theme.font.size.text.base)};
+  line-height: ${p => (p.$size === 'small' ? p.theme.font.lineHeight.text.small : p.theme.font.lineHeight.text.base)};
   &:focus {
     outline: none;
   }
@@ -68,15 +69,15 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li<StyleProps>`
   margin: 0;
-  padding: ${p => p.theme.spacing.xsmall};
+  padding: ${p => (p.$size === 'small' ? p.theme.spacing.xxsmall : p.theme.spacing.xsmall)};
   color: ${p => p.theme.colors.grayDark};
   background: transparent;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: start;
-  font-size: ${p => p.theme.font.size.text.base};
-  line-height: ${p => p.theme.font.lineHeight.text.base};
+  font-size: ${p => (p.$size === 'small' ? p.theme.font.size.text.small : p.theme.font.size.text.base)};
+  line-height: ${p => (p.$size === 'small' ? p.theme.font.lineHeight.text.small : p.theme.font.lineHeight.text.base)};
   transition: all 200ms;
   cursor: pointer;
   ${p =>
@@ -103,10 +104,10 @@ export const StyledListItem = styled.li<StyleProps>`
     `};
 `;
 
-export const StyledListItemImage = styled.img`
-  width: 40px;
-  height: 32px;
-  margin-right: ${p => p.theme.spacing.small};
+export const StyledListItemImage = styled.img<StyleProps>`
+  width: ${p => (p.$size === 'small' ? '32px' : '40px')};
+  height: ${p => (p.$size === 'small' ? '24px' : '32px')};
+  margin-right: ${p => (p.$size === 'small' ? p.theme.spacing.xsmall : p.theme.spacing.small)};
   border: 1px solid ${p => p.theme.colors.steelBlueDark};
   border-radius: ${p => p.theme.borderRadius.small};
 `;
@@ -116,4 +117,8 @@ export const StyledArrow = styled.span<StyleProps>`
   transform: rotate(${p => (p.$isOpen ? '180deg' : '0deg')});
   transition: transform 200ms;
   line-height: 0;
+  align-items: center;
+  width: ${p => (p.$size === 'small' ? '16px' : '24px')};
+  height: ${p => (p.$size === 'small' ? '16px' : '24px')};
+  margin-left: ${p => (p.$size === 'small' ? '4px' : '8px')};
 `;

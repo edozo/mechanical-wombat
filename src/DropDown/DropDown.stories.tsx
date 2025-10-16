@@ -1,5 +1,5 @@
 import { StoryFn, Meta } from '@storybook/react';
-import { DropDown } from './DropDown';
+import { DropDown, DropDownItem, Props } from './DropDown';
 
 export default {
   title: 'Components/DropDown',
@@ -7,7 +7,7 @@ export default {
   component: DropDown,
 } as Meta;
 
-const itemsWithImages = [
+const itemsWithImages: DropDownItem[] = [
   {
     label: 'Item 1',
     value: 'item1',
@@ -17,16 +17,18 @@ const itemsWithImages = [
   {
     label: 'Item 2',
     value: 'item2',
-    thumbnail: 'https://i1.pngguru.com/preview/350/922/403/classic-car-icon-256-png-icon.jpg',
+    thumbnail:
+      'https://is2-ssl.mzstatic.com/image/thumb/Purple69/v4/6f/b1/4a/6fb14a9a-d356-0d33-69c9-2f39ed7f0ecd/source/256x256bb.jpg',
   },
   {
     label: 'Item 3',
     value: 'item3',
-    thumbnail: 'https://i1.pngguru.com/preview/350/922/403/classic-car-icon-256-png-icon.jpg',
+    thumbnail:
+      'https://is2-ssl.mzstatic.com/image/thumb/Purple69/v4/6f/b1/4a/6fb14a9a-d356-0d33-69c9-2f39ed7f0ecd/source/256x256bb.jpg',
   },
 ];
 
-const items = [
+const items: DropDownItem[] = [
   {
     label: 'Item 1',
     value: 'item1',
@@ -41,14 +43,40 @@ const items = [
   },
 ];
 
-export const WithImages: StoryFn = args => (
+const Template: StoryFn<Props> = args => (
   <div style={{ height: '200px' }}>
-    <DropDown selectedItem={itemsWithImages[1]} items={itemsWithImages} onChange={args.onChange} />
+    <DropDown {...args} />
   </div>
 );
 
-export const WithoutImages: StoryFn = args => (
-  <div style={{ height: '200px' }}>
-    <DropDown selectedItem={items[2]} items={items} onChange={args.onChange} />
-  </div>
-);
+export const WithImages = Template.bind({});
+WithImages.args = {
+  selectedItem: itemsWithImages[1],
+  items: itemsWithImages,
+  onChange: () => {},
+  size: 'standard',
+};
+
+export const WithoutImages = Template.bind({});
+WithoutImages.args = {
+  selectedItem: items[2],
+  items: items,
+  onChange: () => {},
+  size: 'standard',
+};
+
+export const SmallWithImages = Template.bind({});
+SmallWithImages.args = {
+  selectedItem: itemsWithImages[0],
+  items: itemsWithImages,
+  onChange: () => {},
+  size: 'small',
+};
+
+export const SmallWithoutImages = Template.bind({});
+SmallWithoutImages.args = {
+  selectedItem: items[1],
+  items: items,
+  onChange: () => {},
+  size: 'small',
+};

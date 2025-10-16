@@ -7,15 +7,32 @@ interface Props {
   placeholder: string;
   disabled: boolean;
   name: string;
+  inputSize?: 'standard' | 'large';
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   reset: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const GlobalSearch: React.FC<Props> = props => (
-  <InputGroup border={false} inputSize="large" {...props}>
+export const GlobalSearch: React.FC<Props> = ({
+  value,
+  placeholder,
+  disabled,
+  name,
+  inputSize = 'large',
+  onChange,
+  reset,
+}) => (
+  <InputGroup
+    border={false}
+    inputSize={inputSize}
+    value={value}
+    placeholder={placeholder}
+    disabled={disabled}
+    name={name}
+    onChange={onChange}
+  >
     <InputGroup.Input />
     <InputGroup.Item>
-      {props.value ? <InputGroup.Button onClick={props.reset}>&times;</InputGroup.Button> : <SearchIcon />}
+      {value ? <InputGroup.Button onClick={reset}>&times;</InputGroup.Button> : <SearchIcon />}
     </InputGroup.Item>
   </InputGroup>
 );
