@@ -54,6 +54,7 @@ WithImages.args = {
   selectedItem: itemsWithImages[1],
   items: itemsWithImages,
   onChange: () => {},
+  size: 'standard',
 };
 
 export const WithoutImages = Template.bind({});
@@ -61,4 +62,21 @@ WithoutImages.args = {
   selectedItem: items[2],
   items: items,
   onChange: () => {},
+  size: 'standard',
+};
+
+export const SmallWithImages = Template.bind({});
+SmallWithImages.args = {
+  selectedItem: itemsWithImages[0],
+  items: itemsWithImages,
+  onChange: () => {},
+  size: 'small',
+};
+
+export const SmallWithoutImages = Template.bind({});
+SmallWithoutImages.args = {
+  selectedItem: items[1],
+  items: items,
+  onChange: () => {},
+  size: 'small',
 };
