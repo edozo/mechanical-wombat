@@ -1,1 +1,2 @@
-export { NotificationBar } from './NotificationBar';
+export { NotificationBar, NotificationBarAccordion } from './NotificationBar';
+export type { NotificationBarProps, NotificationBarAccordionProps } from './NotificationBar';
