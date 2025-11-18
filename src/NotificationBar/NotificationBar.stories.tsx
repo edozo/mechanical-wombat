@@ -1,5 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
-import { NotificationBar, NotificationBarProps } from './NotificationBar';
+import { NotificationBar, NotificationBarAccordion } from './NotificationBar';
+import type { NotificationBarProps } from './NotificationBar';
 import { StyledWarningIcon } from './NotificationBar.styles';
 
 export default {
@@ -19,4 +20,21 @@ const Template: StoryFn<NotificationBarProps> = args => (
   </NotificationBar>
 );
 
-export const Controlled = Template.bind({});
+export const Default = Template.bind({});
+
+export const Accordion = () => (
+  <NotificationBarAccordion
+    variant="info"
+    details={
+      <span>
+        This is the details content that is <strong>hidden by default</strong>. It will expand when you click the 'Show
+        more' button. You can include any additional information here that users might need but don't need to see
+        immediately.
+      </span>
+    }
+  >
+    <span>
+      This is the <strong>summary</strong> content that is always visible.
+    </span>
+  </NotificationBarAccordion>
+);
