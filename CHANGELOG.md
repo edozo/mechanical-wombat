@@ -13,3 +13,11 @@
 ## v3.1.1
 
 - Add reach scripts to push to s3
+
+## v3.2.0
+
+- Add `NotificationBarAccordion` to allow collapsible section in notification bar.
+
+## v3.3.0
+
+- Add AI Icon

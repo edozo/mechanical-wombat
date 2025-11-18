@@ -304,6 +304,9 @@ import FreeholdAutoPolygon from './icons/freehold-autopolygon.svg';
 import actionsIndicatorUrl from './icons/actions-indicator.svg?url';
 import ActionsIndicator from './icons/actions-indicator.svg';
 
+import aiThreeStarsUrl from './icons/ai-three-stars.svg?url';
+import AiThreeStars from './icons/ai-three-stars.svg';
+
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
 export interface Props {
@@ -1028,6 +1031,7 @@ const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
     <GoTo fill={fill} {...props} />
   </IconWrapper>
 );
+export { GoToIcon, goToUrl };
 
 const CopyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
@@ -1036,4 +1040,9 @@ const CopyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { CopyIcon, copyIconUrl };
 
-export { GoToIcon, goToUrl };
+const AiThreeStarsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
+  <IconWrapper size={size}>
+    <AiThreeStars fill={fill} {...props} />
+  </IconWrapper>
+);
+export { AiThreeStarsIcon, aiThreeStarsUrl };
