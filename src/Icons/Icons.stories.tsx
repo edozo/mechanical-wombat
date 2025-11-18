@@ -104,6 +104,7 @@ import {
   FreeholdAutoPolygonIcon,
   LeaseholdAutoPolygonIcon,
   ActionsIndicatorIcon,
+  AiThreeStarsIcon,
 } from '.';
 
 export default {
@@ -159,6 +160,7 @@ const solidIcons = [
   { name: 'Align center', component: <AlignCenterIcon /> },
   { name: 'Align right', component: <AlignRightIcon /> },
   { name: 'Go To', component: <GoToIcon /> },
+  { name: 'Ai Three Stars', component: <AiThreeStarsIcon /> },
 ];
 
 const outlinedIcons = [
