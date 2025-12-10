@@ -33,7 +33,7 @@ export const StyledMenuItem = styled.div.withConfig({
         p.appName === 'occupiers' &&
         css`
           background: ${p.theme.colors.appColors.occupiers};
-        `} 
+        `}
       ${p =>
         p.appName === 'insight' &&
         css`
@@ -43,6 +43,11 @@ export const StyledMenuItem = styled.div.withConfig({
         p.appName === 'reports' &&
         css`
           background: ${p.theme.colors.appColors.reports};
+        `}
+      ${p =>
+        p.appName === 'extract' &&
+        css`
+          background: ${p.theme.colors.appColors.extract};
         `}
       position: absolute;
       bottom: 0;
@@ -56,12 +61,12 @@ export const StyledMenuItem = styled.div.withConfig({
         p.appName === 'maps' &&
         css`
           color: ${p.theme.colors.aliases.primary};
-        `} 
+        `}
       ${p =>
         p.appName === 'occupiers' &&
         css`
           color: ${p.theme.colors.appColors.occupiers};
-        `} 
+        `}
       ${p =>
         p.appName === 'insight' &&
         css`
@@ -71,6 +76,11 @@ export const StyledMenuItem = styled.div.withConfig({
         p.appName === 'reports' &&
         css`
           color: ${p.theme.colors.appColors.reports};
+        `}
+      ${p =>
+        p.appName === 'extract' &&
+        css`
+          color: ${p.theme.colors.appColors.extract};
         `}
     }
 

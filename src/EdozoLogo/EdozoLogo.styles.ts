@@ -33,7 +33,7 @@ export const StyledLogo = styled.div.withConfig({
           width: 149px;
           height: 26px;
         `}
-      
+
       /* OCCUPIERS */
       ${({ size, variant }) =>
         size === 'small' &&
@@ -97,7 +97,22 @@ export const StyledLogo = styled.div.withConfig({
           width: 163px;
           height: 26px;
         `}
-        
+
+      /* EXTRACT */
+      ${({ size, variant }) =>
+        size === 'small' &&
+        variant === 'extract' &&
+        css`
+          width: 127px;
+          height: 17px;
+        `}
+      ${({ size, variant }) =>
+        size === 'standard' &&
+        variant === 'extract' &&
+        css`
+          width: 185px;
+          height: 23px;
+        `}
       /* EDOZO */
       ${({ size, variant }) =>
         size === 'small' &&

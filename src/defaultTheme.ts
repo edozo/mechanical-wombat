@@ -201,6 +201,7 @@ const defaultTheme: DefaultTheme = {
       occupiers: '#7e0bc2',
       insight: '#ff8955',
       reports: colors.steelBlueDarker,
+      extract: colors.steelBlueDarker,
     },
   },
   font,
