@@ -113,6 +113,7 @@ declare module 'styled-components' {
         occupiers: string;
         insight: string;
         reports: string;
+        extract: string;
       };
     };
     font: {
