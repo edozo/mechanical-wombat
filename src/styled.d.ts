@@ -8,16 +8,68 @@ declare module 'styled-components' {
     large: string;
     xlarge: string;
   }
+
+  const removalText = 'Will remain available until all apps are migrated (no planned removal date yet).';
+  const removalReason = 'Why this token is deprecated.';
+
   export interface DefaultTheme {
     name: string;
     spacing: {
+      // ❌ legacy (avoid using these tokens)
+      /**
+       * @deprecated Use `xs` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       xxsmall: string;
+
+      /**
+       * @deprecated Use `sm` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       xsmall: string;
+
+      /** @deprecated Use `md` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       small: string;
+
+      /** @deprecated Use `lg` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       base: string;
+
+      /** @deprecated Use `xl` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       large: string;
+
+      /** @deprecated Use `2xl` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       xlarge: string;
+
+      /** @deprecated Use `3xl` instead.
+       * Reason: ${removalReason}
+       * Removal: ${removalText}
+       */
       xxlarge: string;
+
+      // ✅ preferred (new usage)
+      '3xs': string;
+      '2xs': string;
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+      '3xl': string;
     };
     icons: {
       xxsmall: string;

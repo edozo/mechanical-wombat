@@ -16,6 +16,10 @@ import { MyComponent } from '@edozo/mechanical-wombat';
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
 
+### ESM and tree shaking
+
+This library ships both ESM and CJS builds. To get the best tree shaking, make sure your bundler resolves the ESM entry (`module` / `exports` `import`) rather than the CJS `main`. Most modern bundlers do this by default, but if you see large bundles, check that your tooling is using the ESM build.
+
 ~~[Hosted Storybook](https://5f86b8bef322ef002224b643-dyvtiddehm.chromatic.com/) to find a list of currently available components~~
 [Hosted Storybook](https://edozo.github.io/mechanical-wombat/) to find a list of currently available components
 
