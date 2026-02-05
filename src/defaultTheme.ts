@@ -77,6 +77,11 @@ const colors = {
 /* FONT */
 /**
  * @deprecated Use `typography` tokens instead.
+ *
+ * @remarks
+ * Reason: Because the font tokens are not consistent with the typography tokens.
+ *
+ * Removal: Will remain available until all apps are migrated (no planned removal date yet).
  */
 const font = {
   family: {
@@ -138,23 +143,20 @@ const font = {
   },
 };
 
+/* TYPOGRAPHY */
 export const typography = {
   fontFamily: {
     sans: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
   },
-
   fontWeight: {
     regular: 400,
     medium: 500,
     semibold: 600,
   },
-
   letterSpacing: {
     normal: '0',
     tight: '-0.01em',
   },
-
-  // size tokens (canonical)
   fontSize: {
     '2xs': '10px',
     xs: '12px',
@@ -166,8 +168,6 @@ export const typography = {
     '3xl': '32px',
     '4xl': '40px',
   },
-
-  // line-height tokens (paired to sizes)
   lineHeight: {
     '2xs': '14px',
     xs: '16px',
@@ -179,19 +179,16 @@ export const typography = {
     '3xl': '40px',
     '4xl': '48px',
   },
-
-  // role aliases (preferred usage)
   role: {
     body: { size: 'md', lineHeight: 'md', weight: 'regular', letterSpacing: 'normal' },
     caption: { size: 'xs', lineHeight: 'xs', weight: 'regular', letterSpacing: 'normal' },
     label: { size: 'sm', lineHeight: 'sm', weight: 'medium', letterSpacing: 'normal' },
-
     headingSm: { size: 'xl', lineHeight: 'xl', weight: 'semibold', letterSpacing: 'normal' },
     headingMd: { size: '2xl', lineHeight: '2xl', weight: 'semibold', letterSpacing: 'tight' },
     headingLg: { size: '3xl', lineHeight: '3xl', weight: 'semibold', letterSpacing: 'tight' },
     display: { size: '4xl', lineHeight: '4xl', weight: 'semibold', letterSpacing: 'tight' },
   },
-} as const;
+};
 
 /**
 /** BREAKPOINTS

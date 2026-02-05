@@ -199,46 +199,46 @@ declare module 'styled-components' {
     };
     role: {
       body: {
-        size: 'md';
-        lineHeight: 'md';
-        weight: 'regular';
-        letterSpacing: 'normal';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       caption: {
-        size: 'xs';
-        lineHeight: 'xs';
-        weight: 'regular';
-        letterSpacing: 'normal';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       label: {
-        size: 'sm';
-        lineHeight: 'sm';
-        weight: 'medium';
-        letterSpacing: 'normal';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       headingSm: {
-        size: 'xl';
-        lineHeight: 'xl';
-        weight: 'semibold';
-        letterSpacing: 'normal';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       headingMd: {
-        size: '2xl';
-        lineHeight: '2xl';
-        weight: 'semibold';
-        letterSpacing: 'tight';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       headingLg: {
-        size: '3xl';
-        lineHeight: '3xl';
-        weight: 'semibold';
-        letterSpacing: 'tight';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
       display: {
-        size: '4xl';
-        lineHeight: '4xl';
-        weight: 'semibold';
-        letterSpacing: 'tight';
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
       };
     };
   }
@@ -336,7 +336,7 @@ declare module 'styled-components' {
       };
     };
     /**
-     * @deprecated Use `typorgraphy` instead.
+     * @deprecated Use `typography` instead.
      */
     font: {
       family: {
@@ -397,7 +397,7 @@ declare module 'styled-components' {
         regular: number;
       };
     };
-    typorgraphy: Typography;
+    typography: Typography;
     breakpoints: {
       sm: string;
       md: string;
