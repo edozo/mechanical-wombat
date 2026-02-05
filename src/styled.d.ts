@@ -116,6 +116,9 @@ declare module 'styled-components' {
         extract: string;
       };
     };
+    /**
+     * @deprecated Use `typography` instead.
+     */
     font: {
       family: {
         main: string;
@@ -173,6 +176,86 @@ declare module 'styled-components' {
         bold: number;
         semibold: number;
         regular: number;
+      };
+    };
+    typography: {
+      fontFamily: {
+        sans: string;
+      };
+      fontWeight: {
+        regular: number;
+        medium: number;
+        semibold: number;
+      };
+      letterSpacing: {
+        normal: string;
+        tight: string;
+      };
+      fontSize: {
+        '2xs': string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+        '3xl': string;
+        '4xl': string;
+      };
+      lineHeight: {
+        '2xs': string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+        '3xl': string;
+        '4xl': string;
+      };
+      role: {
+        body: {
+          size: 'md';
+          lineHeight: 'md';
+          weight: 'regular';
+          letterSpacing: 'normal';
+        };
+        caption: {
+          size: 'xs';
+          lineHeight: 'xs';
+          weight: 'regular';
+          letterSpacing: 'normal';
+        };
+        label: {
+          size: 'sm';
+          lineHeight: 'sm';
+          weight: 'medium';
+          letterSpacing: 'normal';
+        };
+        headingSm: {
+          size: 'xl';
+          lineHeight: 'xl';
+          weight: 'semibold';
+          letterSpacing: 'normal';
+        };
+        headingMd: {
+          size: '2xl';
+          lineHeight: '2xl';
+          weight: 'semibold';
+          letterSpacing: 'tight';
+        };
+        headingLg: {
+          size: '3xl';
+          lineHeight: '3xl';
+          weight: 'semibold';
+          letterSpacing: 'tight';
+        };
+        display: {
+          size: '4xl';
+          lineHeight: '4xl';
+          weight: 'semibold';
+          letterSpacing: 'tight';
+        };
       };
     };
     breakpoints: {
