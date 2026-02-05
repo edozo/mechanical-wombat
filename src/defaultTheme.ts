@@ -1,7 +1,5 @@
 import { DefaultTheme } from 'styled-components';
 
-const removalDefaultText = 'Will remain available until all apps are migrated (no planned removal date yet).';
-
 /* COLORS */
 const colors = {
   // Sky blue
@@ -158,49 +156,14 @@ const minMedia = {
 };
 
 /* SPACING */
-// @ts-ignore - used only in JSDoc below
-const spacingRemovalText = removalDefaultText;
-// @ts-ignore - used only in JSDoc below
-const spacingRemovalReason =
-  'Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.';
 const spacing = {
   // ❌ legacy (avoid using these tokens)
-  /**
-   * @deprecated Use `xs` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   xxsmall: '4px',
-  /**
-   * @deprecated Use `sm` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   xsmall: '8px',
-  /** @deprecated Use `md` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   small: '16px',
-  /** @deprecated Use `lg` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   base: '24px',
-  /** @deprecated Use `xl` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   large: '32px',
-  /** @deprecated Use `2xl` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   xlarge: '48px',
-  /** @deprecated Use `3xl` instead.
-   * Reason: ${spacingRemovalReason}
-   * Removal: ${spacingRemovalText}
-   */
   xxlarge: '64px',
 
   // ✅ preferred (new usage)
@@ -216,53 +179,14 @@ const spacing = {
 };
 
 /* ICONS */
-// @ts-ignore - used only in JSDoc below
-const iconsRemovalText = removalDefaultText;
-// @ts-ignore - used only in JSDoc below
-const iconsRemovalReason = 'In favour of simplifying the icon sizing.';
 const icons = {
   // ❌ legacy (avoid using these tokens)
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   xxsmall: '8px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   xsmall: '12px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   small: '16px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   base: '20px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   large: '24px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   xlarge: '32px',
-  /**
-   * @deprecated
-   * Reason: ${iconsRemovalReason}
-   * Removal: ${iconsRemovalText}
-   */
   xxlarge: '48px',
 
   // ✅ preferred (new usage)

@@ -12,12 +12,68 @@ declare module 'styled-components' {
   /* SPACING */
   interface Spacing {
     // ❌ legacy (avoid using these tokens)
+    /**
+     * @deprecated Use `xs` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xxsmall: string;
+
+    /** @deprecated Use `sm` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xsmall: string;
+
+    /** @deprecated Use `md` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     small: string;
+
+    /** @deprecated Use `lg` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     base: string;
+
+    /** @deprecated Use `xl` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     large: string;
+
+    /** @deprecated Use `2xl` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xlarge: string;
+
+    /** @deprecated Use `3xl` instead.
+     *
+     * @remarks
+     * Reason: Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xxlarge: string;
 
     // ✅ preferred (new usage)
@@ -35,12 +91,68 @@ declare module 'styled-components' {
   /* ICONS */
   interface Icons {
     // ❌ legacy (avoid using these tokens)
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xxsmall: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xsmall: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     small: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     base: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     large: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xlarge: string;
+    /**
+     * @deprecated
+     *
+     * @remarks
+     * Reason: In favour of simplifying the icon sizing.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     xxlarge: string;
 
     // ✅ preferred (new usage)
@@ -216,3 +328,5 @@ declare module 'styled-components' {
     };
   }
 }
+
+export {};

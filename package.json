@@ -21,13 +21,16 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
       "default": "./dist/index.mjs"
+    },
+    "./styled": {
+      "types": "./dist/styled.d.ts"
     }
   },
   "sideEffects": [
     "**/*.css"
   ],
   "engines": {
-    "node": ">=22",
+    "node": ">=18",
     "npm": ">=8"
   },
   "scripts": {

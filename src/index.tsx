@@ -3,6 +3,7 @@ export { Button } from './Button';
 export { ButtonV2 } from './ButtonV2';
 export * from './Typography';
 export * from './Icons';
+export * from './LucideIcons';
 export { TableDownloadButton } from './TableDownloadButton';
 export { PopoverContent } from './PopoverContent';
 export { Popover } from './Popover';
