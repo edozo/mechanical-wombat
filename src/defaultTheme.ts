@@ -75,14 +75,6 @@ const colors = {
 };
 
 /* FONT */
-/**
- * @deprecated Use `typography` tokens instead.
- *
- * @remarks
- * Reason: Because the font tokens are not consistent with the typography tokens.
- *
- * Removal: Will remain available until all apps are migrated (no planned removal date yet).
- */
 const font = {
   family: {
     main: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",

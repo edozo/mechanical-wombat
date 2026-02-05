@@ -336,7 +336,12 @@ declare module 'styled-components' {
       };
     };
     /**
-     * @deprecated Use `typography` instead.
+     * @deprecated Use `typography` tokens instead.
+     *
+     * @remarks
+     * Reason: Because the font tokens are not consistent with the typography tokens.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
      */
     font: {
       family: {
