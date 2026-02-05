@@ -9,56 +9,15 @@ declare module 'styled-components' {
     xlarge: string;
   }
 
-  const removalDefaultText = 'Will remain available until all apps are migrated (no planned removal date yet).';
-
   /* SPACING */
-  const spacingRemovalText = removalDefaultText;
-  const spacingRemovalReason =
-    'Because xs / sm / md / lg express clear relative hierarchy and scale cleanly over time, while base is ambiguous, becomes a default, and encourages inconsistency.';
   interface Spacing {
     // ❌ legacy (avoid using these tokens)
-    /**
-     * @deprecated Use `xs` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     xxsmall: string;
-
-    /**
-     * @deprecated Use `sm` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     xsmall: string;
-
-    /** @deprecated Use `md` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     small: string;
-
-    /** @deprecated Use `lg` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     base: string;
-
-    /** @deprecated Use `xl` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     large: string;
-
-    /** @deprecated Use `2xl` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     xlarge: string;
-
-    /** @deprecated Use `3xl` instead.
-     * Reason: ${spacingRemovalReason}
-     * Removal: ${spacingRemovalText}
-     */
     xxlarge: string;
 
     // ✅ preferred (new usage)
@@ -74,52 +33,14 @@ declare module 'styled-components' {
   }
 
   /* ICONS */
-  const iconsRemovalText = removalDefaultText;
-  const iconsRemovalReason =
-    'Because sm / md / lg express clear relative intent and expected usage for icon sizing, while xxsmall / base / xxlarge encode arbitrary scale steps that are harder to reason about and encourage inconsistent application.';
   interface Icons {
     // ❌ legacy (avoid using these tokens)
-    /**
-     * @deprecated Use `xsmall` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     xxsmall: string;
-    /**
-     * @deprecated Use `small` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     xsmall: string;
-    /**
-     * @deprecated Use `base` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     small: string;
-    /**
-     * @deprecated Use `large` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     base: string;
-    /**
-     * @deprecated Use `large` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     large: string;
-    /**
-     * @deprecated Use `xlarge` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     xlarge: string;
-    /**
-     * @deprecated Use `xxlarge` instead.
-     * Reason: ${iconsRemovalReason}
-     * Removal: ${iconsRemovalText}
-     */
     xxlarge: string;
 
     // ✅ preferred (new usage)
