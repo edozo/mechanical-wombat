@@ -152,38 +152,48 @@ const minMedia = {
   '2xl': `(min-width: ${breakpoints['2xl']})`,
 };
 
+const spacing = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '4px',
+  xsmall: '8px',
+  small: '16px',
+  base: '24px',
+  large: '32px',
+  xlarge: '48px',
+  xxlarge: '64px',
+
+  // ✅ preferred (new usage)
+  '3xs': '1px',
+  '2xs': '2px',
+  xs: '4px',
+  sm: '8px',
+  md: '16px',
+  lg: '24px',
+  xl: '32px',
+  '2xl': '48px',
+  '3xl': '64px',
+};
+
+const icons = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '8px',
+  xsmall: '12px',
+  small: '16px',
+  base: '20px',
+  large: '24px',
+  xlarge: '32px',
+  xxlarge: '48px',
+
+  // ✅ preferred (new usage)
+  sm: '16px',
+  md: '20px',
+  lg: '24px',
+};
+
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
-  spacing: {
-    // ❌ legacy (avoid using these tokens)
-    xxsmall: '4px',
-    xsmall: '8px',
-    small: '16px',
-    base: '24px',
-    large: '32px',
-    xlarge: '48px',
-    xxlarge: '64px',
-
-    // ✅ preferred (new usage)
-    '3xs': '1px',
-    '2xs': '2px',
-    xs: '4px',
-    sm: '8px',
-    md: '16px',
-    lg: '24px',
-    xl: '32px',
-    '2xl': '48px',
-    '3xl': '64px',
-  },
-  icons: {
-    xxsmall: '8px',
-    xsmall: '12px',
-    small: '16px',
-    base: '20px',
-    large: '24px',
-    xlarge: '32px',
-    xxlarge: '48px',
-  },
+  spacing,
+  icons,
   borderRadius: {
     xsmall: '1px',
     small: '3px',

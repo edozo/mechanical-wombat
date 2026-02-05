@@ -16,9 +16,53 @@ import { MyComponent } from '@edozo/mechanical-wombat';
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
 
+### Lucide Icons (Peer Dependency)
+
+Lucide icons are provided via a peer dependency and wrapped by the UI library so defaults stay consistent.
+This is **additive** and does **not** change any existing icon APIs or behavior.
+
+Usage:
+
+```tsx
+import { Search } from 'lucide-react';
+import { LucideIcon } from '@edozo/mechanical-wombat';
+
+export const Example = () => <LucideIcon icon={Search} size="sm" />;
+```
+
+Defaults and API:
+
+- Size API: `sm | md | lg` mapped to `theme.icons.sm/md/lg`.
+- Stroke: `strokeWidth=2`, `strokeLinecap="round"`, `strokeLinejoin="round"`.
+- Color: default `theme.colors.grayDarker`, override via `color` prop (overrides should follow branding).
+- Stroke-only: `fill="none"` enforced.
+
+### Custom Lucide-Style Icons (SVG Files)
+
+You can add your own icons as SVG files and wrap them with the same Lucide defaults.
+
+Example:
+
+```tsx
+// src/LucideIcons/custom/index.ts
+import MyBrandSvg from './my-brand-icon.svg';
+import { createLucideIcon } from '../Lucide';
+
+export const LucideMyBrand = createLucideIcon(MyBrandSvg);
+```
+
+Design rules:
+
+- `viewBox="0 0 24 24"`
+- stroke-only paths (no fills)
+- `strokeWidth=2`, `strokeLinecap="round"`, `strokeLinejoin="round"` (defaults from wrapper)
+- See https://lucide.dev/guide/design/icon-design-guide
+
 ### ESM and tree shaking
 
 This library ships both ESM and CJS builds. To get the best tree shaking, make sure your bundler resolves the ESM entry (`module` / `exports` `import`) rather than the CJS `main`. Most modern bundlers do this by default, but if you see large bundles, check that your tooling is using the ESM build.
+
+Note: Icon exports are provided via a barrel (`src/Icons/index.tsx`) with named exports. This is tree‑shakable in modern ESM bundlers. Avoid importing the CJS build if you want optimal tree shaking.
 
 ~~[Hosted Storybook](https://5f86b8bef322ef002224b643-dyvtiddehm.chromatic.com/) to find a list of currently available components~~
 [Hosted Storybook](https://edozo.github.io/mechanical-wombat/) to find a list of currently available components
@@ -44,6 +88,7 @@ This library ships both ESM and CJS builds. To get the best tree shaking, make s
 - In the first terminal run `yarn start`.
 - In the second run `yarn storybook` this will open your browser at localhost port 9009.
 - You are now ready to start developing reusable components.
+- `lucide-react` is a peer dependency; ensure the consuming app installs it.
 
 ## Testing changes to this library with another application before publishing it
 
