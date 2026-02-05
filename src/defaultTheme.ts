@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
+/* COLORS */
 const colors = {
   // Sky blue
   skyBlueLighter: '#A5F0FF',
@@ -73,6 +74,7 @@ const colors = {
   },
 };
 
+/* FONT */
 const font = {
   family: {
     main: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
@@ -133,7 +135,7 @@ const font = {
   },
 };
 
-/**
+/** BREAKPOINTS
  * NOTE: Please use breakpoints sparingly for now, they may hlp us out in some cases. But I do want us to consider container queries (with a polyfill) as it should lend itself to atomic design better: https://css-tricks.com/a-new-container-query-polyfill-that-just-works/
  */
 const breakpoints = {
@@ -144,6 +146,7 @@ const breakpoints = {
   '2xl': '1536px',
 };
 
+/* MIN MEDIA */
 const minMedia = {
   sm: `(min-width: ${breakpoints.sm})`,
   md: `(min-width: ${breakpoints.md})`,
@@ -152,26 +155,50 @@ const minMedia = {
   '2xl': `(min-width: ${breakpoints['2xl']})`,
 };
 
+/* SPACING */
+const spacing = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '4px',
+  xsmall: '8px',
+  small: '16px',
+  base: '24px',
+  large: '32px',
+  xlarge: '48px',
+  xxlarge: '64px',
+
+  // ✅ preferred (new usage)
+  '3xs': '1px',
+  '2xs': '2px',
+  xs: '4px',
+  sm: '8px',
+  md: '16px',
+  lg: '24px',
+  xl: '32px',
+  '2xl': '48px',
+  '3xl': '64px',
+};
+
+/* ICONS */
+const icons = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '8px',
+  xsmall: '12px',
+  small: '16px',
+  base: '20px',
+  large: '24px',
+  xlarge: '32px',
+  xxlarge: '48px',
+
+  // ✅ preferred (new usage)
+  sm: '16px',
+  md: '20px',
+  lg: '24px',
+};
+
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
-  spacing: {
-    xxsmall: '4px',
-    xsmall: '8px',
-    small: '16px',
-    base: '24px',
-    large: '32px',
-    xlarge: '48px',
-    xxlarge: '64px',
-  },
-  icons: {
-    xxsmall: '8px',
-    xsmall: '12px',
-    small: '16px',
-    base: '20px',
-    large: '24px',
-    xlarge: '32px',
-    xxlarge: '48px',
-  },
+  spacing,
+  icons,
   borderRadius: {
     xsmall: '1px',
     small: '3px',
