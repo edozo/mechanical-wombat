@@ -6,5 +6,5 @@ export const StyledSkeletonGroup = styled.div<{
 }>`
   display: flex;
   flex-direction: column;
-  gap: ${props => props.theme.spacing[props.$gap || 'xsmall']};
+  gap: ${({ theme, $gap }) => theme.spacing[$gap || 'xsmall']};
 `;
