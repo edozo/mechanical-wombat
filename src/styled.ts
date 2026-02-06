@@ -250,6 +250,126 @@ declare module 'styled-components' {
     borderRadius: SizeHelper;
     boxShadow: SizeHelper;
     colors: {
+      neutral: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        950: string;
+      };
+      slate: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        950: string;
+      };
+      blue: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        950: string;
+      };
+      indigo: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        950: string;
+      };
+      teal: {
+        50: string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        950: string;
+      };
+      status: {
+        info: {
+          50: string;
+          100: string;
+          200: string;
+          300: string;
+          400: string;
+          500: string;
+          600: string;
+          700: string;
+          800: string;
+          900: string;
+          950: string;
+        };
+        success: {
+          50: string;
+          100: string;
+          200: string;
+          300: string;
+          400: string;
+          500: string;
+          600: string;
+          700: string;
+          800: string;
+          900: string;
+          950: string;
+        };
+        warning: {
+          50: string;
+          100: string;
+          200: string;
+          300: string;
+          400: string;
+          500: string;
+          600: string;
+          700: string;
+          800: string;
+          900: string;
+          950: string;
+        };
+        danger: {
+          50: string;
+          100: string;
+          200: string;
+          300: string;
+          400: string;
+          500: string;
+          600: string;
+          700: string;
+          800: string;
+          900: string;
+          950: string;
+        };
+      };
+      /** @deprecated We may introduce new aliases later is required. */
       aliases: {
         primaryLight: string;
         primary: string;
@@ -259,48 +379,84 @@ declare module 'styled-components' {
         secondaryDark: string;
       };
       // Sky blue
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       skyBlueLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       skyBlueLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       skyBlue: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       skyBlueDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       skyBlueDarker: string;
       // Red
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       redLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       redLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       red: string;
       // Orange
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       orangeLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       orangeLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       orange: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       orangeDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       orangeDarker: string;
       // Purple
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       purpleLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       purpleLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       purple: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       purpleDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       purpleDarker: string;
       // Misc
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       white: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       black: string;
       // Green
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       greenLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       greenLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       green: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       greenDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       greenDarker: string;
       // Gray
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       grayLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       grayLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       gray: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       grayDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       grayDarker: string;
       // Steel blue
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       steelBlueLighter: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       steelBlueLight: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       steelBlue: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       steelBlueDark: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       steelBlueDarker: string;
+      /** @deprecated `colors.blue`, `colors.indigo`, `colors.teal`, `colors.slate`, `colors.neutral` are replacing these colours. */
       system: {
         // Blue
         blueLighter: string;
@@ -327,6 +483,7 @@ declare module 'styled-components' {
         redDark: string;
         redDarker: string;
       };
+      /** @deprecated We are removing app specific colours in the updated branding. */
       appColors: {
         maps: string;
         occupiers: string;

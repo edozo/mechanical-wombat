@@ -18,11 +18,12 @@ export const Primary: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>skyBlue</DisplayBoxTitle>
+          <DisplayBoxTitle>skyBlue (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -41,11 +42,12 @@ export const Secondary: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>green</DisplayBoxTitle>
+          <DisplayBoxTitle>green (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -64,11 +66,12 @@ export const Tertiary: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>steelBlue</DisplayBoxTitle>
+          <DisplayBoxTitle>steelBlue (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -87,11 +90,12 @@ export const Orange: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>orange</DisplayBoxTitle>
+          <DisplayBoxTitle>orange (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -110,11 +114,12 @@ export const Gray: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>gray</DisplayBoxTitle>
+          <DisplayBoxTitle>gray (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -130,10 +135,11 @@ export const Simple: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, name }) => (
         <DisplayBox background={key} key={key}>
-          <DisplayBoxTitle>{name}</DisplayBoxTitle>
+          <DisplayBoxTitle>{name} (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
@@ -150,14 +156,74 @@ export const Alert: StoryFn = () => {
   ] as const;
 
   return (
-    <DisplayBoxWrapper>
+    <DisplayBoxWrapper showBorder={false}>
       {items.map(({ key, subtitle }) => (
         <DisplayBox background={key} key={key}>
           <DisplayBoxSubTitle>{subtitle}</DisplayBoxSubTitle>
-          <DisplayBoxTitle>red</DisplayBoxTitle>
+          <DisplayBoxTitle>red (deprecated)</DisplayBoxTitle>
+          <DisplayBoxSubTitle>Not used by the new brand</DisplayBoxSubTitle>
           <DisplayBoxBody>{theme.colors[key]}</DisplayBoxBody>
         </DisplayBox>
       ))}
     </DisplayBoxWrapper>
   );
+};
+
+const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] as const;
+
+const renderTokenGrid = (title: string, tokens: Record<typeof steps[number], string>) => (
+  <DisplayBoxWrapper showBorder={false}>
+    {steps.map(step => (
+      <DisplayBox background={tokens[step]} key={`${title}-${step}`}>
+        <DisplayBoxSubTitle>{step}</DisplayBoxSubTitle>
+        <DisplayBoxTitle>{title}</DisplayBoxTitle>
+        <DisplayBoxBody>{tokens[step]}</DisplayBoxBody>
+      </DisplayBox>
+    ))}
+  </DisplayBoxWrapper>
+);
+
+export const Neutral: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('neutral', theme.colors.neutral);
+};
+
+export const Slate: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('slate', theme.colors.slate);
+};
+
+export const Blue: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('blue', theme.colors.blue);
+};
+
+export const Indigo: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('indigo', theme.colors.indigo);
+};
+
+export const Teal: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('teal', theme.colors.teal);
+};
+
+export const StatusInfo: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('status.info', theme.colors.status.info);
+};
+
+export const StatusSuccess: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('status.success', theme.colors.status.success);
+};
+
+export const StatusWarning: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('status.warning', theme.colors.status.warning);
+};
+
+export const StatusDanger: StoryFn = () => {
+  const theme = useTheme();
+  return renderTokenGrid('status.danger', theme.colors.status.danger);
 };
