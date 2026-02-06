@@ -161,6 +161,88 @@ declare module 'styled-components' {
     lg: string;
   }
 
+  /* TYPOGRAPHY */
+  interface Typography {
+    fontFamily: {
+      sans: string;
+    };
+    fontWeight: {
+      regular: number;
+      medium: number;
+      semibold: number;
+    };
+    letterSpacing: {
+      normal: string;
+      tight: string;
+    };
+    fontSize: {
+      '2xs': string;
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+      '3xl': string;
+      '4xl': string;
+    };
+    lineHeight: {
+      '2xs': string;
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+      '3xl': string;
+      '4xl': string;
+    };
+    role: {
+      body: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      caption: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      label: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      headingSm: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      headingMd: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      headingLg: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+      display: {
+        size: string;
+        lineHeight: string;
+        weight: string;
+        letterSpacing: string;
+      };
+    };
+  }
+
   export interface DefaultTheme {
     name: string;
     spacing: Spacing;
@@ -253,6 +335,14 @@ declare module 'styled-components' {
         extract: string;
       };
     };
+    /**
+     * @deprecated Use `typography` tokens instead.
+     *
+     * @remarks
+     * Reason: Because the font tokens are not consistent with the typography tokens.
+     *
+     * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+     */
     font: {
       family: {
         main: string;
@@ -312,6 +402,7 @@ declare module 'styled-components' {
         regular: number;
       };
     };
+    typography: Typography;
     breakpoints: {
       sm: string;
       md: string;

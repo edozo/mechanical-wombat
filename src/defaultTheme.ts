@@ -135,6 +135,54 @@ const font = {
   },
 };
 
+/* TYPOGRAPHY */
+export const typography = {
+  fontFamily: {
+    sans: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
+  },
+  fontWeight: {
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+  },
+  letterSpacing: {
+    normal: '0',
+    tight: '-0.01em',
+  },
+  fontSize: {
+    '2xs': '10px',
+    xs: '12px',
+    sm: '14px',
+    md: '16px',
+    lg: '18px',
+    xl: '20px',
+    '2xl': '24px',
+    '3xl': '32px',
+    '4xl': '40px',
+  },
+  lineHeight: {
+    '2xs': '14px',
+    xs: '16px',
+    sm: '20px',
+    md: '24px',
+    lg: '28px',
+    xl: '28px',
+    '2xl': '32px',
+    '3xl': '40px',
+    '4xl': '48px',
+  },
+  role: {
+    body: { size: 'md', lineHeight: 'md', weight: 'regular', letterSpacing: 'normal' },
+    caption: { size: 'xs', lineHeight: 'xs', weight: 'regular', letterSpacing: 'normal' },
+    label: { size: 'sm', lineHeight: 'sm', weight: 'medium', letterSpacing: 'normal' },
+    headingSm: { size: 'xl', lineHeight: 'xl', weight: 'semibold', letterSpacing: 'normal' },
+    headingMd: { size: '2xl', lineHeight: '2xl', weight: 'semibold', letterSpacing: 'tight' },
+    headingLg: { size: '3xl', lineHeight: '3xl', weight: 'semibold', letterSpacing: 'tight' },
+    display: { size: '4xl', lineHeight: '4xl', weight: 'semibold', letterSpacing: 'tight' },
+  },
+};
+
+/**
 /** BREAKPOINTS
  * NOTE: Please use breakpoints sparingly for now, they may hlp us out in some cases. But I do want us to consider container queries (with a polyfill) as it should lend itself to atomic design better: https://css-tricks.com/a-new-container-query-polyfill-that-just-works/
  */
@@ -232,6 +280,7 @@ const defaultTheme: DefaultTheme = {
     },
   },
   font,
+  typography,
   breakpoints,
   minMedia,
 };
