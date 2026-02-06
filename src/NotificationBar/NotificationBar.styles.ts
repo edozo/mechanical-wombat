@@ -9,29 +9,29 @@ export const StyledNotificationBar = styled.div<Props>`
   width: 100%;
   border: 1px solid;
   display: flex;
-  padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
-  font-size: ${p => p.theme.font.size.text.small};
-  line-height: ${p => p.theme.font.lineHeight.text.small};
-  ${p =>
-    p.$variant === 'info' &&
+  padding: ${({ theme }) => theme.spacing.xsmall} ${({ theme }) => theme.spacing.small};
+  font-size: ${({ theme }) => theme.font.size.text.small};
+  line-height: ${({ theme }) => theme.font.lineHeight.text.small};
+  ${({ theme, $variant }) =>
+    $variant === 'info' &&
     css`
-      border-color: ${p.theme.colors.system.blue};
-      background: ${p.theme.colors.system.blueLighter};
-      color: ${p.theme.colors.system.blue};
+      border-color: ${theme.colors.system.blue};
+      background: ${theme.colors.system.blueLighter};
+      color: ${theme.colors.system.blue};
     `}
-  ${p =>
-    p.$variant === 'alert' &&
+  ${({ theme, $variant }) =>
+    $variant === 'alert' &&
     css`
-      border-color: ${p.theme.colors.system.red};
-      background: ${p.theme.colors.system.redLighter};
-      color: ${p.theme.colors.system.red};
+      border-color: ${theme.colors.system.red};
+      background: ${theme.colors.system.redLighter};
+      color: ${theme.colors.system.red};
     `}
-  ${p =>
-    p.$variant === 'warning' &&
+  ${({ theme, $variant }) =>
+    $variant === 'warning' &&
     css`
-      border-color: ${p.theme.colors.system.yellowDarker};
-      background: ${p.theme.colors.system.yellowLighter};
-      color: ${p.theme.colors.system.yellowDarker};
+      border-color: ${theme.colors.system.yellowDarker};
+      background: ${theme.colors.system.yellowLighter};
+      color: ${theme.colors.system.yellowDarker};
     `}
 `;
 
@@ -57,27 +57,27 @@ export const StyledDetailsTrigger = styled.button<{ $variant: 'alert' | 'info' |
   background: transparent;
   border: none;
   padding: 0;
-  margin-left: ${p => p.theme.spacing.small};
-  font-size: ${p => p.theme.font.size.text.small};
-  line-height: ${p => p.theme.font.lineHeight.text.small};
+  margin-left: ${({ theme }) => theme.spacing.small};
+  font-size: ${({ theme }) => theme.font.size.text.small};
+  line-height: ${({ theme }) => theme.font.lineHeight.text.small};
   cursor: pointer;
   text-decoration: underline;
   white-space: nowrap;
   flex-shrink: 0;
-  ${p =>
-    p.$variant === 'info' &&
+  ${({ theme, $variant }) =>
+    $variant === 'info' &&
     css`
-      color: ${p.theme.colors.system.blue};
+      color: ${theme.colors.system.blue};
     `}
-  ${p =>
-    p.$variant === 'alert' &&
+  ${({ theme, $variant }) =>
+    $variant === 'alert' &&
     css`
-      color: ${p.theme.colors.system.red};
+      color: ${theme.colors.system.red};
     `}
-  ${p =>
-    p.$variant === 'warning' &&
+  ${({ theme, $variant }) =>
+    $variant === 'warning' &&
     css`
-      color: ${p.theme.colors.system.yellowDarker};
+      color: ${theme.colors.system.yellowDarker};
     `}
 
   &:hover {
@@ -91,16 +91,16 @@ export const StyledDetailsTrigger = styled.button<{ $variant: 'alert' | 'info' |
 `;
 
 export const StyledDetailsPanel = styled.div`
-  margin-top: ${p => p.theme.spacing.xsmall};
-  padding-top: ${p => p.theme.spacing.xsmall};
+  margin-top: ${({ theme }) => theme.spacing.xsmall};
+  padding-top: ${({ theme }) => theme.spacing.xsmall};
   width: 100%;
 `;
 
 export const StyledWarningIcon = styled(WarningIcon)`
-  margin: 0 ${p => p.theme.spacing.small};
-  fill: ${p => p.theme.colors.system.red};
+  margin: 0 ${({ theme }) => theme.spacing.small};
+  fill: ${({ theme }) => theme.colors.system.red};
 `;
 
 export const StyledUpgradeIcon = styled(UpgradeIcon)`
-  fill: ${p => p.theme.colors.white};
+  fill: ${({ theme }) => theme.colors.white};
 `;

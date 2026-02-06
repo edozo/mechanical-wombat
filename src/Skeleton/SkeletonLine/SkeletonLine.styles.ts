@@ -16,14 +16,14 @@ export const StyledSkeletonLine = styled.div<{
   $radius?: keyof DefaultTheme['borderRadius'];
   $color?: 'white' | 'grey';
 }>`
-  width: ${props => props.$width || '100%'};
-  height: ${props => props.$height || '12px'};
-  border-radius: ${props => props.theme.borderRadius[props.$radius || 'standard']};
+  width: ${({ $width }) => $width || '100%'};
+  height: ${({ $height }) => $height || '12px'};
+  border-radius: ${({ theme, $radius }) => theme.borderRadius[$radius || 'standard']};
   background: linear-gradient(
     90deg,
-    ${props => (props.$color === 'white' ? props.theme.colors.white : props.theme.colors.grayLight)} 25%,
-    ${props => (props.$color === 'white' ? props.theme.colors.grayLight : props.theme.colors.grayLighter)} 37%,
-    ${props => (props.$color === 'white' ? props.theme.colors.white : props.theme.colors.grayLight)} 63%
+    ${({ $color, theme }) => ($color === 'white' ? theme.colors.white : theme.colors.grayLight)} 25%,
+    ${({ $color, theme }) => ($color === 'white' ? theme.colors.grayLight : theme.colors.grayLighter)} 37%,
+    ${({ $color, theme }) => ($color === 'white' ? theme.colors.white : theme.colors.grayLight)} 63%
   );
   background-size: 400% 100%;
   animation: ${shimmer} 2s ease-in-out infinite;

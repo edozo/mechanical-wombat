@@ -5,7 +5,7 @@ export const LucideIconWrapper = styled.span<{ size: LucideIconSize }>`
   display: inline-flex;
 
   svg {
-    width: ${p => p.theme.icons[p.size]};
-    height: ${p => p.theme.icons[p.size]};
+    width: ${({ theme, size }) => theme.icons[size]};
+    height: ${({ theme, size }) => theme.icons[size]};
   }
 `;
