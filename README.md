@@ -16,6 +16,15 @@ import { MyComponent } from '@edozo/mechanical-wombat';
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
 
+### Typography font (Inter)
+
+This library expects the Inter font to be available in the consuming app. Add the following
+to your app’s `index.html`:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+```
+
 ### Lucide Icons (Peer Dependency)
 
 Lucide icons are provided via a peer dependency and wrapped by the UI library so defaults stay consistent.
@@ -67,7 +76,7 @@ Note: Icon exports are provided via a barrel (`src/Icons/index.tsx`) with named 
 ~~[Hosted Storybook](https://5f86b8bef322ef002224b643-dyvtiddehm.chromatic.com/) to find a list of currently available components~~
 [Hosted Storybook](https://edozo.github.io/mechanical-wombat/) to find a list of currently available components
 
-[Default theme values](https://github.com/edozo/mechanical-wombat/blob/main/src/defaultTheme.ts)
+[Default theme values](https://github.com/edozo/mechanical-wombat/blob/main/src/Theme/defaultTheme.ts)
 
 ## Development
 
