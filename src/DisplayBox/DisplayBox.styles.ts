@@ -1,32 +1,48 @@
 import styled, { DefaultTheme } from 'styled-components';
 
 export interface StyleProps {
-  background?: keyof DefaultTheme['colors'] | 'gray';
+  background?: keyof DefaultTheme['colors'] | string;
   size?: string;
   borderRadius?: keyof DefaultTheme['borderRadius'] | 'small';
   children?: React.ReactNode;
+}
+
+interface StyledDisplayBoxWrapperProps extends StyleProps {
+  showBorder?: boolean;
 }
 
 export const StyledDisplayBox = styled.div<StyleProps>`
   margin: ${({ theme }) => theme.spacing.small};
 `;
 
+const resolveColor = (theme: DefaultTheme, background?: string) => {
+  if (!background) {
+    return '#FF6600';
+  }
+
+  if (background in theme.colors) {
+    return theme.colors[background as keyof DefaultTheme['colors']];
+  }
+
+  return background;
+};
+
 export const StyledDisplayBoxColor = styled.div<StyleProps>`
-  background: ${({ background, theme }) => (background ? theme.colors[background] : theme.colors.gray)};
-  border-radius: ${({ borderRadius, theme }) =>
+  background: ${({ theme, background }) => resolveColor(theme, background)};
+  border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? theme.borderRadius[borderRadius] : theme.borderRadius.small};
   width: ${({ size }) => (size ? size : '100px')};
   height: ${({ size }) => (size ? size : '100px')};
   border: 1px solid ${({ theme }) => theme.colors.gray};
 `;
 
-export const StyledDisplayBoxWrapper = styled.div<StyleProps>`
+export const StyledDisplayBoxWrapper = styled.div<StyledDisplayBoxWrapperProps>`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: ${({ theme }) => theme.spacing.base};
   @media ${({ theme }) => theme.minMedia.xl} {
-    border: 2px dashed red;
+    border: ${({ theme, showBorder }) => (showBorder !== false ? `2px dashed ${theme.colors.red}` : 'none')};
   }
 `;
 
