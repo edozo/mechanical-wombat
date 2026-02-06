@@ -8,10 +8,10 @@ export interface StylePopoverProps {
 }
 
 export const StyledPopover = styled(Tippy)<StylePopoverProps>`
-  background-color: ${p => p.theme.colors.white};
-  color: ${p => p.theme.colors.grayDarker};
-  box-shadow: ${p => p.theme.boxShadow.standard};
-  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.grayDarker};
+  box-shadow: ${({ theme }) => theme.boxShadow.standard};
+  border-radius: ${({ theme, radius }) => theme.borderRadius[radius || 'standard']};
 
   .tippy-content {
     padding: 0;
@@ -22,31 +22,31 @@ export const StyledPopover = styled(Tippy)<StylePopoverProps>`
   }
 
   .tippy-arrow {
-    color: ${p => p.theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
 export const StyledTitle = styled(TextXXSmall)`
-  font-weight: ${p => p.theme.font.weight.semibold};
-  margin-bottom: ${p => p.theme.spacing.xxsmall};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
+  margin-bottom: ${({ theme }) => theme.spacing.xxsmall};
 `;
 
 export const StyledButton = styled.button`
-  background-color: ${p => p.theme.colors.grayLighter};
-  border: 1px solid ${p => p.theme.colors.grayLighter};
-  padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
-  font-weight: ${p => p.theme.font.weight.semibold};
-  font-size: ${p => p.theme.font.size.text.xxsmall};
+  background-color: ${({ theme }) => theme.colors.grayLighter};
+  border: 1px solid ${({ theme }) => theme.colors.grayLighter};
+  padding: ${({ theme }) => theme.spacing.xsmall} ${({ theme }) => theme.spacing.small};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
+  font-size: ${({ theme }) => theme.font.size.text.xxsmall};
   &:hover {
-    background-color: ${p => p.theme.colors.steelBlueLighter};
-    border-color: ${p => p.theme.colors.steelBlueDark};
-    color: ${p => p.theme.colors.aliases.primary};
+    background-color: ${({ theme }) => theme.colors.steelBlueLighter};
+    border-color: ${({ theme }) => theme.colors.steelBlueDark};
+    color: ${({ theme }) => theme.colors.aliases.primary};
     svg {
-      fill: ${p => p.theme.colors.aliases.primary};
+      fill: ${({ theme }) => theme.colors.aliases.primary};
     }
   }
   &:focus {
     outline: none;
-    border-color: ${p => p.theme.colors.steelBlueDark};
+    border-color: ${({ theme }) => theme.colors.steelBlueDark};
   }
 `;

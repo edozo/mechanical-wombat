@@ -11,13 +11,13 @@ export const StyledListItem = styled.div.withConfig({
   shouldForwardProp: (prop: any) => prop,
 })<ListItemProps>`
   cursor: pointer;
-  color: ${p => p.theme.colors.grayDark};
+  color: ${({ theme }) => theme.colors.grayDark};
   font-weight: 700;
-  background-color: ${p => p.theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   position: relative;
-  padding: ${p => p.theme.spacing.xsmall};
+  padding: ${({ theme }) => theme.spacing.xsmall};
   &:not(:last-child) {
-    border-bottom: 1px solid ${p => p.theme.colors.gray};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
   }
   &:first-of-type {
     border-top-left-radius: inherit;
@@ -29,24 +29,24 @@ export const StyledListItem = styled.div.withConfig({
   }
 
   &:hover {
-    background-color: ${p => (p.variant === 'platform' ? '#f2f6f9' : p.theme.colors.grayLighter)};
+    background-color: ${({ variant, theme }) => (variant === 'platform' ? '#f2f6f9' : theme.colors.grayLighter)};
   }
   &:focus,
   &:active {
-    background-color: ${p => (p.variant === 'platform' ? '#d6e1eb' : p.theme.colors.gray)};
-    color: ${p => p.theme.colors.grayDark};
+    background-color: ${({ variant, theme }) => (variant === 'platform' ? '#d6e1eb' : theme.colors.gray)};
+    color: ${({ theme }) => theme.colors.grayDark};
     outline: none;
   }
 
-  ${p =>
-    p.disabled &&
+  ${({ variant, disabled, theme }) =>
+    disabled &&
     css`
       cursor: not-allowed;
-      background-color: ${p.variant === 'platform' ? '#d6e1eb' : p.theme.colors.gray};
+      background-color: ${variant === 'platform' ? '#d6e1eb' : theme.colors.gray};
       &:hover,
       &:focus,
       &:active {
-        background-color: ${p.variant === 'platform' ? '#d6e1eb' : p.theme.colors.gray};
+        background-color: ${variant === 'platform' ? '#d6e1eb' : theme.colors.gray};
         outline: none;
       }
     `};

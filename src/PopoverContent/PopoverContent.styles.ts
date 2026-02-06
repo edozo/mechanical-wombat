@@ -5,11 +5,11 @@ export interface StyleProps {
 }
 
 export const StyledPopoverContent = styled.div<StyleProps>`
-  box-shadow: ${p => p.theme.boxShadow.standard};
-  background-color: ${p => p.theme.colors.white};
+  box-shadow: ${({ theme }) => theme.boxShadow.standard};
+  background-color: ${({ theme }) => theme.colors.white};
   position: relative;
   display: inline-block;
-  border-radius: ${p => p.theme.borderRadius[p.radius || 'standard']};
+  border-radius: ${({ theme, radius }) => theme.borderRadius[radius || 'standard']};
 
   &:after {
     content: '';
@@ -17,7 +17,7 @@ export const StyledPopoverContent = styled.div<StyleProps>`
     border-right: 8px solid transparent;
     position: absolute;
     right: 13px;
-    border-bottom: 8px solid ${p => p.theme.colors.white};
+    border-bottom: 8px solid ${({ theme }) => theme.colors.white};
     top: -8px;
     bottom: auto;
   }

@@ -6,10 +6,10 @@ export const StyledItem = styled.div<ItemProps>`
   align-items: center;
   justify-content: center;
   background-color: white;
-  background-color: ${p => p.backgroundColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   svg {
     margin: 0 8px;
-    width: ${p => p.theme.icons.small};
-    height: ${p => p.theme.icons.small};
+    width: ${({ theme }) => theme.icons.small};
+    height: ${({ theme }) => theme.icons.small};
   }
 `;

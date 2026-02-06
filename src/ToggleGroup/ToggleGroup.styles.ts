@@ -6,33 +6,33 @@ export interface StyleProps {
 }
 
 export const StyledToggleGroup = styled.div<StyleProps>`
-  background-color: ${p => p.theme.colors.aliases.primary};
-  border-radius: ${p => p.theme.borderRadius.standard};
+  background-color: ${({ theme }) => theme.colors.aliases.primary};
+  border-radius: ${({ theme }) => theme.borderRadius.standard};
   display: inline-block;
 `;
 
 export const StyledToggleButton = styled.button<StyleProps>`
-  font-size: ${p => p.theme.font.size.text.small};
-  line-height: ${p => p.theme.font.lineHeight.text.base};
-  font-weight: ${p => p.theme.font.weight.semibold};
+  font-size: ${({ theme }) => theme.font.size.text.small};
+  line-height: ${({ theme }) => theme.font.lineHeight.text.base};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
   background-color: transparent;
-  color: ${p => p.theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
-  border-radius: ${p => p.theme.borderRadius.standard};
-  padding: 0 ${p => p.theme.spacing.small};
-  margin: ${p => p.theme.spacing.xxsmall};
+  border-radius: ${({ theme }) => theme.borderRadius.standard};
+  padding: 0 ${({ theme }) => theme.spacing.small};
+  margin: ${({ theme }) => theme.spacing.xxsmall};
   &:hover {
-    background-color: ${p => p.theme.colors.white};
-    color: ${p => p.theme.colors.aliases.primary};
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.aliases.primary};
     opacity: 0.8;
   }
   &:focus {
     outline: none;
   }
-  ${p =>
-    p.$isActive &&
+  ${({ theme, $isActive }) =>
+    $isActive &&
     css`
-      background-color: ${p.theme.colors.white};
-      color: ${p.theme.colors.aliases.primary};
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.aliases.primary};
     `};
 `;

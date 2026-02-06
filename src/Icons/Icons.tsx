@@ -317,8 +317,8 @@ export interface Props {
 export const IconWrapper = styled.div<Props>`
   display: inline-flex;
   svg {
-    width: ${p => (p.size ? p.theme.icons[p.size] : p.theme.icons.base)};
-    height: ${p => (p.size ? p.theme.icons[p.size] : p.theme.icons.base)};
+    width: ${({ size, theme }) => (size ? theme.icons[size] : theme.icons.base)};
+    height: ${({ size, theme }) => (size ? theme.icons[size] : theme.icons.base)};
   }
 `;
 
