@@ -21,3 +21,28 @@
 ## v3.3.0
 
 - Add AI Icon
+
+## v3.4.0
+
+- Add Edozo Extract logo
+
+## v3.5.0
+
+- Implement Lucide Icon wrapper
+
+## v3.6.0
+
+- Add new/rebrand typography tokens
+
+## v3.7.0
+
+- Add new/rebrand colour tokens
+
+## v3.7.1
+
+- Refactor style prop usage
+
+## v3.8.0
+
+- Add new/rebrand header/nav bar
+- Setup build to use absolute paths
