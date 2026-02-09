@@ -1,11 +1,11 @@
 import React from 'react';
-import { ProductSwitch } from './ProductSwitch';
-import { LogoutIcon } from '../Icons';
-import { Menu } from './Menu';
-import { AppName, Context, Header } from './Header';
+import { ProductSwitch } from 'Header/ProductSwitch';
+import { LogoutIcon } from 'Icons';
+import { Menu } from 'Header/Menu';
+import { Context, Header } from 'Header/Header';
 
 export interface ProductInfo {
-  appName: AppName;
+  appName: string;
   description: string;
   url: string;
   disabled?: boolean;
@@ -40,6 +40,7 @@ export interface AppHeaderProps extends Context {
   isAuthenticated?: boolean;
   edozoProducts?: ProductInfo[];
   children?: React.ReactNode;
+  appName: string;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({

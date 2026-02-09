@@ -21,7 +21,7 @@ export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
 export { Error, NotFound, GenericError } from './Error';
 export { GlobalSearch, InputGroup } from './InputGroup';
-export { Header, AppHeader, Menu, AppName } from './Header';
+export { Header, AppHeader, Menu } from './Header';
 export { HeaderV2, AppHeaderV2, MenuV2 } from './HeaderV2';
 export { Skeleton } from './Skeleton';
 export { SkeletonLine } from './Skeleton/SkeletonLine';

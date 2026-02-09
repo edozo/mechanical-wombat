@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { ProductInfo } from '../AppHeader';
-import { SwitchAppIconColour } from '../../Icons';
-import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from './ProductSwitch.styles';
-import { List } from '../../List';
-import { Popover } from '../../Popover';
-import { EdozoLogo } from '../../EdozoLogo';
-import { AppName } from 'Header/Header';
+import { ProductInfo } from 'Header/AppHeader';
+import { SwitchAppIconColour } from 'Icons';
+import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from 'Header/ProductSwitch/ProductSwitch.styles';
+import { List } from 'List';
+import { Popover } from 'Popover';
+import { EdozoLogo, LogoVariants } from 'EdozoLogo';
 
 interface Props {
   edozoProducts: ProductInfo[];
-  appName: AppName;
+  appName: string;
 }
 
 export const ProductSwitch: React.FC<Props> = ({ edozoProducts, appName }) => {
@@ -52,7 +51,7 @@ export const ProductSwitch: React.FC<Props> = ({ edozoProducts, appName }) => {
                   disabled={product.disabled || appName === product.appName}
                 >
                   <ItemWrapper>
-                    <EdozoLogo size="small" variant={product.appName} />
+                    <EdozoLogo size="small" variant={product.appName as LogoVariants} />
                     <StyledText>{product.description}</StyledText>
                   </ItemWrapper>
                 </List.Item>

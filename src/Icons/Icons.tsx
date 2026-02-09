@@ -309,11 +309,13 @@ import AiThreeStars from './icons/ai-three-stars.svg';
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 export interface Props {
   fill?: string;
   size?: 'xxsmall' | 'xsmall' | 'small' | 'base' | 'large' | 'xlarge';
 }
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 export const IconWrapper = styled.div<Props>`
   display: inline-flex;
   svg {
@@ -324,6 +326,7 @@ export const IconWrapper = styled.div<Props>`
 
 // TODO: Can we iterate this? possibly from the file system?
 // Drawing
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AutoPolygon fill={fill} {...props} />
@@ -331,6 +334,7 @@ const AutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { AutoPolygonIcon, autoPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LeaseholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LeaseholdAutoPolygon fill={fill} {...props} />
@@ -338,6 +342,7 @@ const LeaseholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFA
 );
 export { LeaseholdAutoPolygonIcon, autoPolygonUrl as leaseholdAutoPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const FreeholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <FreeholdAutoPolygon fill={fill} {...props} />
@@ -345,6 +350,7 @@ const FreeholdAutoPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAU
 );
 export { FreeholdAutoPolygonIcon, freeholdAutoPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ActionsIndicatorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ActionsIndicator fill={fill} {...props} />
@@ -352,6 +358,7 @@ const ActionsIndicatorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_
 );
 export { ActionsIndicatorIcon, actionsIndicatorUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DrawPolygon fill={fill} {...props} />
@@ -359,6 +366,7 @@ const DrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { DrawPolygonIcon, drawPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const RectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Rectangle fill={fill} {...props} />
@@ -366,6 +374,7 @@ const RectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { RectangleIcon, rectangleUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Circle fill={fill} {...props} />
@@ -373,6 +382,7 @@ const CircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { CircleIcon, circleUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ArrowToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowTool fill={fill} {...props} />
@@ -380,6 +390,7 @@ const ArrowToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { ArrowToolIcon, arrowToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LineTool fill={fill} {...props} />
@@ -387,6 +398,7 @@ const LineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { LineToolIcon, lineToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const NewLineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <NewLineTool fill={fill} {...props} />
@@ -394,6 +406,7 @@ const NewLineToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { NewLineToolIcon, newLineToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const MeasureToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <MeasureTool fill={fill} {...props} />
@@ -401,6 +414,7 @@ const MeasureToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { MeasureToolIcon, measureToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const EditToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <EditTool fill={fill} {...props} />
@@ -408,6 +422,7 @@ const EditToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { EditToolIcon, editToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ModifyToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ModifyTool fill={fill} {...props} />
@@ -415,6 +430,7 @@ const ModifyToolIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
 );
 export { ModifyToolIcon, modifyToolUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const TextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Text fill={fill} {...props} />
@@ -422,6 +438,7 @@ const TextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { TextIcon, textUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const StreetNameTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <StreetNameText fill={fill} {...props} />
@@ -429,6 +446,7 @@ const StreetNameTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_IC
 );
 export { StreetNameTextIcon, streetNameTextUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const BuildingNumberTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <BuildingNumberText fill={fill} {...props} />
@@ -436,6 +454,7 @@ const BuildingNumberTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAUL
 );
 export { BuildingNumberTextIcon, buildingNumberTextUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const NotesTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <NotesText fill={fill} {...props} />
@@ -443,6 +462,7 @@ const NotesTextIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { NotesTextIcon, notesTextUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DeleteAllIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DeleteAll fill={fill} {...props} />
@@ -450,6 +470,7 @@ const DeleteAllIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { DeleteAllIcon, deleteAllUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SeparateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Separate fill={fill} {...props} />
@@ -457,6 +478,7 @@ const SeparateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { SeparateIcon, separateUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DuplicateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Duplicate fill={fill} {...props} />
@@ -464,6 +486,7 @@ const DuplicateIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { DuplicateIcon, duplicateUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const MergeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Merge fill={fill} {...props} />
@@ -471,6 +494,7 @@ const MergeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { MergeIcon, mergeUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LockOpenIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LockOpen fill={fill} {...props} />
@@ -478,6 +502,7 @@ const LockOpenIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { LockOpenIcon, lockOpenUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LockClosedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LockClosed fill={fill} {...props} />
@@ -485,6 +510,7 @@ const LockClosedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
 );
 export { LockClosedIcon, lockClosedUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DeleteIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Delete fill={fill} {...props} />
@@ -492,6 +518,7 @@ const DeleteIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { DeleteIcon, deleteUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DrawingLibraryIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DrawingLibrary fill={fill} {...props} />
@@ -499,6 +526,7 @@ const DrawingLibraryIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_IC
 );
 export { DrawingLibraryIcon, drawingLibraryUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedRectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedRectangle fill={fill} {...props} />
@@ -506,6 +534,7 @@ const DashedRectangleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
 );
 export { DashedRectangleIcon, dashedRectangleUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedCircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedCircle fill={fill} {...props} />
@@ -514,6 +543,7 @@ const DashedCircleIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 export { DashedCircleIcon, dashedCircleUrl };
 
 // Outlined
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SaveIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Save fill={fill} {...props} />
@@ -521,6 +551,7 @@ const SaveIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { SaveIcon, saveUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ZoomIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Zoom fill={fill} {...props} />
@@ -528,6 +559,7 @@ const ZoomIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { ZoomIcon, zoomUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ZoomInIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ZoomIn fill={fill} {...props} />
@@ -535,6 +567,7 @@ const ZoomInIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { ZoomInIcon, zoomInUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ZoomOutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ZoomOut fill={fill} {...props} />
@@ -542,6 +575,7 @@ const ZoomOutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { ZoomOutIcon, zoomOutUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ReloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Reload fill={fill} {...props} />
@@ -549,6 +583,7 @@ const ReloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { ReloadIcon, reloadUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SplitPolygon fill={fill} {...props} />
@@ -556,6 +591,7 @@ const SplitPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { SplitPolygonIcon, splitPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const VerifiedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Verified fill={fill} {...props} />
@@ -563,6 +599,7 @@ const VerifiedIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { VerifiedIcon, verifiedUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const MoreInfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <MoreInfo fill={fill} {...props} />
@@ -571,6 +608,7 @@ const MoreInfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 export { MoreInfoIcon, moreInfoUrl };
 
 // Solid
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Edit fill={fill} {...props} />
@@ -578,6 +616,7 @@ const EditIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { EditIcon, editUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DownloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Download fill={fill} {...props} />
@@ -585,6 +624,7 @@ const DownloadIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { DownloadIcon, downloadUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const PlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Plus fill={fill} {...props} />
@@ -592,6 +632,7 @@ const PlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { PlusIcon, plusUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CloseIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Close fill={fill} {...props} />
@@ -599,6 +640,7 @@ const CloseIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { CloseIcon, closeUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const MinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Minus fill={fill} {...props} />
@@ -606,6 +648,7 @@ const MinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { MinusIcon, minusUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ArrowDownIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowDown fill={fill} {...props} />
@@ -613,6 +656,7 @@ const ArrowDownIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { ArrowDownIcon, arrowDownUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ArrowUpIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowUp fill={fill} {...props} />
@@ -620,6 +664,7 @@ const ArrowUpIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { ArrowUpIcon, arrowUpUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const QuestionIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Question fill={fill} {...props} />
@@ -627,6 +672,7 @@ const QuestionIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { QuestionIcon, questionUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const WarningIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Warning fill={fill} {...props} />
@@ -634,6 +680,7 @@ const WarningIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { WarningIcon, warningUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const RefreshIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Refresh fill={fill} {...props} />
@@ -641,6 +688,7 @@ const RefreshIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { RefreshIcon, refreshUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const UpgradeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Upgrade fill={fill} {...props} />
@@ -648,6 +696,7 @@ const UpgradeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { UpgradeIcon, upgradeUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CheckIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Check fill={fill} {...props} />
@@ -655,6 +704,7 @@ const CheckIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { CheckIcon, checkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const InfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Info fill={fill} {...props} />
@@ -662,6 +712,7 @@ const InfoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { InfoIcon, infoUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const BinIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Bin fill={fill} {...props} />
@@ -669,6 +720,7 @@ const BinIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, .
 );
 export { BinIcon, binUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const BoldIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Bold fill={fill} {...props} />
@@ -676,6 +728,7 @@ const BoldIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { BoldIcon, boldUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ItalicIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Italic fill={fill} {...props} />
@@ -683,6 +736,7 @@ const ItalicIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { ItalicIcon, italicUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchCDIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchCD fill={fill} {...props} />
@@ -690,6 +744,7 @@ const HatchCDIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { HatchCDIcon, hatchCDUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchCUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchCU fill={fill} {...props} />
@@ -697,6 +752,7 @@ const HatchCUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { HatchCUIcon, hatchCUUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchLAIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchLA fill={fill} {...props} />
@@ -704,6 +760,7 @@ const HatchLAIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { HatchLAIcon, hatchLAUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchLMinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchLMinus fill={fill} {...props} />
@@ -711,6 +768,7 @@ const HatchLMinusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { HatchLMinusIcon, hatchLMinusUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchLPlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchLPlus fill={fill} {...props} />
@@ -718,6 +776,7 @@ const HatchLPlusIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
 );
 export { HatchLPlusIcon, hatchLPlusUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HatchLUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HatchLU fill={fill} {...props} />
@@ -725,6 +784,7 @@ const HatchLUIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { HatchLUIcon, hatchLUUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SearchIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Search fill={fill} {...props} />
@@ -732,6 +792,7 @@ const SearchIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { SearchIcon, searchUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const StackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Stack fill={fill} {...props} />
@@ -739,6 +800,7 @@ const StackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { StackIcon, stackUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CenterMapIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <CenterMap fill={fill} {...props} />
@@ -746,6 +808,7 @@ const CenterMapIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { CenterMapIcon, centerMapUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HMark fill={fill} {...props} />
@@ -753,6 +816,7 @@ const HMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { HMarkIcon, hMarkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const TMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <TMark fill={fill} {...props} />
@@ -760,6 +824,7 @@ const TMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { TMarkIcon, tMarkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedDrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedDrawPolygon fill={fill} {...props} />
@@ -767,6 +832,7 @@ const DashedDrawPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT
 );
 export { DashedDrawPolygonIcon, dashedDrawPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedModifyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedModify fill={fill} {...props} />
@@ -774,6 +840,7 @@ const DashedModifyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { DashedModifyIcon, dashedModifyUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedRectangleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedRectangleNodes fill={fill} {...props} />
@@ -781,6 +848,7 @@ const DashedRectangleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFA
 );
 export { DashedRectangleNodesIcon, dashedRectangleNodesUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DashedCircleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DashedCircleNodes fill={fill} {...props} />
@@ -788,6 +856,7 @@ const DashedCircleNodesIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT
 );
 export { DashedCircleNodesIcon, dashedCircleNodesUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ReopenPolygon fill={fill} {...props} />
@@ -795,6 +864,7 @@ const ReopenPolygonIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
 );
 export { ReopenPolygonIcon, reopenPolygonUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const FeatureOutlineIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <FeatureOutline fill={fill} {...props} />
@@ -802,6 +872,7 @@ const FeatureOutlineIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_IC
 );
 export { FeatureOutlineIcon, featureOutlineUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ArrowMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <ArrowMark fill={fill} {...props} />
@@ -809,6 +880,7 @@ const ArrowMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { ArrowMarkIcon, arrowMarkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CrossMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <CrossMark fill={fill} {...props} />
@@ -816,6 +888,7 @@ const CrossMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { CrossMarkIcon, crossMarkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const StarMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <StarMark fill={fill} {...props} />
@@ -823,6 +896,7 @@ const StarMarkIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { StarMarkIcon, starMarkUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <LightBulb fill={fill} {...props} />
@@ -830,6 +904,7 @@ const LightBulbIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { LightBulbIcon, lightBulbUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const TreeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Tree fill={fill} {...props} />
@@ -837,6 +912,7 @@ const TreeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { TreeIcon, treeUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const RedoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Redo fill={fill} {...props} />
@@ -844,6 +920,7 @@ const RedoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { RedoIcon, redoUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Undo fill={fill} {...props} />
@@ -851,6 +928,7 @@ const UndoIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { UndoIcon, undoUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const LogoutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Logout fill={fill} {...props} />
@@ -858,6 +936,7 @@ const LogoutIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR
 );
 export { LogoutIcon, logoutUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SwitchAppIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SwitchApp fill={fill} {...props} />
@@ -865,6 +944,7 @@ const SwitchAppIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { SwitchAppIcon, switchAppUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SwitchAppIconColour: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SwitchAppColour fill={fill} {...props} />
@@ -872,6 +952,7 @@ const SwitchAppIconColour: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
 );
 export { SwitchAppIconColour, switchAppColourUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const BinocularIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Binocular fill={fill} {...props} />
@@ -879,6 +960,7 @@ const BinocularIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { BinocularIcon, binocularUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ErrorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Error fill={fill} {...props} />
@@ -886,6 +968,7 @@ const ErrorIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR,
 );
 export { ErrorIcon, errorUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const OneAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <OneAcre fill={fill} {...props} />
@@ -893,6 +976,7 @@ const OneAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { OneAcreIcon, oneAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HalfAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HalfAcre fill={fill} {...props} />
@@ -900,6 +984,7 @@ const HalfAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { HalfAcreIcon, halfAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const OneThirdAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <OneThirdAcre fill={fill} {...props} />
@@ -907,6 +992,7 @@ const OneThirdAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { OneThirdAcreIcon, oneThirdAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const QuarterAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <QuarterAcre fill={fill} {...props} />
@@ -914,6 +1000,7 @@ const QuarterAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { QuarterAcreIcon, quarterAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const OneSixthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <OneSixthAcre fill={fill} {...props} />
@@ -921,6 +1008,7 @@ const OneSixthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { OneSixthAcreIcon, oneSixthAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const OneEighthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <OneEighthAcre fill={fill} {...props} />
@@ -928,6 +1016,7 @@ const OneEighthAcreIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
 );
 export { OneEighthAcreIcon, oneEighthAcreUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HouseFootprint1Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HouseFootprint1 fill={fill} {...props} />
@@ -935,6 +1024,7 @@ const HouseFootprint1Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
 );
 export { HouseFootprint1Icon, houseFootprint1Url };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HouseFootprint2Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HouseFootprint2 fill={fill} {...props} />
@@ -942,6 +1032,7 @@ const HouseFootprint2Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
 );
 export { HouseFootprint2Icon, houseFootprint2Url };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const HouseFootprint3Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <HouseFootprint3 fill={fill} {...props} />
@@ -949,6 +1040,7 @@ const HouseFootprint3Icon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_I
 );
 export { HouseFootprint3Icon, houseFootprint3Url };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SingleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SingleGarage fill={fill} {...props} />
@@ -956,6 +1048,7 @@ const SingleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { SingleGarageIcon, singleGarageUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const DoubleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <DoubleGarage fill={fill} {...props} />
@@ -963,6 +1056,7 @@ const DoubleGarageIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { DoubleGarageIcon, doubleGarageUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Scissors fill={fill} {...props} />
@@ -970,6 +1064,7 @@ const ScissorsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COL
 );
 export { ScissorsIcon, scissorsUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const EyeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Eye fill={fill} {...props} />
@@ -977,6 +1072,7 @@ const EyeIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, .
 );
 export { EyeIcon, eyeUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const FiltersIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Filters fill={fill} {...props} />
@@ -984,6 +1080,7 @@ const FiltersIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLO
 );
 export { FiltersIcon, filtersUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const StandardArrowIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <StandardArrow fill={fill} {...props} />
@@ -991,6 +1088,7 @@ const StandardArrowIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICO
 );
 export { StandardArrowIcon, standardArrowUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const BringToFrontIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <BringToFront fill={fill} {...props} />
@@ -998,6 +1096,7 @@ const BringToFrontIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON
 );
 export { BringToFrontIcon, bringToFrontUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const SendToBackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <SendToBack fill={fill} {...props} />
@@ -1005,6 +1104,7 @@ const SendToBackIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
 );
 export { SendToBackIcon, sendToBackUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const AlignLeftIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AlignLeft fill={fill} {...props} />
@@ -1012,6 +1112,7 @@ const AlignLeftIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_CO
 );
 export { AlignLeftIcon, alignLeftUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const AlignCenterIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AlignCenter fill={fill} {...props} />
@@ -1019,6 +1120,7 @@ const AlignCenterIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_
 );
 export { AlignCenterIcon, alignCenterUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const AlignRightIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AlignRight fill={fill} {...props} />
@@ -1026,6 +1128,7 @@ const AlignRightIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_C
 );
 export { AlignRightIcon, alignRightUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <GoTo fill={fill} {...props} />
@@ -1033,6 +1136,7 @@ const GoToIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { GoToIcon, goToUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const CopyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <Copy fill={fill} {...props} />
@@ -1040,6 +1144,7 @@ const CopyIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, 
 );
 export { CopyIcon, copyIconUrl };
 
+/** @deprecated Use Lucide icons instead of this legacy icon library. */
 const AiThreeStarsIcon: React.FC<Props> = ({ size = 'large', fill = DEFAULT_ICON_COLOR, ...props }) => (
   <IconWrapper size={size}>
     <AiThreeStars fill={fill} {...props} />
