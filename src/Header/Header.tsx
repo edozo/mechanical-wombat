@@ -1,9 +1,8 @@
 import React, { createContext, useContext } from 'react';
-import { StyledHeader } from './Header.styles';
+import { StyledHeader } from 'Header/Header.styles';
 
-export type AppName = 'maps' | 'occupiers' | 'insight' | 'reports' | 'extract' | 'edozo';
 export interface Context extends React.HTMLAttributes<HTMLDivElement> {
-  appName: AppName;
+  appName: string;
 }
 
 const HeaderContext = createContext<Context>({ appName: 'maps' });

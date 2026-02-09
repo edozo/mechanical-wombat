@@ -46,3 +46,8 @@
 
 - Add new/rebrand header/nav bar
 - Setup build to use absolute paths
+
+## v3.8.1
+
+- Loosen types for app name (this aids the refactor for rebrand and we can tighten later)
+- Deprecate legacy `Icons` library in favor of Lucide.
