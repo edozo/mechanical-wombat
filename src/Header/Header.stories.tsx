@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import { AppHeader, AppHeaderProps } from './AppHeader';
 import { EdozoLogo } from '../EdozoLogo';

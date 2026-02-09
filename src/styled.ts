@@ -162,6 +162,11 @@ declare module 'styled-components' {
   }
 
   /* TYPOGRAPHY */
+
+  interface TypographyScale {
+    size: string;
+    lineHeight: string;
+  }
   interface Typography {
     fontFamily: {
       sans: string;
@@ -175,68 +180,50 @@ declare module 'styled-components' {
       normal: string;
       tight: string;
     };
-    fontSize: {
-      '2xs': string;
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-      '2xl': string;
-      '3xl': string;
-      '4xl': string;
-    };
-    lineHeight: {
-      '2xs': string;
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-      '2xl': string;
-      '3xl': string;
-      '4xl': string;
+    scale: {
+      '2xs': TypographyScale;
+      xs: TypographyScale;
+      sm: TypographyScale;
+      md: TypographyScale;
+      lg: TypographyScale;
+      xl: TypographyScale;
+      '2xl': TypographyScale;
+      '3xl': TypographyScale;
+      '4xl': TypographyScale;
     };
     role: {
       body: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       caption: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       label: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       headingSm: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       headingMd: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       headingLg: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
       display: {
-        size: string;
-        lineHeight: string;
+        scale: string;
         weight: string;
         letterSpacing: string;
       };
