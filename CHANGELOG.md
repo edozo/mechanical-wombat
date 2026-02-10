@@ -51,3 +51,8 @@
 
 - Loosen types for app name (this aids the refactor for rebrand and we can tighten later)
 - Deprecate legacy `Icons` library in favor of Lucide.
+
+## v4.0.0
+
+- BREAKING: `ThemeProvider` no longer accepts a `theme` prop override.
+- `ThemeProvider` now always uses the library `defaultTheme`.
