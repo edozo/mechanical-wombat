@@ -12,7 +12,7 @@
 
 ## v3.1.1
 
-- Add reach scripts to push to s3
+- Add reach scripts to push to s3.
 
 ## v3.2.0
 
@@ -20,39 +20,43 @@
 
 ## v3.3.0
 
-- Add AI Icon
+- Add AI Icon.
 
 ## v3.4.0
 
-- Add Edozo Extract logo
+- Add Edozo Extract logo.
 
 ## v3.5.0
 
-- Implement Lucide Icon wrapper
+- Implement Lucide Icon wrapper.
 
 ## v3.6.0
 
-- Add new/rebrand typography tokens
+- Add new/rebrand typography tokens.
 
 ## v3.7.0
 
-- Add new/rebrand colour tokens
+- Add new/rebrand colour tokens.
 
 ## v3.7.1
 
-- Refactor style prop usage
+- Refactor style prop usage.
 
 ## v3.8.0
 
-- Add new/rebrand header/nav bar
-- Setup build to use absolute paths
+- Add new/rebrand header/nav bar.
+- Setup build to use absolute paths.
 
 ## v3.8.1
 
-- Loosen types for app name (this aids the refactor for rebrand and we can tighten later)
+- Loosen types for app name (this aids the refactor for rebrand and we can tighten later).
 - Deprecate legacy `Icons` library in favor of Lucide.
 
 ## v4.0.0
 
 - BREAKING: `ThemeProvider` no longer accepts a `theme` prop override.
 - `ThemeProvider` now always uses the library `defaultTheme`.
+
+## v4.1.0
+
+- Add 'bold' font weight to theme tokens.
