@@ -175,6 +175,7 @@ declare module 'styled-components' {
       regular: number;
       medium: number;
       semibold: number;
+      bold: number;
     };
     letterSpacing: {
       normal: string;

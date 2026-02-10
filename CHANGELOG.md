@@ -51,3 +51,7 @@
 
 - Loosen types for app name (this aids the refactor for rebrand and we can tighten later)
 - Deprecate legacy `Icons` library in favor of Lucide.
+
+## v3.8.2
+
+- Add 'bold' font weight to theme tokens
