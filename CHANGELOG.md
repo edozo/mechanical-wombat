@@ -57,6 +57,6 @@
 - BREAKING: `ThemeProvider` no longer accepts a `theme` prop override.
 - `ThemeProvider` now always uses the library `defaultTheme`.
 
-## v4.0.1
+## v4.1.0
 
 - Add 'bold' font weight to theme tokens.
