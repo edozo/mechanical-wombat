@@ -60,3 +60,8 @@
 ## v4.1.0
 
 - Add 'bold' font weight to theme tokens.
+
+## v4.1.1
+
+- Convert new typography scale tokens from `px` to `rem`.
+- Convert preferred spacing tokens from `px` to `rem`.

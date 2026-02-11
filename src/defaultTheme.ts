@@ -272,15 +272,15 @@ export const typography = {
     tight: '-0.01em',
   },
   scale: {
-    '2xs': { size: '10px', lineHeight: '14px' },
-    xs: { size: '12px', lineHeight: '16px' },
-    sm: { size: '14px', lineHeight: '20px' },
-    md: { size: '16px', lineHeight: '24px' },
-    lg: { size: '18px', lineHeight: '28px' },
-    xl: { size: '20px', lineHeight: '28px' },
-    '2xl': { size: '24px', lineHeight: '32px' },
-    '3xl': { size: '32px', lineHeight: '40px' },
-    '4xl': { size: '40px', lineHeight: '48px' },
+    '2xs': { size: '0.625rem', lineHeight: '0.875rem' }, // 10px / 14px (default)
+    xs: { size: '0.75rem', lineHeight: '1rem' }, // 12px / 16px (default)
+    sm: { size: '0.875rem', lineHeight: '1.25rem' }, // 14px / 20px (default)
+    md: { size: '1rem', lineHeight: '1.5rem' }, // 16px / 24px (default)
+    lg: { size: '1.125rem', lineHeight: '1.75rem' }, // 18px / 28px (default)
+    xl: { size: '1.25rem', lineHeight: '1.75rem' }, // 20px / 28px (default)
+    '2xl': { size: '1.5rem', lineHeight: '2rem' }, // 24px / 32px (default)
+    '3xl': { size: '2rem', lineHeight: '2.5rem' }, // 32px / 40px (default)
+    '4xl': { size: '2.5rem', lineHeight: '3rem' }, // 40px / 48px (default)
   },
   role: {
     body: { scale: 'md', weight: 'regular', letterSpacing: 'normal' },
@@ -326,15 +326,15 @@ const spacing = {
   xxlarge: '64px',
 
   // ✅ preferred (new usage)
-  '3xs': '1px',
-  '2xs': '2px',
-  xs: '4px',
-  sm: '8px',
-  md: '16px',
-  lg: '24px',
-  xl: '32px',
-  '2xl': '48px',
-  '3xl': '64px',
+  '3xs': '0.0625rem', // 1px (default)
+  '2xs': '0.125rem', // 2px (default)
+  xs: '0.25rem', // 4px (default)
+  sm: '0.5rem', // 8px (default)
+  md: '1rem', // 16px (default)
+  lg: '1.5rem', // 24px (default)
+  xl: '2rem', // 32px (default)
+  '2xl': '3rem', // 48px (default)
+  '3xl': '4rem', // 64px (default)
 };
 
 /* ICONS */
