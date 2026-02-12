@@ -356,12 +356,22 @@ const icons = {
 };
 
 /* SHADOWS */
+const shadowColor = rgba(colors.slate[900], 0.08);
+
 const shadows = {
+  // ❌ legacy (avoid using these tokens)
   xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
   small: '1px 1px 10px rgba(0, 0, 0, 0)',
   standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
   large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
   xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
+
+  // ✅ preferred (new usage)
+  sm: `0 2px 4px ${shadowColor}`,
+  md: `0 4px 8px ${shadowColor}`,
+  lg: `0 6px 12px ${shadowColor}`,
+  xl: `0 8px 16px ${shadowColor}`,
+  '2xl': `0 12px 24px ${shadowColor}`,
 };
 
 const defaultTheme: DefaultTheme = {
@@ -407,3 +417,4 @@ const defaultTheme: DefaultTheme = {
 };
 
 export { defaultTheme };
+import { rgba } from 'polished';

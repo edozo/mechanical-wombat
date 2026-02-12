@@ -2,11 +2,34 @@ import 'styled-components';
 
 declare module 'styled-components' {
   interface SizeHelper {
+    // ❌ legacy (avoid using these tokens)
+    /**
+     * @deprecated Use `sm` instead.
+     */
     xsmall: string;
+    /**
+     * @deprecated Use `md` instead.
+     */
     small: string;
+    /**
+     * @deprecated Use `lg` instead.
+     */
     standard: string;
+    /**
+     * @deprecated Use `xl` instead.
+     */
     large: string;
+    /**
+     * @deprecated Use `2xl` instead.
+     */
     xlarge: string;
+
+    // ✅ preferred (new usage)
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+    '2xl': string;
   }
 
   /* SPACING */
