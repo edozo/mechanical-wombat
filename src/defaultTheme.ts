@@ -352,6 +352,16 @@ const icons = {
   sm: '16px',
   md: '20px',
   lg: '24px',
+  xl: '32px',
+};
+
+/* SHADOWS */
+const shadows = {
+  xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
+  small: '1px 1px 10px rgba(0, 0, 0, 0)',
+  standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+  large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
+  xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
 };
 
 const defaultTheme: DefaultTheme = {
@@ -364,14 +374,14 @@ const defaultTheme: DefaultTheme = {
     standard: '6px',
     large: '10px',
     xlarge: '16px',
+
+    // ✅ preferred (new usage)
+    sm: '3px',
+    md: '6px',
+    lg: '10px',
+    round: '100vh',
   },
-  boxShadow: {
-    xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
-    small: '1px 1px 10px rgba(0, 0, 0, 0)',
-    standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
-    xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
-  },
+  boxShadow: shadows,
   colors: {
     ...colors,
     aliases: {
