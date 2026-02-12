@@ -159,6 +159,7 @@ declare module 'styled-components' {
     sm: string;
     md: string;
     lg: string;
+    xl: string;
   }
 
   /* TYPOGRAPHY */
@@ -235,7 +236,60 @@ declare module 'styled-components' {
     name: string;
     spacing: Spacing;
     icons: Icons;
-    borderRadius: SizeHelper;
+    borderRadius: {
+      // ❌ legacy (avoid using these tokens)
+      /**
+       * @deprecated
+       *
+       * @remarks
+       * Reason: In favour of simplifying the border radius tokens.
+       *
+       * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+       */
+      xsmall: string;
+      /**
+       * @deprecated
+       *
+       * @remarks
+       * Reason: In favour of simplifying the border radius tokens.
+       *
+       * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+       */
+      small: string;
+      /**
+       * @deprecated
+       *
+       * @remarks
+       * Reason: In favour of simplifying the border radius tokens.
+       *
+       * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+       */
+      standard: string;
+      /**
+       * @deprecated
+       *
+       * @remarks
+       * Reason: In favour of simplifying the border radius tokens.
+       *
+       * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+       */
+      large: string;
+      /**
+       * @deprecated
+       *
+       * @remarks
+       * Reason: In favour of simplifying the border radius tokens.
+       *
+       * Removal: Will remain available until all apps are migrated (no planned removal date yet).
+       */
+      xlarge: string;
+
+      // ✅ preferred (new usage)
+      sm: string;
+      md: string;
+      lg: string;
+      round: string;
+    };
     boxShadow: SizeHelper;
     colors: {
       neutral: {

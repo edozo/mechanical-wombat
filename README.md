@@ -16,6 +16,10 @@ import { MyComponent } from '@edozo/mechanical-wombat';
 export const Example: React.FC = ({ children }) => <Button {...props}>{children}</Button>;
 ```
 
+### Component docs
+
+- [ButtonV3 docs](./src/ButtonV3/README.md)
+
 ### Typography font (Inter)
 
 This library expects the Inter font to be available in the consuming app. Add the following
