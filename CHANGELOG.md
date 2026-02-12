@@ -65,3 +65,11 @@
 
 - Convert new typography scale tokens from `px` to `rem`.
 - Convert preferred spacing tokens from `px` to `rem`.
+
+## v4.2.0
+
+- Implement new buttons.
+
+## v4.3.0
+
+- Add new shadow tokens.
