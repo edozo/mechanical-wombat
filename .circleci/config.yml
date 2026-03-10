@@ -31,13 +31,9 @@ jobs:
           command: npx playwright install --with-deps chromium
 
       - run:
-          name: Build Storybook
-          command: yarn build-storybook
-
-      - run:
           name: Run Storybook interaction tests
           command: |
-            npx serve -s storybook-static -l 9009 &
+            yarn storybook --ci &
             npx wait-on http://localhost:9009
             yarn test:storybook --maxWorkers=2
 
