@@ -7,17 +7,16 @@ You are a React component library specialist. Your role is to add or modify comp
 ## Commands
 
 ```bash
-yarn storybook       # Storybook dev server on :9009 (primary development environment)
-yarn start           # tsup watch mode (build only, no browser)
-yarn build           # Production build: tsup + tsc type declarations
-yarn lint            # ESLint (ts/tsx) + stylelint (styled-components CSS)
-yarn lintfix         # Auto-fix lint errors where possible
-yarn yarn:package    # Pack a local .tgz for testing in consumer apps
+yarn storybook           # Storybook dev server on :9009 (primary development environment)
+yarn start               # tsup watch mode (build only, no browser)
+yarn build               # Production build: tsup + tsc type declarations
+yarn lint                # ESLint (ts/tsx) + stylelint (styled-components CSS)
+yarn lintfix             # Auto-fix lint errors where possible
+yarn test:storybook      # Run Storybook interaction tests (requires storybook dev server running)
+yarn yarn:package        # Pack a local .tgz for testing in consumer apps
 ```
 
 **Pre-commit hook** runs lint-staged (ESLint on staged files) and pretty-quick automatically.
-
-There are no unit tests — `yarn test` is a no-op.
 
 ## Architecture
 
@@ -145,6 +144,40 @@ Each category has a set of preferred keys and a set of legacy/deprecated keys (m
 - Functional components with hooks only — no class components
 - Set `displayName` on every `forwardRef` component
 
+## Interaction Tests
+
+Storybook `play` functions are the project's test mechanism — there are no separate unit tests.
+
+- **Tool**: `@storybook/test-runner` + `@storybook/addon-interactions`
+- **Run locally**: start `yarn storybook`, then in a second terminal run `yarn test:storybook`
+- **CI**: the `test-storybook` CircleCI job builds a static Storybook, serves it on port 9009 with `npx serve`, and runs all `play` functions headlessly via Playwright
+
+### When to write a `play` function
+
+Write a `play` function on stories that exercise **interactive or stateful behaviour** — toggling, opening, typing, selecting. Do not add them to static/display-only stories.
+
+### Pattern
+
+```typescript
+import { expect, userEvent, within } from '@storybook/test';
+
+export const MyInteractiveStory: StoryFn<MyProps> = args => <MyComponent {...args} />;
+MyInteractiveStory.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  // Assert initial state
+  expect(canvas.getByRole('checkbox')).not.toBeChecked();
+
+  // Interact
+  await userEvent.click(canvas.getByRole('checkbox'));
+
+  // Assert result
+  expect(canvas.getByRole('checkbox')).toBeChecked();
+};
+```
+
+Use `getByTestId` only when no semantic query (`getByRole`, `getByLabelText`, etc.) is available. Use `data-testid` on the component element if needed.
+
 ## Storybook
 
 Every component needs a `.stories.tsx`. Follow this structure:
@@ -222,6 +255,8 @@ Merging to `main` triggers CI publish to GitHub Packages. The `tag-release` work
 - Set `displayName` on `forwardRef` components
 - Add JSDoc to all exported props
 - Run `yarn lint` before declaring work complete
+- Write a `play` function for any story with interactive or stateful behaviour
+- Run `yarn test:storybook` (with `yarn storybook` running) before declaring work complete
 - Update `CHANGELOG.md` and bump the version when shipping a change
 
 ⚠️ **Ask before doing**

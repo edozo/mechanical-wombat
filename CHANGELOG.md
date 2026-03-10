@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.2] - 2026-03-10
+
+### Added
+
+- Storybook interaction tests via `@storybook/test-runner` and `@storybook/addon-interactions`.
+- `Switch` component: `Interactions` story with a `play` function covering toggle on/off.
+- `yarn test:storybook` script — runs all `play` functions against a live Storybook server.
+- CircleCI `test-storybook` job — builds static Storybook, serves it with `npx serve`, and runs interaction tests headlessly via Playwright; gates the `publish` job.
+
 ## [4.3.1] - 2026-03-10
 
 ### Added
@@ -126,7 +135,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v4.3.1...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v4.3.2...HEAD
+[4.3.2]: https://github.com/edozo/mechanical-wombat/compare/v4.3.1...v4.3.2
 [4.3.1]: https://github.com/edozo/mechanical-wombat/compare/v4.3.0...v4.3.1
 [4.3.0]: https://github.com/edozo/mechanical-wombat/compare/v4.2.0...v4.3.0
 [4.2.0]: https://github.com/edozo/mechanical-wombat/compare/v4.1.1...v4.2.0

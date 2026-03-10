@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-docs'],
+  addons: ['@storybook/addon-docs', '@storybook/addon-interactions'],
 
   framework: {
     name: '@storybook/react-vite',
