@@ -156,6 +156,11 @@ Storybook `play` functions are the project's test mechanism — there are no sep
 
 Write a `play` function on stories that exercise **interactive or stateful behaviour** — toggling, opening, typing, selecting. Do not add them to static/display-only stories.
 
+Interaction test policy:
+- Add `play` tests only for components/states with meaningful user interaction or state transitions.
+- Do not add `play` tests for purely presentational components (for example, `Badge`) unless they include behaviour that can change via user input or async state.
+- CI is configured to run only stories tagged as `play-fn` (stories with a `play` function), so static stories are intentionally excluded from test-runner execution.
+
 ### Pattern
 
 ```typescript
