@@ -1,5 +1,5 @@
 import { StoryFn, Meta } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 import { SwitchWrapper, SwitchWrapperProps } from './SwitchWrapper';
 
 export default {
