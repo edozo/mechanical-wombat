@@ -1,75 +1,147 @@
 # Changelog
 
-## v3.0.0
+All notable changes to this project will be documented in this file.
 
-- Update `AppHeader` to:
-  - Accept only a `url` instead of both a `stageUrl` and `prodUrl`. Users are required to derive their url within their own apps.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v3.1.0
+## [Unreleased]
 
-- Add `small` size option for the DropDown component.
-- Add `small` size option for the GlobalSearch component.
+## [4.3.1] - 2026-03-10
 
-## v3.1.1
+### Added
 
-- Add reach scripts to push to s3.
+- `AGENTS.md` and `CLAUDE.md` with AI agent guidance: Radix UI for new/refactored components, styled-components only, theme tokens sourced from `src/defaultTheme.ts`.
 
-## v3.2.0
+## [4.3.0] - 2026-02-12
 
-- Add `NotificationBarAccordion` to allow collapsible section in notification bar.
+### Added
 
-## v3.3.0
+- New shadow tokens.
 
-- Add AI Icon.
+## [4.2.0] - 2026-02-12
 
-## v3.4.0
+### Added
 
-- Add Edozo Extract logo.
+- New `ButtonV3` component (first pass).
 
-## v3.5.0
+## [4.1.1] - 2026-02-11
 
-- Implement Lucide Icon wrapper.
-
-## v3.6.0
-
-- Add new/rebrand typography tokens.
-
-## v3.7.0
-
-- Add new/rebrand colour tokens.
-
-## v3.7.1
-
-- Refactor style prop usage.
-
-## v3.8.0
-
-- Add new/rebrand header/nav bar.
-- Setup build to use absolute paths.
-
-## v3.8.1
-
-- Loosen types for app name (this aids the refactor for rebrand and we can tighten later).
-- Deprecate legacy `Icons` library in favor of Lucide.
-
-## v4.0.0
-
-- BREAKING: `ThemeProvider` no longer accepts a `theme` prop override.
-- `ThemeProvider` now always uses the library `defaultTheme`.
-
-## v4.1.0
-
-- Add 'bold' font weight to theme tokens.
-
-## v4.1.1
+### Changed
 
 - Convert new typography scale tokens from `px` to `rem`.
 - Convert preferred spacing tokens from `px` to `rem`.
 
-## v4.2.0
+## [4.1.0] - 2026-02-10
 
-- Implement new buttons.
+### Added
 
-## v4.3.0
+- `bold` font weight to theme tokens.
 
-- Add new shadow tokens.
+## [4.0.0] - 2026-02-10
+
+### Changed
+
+- **BREAKING:** `ThemeProvider` no longer accepts a `theme` prop override.
+- `ThemeProvider` now always uses the library `defaultTheme`.
+
+## [3.8.1] - 2026-02-09
+
+### Changed
+
+- Loosen types for app name to aid rebrand refactor.
+
+### Deprecated
+
+- Legacy `Icons` library in favour of Lucide.
+
+## [3.8.0] - 2026-02-09
+
+### Added
+
+- New/rebrand header and nav bar.
+
+### Changed
+
+- Build configured to use absolute paths.
+
+## [3.7.1] - 2026-02-06
+
+### Changed
+
+- Refactor style prop usage.
+
+## [3.7.0] - 2026-02-06
+
+### Added
+
+- New/rebrand colour tokens.
+
+## [3.6.0] - 2026-02-05
+
+### Added
+
+- New/rebrand typography tokens.
+
+## [3.5.0] - 2026-02-05
+
+### Added
+
+- Lucide Icon wrapper.
+
+## [3.4.0] - 2025-12-11
+
+### Added
+
+- Edozo Extract logo.
+
+## [3.3.0] - 2025-11-18
+
+### Added
+
+- AI Icon.
+
+## [3.2.0] - 2025-11-17
+
+### Added
+
+- `NotificationBarAccordion` to allow a collapsible section in the notification bar.
+
+## [3.1.1] - 2025-10-16
+
+### Added
+
+- Scripts to deploy Storybook to S3.
+
+## [3.1.0] - 2025-10-16
+
+### Added
+
+- `small` size option for the `DropDown` component.
+- `small` size option for the `GlobalSearch` component.
+
+## [3.0.0] - 2025-10-08
+
+### Changed
+
+- **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
+
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v4.3.1...HEAD
+[4.3.1]: https://github.com/edozo/mechanical-wombat/compare/v4.3.0...v4.3.1
+[4.3.0]: https://github.com/edozo/mechanical-wombat/compare/v4.2.0...v4.3.0
+[4.2.0]: https://github.com/edozo/mechanical-wombat/compare/v4.1.1...v4.2.0
+[4.1.1]: https://github.com/edozo/mechanical-wombat/compare/v4.1.0...v4.1.1
+[4.1.0]: https://github.com/edozo/mechanical-wombat/compare/v4.0.0...v4.1.0
+[4.0.0]: https://github.com/edozo/mechanical-wombat/compare/v3.8.1...v4.0.0
+[3.8.1]: https://github.com/edozo/mechanical-wombat/compare/v3.8.0...v3.8.1
+[3.8.0]: https://github.com/edozo/mechanical-wombat/compare/v3.7.1...v3.8.0
+[3.7.1]: https://github.com/edozo/mechanical-wombat/compare/v3.7.0...v3.7.1
+[3.7.0]: https://github.com/edozo/mechanical-wombat/compare/v3.6.0...v3.7.0
+[3.6.0]: https://github.com/edozo/mechanical-wombat/compare/v3.5.0...v3.6.0
+[3.5.0]: https://github.com/edozo/mechanical-wombat/compare/v3.4.0...v3.5.0
+[3.4.0]: https://github.com/edozo/mechanical-wombat/compare/v3.3.0...v3.4.0
+[3.3.0]: https://github.com/edozo/mechanical-wombat/compare/v3.2.0...v3.3.0
+[3.2.0]: https://github.com/edozo/mechanical-wombat/compare/v3.1.1...v3.2.0
+[3.1.1]: https://github.com/edozo/mechanical-wombat/compare/v3.1.0...v3.1.1
+[3.1.0]: https://github.com/edozo/mechanical-wombat/compare/v3.0.0...v3.1.0
+[3.0.0]: https://github.com/edozo/mechanical-wombat/releases/tag/v3.0.0
