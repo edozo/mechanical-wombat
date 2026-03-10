@@ -18,7 +18,7 @@ jobs:
   test-storybook:
     docker:
       - image: cimg/node:22.18-browsers
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
 
