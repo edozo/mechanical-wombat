@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18
     steps:
       - checkout
 
@@ -17,7 +17,7 @@ jobs:
 
   test-storybook:
     docker:
-      - image: cimg/node:20.10-browsers
+      - image: cimg/node:22.18-browsers
     resource_class: large
     steps:
       - checkout
@@ -33,13 +33,16 @@ jobs:
       - run:
           name: Run Storybook interaction tests
           command: |
-            yarn storybook --ci &
-            npx wait-on http://localhost:9009
+            yarn build-storybook
+            npx http-server storybook-static --port 9009 --silent &
+            SB_SERVER_PID=$!
+            trap "kill $SB_SERVER_PID" EXIT
+            npx wait-on tcp:9009
             yarn test:storybook --maxWorkers=2
 
   publish:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18
     steps:
       - checkout
 
@@ -62,7 +65,7 @@ jobs:
 
   deploy-storybook:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18
     steps:
       - checkout
 

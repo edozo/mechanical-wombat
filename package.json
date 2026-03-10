@@ -72,7 +72,7 @@
     "@storybook/addon-docs": "^9.1.2",
     "@storybook/react-vite": "^9.1.2",
     "@storybook/react-webpack5": "^9.1.2",
-    "@storybook/test-runner": "^0.24.2",
+    "@storybook/test-runner": "^0.19.0",
     "@svgr/rollup": "^5.5.0",
     "@svgr/webpack": "^5.5.0",
     "@tippyjs/react": "^4.2.5",
