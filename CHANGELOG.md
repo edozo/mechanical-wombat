@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.3.1
+
+- Add `AGENTS.md` and `CLAUDE.md` with AI agent guidance: Radix UI for new/refactored components, styled-components only, theme tokens sourced from `src/defaultTheme.ts`.
+
 ## v3.0.0
 
 - Update `AppHeader` to:
