@@ -32,3 +32,5 @@ build-storybook.log
 notes.md
 
 *.tgz
+
+.claude/
