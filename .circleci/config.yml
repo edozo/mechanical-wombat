@@ -18,6 +18,7 @@ jobs:
   test-storybook:
     docker:
       - image: cimg/node:20.10-browsers
+    resource_class: large
     steps:
       - checkout
 
@@ -38,7 +39,7 @@ jobs:
           command: |
             npx serve -s storybook-static -l 9009 &
             npx wait-on http://localhost:9009
-            yarn test:storybook
+            yarn test:storybook --maxWorkers=2
 
   publish:
     docker:
