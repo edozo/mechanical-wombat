@@ -3,6 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { AppHeaderV2, AppHeaderV2Props } from 'HeaderV2/AppHeaderV2';
 import { EdozoLogo } from 'EdozoLogo';
 import type { LogoVariants } from 'EdozoLogo';
+import { EdozoLogoV2 } from 'EdozoLogoV2';
 import { MenuV2 } from 'HeaderV2/Menu';
 
 export default {
@@ -39,3 +40,11 @@ ControlledAppHeader.args = {
   isAuthenticated: true,
   logout: () => console.log('app specific logout method'),
 };
+
+export const MapsApp: StoryFn = () => (
+  <AppHeaderV2
+    logoSection={<EdozoLogoV2 appName="maps" />}
+    isAuthenticated
+    logout={() => {}}
+  />
+);

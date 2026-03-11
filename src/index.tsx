@@ -18,6 +18,8 @@ export { Tooltip } from './Tooltip';
 export { NotificationBar, NotificationBarAccordion } from './NotificationBar';
 export { Tabs } from './Tabs';
 export { EdozoLogo } from './EdozoLogo';
+export { EdozoLogoV2 } from './EdozoLogoV2';
+export type { EdozoLogoV2Props, AppName } from './EdozoLogoV2';
 export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
