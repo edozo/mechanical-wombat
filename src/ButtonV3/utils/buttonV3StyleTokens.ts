@@ -25,9 +25,9 @@ type ToneByStyle = Record<ButtonV3Style, ButtonV3ResolvedTone>;
 type ToneByVariant = Record<ButtonV3Variant, ToneByStyle>;
 
 const getIntentTone = (theme: DefaultTheme, variant: ButtonV3Variant, style: ButtonV3Style): ButtonV3ResolvedTone => {
-  const indigo = theme.colors.indigo;
-  const teal = theme.colors.teal;
-  const neutral = theme.colors.neutral;
+  const { indigo } = theme.colors;
+  const { teal } = theme.colors;
+  const { neutral } = theme.colors;
 
   const tonesByVariant: ToneByVariant = {
     primary: {

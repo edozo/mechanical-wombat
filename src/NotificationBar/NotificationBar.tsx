@@ -48,7 +48,7 @@ export const NotificationBarAccordion: React.FC<NotificationBarAccordionProps> =
             aria-expanded={isExpanded}
             aria-controls={detailsPanelId}
             {...getToggleProps({
-              onClick: () => setExpanded(prevState => !prevState),
+              onClick: () => setExpanded((prevState) => !prevState),
             })}
           >
             {isExpanded ? 'Show less' : 'Show more'}

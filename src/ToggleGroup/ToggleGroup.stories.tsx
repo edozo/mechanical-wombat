@@ -22,4 +22,6 @@ const items = [
   },
 ];
 
-export const Default: StoryFn = args => <ToggleGroup items={items} onChange={args.onChange} selectedItem={items[1]} />;
+export const Default: StoryFn = (args) => (
+  <ToggleGroup items={items} onChange={args.onChange} selectedItem={items[1]} />
+);

@@ -2,6 +2,7 @@ import React, { createContext, useContext } from 'react';
 import { StyledHeader } from 'Header/Header.styles';
 
 export interface Context extends React.HTMLAttributes<HTMLDivElement> {
+  // eslint-disable-next-line react/no-unused-prop-types
   appName: string;
 }
 

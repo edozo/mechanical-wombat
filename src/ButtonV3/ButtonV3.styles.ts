@@ -134,6 +134,13 @@ export const StyledButtonV3 = styled.button.withConfig({
       border-color: ${tone.border};
       background: ${tone.background};
 
+      &:disabled,
+      &[aria-disabled='true'] {
+        color: ${tone.disabledColor};
+        border-color: ${tone.disabledBorder};
+        background: ${tone.disabledBackground};
+      }
+
       &:hover:not(:disabled):not([aria-disabled='true']) {
         color: ${tone.hoverColor};
         border-color: ${tone.hoverBorder};
@@ -152,13 +159,6 @@ export const StyledButtonV3 = styled.button.withConfig({
         color: ${tone.activeColor};
         border-color: ${tone.activeBorder};
         background: ${tone.activeBackground};
-      }
-
-      &:disabled,
-      &[aria-disabled='true'] {
-        color: ${tone.disabledColor};
-        border-color: ${tone.disabledBorder};
-        background: ${tone.disabledBackground};
       }
     `;
   }}

@@ -14,9 +14,9 @@ export const StyledLogoV2 = styled.div<{ $size: 'small' | 'standard' }>`
 export const AppNameText = styled.span<{ $size: 'small' | 'standard' }>`
   font-family: ${({ theme }) => theme.typography.fontFamily.sans};
   font-size: ${({ $size, theme }) =>
-    $size === 'small' ? theme.typography.scale.sm.size : theme.typography.scale['xl'].size};
+    $size === 'small' ? theme.typography.scale.sm.size : theme.typography.scale.xl.size};
   line-height: ${({ $size, theme }) =>
-    $size === 'small' ? theme.typography.scale.sm.lineHeight : theme.typography.scale['xl'].lineHeight};
+    $size === 'small' ? theme.typography.scale.sm.lineHeight : theme.typography.scale.xl.lineHeight};
   font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
   color: ${({ theme }) => theme.colors.neutral[800]};
   text-transform: capitalize;

@@ -108,7 +108,7 @@ export const ButtonV3 = forwardRef<HTMLButtonElement | HTMLElement, ButtonV3Prop
     const { onClick, tabIndex, ...slotRest } = rest as AsChildElementProps;
     const slotRef = ref as React.Ref<HTMLElement>;
 
-    const handleAsChildClick: React.MouseEventHandler<HTMLElement> = event => {
+    const handleAsChildClick: React.MouseEventHandler<HTMLElement> = (event) => {
       if (isDisabled) {
         event.preventDefault();
         event.stopPropagation();

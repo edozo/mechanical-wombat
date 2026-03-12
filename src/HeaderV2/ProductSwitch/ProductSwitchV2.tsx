@@ -25,7 +25,7 @@ export const ProductSwitchV2: React.FC<Props> = ({ edozoProducts, triggerProps }
       </StyledNavTrigger>
       <StyledNavContent>
         <List variant="platform">
-          {edozoProducts.map(product => (
+          {edozoProducts.map((product) => (
             <List.Item key={product.url} onClick={() => linkHandler(product)} disabled={product.disabled}>
               <ItemWrapper>
                 <EdozoLogoV2 size="small" appName={product.appName} />

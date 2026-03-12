@@ -1,8 +1,8 @@
 import { StoryFn, Meta } from '@storybook/react';
 import styled from 'styled-components';
+import { Fragment } from 'react';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
 import { DisplayBoxTitle, DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles';
-import { Fragment } from 'react';
 
 export default {
   title: 'Theme/Space',
@@ -53,7 +53,7 @@ export const Space: StoryFn = () => (
     <SectionTitle>Legacy spacing tokens (deprecated)</SectionTitle>
     <SectionNote>Use only while migrating older components.</SectionNote>
     <DisplayBoxWrapper showBorder={false}>
-      {legacySpaces.map(space => (
+      {legacySpaces.map((space) => (
         <DisplayBox key={`legacy-${space.name}`} size={space.size} borderRadius="xsmall">
           <DisplayBoxSubTitle>Legacy</DisplayBoxSubTitle>
           <DisplayBoxSubTitle>{space.name}</DisplayBoxSubTitle>
@@ -65,7 +65,7 @@ export const Space: StoryFn = () => (
     <SectionTitle>New spacing tokens (preferred)</SectionTitle>
     <SectionNote>Use these tokens for all new work.</SectionNote>
     <DisplayBoxWrapper showBorder={false}>
-      {newSpaces.map(space => (
+      {newSpaces.map((space) => (
         <DisplayBox key={`new-${space.name}`} size={space.size} borderRadius="xsmall">
           <DisplayBoxSubTitle>Preferred</DisplayBoxSubTitle>
           <DisplayBoxSubTitle>{space.name}</DisplayBoxSubTitle>

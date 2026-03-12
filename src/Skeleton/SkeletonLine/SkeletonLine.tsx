@@ -1,5 +1,5 @@
-import { StyledSkeletonLine } from './SkeletonLine.styles';
 import type { DefaultTheme } from 'styled-components';
+import { StyledSkeletonLine } from './SkeletonLine.styles';
 
 export const SkeletonLine = ({
   width,

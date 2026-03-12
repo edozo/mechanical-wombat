@@ -9,6 +9,13 @@ import { StyledNavContent, StyledNavIconTrigger, StyledNavItem } from 'HeaderV2/
 import { StyledLogoutButton } from 'HeaderV2/AppHeaderV2/AppHeaderV2.styles';
 import { AppName } from 'EdozoLogoV2';
 
+export interface ProductInfo {
+  appName: AppName;
+  description: string;
+  url: string;
+  disabled?: boolean;
+}
+
 const defaultProducts: ProductInfo[] = [
   {
     appName: 'maps',
@@ -31,13 +38,6 @@ const defaultProducts: ProductInfo[] = [
     url: 'https://reports.edozo.com/',
   },
 ];
-
-export interface ProductInfo {
-  appName: AppName;
-  description: string;
-  url: string;
-  disabled?: boolean;
-}
 
 export interface AppHeaderV2Props {
   logout: () => void;
@@ -65,8 +65,8 @@ export const AppHeaderV2: React.FC<PropsWithChildren<AppHeaderV2Props>> = ({
           triggerProps={
             openOnClickOnly
               ? {
-                  onPointerMove: event => event.preventDefault(),
-                  onPointerLeave: event => event.preventDefault(),
+                  onPointerMove: (event) => event.preventDefault(),
+                  onPointerLeave: (event) => event.preventDefault(),
                 }
               : undefined
           }
@@ -74,8 +74,8 @@ export const AppHeaderV2: React.FC<PropsWithChildren<AppHeaderV2Props>> = ({
         <StyledNavItem>
           <StyledNavIconTrigger
             aria-label="Account menu"
-            onPointerMove={openOnClickOnly ? event => event.preventDefault() : undefined}
-            onPointerLeave={openOnClickOnly ? event => event.preventDefault() : undefined}
+            onPointerMove={openOnClickOnly ? (event) => event.preventDefault() : undefined}
+            onPointerLeave={openOnClickOnly ? (event) => event.preventDefault() : undefined}
           >
             <LucideIcon icon={CircleUserRound} size="md" aria-hidden="true" />
           </StyledNavIconTrigger>

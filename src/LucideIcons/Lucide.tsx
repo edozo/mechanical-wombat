@@ -29,7 +29,7 @@ const renderLucideIcon = (
 );
 
 export const createLucideIcon = (IconComponent: LucideIconComponent) => {
-  const WrappedIcon: React.FC<LucideIconProps> = props => {
+  const WrappedIcon: React.FC<LucideIconProps> = (props) => {
     const theme = useTheme();
     return renderLucideIcon(IconComponent, props, theme);
   };

@@ -8,7 +8,7 @@ export default {
   component: SwitchWrapper,
 } as Meta;
 
-const Template: StoryFn<SwitchWrapperProps> = args => <SwitchWrapper {...args} />;
+const Template: StoryFn<SwitchWrapperProps> = (args) => <SwitchWrapper {...args} />;
 
 export const Controlled = Template.bind({});
 Controlled.args = {

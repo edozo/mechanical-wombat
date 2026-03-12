@@ -8,7 +8,7 @@ export default {
   component: NotificationBar,
 } as Meta;
 
-const Template: StoryFn<NotificationBarProps> = args => (
+const Template: StoryFn<NotificationBarProps> = (args) => (
   <NotificationBar {...args}>
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <StyledWarningIcon />
@@ -27,9 +27,9 @@ export const Accordion = () => (
     variant="info"
     details={
       <span>
-        This is the details content that is <strong>hidden by default</strong>. It will expand when you click the 'Show
-        more' button. You can include any additional information here that users might need but don't need to see
-        immediately.
+        This is the details content that is <strong>hidden by default</strong>. It will expand when you click the
+        &apos;Show more&apos; button. You can include any additional information here that users might need but
+        don&apos;t need to see immediately.
       </span>
     }
   >

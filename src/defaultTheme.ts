@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components';
+import { rgba } from 'polished';
 
 /* COLORS */
 export const statusColors = {
@@ -417,4 +418,3 @@ const defaultTheme: DefaultTheme = {
 };
 
 export { defaultTheme };
-import { rgba } from 'polished';

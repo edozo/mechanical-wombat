@@ -9,7 +9,8 @@ export default {
   component: EmptyState,
 } as Meta;
 
-const Template: StoryFn = args => <EmptyState children={undefined} {...args} />;
+// eslint-disable-next-line react/no-children-prop
+const Template: StoryFn = (args) => <EmptyState children={undefined} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

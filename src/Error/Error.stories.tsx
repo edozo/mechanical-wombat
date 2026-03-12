@@ -14,7 +14,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: StoryFn = args => (
+const Template: StoryFn = (args) => (
   <div
     style={{
       display: 'flex',
@@ -88,10 +88,10 @@ Permissions.args = {
 
 export const NotFound = Template.bind({});
 NotFound.args = {
-  children: <NotFoundUI children={undefined} />,
+  children: <NotFoundUI />,
 };
 
 export const ErrorBoundary = Template.bind({});
 ErrorBoundary.args = {
-  children: <GenericErrorUI children={undefined} />,
+  children: <GenericErrorUI />,
 };

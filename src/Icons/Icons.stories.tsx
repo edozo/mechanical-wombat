@@ -223,7 +223,7 @@ const outlinedIcons = [
 
 export const Solid: StoryFn = () => (
   <DisplayBoxWrapper>
-    {solidIcons.map(icon => (
+    {solidIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>
@@ -234,7 +234,7 @@ export const Solid: StoryFn = () => (
 
 export const Outline: StoryFn = () => (
   <DisplayBoxWrapper>
-    {outlinedIcons.map(icon => (
+    {outlinedIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>

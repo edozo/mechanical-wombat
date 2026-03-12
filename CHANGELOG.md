@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Storybook interaction tests via `@storybook/test-runner` and `@storybook/addon-interactions`.
 - `Switch` component: `Interactions` story with a `play` function covering toggle on/off.
-- `yarn test:storybook` script — runs all `play` functions against a live Storybook server.
+- `yarn test` script — runs all `play` functions against a live Storybook server.
 - CircleCI `test-storybook` job — builds static Storybook, serves it with `npx serve`, and runs interaction tests headlessly via Playwright; gates the `publish` job.
 
 ## [4.3.1] - 2026-03-10

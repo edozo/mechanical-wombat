@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import styled from 'styled-components';
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { Fragment } from 'react';
 
 export default {
@@ -90,7 +89,7 @@ export const BoxShadow: StoryFn = () => {
       <SectionTitle>New shadow tokens (preferred)</SectionTitle>
       <SectionNote>Use these tokens for all new work.</SectionNote>
       <Grid>
-        {preferredShadowTokens.map(token => (
+        {preferredShadowTokens.map((token) => (
           <Card key={`preferred-${token.name}`}>
             <ShadowPreview $shadow={token.value} />
             <Label>{token.name}</Label>
@@ -102,7 +101,7 @@ export const BoxShadow: StoryFn = () => {
       <SectionTitle>Legacy shadow tokens (deprecated)</SectionTitle>
       <SectionNote>Keep only while migrating older components.</SectionNote>
       <Grid>
-        {legacyShadowTokens.map(token => (
+        {legacyShadowTokens.map((token) => (
           <Card key={`legacy-${token.name}`}>
             <ShadowPreview $shadow={token.value} />
             <Label>{token.name}</Label>

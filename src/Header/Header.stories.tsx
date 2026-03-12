@@ -13,10 +13,14 @@ export default {
 } as Meta;
 
 export const Default: StoryFn = () => (
-  <AppHeader appName="edozo" logoSection={<EdozoLogo variant={"edozo" as LogoVariants} size="small" />} logout={() => {}} />
+  <AppHeader
+    appName="edozo"
+    logoSection={<EdozoLogo variant={'edozo' as LogoVariants} size="small" />}
+    logout={() => {}}
+  />
 );
 
-export const ControlledAppHeader: StoryFn<AppHeaderProps> = args => (
+export const ControlledAppHeader: StoryFn<AppHeaderProps> = (args) => (
   <AppHeader
     logoSection={
       <a>

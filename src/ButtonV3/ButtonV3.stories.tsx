@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { ButtonV3, ButtonV3Props } from './ButtonV3';
 import { LucideIcon } from 'LucideIcons';
+import { ButtonV3, ButtonV3Props } from './ButtonV3';
 import { defaultTheme } from '../defaultTheme';
 
 export default {
@@ -79,11 +79,11 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<ButtonV3Props> = args => <ButtonV3 {...args} />;
+const Template: StoryFn<ButtonV3Props> = (args) => <ButtonV3 {...args} />;
 
 export const Playground = Template.bind({});
 
-export const Variants: StoryFn<ButtonV3Props> = args => (
+export const Variants: StoryFn<ButtonV3Props> = (args) => (
   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
     <ButtonV3 {...args} asChild={false} variant="primary">
       Primary
@@ -100,21 +100,24 @@ export const Variants: StoryFn<ButtonV3Props> = args => (
   </div>
 );
 
-export const Styles: StoryFn<ButtonV3Props> = args => (
+export const Styles: StoryFn<ButtonV3Props> = (args) => (
   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+    {/* eslint-disable-next-line react/style-prop-object */}
     <ButtonV3 {...args} asChild={false} style="solid">
       Solid
     </ButtonV3>
+    {/* eslint-disable-next-line react/style-prop-object */}
     <ButtonV3 {...args} asChild={false} style="outline">
       Outline
     </ButtonV3>
+    {/* eslint-disable-next-line react/style-prop-object */}
     <ButtonV3 {...args} asChild={false} style="ghost">
       Ghost
     </ButtonV3>
   </div>
 );
 
-export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
+export const VariantStyleMatrix: StoryFn<ButtonV3Props> = (args) => {
   const variants: Array<ButtonV3Props['variant']> = ['primary', 'secondary', 'tertiary', 'quaternary'];
   const styles: Array<ButtonV3Props['style']> = ['solid', 'outline', 'ghost'];
 
@@ -129,7 +132,7 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
       }}
     >
       <div />
-      {styles.map(style => (
+      {styles.map((style) => (
         <div
           key={`variant-header-${style}`}
           style={{
@@ -143,7 +146,7 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
         </div>
       ))}
 
-      {variants.flatMap(variant => [
+      {variants.flatMap((variant) => [
         <div
           key={`variant-row-${variant}`}
           style={{
@@ -155,7 +158,7 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
         >
           {variant}
         </div>,
-        ...styles.map(style => (
+        ...styles.map((style) => (
           <div
             key={`${variant}-${style}`}
             style={{
@@ -174,7 +177,7 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
   );
 };
 
-export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
+export const NotificationContextMatrix: StoryFn<ButtonV3Props> = (args) => {
   const statuses: Array<NonNullable<ButtonV3Props['status']>> = ['info', 'success', 'warning', 'danger'];
   const styles: Array<ButtonV3Props['style']> = ['solid', 'outline', 'ghost'];
 
@@ -189,7 +192,7 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
       }}
     >
       <div />
-      {styles.map(style => (
+      {styles.map((style) => (
         <div
           key={`header-${style}`}
           style={{
@@ -203,7 +206,7 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
         </div>
       ))}
 
-      {statuses.flatMap(status => [
+      {statuses.flatMap((status) => [
         <div
           key={`row-${status}`}
           style={{
@@ -215,7 +218,7 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
         >
           {status}
         </div>,
-        ...styles.map(style => (
+        ...styles.map((style) => (
           <div
             key={`${status}-${style}`}
             style={{
@@ -234,8 +237,15 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
   );
 };
 
-export const IconOnly: StoryFn<ButtonV3Props> = args => (
-  <ButtonV3 {...args} asChild={false} iconOnly aria-label="Search" leadingIcon={<span>⌕</span>} trailingIcon={undefined} />
+export const IconOnly: StoryFn<ButtonV3Props> = (args) => (
+  <ButtonV3
+    {...args}
+    asChild={false}
+    iconOnly
+    aria-label="Search"
+    leadingIcon={<span>⌕</span>}
+    trailingIcon={undefined}
+  />
 );
 
 export const ButtonWithTrailingArrowRight = Template.bind({});
