@@ -6,7 +6,7 @@ import { MenuV2 } from 'HeaderV2/Menu';
 import { HeaderV2 } from 'HeaderV2/HeaderV2';
 import { LucideIcon } from 'LucideIcons';
 import { StyledNavContent, StyledNavIconTrigger, StyledNavItem } from 'HeaderV2/Menu/MenuV2.styles';
-import { StyledLogoutButton } from 'HeaderV2/AppHeaderV2/AppHeaderV2.styles';
+import { StyledLogoutButton, StyledUserInfo } from 'HeaderV2/AppHeaderV2/AppHeaderV2.styles';
 import { AppName } from 'EdozoLogoV2';
 
 const defaultProducts: ProductInfo[] = [
@@ -45,6 +45,8 @@ export interface AppHeaderV2Props {
   isAuthenticated?: boolean;
   edozoProducts?: ProductInfo[];
   openOnClickOnly?: boolean;
+  /** The logged-in user identifier shown in the account dropdown. May be a name or email address. */
+  user?: string;
 }
 
 export const AppHeaderV2: React.FC<PropsWithChildren<AppHeaderV2Props>> = ({
@@ -54,6 +56,7 @@ export const AppHeaderV2: React.FC<PropsWithChildren<AppHeaderV2Props>> = ({
   edozoProducts = defaultProducts,
   children,
   openOnClickOnly = true,
+  user,
 }) => (
   <HeaderV2>
     {logoSection}
@@ -80,6 +83,7 @@ export const AppHeaderV2: React.FC<PropsWithChildren<AppHeaderV2Props>> = ({
             <LucideIcon icon={CircleUserRound} size="md" aria-hidden="true" />
           </StyledNavIconTrigger>
           <StyledNavContent>
+            {user && <StyledUserInfo>{user}</StyledUserInfo>}
             <NavigationMenu.Link asChild>
               <StyledLogoutButton type="button" onClick={logout} data-testid="logoutButton">
                 <LucideIcon icon={LogOut} size="sm" aria-hidden="true" />
