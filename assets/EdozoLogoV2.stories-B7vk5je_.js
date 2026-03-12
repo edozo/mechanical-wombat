@@ -1,7 +1,0 @@
-import{j as r}from"./iframe-D_ylYApI.js";import{E as a}from"./EdozoLogoV2-DwqUgY4S.js";import"./preload-helper-C1FmrZbK.js";import"./edozo-logo-NeVFMK4-.js";const y={title:"Components/EdozoLogoV2",component:a,argTypes:{appName:{description:"App name to display.",control:{type:"select"},options:["edozo","maps","occupiers","insight","reports","extract"]},size:{description:"Visual size of the logo.",control:{type:"select"},options:["small","standard"]}},args:{appName:"edozo",size:"standard"}},l=s=>r.jsx(a,{...s}),e=l.bind({}),o=s=>r.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"16px"},children:["edozo","maps","occupiers","insight","reports","extract"].map(t=>r.jsx(a,{...s,appName:t},t))});o.args={size:"standard"};o.__docgenInfo={description:"",methods:[],displayName:"AllProducts"};var p,i,n;e.parameters={...e.parameters,docs:{...(p=e.parameters)==null?void 0:p.docs,source:{originalSource:"args => <EdozoLogoV2 {...args} />",...(n=(i=e.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};var c,d,m;o.parameters={...o.parameters,docs:{...(c=o.parameters)==null?void 0:c.docs,source:{originalSource:`args => <div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '16px'
-}}>
-    {(['edozo', 'maps', 'occupiers', 'insight', 'reports', 'extract'] as AppName[]).map(name => <EdozoLogoV2 key={name} {...args} appName={name} />)}
-  </div>`,...(m=(d=o.parameters)==null?void 0:d.docs)==null?void 0:m.source}}};const f=["Playground","AllProducts"];export{o as AllProducts,e as Playground,f as __namedExportsOrder,y as default};
