@@ -1,10 +1,11 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { ProductInfo } from 'HeaderV2/AppHeaderV2';
-import { ItemTitle, ItemWrapper, ProductsButtonLabel, StyledText } from 'HeaderV2/ProductSwitch/ProductSwitchV2.styles';
+import { ItemWrapper, ProductsButtonLabel, StyledText } from 'HeaderV2/ProductSwitch/ProductSwitchV2.styles';
 import { List } from 'List';
 import { LucideIcon } from 'LucideIcons';
 import { StyledNavContent, StyledNavItem, StyledNavTrigger } from 'HeaderV2/Menu/MenuV2.styles';
+import { EdozoLogoV2 } from 'EdozoLogoV2';
 
 interface Props {
   edozoProducts: ProductInfo[];
@@ -27,7 +28,7 @@ export const ProductSwitchV2: React.FC<Props> = ({ edozoProducts, triggerProps }
           {edozoProducts.map(product => (
             <List.Item key={product.url} onClick={() => linkHandler(product)} disabled={product.disabled}>
               <ItemWrapper>
-                <ItemTitle>{product.appName}</ItemTitle>
+                <EdozoLogoV2 size="small" appName={product.appName} />
                 <StyledText>{product.description}</StyledText>
               </ItemWrapper>
             </List.Item>

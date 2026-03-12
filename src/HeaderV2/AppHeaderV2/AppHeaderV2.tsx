@@ -7,32 +7,33 @@ import { HeaderV2 } from 'HeaderV2/HeaderV2';
 import { LucideIcon } from 'LucideIcons';
 import { StyledNavContent, StyledNavIconTrigger, StyledNavItem } from 'HeaderV2/Menu/MenuV2.styles';
 import { StyledLogoutButton } from 'HeaderV2/AppHeaderV2/AppHeaderV2.styles';
+import { AppName } from 'EdozoLogoV2';
 
 const defaultProducts: ProductInfo[] = [
   {
-    appName: 'Maps',
+    appName: 'maps',
     description: 'Create best in class OS mapping with single click technology',
     url: 'https://maps.edozo.com/',
   },
   {
-    appName: 'Occupiers',
+    appName: 'occupiers',
     description: 'Create plans and see occupiers for all use classes',
     url: 'https://occupiers.edozo.com/',
   },
   {
-    appName: 'Insight',
+    appName: 'insight',
     description: 'Find thousands of commercial property transaction comps',
     url: 'https://insight.edozo.com/',
   },
   {
-    appName: 'Reports',
+    appName: 'reports',
     description: 'Create automated valuation reports',
     url: 'https://reports.edozo.com/',
   },
 ];
 
 export interface ProductInfo {
-  appName: string;
+  appName: AppName;
   description: string;
   url: string;
   disabled?: boolean;
