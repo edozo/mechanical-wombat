@@ -27,7 +27,7 @@ export const Collapse: React.FC<CollapseProps> = ({ children, isOpen = false, tr
     <StyledCollapse {...rest}>
       <StyledTrigger
         {...getToggleProps({
-          onClick: () => setExpanded(prevState => !prevState),
+          onClick: () => setExpanded((prevState) => !prevState),
         })}
       >
         {trigger}

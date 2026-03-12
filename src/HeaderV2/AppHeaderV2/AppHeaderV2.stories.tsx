@@ -22,14 +22,15 @@ export default {
 } as Meta;
 
 export const Default: StoryFn = () => (
-  <AppHeaderV2 logoSection={<EdozoLogo variant={"edozo" as LogoVariants} size="small" />} logout={() => {}} />
+  <AppHeaderV2 logoSection={<EdozoLogo variant={'edozo' as LogoVariants} size="small" />} logout={() => {}} />
 );
 
-export const ControlledAppHeader: StoryFn<AppHeaderV2Props> = args => (
+export const ControlledAppHeader: StoryFn<AppHeaderV2Props> = (args) => (
   <AppHeaderV2
     logoSection={
-      <a>
-        <EdozoLogo variant={"edozo" as LogoVariants} />
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      <a href="#">
+        <EdozoLogo variant={'edozo' as LogoVariants} />
       </a>
     }
     isAuthenticated={args.isAuthenticated}
@@ -38,10 +39,14 @@ export const ControlledAppHeader: StoryFn<AppHeaderV2Props> = args => (
   >
     <Fragment>
       <MenuV2.Item>
-        <a className="active">Help</a>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a href="#" className="active">
+          Help
+        </a>
       </MenuV2.Item>
       <MenuV2.Item>
-        <a>Docs</a>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a href="#">Docs</a>
       </MenuV2.Item>
     </Fragment>
   </AppHeaderV2>
@@ -49,22 +54,20 @@ export const ControlledAppHeader: StoryFn<AppHeaderV2Props> = args => (
 
 ControlledAppHeader.args = {
   isAuthenticated: true,
+  // eslint-disable-next-line no-console
   logout: () => console.log('app specific logout method'),
 };
 
 export const MapsApp: StoryFn = () => (
-  <AppHeaderV2
-    logoSection={<EdozoLogoV2 appName="maps" />}
-    isAuthenticated
-    logout={() => {}}
-  />
+  <AppHeaderV2 logoSection={<EdozoLogoV2 appName="maps" />} isAuthenticated logout={() => {}} />
 );
 
-export const WithUser: StoryFn<AppHeaderV2Props> = args => (
+export const WithUser: StoryFn<AppHeaderV2Props> = (args) => (
   <AppHeaderV2
     logoSection={
-      <a>
-        <EdozoLogo variant={"edozo" as LogoVariants} />
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      <a href="#">
+        <EdozoLogo variant={'edozo' as LogoVariants} />
       </a>
     }
     isAuthenticated
@@ -74,6 +77,7 @@ export const WithUser: StoryFn<AppHeaderV2Props> = args => (
 );
 
 WithUser.args = {
+  // eslint-disable-next-line no-console
   logout: () => console.log('logout'),
   user: 'jane.smith@example.com',
 };

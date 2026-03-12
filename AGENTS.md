@@ -12,7 +12,7 @@ yarn start               # tsup watch mode (build only, no browser)
 yarn build               # Production build: tsup + tsc type declarations
 yarn lint                # ESLint (ts/tsx) + stylelint (styled-components CSS)
 yarn lintfix             # Auto-fix lint errors where possible
-yarn test:storybook      # Run Storybook interaction tests (requires storybook dev server running)
+yarn test      # Run Storybook interaction tests (requires storybook dev server running)
 yarn yarn:package        # Pack a local .tgz for testing in consumer apps
 ```
 
@@ -58,18 +58,15 @@ All new components and any significantly refactored existing components must be 
 Always create all four files. See `src/ButtonV3/` as the reference implementation.
 
 ```typescript
-// ComponentName/index.tsx — re-export public API only
 export { ComponentName } from './ComponentName';
 export type { ComponentNameProps } from './ComponentName';
 ```
 
 ```typescript
-// ComponentName/ComponentName.tsx
 import { forwardRef } from 'react';
 import { StyledRoot } from 'ComponentName/ComponentName.styles';
 
 export interface ComponentNameProps {
-  /** JSDoc on every prop. */
   variant?: 'primary' | 'secondary';
 }
 
@@ -81,7 +78,6 @@ ComponentName.displayName = 'ComponentName';
 ```
 
 ```typescript
-// ComponentName/ComponentName.styles.ts
 import styled from 'styled-components';
 
 export const StyledRoot = styled.div<{ $variant: string }>`
@@ -96,24 +92,22 @@ After creating a component, add it to `src/index.tsx`.
 
 ### Naming
 
-| Thing | Convention |
-|---|---|
-| Components | `PascalCase` |
-| Props interfaces | `ComponentNameProps` |
-| Styled elements | `Styled` prefix — `StyledButton`, `IconWrapper` |
+| Thing                  | Convention                                                      |
+| ---------------------- | --------------------------------------------------------------- |
+| Components             | `PascalCase`                                                    |
+| Props interfaces       | `ComponentNameProps`                                            |
+| Styled elements        | `Styled` prefix — `StyledButton`, `IconWrapper`                 |
 | Transient styled props | `$` prefix — `$variant`, `$isLoading` (prevents DOM forwarding) |
-| Constants | `SCREAMING_SNAKE_CASE` |
+| Constants              | `SCREAMING_SNAKE_CASE`                                          |
 
 ### Imports
 
 `tsconfig.json` sets `baseUrl: "src"`, so use bare module-relative paths — not relative paths:
 
 ```typescript
-// ✅ correct
 import { StyledButtonV3 } from 'ButtonV3/ButtonV3.styles';
 import { defaultTheme } from 'defaultTheme';
 
-// ❌ wrong
 import { StyledButtonV3 } from './ButtonV3.styles';
 ```
 
@@ -149,7 +143,7 @@ Each category has a set of preferred keys and a set of legacy/deprecated keys (m
 Storybook `play` functions are the project's test mechanism — there are no separate unit tests.
 
 - **Tool**: `@storybook/test-runner` + `@storybook/addon-interactions`
-- **Run locally**: start `yarn storybook`, then in a second terminal run `yarn test:storybook`
+- **Run locally**: start `yarn storybook`, then in a second terminal run `yarn test`
 - **CI**: the `test-storybook` CircleCI job builds a static Storybook, serves it on port 9009 with `npx serve`, and runs all `play` functions headlessly via Playwright
 
 ### When to write a `play` function
@@ -157,6 +151,7 @@ Storybook `play` functions are the project's test mechanism — there are no sep
 Write a `play` function on stories that exercise **interactive or stateful behaviour** — toggling, opening, typing, selecting. Do not add them to static/display-only stories.
 
 Interaction test policy:
+
 - Add `play` tests only for components/states with meaningful user interaction or state transitions.
 - Do not add `play` tests for purely presentational components (for example, `Badge`) unless they include behaviour that can change via user input or async state.
 - CI is configured to run only stories tagged as `play-fn` (stories with a `play` function), so static stories are intentionally excluded from test-runner execution.
@@ -166,17 +161,14 @@ Interaction test policy:
 ```typescript
 import { expect, userEvent, within } from '@storybook/test';
 
-export const MyInteractiveStory: StoryFn<MyProps> = args => <MyComponent {...args} />;
+export const MyInteractiveStory: StoryFn<MyProps> = (args) => <MyComponent {...args} />;
 MyInteractiveStory.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  // Assert initial state
   expect(canvas.getByRole('checkbox')).not.toBeChecked();
 
-  // Interact
   await userEvent.click(canvas.getByRole('checkbox'));
 
-  // Assert result
   expect(canvas.getByRole('checkbox')).toBeChecked();
 };
 ```
@@ -206,16 +198,18 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<ComponentNameProps> = args => <ComponentName {...args} />;
+const Template: StoryFn<ComponentNameProps> = (args) => <ComponentName {...args} />;
 
-// Always include a Playground story with full controls
 export const Playground = Template.bind({});
 
-// Add named stories for each meaningful variant or state
-export const Variants: StoryFn<ComponentNameProps> = args => (
+export const Variants: StoryFn<ComponentNameProps> = (args) => (
   <div style={{ display: 'flex', gap: '8px' }}>
-    <ComponentName {...args} variant="primary">Primary</ComponentName>
-    <ComponentName {...args} variant="secondary">Secondary</ComponentName>
+    <ComponentName {...args} variant="primary">
+      Primary
+    </ComponentName>
+    <ComponentName {...args} variant="secondary">
+      Secondary
+    </ComponentName>
   </div>
 );
 ```
@@ -234,6 +228,7 @@ export const Variants: StoryFn<ComponentNameProps> = args => (
 ## Publishing
 
 When adding or changing components:
+
 1. Update `CHANGELOG.md` following the [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) format:
    - Add a new `## [x.y.z] - YYYY-MM-DD` section below `## [Unreleased]`
    - Group entries under the appropriate subsection: `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, or `### Security`
@@ -252,6 +247,7 @@ Merging to `main` triggers CI publish to GitHub Packages. The `tag-release` work
 ## Boundaries
 
 ✅ **Always do**
+
 - Create all four files per component (`*.tsx`, `*.styles.ts`, `*.stories.tsx`, `index.tsx`)
 - Export new components from `src/index.tsx`
 - Use Radix UI primitives for new components and refactored existing ones
@@ -261,10 +257,11 @@ Merging to `main` triggers CI publish to GitHub Packages. The `tag-release` work
 - Add JSDoc to all exported props
 - Run `yarn lint` before declaring work complete
 - Write a `play` function for any story with interactive or stateful behaviour
-- Run `yarn test:storybook` (with `yarn storybook` running) before declaring work complete
+- Run `yarn test` (with `yarn storybook` running) before declaring work complete
 - Update `CHANGELOG.md` and bump the version when shipping a change
 
 ⚠️ **Ask before doing**
+
 - Adding a new peer dependency or direct runtime dependency
 - Modifying `tsup.config.ts`, `tsconfig.json`, or `.eslintrc`
 - Changing `src/globalStyle.ts` or `src/defaultTheme.ts`
@@ -272,6 +269,7 @@ Merging to `main` triggers CI publish to GitHub Packages. The `tag-release` work
 - Bumping a major version
 
 🚫 **Never do**
+
 - Commit the `dist/` directory
 - Add a direct runtime dependency without discussion (everything should be a peer dep)
 - Use Tailwind, SCSS, or plain CSS — styled-components is the only styling mechanism

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.1.1] - 2026-03-12
+
+### Fixed
+
+- Upgraded ESLint to v8, `@typescript-eslint` to v8, prettier to v2, and `eslint-plugin-react-hooks` to v4, resolving a startup crash caused by `eslint-plugin-storybook` v9 requiring ESLint 8.
+- Added `yarn lint` and `yarn typecheck` steps to the CircleCI `build-and-test` job (runs on all branches/PRs), and `yarn typecheck` to the pre-commit hook, so quality gates are enforced in CI and locally.
+- Added `typecheck` script (`tsc --noEmit`) to `package.json`.
+- Fixed all pre-existing lint errors across the codebase (ESLint had never run successfully before).
+- Typed `SkeletonGroup` and `SkeletonLine` components as `React.FC<Props>` and extracted their props into exported `SkeletonGroupProps` and `SkeletonLineProps` interfaces.
+
 ## [5.1.0] - 2026-03-12
 
 ### Added
@@ -38,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Storybook interaction tests via `@storybook/test-runner` and `@storybook/addon-interactions`.
 - `Switch` component: `Interactions` story with a `play` function covering toggle on/off.
-- `yarn test:storybook` script — runs all `play` functions against a live Storybook server.
+- `yarn test` script — runs all `play` functions against a live Storybook server.
 - CircleCI `test-storybook` job — builds static Storybook, serves it with `npx serve`, and runs interaction tests headlessly via Playwright; gates the `publish` job.
 
 ## [4.3.1] - 2026-03-10
@@ -160,7 +170,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v5.1.1...HEAD
+[5.1.1]: https://github.com/edozo/mechanical-wombat/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/edozo/mechanical-wombat/compare/v4.3.2...v5.0.0
 [4.3.2]: https://github.com/edozo/mechanical-wombat/compare/v4.3.1...v4.3.2

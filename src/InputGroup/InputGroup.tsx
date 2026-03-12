@@ -20,7 +20,7 @@ const defaultProps: InputGroupState = {
   placeholder: '',
 };
 
-const InputGroup: React.FC<InputGroupState> & ListComposition = props => {
+const InputGroup: React.FC<InputGroupState> & ListComposition = (props) => {
   const mergedProps = { ...defaultProps, ...props };
 
   return (

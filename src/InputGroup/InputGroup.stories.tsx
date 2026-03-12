@@ -20,13 +20,13 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn = args => (
+const Template: StoryFn = (args) => (
   <InputGroup type={args.type} onChange={() => null} {...args}>
     <InputGroup.Input />
   </InputGroup>
 );
 
-const TemplateWithIconEnd: StoryFn = args => (
+const TemplateWithIconEnd: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -35,7 +35,7 @@ const TemplateWithIconEnd: StoryFn = args => (
   </InputGroup>
 );
 
-const TemplateWithIconStart: StoryFn = args => (
+const TemplateWithIconStart: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
@@ -44,7 +44,7 @@ const TemplateWithIconStart: StoryFn = args => (
   </InputGroup>
 );
 
-const TemplateWithIconButton: StoryFn = args => (
+const TemplateWithIconButton: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -53,7 +53,7 @@ const TemplateWithIconButton: StoryFn = args => (
   </InputGroup>
 );
 
-const TemplateKitchenSink: StoryFn = args => (
+const TemplateKitchenSink: StoryFn = (args) => (
   <InputGroup placeholder="Placeholder from the input props" onChange={() => null} {...args}>
     <InputGroup.Item>
       <SearchIcon />
@@ -65,7 +65,7 @@ const TemplateKitchenSink: StoryFn = args => (
   </InputGroup>
 );
 
-const TemplateWithItemEnd: StoryFn = args => (
+const TemplateWithItemEnd: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Input />
     <InputGroup.Item>
@@ -74,7 +74,7 @@ const TemplateWithItemEnd: StoryFn = args => (
   </InputGroup>
 );
 
-const TemplateWithItemStart: StoryFn = args => (
+const TemplateWithItemStart: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Item backgroundColor="red">
       <strong style={{ border: '1px solid green', margin: '0 36px' }}>
@@ -93,13 +93,13 @@ const GlobalSearchTemplate: StoryFn = () => {
       placeholder="Search by Plan name or Address"
       disabled={false}
       value={value}
-      onChange={event => setValue(event.target.value)}
+      onChange={(event) => setValue(event.target.value)}
       reset={() => setValue('')}
     />
   );
 };
 
-const TextareaTemplate: StoryFn = args => (
+const TextareaTemplate: StoryFn = (args) => (
   <InputGroup onChange={() => null} {...args}>
     <InputGroup.Textarea />
   </InputGroup>

@@ -110,12 +110,12 @@ export const StyledNavTrigger = styled(NavigationMenu.Trigger)`
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.blue[300]};
   }
 
-  &[data-state='open'] svg {
-    transform: rotate(-180deg);
-  }
-
   svg {
     transition: transform 200ms ease;
+  }
+
+  &[data-state='open'] svg {
+    transform: rotate(-180deg);
   }
 `;
 

@@ -12,6 +12,14 @@ jobs:
           command: yarn
 
       - run:
+          name: Lint
+          command: yarn lint
+
+      - run:
+          name: Type check
+          command: yarn typecheck
+
+      - run:
           name: Build
           command: yarn build
 
@@ -38,7 +46,7 @@ jobs:
             SB_SERVER_PID=$!
             trap "kill $SB_SERVER_PID" EXIT
             npx wait-on tcp:9009
-            yarn test:storybook --maxWorkers=2
+            yarn test --maxWorkers=2
 
   publish:
     docker:

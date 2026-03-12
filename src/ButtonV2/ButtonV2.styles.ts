@@ -70,11 +70,11 @@ export const StyledButton = styled.button.withConfig({
       background: ${theme.colors.system.red};
     `}
     ${({ theme, variant }) =>
-      variant === 'white' &&
-      css`
-        background: ${theme.colors.white};
-        color: ${theme.colors.black};
-      `}
+    variant === 'white' &&
+    css`
+      background: ${theme.colors.white};
+      color: ${theme.colors.black};
+    `}
 
   &:hover {
     opacity: 0.85;
@@ -95,5 +95,5 @@ export const StyledButton = styled.button.withConfig({
         top: -7px;
         right: 0;
       `}
-	}
+  }
 `;

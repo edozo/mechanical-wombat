@@ -57,7 +57,6 @@ You can add your own icons as SVG files and wrap them with the same Lucide defau
 Example:
 
 ```tsx
-// src/LucideIcons/custom/index.ts
 import MyBrandSvg from './my-brand-icon.svg';
 import { createLucideIcon } from '../Lucide';
 
@@ -118,7 +117,7 @@ Storybook interaction tests (`play` functions) are the primary test mechanism. T
 yarn storybook
 
 # Terminal 2
-yarn test:storybook
+yarn test
 ```
 
 **CI** — the `test-storybook` CircleCI job builds a static Storybook, serves it, and runs all `play` functions headlessly via Playwright.
@@ -130,7 +129,7 @@ Add a `play` function to any story that has meaningful interactive behaviour:
 ```tsx
 import { expect, userEvent, within } from '@storybook/test';
 
-export const MyStory: StoryFn<Props> = args => <MyComponent {...args} />;
+export const MyStory: StoryFn<Props> = (args) => <MyComponent {...args} />;
 MyStory.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
@@ -144,7 +143,7 @@ Only add `play` functions to stories with stateful or interactive behaviour — 
 
 When making changes to this library, please make sure you:
 
-1. Write or update interaction tests for any interactive behaviour and confirm they pass (`yarn test:storybook`)
+1. Write or update interaction tests for any interactive behaviour and confirm they pass (`yarn test`)
 2. Update the version number in `package.json`
 3. Commit changes to a branch, open a PR and get it reviewed
 4. Once approved, merge to the `main` branch

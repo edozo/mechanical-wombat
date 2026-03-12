@@ -22,13 +22,13 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<EdozoLogoV2Props> = args => <EdozoLogoV2 {...args} />;
+const Template: StoryFn<EdozoLogoV2Props> = (args) => <EdozoLogoV2 {...args} />;
 
 export const Playground = Template.bind({});
 
-export const AllProducts: StoryFn<EdozoLogoV2Props> = args => (
+export const AllProducts: StoryFn<EdozoLogoV2Props> = (args) => (
   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-    {(['edozo', 'maps', 'occupiers', 'insight', 'reports', 'extract'] as AppName[]).map(name => (
+    {(['edozo', 'maps', 'occupiers', 'insight', 'reports', 'extract'] as AppName[]).map((name) => (
       <EdozoLogoV2 key={name} {...args} appName={name} />
     ))}
   </div>

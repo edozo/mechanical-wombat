@@ -10,6 +10,7 @@ declare module '*.css' {
 
 declare module '*.svg' {
   import * as React from 'react';
+
   const Component: React.FC<React.SVGProps<SVGSVGElement>>;
   export default Component;
 }
@@ -21,12 +22,14 @@ declare module '*.svg?url' {
 
 declare module '*.svg?react' {
   import * as React from 'react';
+
   const Component: React.FC<React.SVGProps<SVGSVGElement>>;
   export default Component;
 }
 
 declare module 'react-collapsed' {
   import * as React from 'react';
+
   export interface CollapseProps {
     isExpanded?: boolean;
     children?: React.ReactNode;

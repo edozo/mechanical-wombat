@@ -31,8 +31,8 @@ export const StyledDisplayBoxColor = styled.div<StyleProps>`
   background: ${({ theme, background }) => resolveColor(theme, background)};
   border-radius: ${({ theme, borderRadius }) =>
     borderRadius ? theme.borderRadius[borderRadius] : theme.borderRadius.small};
-  width: ${({ size }) => (size ? size : '100px')};
-  height: ${({ size }) => (size ? size : '100px')};
+  width: ${({ size }) => size || '100px'};
+  height: ${({ size }) => size || '100px'};
   border: 1px solid ${({ theme }) => theme.colors.gray};
 `;
 

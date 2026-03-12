@@ -5,7 +5,7 @@ export interface PopoverContentProps extends StyleProps {
   children?: React.ReactNode;
 }
 
-export const PopoverContent: React.FC<PopoverContentProps> = props => {
+export const PopoverContent: React.FC<PopoverContentProps> = (props) => {
   const { children, ...rest } = props;
   return <StyledPopoverContent {...rest}>{children}</StyledPopoverContent>;
 };

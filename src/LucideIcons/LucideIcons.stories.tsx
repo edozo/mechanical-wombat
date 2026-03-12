@@ -1,7 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
+import { Triangle, Check, Search, X } from 'lucide-react';
 import { DisplayBoxWrapper } from '../DisplayBox';
 import { DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles';
-import { Triangle, Check, Search, X } from 'lucide-react';
 import { LucideIcon, LucideCustomExample } from '.';
 import { TextBase } from '../Typography';
 
@@ -57,7 +57,12 @@ export const Controls: StoryFn<ControlsArgs> = ({ size, color, iconKey }) => (
         <DisplayBoxSubTitle style={{ width: '80px' }}>{iconKey}</DisplayBoxSubTitle>
       </div>
     </DisplayBoxWrapper>
-    <TextBase>For the full set of icons available visit - <a href="https://lucide.dev/icons/" target="_blank" rel="noopener noreferrer">lucide.dev/icons</a></TextBase>
+    <TextBase>
+      For the full set of icons available visit -{' '}
+      <a href="https://lucide.dev/icons/" target="_blank" rel="noopener noreferrer">
+        lucide.dev/icons
+      </a>
+    </TextBase>
   </div>
 );
 
@@ -70,13 +75,18 @@ Controls.args = {
 export const Default: StoryFn = () => (
   <div>
     <DisplayBoxWrapper>
-      {icons.map(icon => (
+      {icons.map((icon) => (
         <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
           {icon.component}
           <DisplayBoxSubTitle style={{ width: '80px' }}>{icon.name}</DisplayBoxSubTitle>
         </div>
       ))}
     </DisplayBoxWrapper>
-    <TextBase>For the full set of icons available visit - <a href="https://lucide.dev/icons/" target="_blank" rel="noopener noreferrer">lucide.dev/icons</a></TextBase>
+    <TextBase>
+      For the full set of icons available visit -{' '}
+      <a href="https://lucide.dev/icons/" target="_blank" rel="noopener noreferrer">
+        lucide.dev/icons
+      </a>
+    </TextBase>
   </div>
 );
