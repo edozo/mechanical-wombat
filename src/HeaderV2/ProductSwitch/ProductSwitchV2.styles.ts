@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const StyledProductList = styled.div`
+  width: 240px;
+`;
+
 export const ProductsButtonLabel = styled.span`
   display: inline-flex;
   align-items: center;
