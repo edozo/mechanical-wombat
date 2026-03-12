@@ -62,11 +62,12 @@ export const MapsApp: StoryFn = () => (
   <AppHeaderV2 logoSection={<EdozoLogoV2 appName="maps" />} isAuthenticated logout={() => {}} />
 );
 
-export const WithUser: StoryFn<AppHeaderV2Props> = args => (
+export const WithUser: StoryFn<AppHeaderV2Props> = (args) => (
   <AppHeaderV2
     logoSection={
-      <a>
-        <EdozoLogo variant={"edozo" as LogoVariants} />
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
+      <a href="#">
+        <EdozoLogo variant={'edozo' as LogoVariants} />
       </a>
     }
     isAuthenticated
@@ -76,6 +77,7 @@ export const WithUser: StoryFn<AppHeaderV2Props> = args => (
 );
 
 WithUser.args = {
+  // eslint-disable-next-line no-console
   logout: () => console.log('logout'),
   user: 'jane.smith@example.com',
 };
