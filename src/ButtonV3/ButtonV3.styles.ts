@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 import {
   ButtonV3Status,
-  ButtonV3Style,
+  ButtonV3Appearance,
   ButtonV3Variant,
   getButtonV3SizeTokens,
   getButtonV3Tone,
@@ -10,7 +10,7 @@ import {
 
 interface StyledButtonV3Props {
   $variant: ButtonV3Variant;
-  $style: ButtonV3Style;
+  $appearance: ButtonV3Appearance;
   $size: ButtonV3Size;
   $status?: ButtonV3Status;
   $fullWidth: boolean;
@@ -126,8 +126,8 @@ export const StyledButtonV3 = styled.button.withConfig({
     `;
   }}
 
-  ${({ theme, $variant, $style, $status }) => {
-    const tone = getButtonV3Tone(theme, $variant, $style, $status);
+  ${({ theme, $variant, $appearance, $status }) => {
+    const tone = getButtonV3Tone(theme, $variant, $appearance, $status);
 
     return css`
       color: ${tone.color};

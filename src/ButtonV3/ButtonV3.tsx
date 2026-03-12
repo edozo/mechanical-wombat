@@ -2,10 +2,10 @@ import { Fragment, forwardRef, useEffect } from 'react';
 import { Slot, Slottable } from '@radix-ui/react-slot';
 import { IconSlot, Spinner, SpinnerWrapper, StyledButtonV3 } from 'ButtonV3/ButtonV3.styles';
 import {
+  ButtonV3Appearance,
   ButtonV3Context,
   ButtonV3Size,
   ButtonV3Status,
-  ButtonV3Style,
   ButtonV3Variant,
 } from 'ButtonV3/utils/buttonV3StyleTokens';
 
@@ -24,8 +24,8 @@ type IconPlacementProps =
 interface ButtonV3BaseProps {
   /** Visual intent: primary, secondary, tertiary, quaternary. */
   variant?: ButtonV3Variant;
-  /** Treatment style: solid, outline, ghost. */
-  style?: ButtonV3Style;
+  /** Visual appearance: solid, outline, ghost. */
+  appearance?: ButtonV3Appearance;
   /** Size scale for spacing/text/icons. */
   size?: ButtonV3Size;
   /** Renders icon-only button; requires aria-label. */
@@ -65,7 +65,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 export const ButtonV3 = forwardRef<HTMLButtonElement | HTMLElement, ButtonV3Props>((props, ref) => {
   const {
     variant = 'secondary',
-    style = 'solid',
+    appearance = 'solid',
     size = 'md',
     leadingIcon,
     trailingIcon,
@@ -126,9 +126,9 @@ export const ButtonV3 = forwardRef<HTMLButtonElement | HTMLElement, ButtonV3Prop
         aria-disabled={isDisabled}
         tabIndex={isDisabled ? -1 : tabIndex}
         data-variant={variant}
-        data-style={style}
+        data-appearance={appearance}
         $variant={variant}
-        $style={style}
+        $appearance={appearance}
         $size={size}
         $status={resolvedStatus}
         $fullWidth={fullWidth}
@@ -176,9 +176,9 @@ export const ButtonV3 = forwardRef<HTMLButtonElement | HTMLElement, ButtonV3Prop
       disabled={isDisabled}
       aria-busy={isLoading}
       data-variant={variant}
-      data-style={style}
+      data-appearance={appearance}
       $variant={variant}
-      $style={style}
+      $appearance={appearance}
       $size={size}
       $status={resolvedStatus}
       $fullWidth={fullWidth}
