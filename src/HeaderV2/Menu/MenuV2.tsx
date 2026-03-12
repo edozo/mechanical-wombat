@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PlatformMenuV2 } from 'HeaderV2/Menu/PlatformMenu';
 import { MenuItemV2 } from 'HeaderV2/Menu/MenuItem';
 import {
-  StyledNavIndicatorArrow,
   StyledNavList,
   StyledNavMenu,
   StyledNavViewport,
@@ -61,7 +60,6 @@ const MenuV2: React.FC<Props> & MenuV2Composition = ({
       onPointerLeave={openOnClickOnly ? (event) => event.preventDefault() : undefined}
     >
       <StyledNavList>{children}</StyledNavList>
-      <StyledNavIndicatorArrow />
       <StyledNavViewportPosition>
         <StyledNavViewport />
       </StyledNavViewportPosition>

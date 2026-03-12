@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [5.0.1] - 2026-03-12
+## [5.1.1] - 2026-03-12
 
 ### Fixed
 
@@ -16,6 +16,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `typecheck` script (`tsc --noEmit`) to `package.json`.
 - Fixed all pre-existing lint errors across the codebase (ESLint had never run successfully before).
 - Typed `SkeletonGroup` and `SkeletonLine` components as `React.FC<Props>` and extracted their props into exported `SkeletonGroupProps` and `SkeletonLineProps` interfaces.
+
+## [5.1.0] - 2026-03-12
+
+### Added
+
+- `AppHeaderV2`: new optional `user` prop — displays the logged-in user identifier (name or email) in the account dropdown, visually de-emphasised above the logout button.
+- `AppHeaderV2`: `WithUser` Storybook story demonstrating the `user` prop.
+
+### Fixed
+
+- `AppHeaderV2` / `MenuV2`: dropdown viewport now correctly sizes to content width; `flex-shrink: 0` and `--radix-navigation-menu-viewport-width` prevent collapse on narrow headers.
+- `MenuV2`: dropdown is right-anchored (`right: 0`) to prevent overflow on narrow screens.
+- `ProductSwitchV2`: product description text now wraps over two lines within a 240 px width constraint.
 
 ## [5.0.0] - 2026-03-11
 
@@ -157,8 +170,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...HEAD
-[5.0.1]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...v5.0.1
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v5.1.1...HEAD
+[5.1.1]: https://github.com/edozo/mechanical-wombat/compare/v5.1.0...v5.1.1
+[5.1.0]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/edozo/mechanical-wombat/compare/v4.3.2...v5.0.0
 [4.3.2]: https://github.com/edozo/mechanical-wombat/compare/v4.3.1...v4.3.2
 [4.3.1]: https://github.com/edozo/mechanical-wombat/compare/v4.3.0...v4.3.1
