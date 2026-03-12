@@ -1,14 +1,18 @@
+import React from 'react';
 import type { DefaultTheme } from 'styled-components';
 import { StyledSkeletonLine } from './SkeletonLine.styles';
 
-export const SkeletonLine = ({
-  width,
-  height,
-  radius,
-  color,
-}: {
+export interface SkeletonLineProps {
+  /** Width of the skeleton line (CSS value, e.g. '100%', '200px'). */
   width?: string;
+  /** Height of the skeleton line (CSS value). */
   height?: string;
+  /** Border radius token from the theme. */
   radius?: keyof DefaultTheme['borderRadius'];
+  /** Colour variant — defaults to grey. */
   color?: 'white' | 'grey';
-}) => <StyledSkeletonLine $width={width} $height={height} $radius={radius} $color={color} />;
+}
+
+export const SkeletonLine: React.FC<SkeletonLineProps> = ({ width, height, radius, color }) => (
+  <StyledSkeletonLine $width={width} $height={height} $radius={radius} $color={color} />
+);

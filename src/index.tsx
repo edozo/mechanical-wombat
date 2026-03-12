@@ -29,5 +29,7 @@ export { Header, AppHeader, Menu } from './Header';
 export { HeaderV2, AppHeaderV2, MenuV2 } from './HeaderV2';
 export { Skeleton } from './Skeleton';
 export { SkeletonLine } from './Skeleton/SkeletonLine';
+export type { SkeletonLineProps } from './Skeleton/SkeletonLine';
 export { SkeletonGroup } from './Skeleton/SkeletonGroup';
+export type { SkeletonGroupProps } from './Skeleton/SkeletonGroup';
 export { ThemeProvider } from './ThemeProvider';

@@ -1,8 +1,8 @@
-import React, { Fragment, PropsWithChildren } from 'react';
+import React, { Fragment } from 'react';
 import { SkeletonLine } from './SkeletonLine';
 import { SkeletonGroup } from './SkeletonGroup';
 
-export type SkeletonCompoundComponent = ((props: PropsWithChildren<object>) => React.ReactElement) & {
+type SkeletonCompoundComponent = React.FC<{ children?: React.ReactNode }> & {
   Line: typeof SkeletonLine;
   Group: typeof SkeletonGroup;
 };
