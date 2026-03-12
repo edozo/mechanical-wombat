@@ -1,8 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, PropsWithChildren } from 'react';
 import { SkeletonLine } from './SkeletonLine';
 import { SkeletonGroup } from './SkeletonGroup';
 
-type SkeletonCompoundComponent = React.FC<{ children?: React.ReactNode }> & {
+interface SkeletonProps {
+  Line: typeof SkeletonLine;
+  Group: typeof SkeletonGroup;
+}
+
+type SkeletonCompoundComponent = React.FC<PropsWithChildren<SkeletonProps>> & {
   Line: typeof SkeletonLine;
   Group: typeof SkeletonGroup;
 };
