@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.4] - 2026-03-13
+
+### Changed
+
+- Updated `storybook`, `@storybook/addon-docs`, `@storybook/react`, `@storybook/react-vite`, and `@storybook/react-webpack5` to `^9.1.20` (from `^9.1.2` / `^9.1.19`).
+
 ## [6.0.3] - 2026-03-13
 
 ### Changed
@@ -54,7 +60,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgraded Node.js runtime to v24.14.0 LTS (from v22.18.0).
 - Updated CircleCI Docker images to `cimg/node:24.14` / `cimg/node:24.14-browsers`.
 - **Breaking**: bumped `engines.node` minimum requirement from `>=18` to `>=20` (Node 18 reached EOL April 2025).
->>>>>>> main
 
 ## [5.1.1] - 2026-03-12
 
@@ -219,7 +224,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.3...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...HEAD
+[6.0.4]: https://github.com/edozo/mechanical-wombat/compare/v6.0.3...v6.0.4
 [6.0.3]: https://github.com/edozo/mechanical-wombat/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/edozo/mechanical-wombat/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/edozo/mechanical-wombat/compare/v6.0.0...v6.0.1
