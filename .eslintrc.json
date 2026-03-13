@@ -1,10 +1,7 @@
 {
   "extends": [
     "airbnb",
-    "prettier",
-    "prettier/react",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:storybook/recommended"
   ],
@@ -91,6 +88,7 @@
     "react/destructuring-assignment": 0,
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
+    "react/function-component-definition": "off",
     "storybook/no-renderer-packages": "off",
     "import/no-unresolved": "off",
     "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
