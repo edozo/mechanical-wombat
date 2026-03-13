@@ -13,6 +13,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated `storybook`, `@storybook/addon-docs`, `@storybook/react`, `@storybook/react-vite`, and `@storybook/react-webpack5` to `^9.1.20` (from `^9.1.2` / `^9.1.19`).
 
+## [6.0.3] - 2026-03-13
+
+### Changed
+
+- Updated `vite` to `^7.0.0` (from `^5.4.0`) — the latest version compatible with Storybook 9.x (`^5 || ^6 || ^7`).
+- Updated `vite-tsconfig-paths` to `^6.1.1` (from `^4.3.2`).
+- Updated `vite-plugin-svgr` to `^4.5.0`.
+- Updated `@svgr/rollup` and `@svgr/webpack` to `^8.1.0` (from `^5.5.0`).
+- Updated `esbuild-plugin-svgr` to `^3.1.1` (from `^2.1.0`).
+
+## [6.0.2] - 2026-03-13
+
+### Changed
+
+- Updated `prettier` to `^3.8.1` (from `^2.8.8`) and `pretty-quick` to `^4.2.2`.
+- Updated `eslint-config-prettier` to `^10.1.8` and `eslint-plugin-prettier` to `^5.5.5`.
+- Updated `eslint-config-airbnb` to `^19.0.4`.
+- Updated `eslint-plugin-react-hooks` to `^7.0.1` and `eslint-plugin-jest` to `^29.15.0`.
+- Removed deprecated `prettier/react` and `prettier/@typescript-eslint` extends from `.eslintrc.json` (removed in `eslint-config-prettier` v8).
+- Added `"react/function-component-definition": "off"` to ESLint rules (codebase uses arrow function components throughout).
+
+### Fixed
+
+- `ToggleGroup`: converted `componentDidUpdate` from arrow function to a regular class method (`react/no-arrow-function-lifecycle`).
+- `Error.stories.tsx`: removed unnecessary Fragment wrapper around single-child JSX.
+- `Skeleton.tsx`, `InputGroup.tsx`: added targeted `eslint-disable` comments for `react/jsx-no-useless-fragment` and `react/jsx-no-constructed-context-values`.
+
+## [6.0.1] - 2026-03-13
+
+### Changed
+
+- Updated `typescript` to `^5.9.3` (from `^5.4.5`).
+- Updated `@types/react` to `^18.3.0` and `@types/react-dom` to `^18.3.0`.
+- Added `@types/node` as an explicit devDependency; added `"node"` to `tsconfig.json` types array.
+- Removed `@types/styled-components` — styled-components v6 ships its own type declarations.
+- Removed `@types/jest` — unused; the project uses Storybook interaction tests, not Jest directly.
+- Updated `tsup` to `^8.5.1`, `postcss` to `^8.5.8`, `autoprefixer` to `^10.4.27`, `@mdx-js/react` to `^3.1.1`.
+- Updated `cross-env` to `^10.1.0`.
+- Updated `styled-components` devDependency to `^6.3.11`.
+
+## [6.0.0] - 2026-03-13
+
+### Changed
+
+- Upgraded Node.js runtime to v24.14.0 LTS (from v22.18.0).
+- Updated CircleCI Docker images to `cimg/node:24.14` / `cimg/node:24.14-browsers`.
+- **Breaking**: bumped `engines.node` minimum requirement from `>=18` to `>=20` (Node 18 reached EOL April 2025).
+
 ## [5.1.1] - 2026-03-12
 
 ### Fixed
@@ -178,6 +226,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...HEAD
 [6.0.4]: https://github.com/edozo/mechanical-wombat/compare/v6.0.3...v6.0.4
+[6.0.3]: https://github.com/edozo/mechanical-wombat/compare/v6.0.2...v6.0.3
+[6.0.2]: https://github.com/edozo/mechanical-wombat/compare/v6.0.1...v6.0.2
+[6.0.1]: https://github.com/edozo/mechanical-wombat/compare/v6.0.0...v6.0.1
+[6.0.0]: https://github.com/edozo/mechanical-wombat/compare/v5.1.1...v6.0.0
 [5.1.1]: https://github.com/edozo/mechanical-wombat/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/edozo/mechanical-wombat/compare/v4.3.2...v5.0.0

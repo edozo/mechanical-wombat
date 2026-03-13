@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:22.18
+      - image: cimg/node:24.14
     steps:
       - checkout
 
@@ -25,7 +25,7 @@ jobs:
 
   test-storybook:
     docker:
-      - image: cimg/node:22.18-browsers
+      - image: cimg/node:24.14-browsers
     resource_class: medium
     steps:
       - checkout
@@ -50,7 +50,7 @@ jobs:
 
   publish:
     docker:
-      - image: cimg/node:22.18
+      - image: cimg/node:24.14
     steps:
       - checkout
 
@@ -73,7 +73,7 @@ jobs:
 
   deploy-storybook:
     docker:
-      - image: cimg/node:22.18
+      - image: cimg/node:24.14
     steps:
       - checkout
 

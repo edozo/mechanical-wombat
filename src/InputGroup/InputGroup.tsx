@@ -21,6 +21,7 @@ const defaultProps: InputGroupState = {
 };
 
 const InputGroup: React.FC<InputGroupState> & ListComposition = (props) => {
+  // eslint-disable-next-line react/jsx-no-constructed-context-values
   const mergedProps = { ...defaultProps, ...props };
 
   return (
