@@ -10,9 +10,9 @@ export const StyledMenuItem = styled.div.withConfig({
     height: 100%;
     align-items: center;
     text-decoration: none;
-    font-size: ${p => p.theme.font.size.text.base};
-    margin-left: ${p => p.theme.spacing.small};
-    color: ${p => p.theme.colors.grayDarker};
+    font-size: ${({ theme }) => theme.font.size.text.base};
+    margin-left: ${({ theme }) => theme.spacing.small};
+    color: ${({ theme }) => theme.colors.grayDarker};
 
     &.active:after {
       height: 6px;
@@ -23,26 +23,31 @@ export const StyledMenuItem = styled.div.withConfig({
       transition: height 0.2s ease-out;
       height: 0px;
       width: 100%;
-      background: ${p => p.theme.colors.aliases.primary};
-      ${p =>
-        p.appName === 'maps' &&
+      background: ${({ theme }) => theme.colors.aliases.primary};
+      ${({ theme, appName }) =>
+        appName === 'maps' &&
         css`
-          background: ${p.theme.colors.aliases.primary};
+          background: ${theme.colors.aliases.primary};
         `}
-      ${p =>
-        p.appName === 'occupiers' &&
+      ${({ theme, appName }) =>
+        appName === 'occupiers' &&
         css`
-          background: ${p.theme.colors.appColors.occupiers};
-        `} 
-      ${p =>
-        p.appName === 'insight' &&
-        css`
-          background: ${p.theme.colors.appColors.insight};
+          background: ${theme.colors.appColors.occupiers};
         `}
-      ${p =>
-        p.appName === 'reports' &&
+      ${({ theme, appName }) =>
+        appName === 'insight' &&
         css`
-          background: ${p.theme.colors.appColors.reports};
+          background: ${theme.colors.appColors.insight};
+        `}
+      ${({ theme, appName }) =>
+        appName === 'reports' &&
+        css`
+          background: ${theme.colors.appColors.reports};
+        `}
+      ${({ theme, appName }) =>
+        appName === 'extract' &&
+        css`
+          background: ${theme.colors.appColors.extract};
         `}
       position: absolute;
       bottom: 0;
@@ -51,26 +56,31 @@ export const StyledMenuItem = styled.div.withConfig({
 
     &:hover {
       text-decoration: none;
-      color: ${p => p.theme.colors.aliases.primary};
-      ${p =>
-        p.appName === 'maps' &&
+      color: ${({ theme }) => theme.colors.aliases.primary};
+      ${({ theme, appName }) =>
+        appName === 'maps' &&
         css`
-          color: ${p.theme.colors.aliases.primary};
-        `} 
-      ${p =>
-        p.appName === 'occupiers' &&
-        css`
-          color: ${p.theme.colors.appColors.occupiers};
-        `} 
-      ${p =>
-        p.appName === 'insight' &&
-        css`
-          color: ${p.theme.colors.appColors.insight};
+          color: ${theme.colors.aliases.primary};
         `}
-      ${p =>
-        p.appName === 'reports' &&
+      ${({ theme, appName }) =>
+        appName === 'occupiers' &&
         css`
-          color: ${p.theme.colors.appColors.reports};
+          color: ${theme.colors.appColors.occupiers};
+        `}
+      ${({ theme, appName }) =>
+        appName === 'insight' &&
+        css`
+          color: ${theme.colors.appColors.insight};
+        `}
+      ${({ theme, appName }) =>
+        appName === 'reports' &&
+        css`
+          color: ${theme.colors.appColors.reports};
+        `}
+      ${({ theme, appName }) =>
+        appName === 'extract' &&
+        css`
+          color: ${theme.colors.appColors.extract};
         `}
     }
 

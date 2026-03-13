@@ -3,15 +3,18 @@ import { StyledDisplayBox, StyledDisplayBoxColor, StyledDisplayBoxWrapper, Style
 
 export interface DisplayBoxProps extends StyleProps {
   children?: React.ReactNode;
+  showBorder?: boolean;
 }
 
-export const DisplayBox: React.FC<DisplayBoxProps> = props => (
+export const DisplayBox: React.FC<DisplayBoxProps> = (props) => (
   <StyledDisplayBox {...props}>
     <StyledDisplayBoxColor background={props.background} size={props.size} borderRadius={props.borderRadius} />
     {props.children}
   </StyledDisplayBox>
 );
 
-export const DisplayBoxWrapper: React.FC<DisplayBoxProps> = props => (
-  <StyledDisplayBoxWrapper {...props}>{props.children}</StyledDisplayBoxWrapper>
+export const DisplayBoxWrapper: React.FC<DisplayBoxProps> = (props) => (
+  <StyledDisplayBoxWrapper showBorder={props.showBorder} {...props}>
+    {props.children}
+  </StyledDisplayBoxWrapper>
 );

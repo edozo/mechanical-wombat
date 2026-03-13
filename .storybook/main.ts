@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import svgr from 'vite-plugin-svgr';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -18,7 +19,7 @@ const config: StorybookConfig = {
     }) as any;
 
     // run SVGR before other plugins so it intercepts SVG imports
-    viteConfig.plugins = [svgrPlugin, ...(viteConfig.plugins || [])];
+    viteConfig.plugins = [svgrPlugin, tsconfigPaths(), ...(viteConfig.plugins || [])];
     return viteConfig;
   }
 };

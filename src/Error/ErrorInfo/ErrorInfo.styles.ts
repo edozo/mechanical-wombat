@@ -20,7 +20,7 @@ export const ErrorInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: ${p => p.theme.font.size.h4};
-  line-height: ${p => p.theme.font.lineHeight.text.xlarge};
-  font-weight: ${p => p.theme.font.weight.semibold};
+  font-size: ${({ theme }) => theme.font.size.h4};
+  line-height: ${({ theme }) => theme.font.lineHeight.text.xlarge};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
 `;

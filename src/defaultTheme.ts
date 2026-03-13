@@ -1,6 +1,129 @@
 import { DefaultTheme } from 'styled-components';
+import { rgba } from 'polished';
+
+/* COLORS */
+export const statusColors = {
+  info: {
+    50: '#EFF4FA',
+    100: '#E1E9F5',
+    200: '#C7D6EE',
+    300: '#9DB9E6',
+    400: '#6F99DA',
+    500: '#3865A9',
+    600: '#2F5692',
+    700: '#1D4A8E',
+    800: '#12386D',
+    900: '#072C64',
+    950: '#051E45',
+  },
+  success: {
+    50: '#F1FAEA',
+    100: '#E3F8D7',
+    200: '#C8EFB0',
+    300: '#A6E27E',
+    400: '#8ED961',
+    500: '#6AA83A',
+    600: '#5A9430',
+    700: '#4A9013',
+    800: '#356F0E',
+    900: '#2F6405',
+    950: '#1C3F02',
+  },
+  warning: {
+    50: '#FFFBEA',
+    100: '#FFF8E0',
+    200: '#FEEEB3',
+    300: '#FEDF6A',
+    400: '#FED64F',
+    500: '#F6C10D',
+    600: '#E1B212',
+    700: '#CDA50F',
+    800: '#B28E00',
+    900: '#8A6F00',
+    950: '#4F3F00',
+  },
+  danger: {
+    50: '#FDEDEC',
+    100: '#FDE5E2',
+    200: '#F5B7B1',
+    300: '#E38C7F',
+    400: '#D97063',
+    500: '#D65846',
+    600: '#B93421',
+    700: '#A52818',
+    800: '#8C1F10',
+    900: '#6E140A',
+    950: '#3F0A05',
+  },
+} as const;
 
 const colors = {
+  neutral: {
+    50: '#FFFFFF',
+    100: '#F9FAFB',
+    200: '#F3F4F6',
+    300: '#E5E7EB',
+    400: '#D1D5DB',
+    500: '#9CA3AF',
+    600: '#6B7280',
+    700: '#374151',
+    800: '#1F2937',
+    900: '#111827',
+    950: '#0B1220',
+  },
+  slate: {
+    50: '#F8FAFC',
+    100: '#F1F5F9',
+    200: '#E2E8F0',
+    300: '#CBD5E1',
+    400: '#94A3B8',
+    500: '#64748B',
+    600: '#475569',
+    700: '#334155',
+    800: '#1E293B',
+    900: '#0F172A',
+    950: '#020617',
+  },
+  blue: {
+    50: '#EFF6FF',
+    100: '#DBEAFE',
+    200: '#BEDBFF',
+    300: '#8EC5FF',
+    400: '#51A2FF',
+    500: '#2B7FFF',
+    600: '#155DFC',
+    700: '#1447E6',
+    800: '#193CB8',
+    900: '#1C398E',
+    950: '#162456',
+  },
+  indigo: {
+    50: '#F3F2FD',
+    100: '#E5E3FA',
+    200: '#C9C4F2',
+    300: '#A79DE7',
+    400: '#7F6FD9',
+    500: '#5B4EC8',
+    600: '#4335B4',
+    700: '#332694',
+    800: '#241A6E',
+    900: '#1A134F',
+    950: '#110C33',
+  },
+  teal: {
+    50: '#F0FDFA',
+    100: '#CBFBF1',
+    200: '#96F7E4',
+    300: '#46ECD5',
+    400: '#00D5BE',
+    500: '#00BBA7',
+    600: '#009689',
+    700: '#00786F',
+    800: '#005F5A',
+    900: '#0B4F4A',
+    950: '#022F2E',
+  },
+  status: statusColors,
   // Sky blue
   skyBlueLighter: '#A5F0FF',
   skyBlueLight: '#49E0FF',
@@ -73,6 +196,7 @@ const colors = {
   },
 };
 
+/* FONT */
 const font = {
   family: {
     main: "'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif",
@@ -133,7 +257,45 @@ const font = {
   },
 };
 
+/* TYPOGRAPHY */
+export const typography = {
+  fontFamily: {
+    sans: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif',
+  },
+  fontWeight: {
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+  },
+  letterSpacing: {
+    normal: '0',
+    tight: '-0.01em',
+  },
+  scale: {
+    '2xs': { size: '0.625rem', lineHeight: '0.875rem' }, // 10px / 14px (default)
+    xs: { size: '0.75rem', lineHeight: '1rem' }, // 12px / 16px (default)
+    sm: { size: '0.875rem', lineHeight: '1.25rem' }, // 14px / 20px (default)
+    md: { size: '1rem', lineHeight: '1.5rem' }, // 16px / 24px (default)
+    lg: { size: '1.125rem', lineHeight: '1.75rem' }, // 18px / 28px (default)
+    xl: { size: '1.25rem', lineHeight: '1.75rem' }, // 20px / 28px (default)
+    '2xl': { size: '1.5rem', lineHeight: '2rem' }, // 24px / 32px (default)
+    '3xl': { size: '2rem', lineHeight: '2.5rem' }, // 32px / 40px (default)
+    '4xl': { size: '2.5rem', lineHeight: '3rem' }, // 40px / 48px (default)
+  },
+  role: {
+    body: { scale: 'md', weight: 'regular', letterSpacing: 'normal' },
+    caption: { scale: 'xs', weight: 'regular', letterSpacing: 'normal' },
+    label: { scale: 'sm', weight: 'medium', letterSpacing: 'normal' },
+    headingSm: { scale: 'xl', weight: 'semibold', letterSpacing: 'normal' },
+    headingMd: { scale: '2xl', weight: 'semibold', letterSpacing: 'tight' },
+    headingLg: { scale: '3xl', weight: 'semibold', letterSpacing: 'tight' },
+    display: { scale: '4xl', weight: 'semibold', letterSpacing: 'tight' },
+  },
+};
+
 /**
+/** BREAKPOINTS
  * NOTE: Please use breakpoints sparingly for now, they may hlp us out in some cases. But I do want us to consider container queries (with a polyfill) as it should lend itself to atomic design better: https://css-tricks.com/a-new-container-query-polyfill-that-just-works/
  */
 const breakpoints = {
@@ -144,6 +306,7 @@ const breakpoints = {
   '2xl': '1536px',
 };
 
+/* MIN MEDIA */
 const minMedia = {
   sm: `(min-width: ${breakpoints.sm})`,
   md: `(min-width: ${breakpoints.md})`,
@@ -152,40 +315,84 @@ const minMedia = {
   '2xl': `(min-width: ${breakpoints['2xl']})`,
 };
 
+/* SPACING */
+const spacing = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '4px',
+  xsmall: '8px',
+  small: '16px',
+  base: '24px',
+  large: '32px',
+  xlarge: '48px',
+  xxlarge: '64px',
+
+  // ✅ preferred (new usage)
+  '3xs': '0.0625rem', // 1px (default)
+  '2xs': '0.125rem', // 2px (default)
+  xs: '0.25rem', // 4px (default)
+  sm: '0.5rem', // 8px (default)
+  md: '1rem', // 16px (default)
+  lg: '1.5rem', // 24px (default)
+  xl: '2rem', // 32px (default)
+  '2xl': '3rem', // 48px (default)
+  '3xl': '4rem', // 64px (default)
+};
+
+/* ICONS */
+const icons = {
+  // ❌ legacy (avoid using these tokens)
+  xxsmall: '8px',
+  xsmall: '12px',
+  small: '16px',
+  base: '20px',
+  large: '24px',
+  xlarge: '32px',
+  xxlarge: '48px',
+
+  // ✅ preferred (new usage)
+  sm: '16px',
+  md: '20px',
+  lg: '24px',
+  xl: '32px',
+};
+
+/* SHADOWS */
+const shadowColor = rgba(colors.slate[900], 0.08);
+
+const shadows = {
+  // ❌ legacy (avoid using these tokens)
+  xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
+  small: '1px 1px 10px rgba(0, 0, 0, 0)',
+  standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
+  large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
+  xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
+
+  // ✅ preferred (new usage)
+  sm: `0 2px 4px ${shadowColor}`,
+  md: `0 4px 8px ${shadowColor}`,
+  lg: `0 6px 12px ${shadowColor}`,
+  xl: `0 8px 16px ${shadowColor}`,
+  '2xl': `0 12px 24px ${shadowColor}`,
+};
+
 const defaultTheme: DefaultTheme = {
   name: 'Default Theme',
-  spacing: {
-    xxsmall: '4px',
-    xsmall: '8px',
-    small: '16px',
-    base: '24px',
-    large: '32px',
-    xlarge: '48px',
-    xxlarge: '64px',
-  },
-  icons: {
-    xxsmall: '8px',
-    xsmall: '12px',
-    small: '16px',
-    base: '20px',
-    large: '24px',
-    xlarge: '32px',
-    xxlarge: '48px',
-  },
+  spacing,
+  icons,
   borderRadius: {
     xsmall: '1px',
     small: '3px',
     standard: '6px',
     large: '10px',
     xlarge: '16px',
+
+    // ✅ preferred (new usage)
+    sm: '3px',
+    md: '6px',
+    lg: '10px',
+    round: '100vh',
   },
-  boxShadow: {
-    xsmall: '0 0 2px 0 rgba(0,0,0,0.5)',
-    small: '1px 1px 10px rgba(0, 0, 0, 0)',
-    standard: '1px 1px 10px rgba(0, 0, 0, 0.25)',
-    large: '0 5px 7px 0 rgba(0, 0, 0, 0.2)',
-    xlarge: '0px 3px 12px rgba(0, 0, 0, 0.15)',
-  },
+  boxShadow: shadows,
   colors: {
     ...colors,
     aliases: {
@@ -201,9 +408,11 @@ const defaultTheme: DefaultTheme = {
       occupiers: '#7e0bc2',
       insight: '#ff8955',
       reports: colors.steelBlueDarker,
+      extract: colors.steelBlueDarker,
     },
   },
   font,
+  typography,
   breakpoints,
   minMedia,
 };

@@ -11,77 +11,77 @@ export const StyledButton = styled.button.withConfig({
   cursor: pointer;
 
   /* SIZE */
-  ${p =>
-    p.size === 'standard' &&
+  ${({ theme, size }) =>
+    size === 'standard' &&
     css`
-      font-size: ${p.theme.font.size.text.base};
-      line-height: ${p.theme.font.lineHeight.text.base};
-      padding: ${p.theme.spacing.xsmall} ${p.theme.spacing.base};
+      font-size: ${theme.font.size.text.base};
+      line-height: ${theme.font.lineHeight.text.base};
+      padding: ${theme.spacing.xsmall} ${theme.spacing.base};
     `}
-  ${p =>
-    p.size === 'small' &&
+  ${({ theme, size }) =>
+    size === 'small' &&
     css`
-      font-size: ${p.theme.font.size.text.xsmall};
-      line-height: ${p.theme.font.lineHeight.text.xsmall};
-      padding: ${p.theme.spacing.xxsmall} ${p.theme.spacing.small};
+      font-size: ${theme.font.size.text.xsmall};
+      line-height: ${theme.font.lineHeight.text.xsmall};
+      padding: ${theme.spacing.xxsmall} ${theme.spacing.small};
     `}
-  ${p =>
-    p.size === 'large' &&
+  ${({ theme, size }) =>
+    size === 'large' &&
     css`
-      font-size: ${p.theme.font.size.text.large};
-      line-height: ${p.theme.font.lineHeight.text.large};
-      padding: ${p.theme.spacing.small} ${p.theme.spacing.large};
+      font-size: ${theme.font.size.text.large};
+      line-height: ${theme.font.lineHeight.text.large};
+      padding: ${theme.spacing.small} ${theme.spacing.large};
     `}
-  
-      
+
+
   /* RADIUS */
-  ${p =>
-    p.radius === 'standard' &&
+  ${({ radius }) =>
+    radius === 'standard' &&
     css`
       border-radius: 6px;
     `}
-  ${p =>
-    p.radius === 'round' &&
+  ${({ radius }) =>
+    radius === 'round' &&
     css`
       border-radius: 50px;
     `}
-      
+
   /* VARIANT */
-  ${p =>
-    p.variant === 'primary' &&
+  ${({ theme, variant }) =>
+    variant === 'primary' &&
     css`
-      background: ${p.theme.colors.aliases.primary};
+      background: ${theme.colors.aliases.primary};
     `}
-  ${p =>
-    p.variant === 'secondary' &&
+  ${({ theme, variant }) =>
+    variant === 'secondary' &&
     css`
-      background: ${p.theme.colors.aliases.secondary};
+      background: ${theme.colors.aliases.secondary};
     `}
-  ${p =>
-    p.variant === 'tertiary' &&
+  ${({ theme, variant }) =>
+    variant === 'tertiary' &&
     css`
-      background: ${p.theme.colors.white};
-      border: 2px solid ${p.theme.colors.grayDark};
-      color: ${p.theme.colors.grayDark};
+      background: ${theme.colors.white};
+      border: 2px solid ${theme.colors.grayDark};
+      color: ${theme.colors.grayDark};
     `}
-  ${p =>
-    p.variant === 'danger' &&
+  ${({ theme, variant }) =>
+    variant === 'danger' &&
     css`
-      background: ${p.theme.colors.system.red};
+      background: ${theme.colors.system.red};
     `}
-    ${p =>
-      p.variant === 'white' &&
-      css`
-        background: ${p.theme.colors.white};
-        color: ${p.theme.colors.black};
-      `}
-  
+    ${({ theme, variant }) =>
+    variant === 'white' &&
+    css`
+      background: ${theme.colors.white};
+      color: ${theme.colors.black};
+    `}
+
   &:hover {
     opacity: 0.85;
   }
 
   &:disabled {
-    background: ${p => p.theme.colors.gray};
+    background: ${({ theme }) => theme.colors.gray};
     cursor: not-allowed;
   }
 
@@ -89,11 +89,11 @@ export const StyledButton = styled.button.withConfig({
     position: absolute;
     top: -4px;
     right: -4px;
-    ${p =>
-      p.radius === 'round' &&
+    ${({ radius }) =>
+      radius === 'round' &&
       css`
         top: -7px;
         right: 0;
       `}
-	}
+  }
 `;

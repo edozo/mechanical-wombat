@@ -11,7 +11,7 @@ export const StylePlatformButton = styled.button<PlatformMenuButtonProps>`
   border-radius: 50px;
   width: 32px;
   height: 32px;
-  background: ${p => p.theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ export const StylePlatformButton = styled.button<PlatformMenuButtonProps>`
   animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 
   &:hover {
-    background: ${p => p.theme.colors.gray};
+    background: ${({ theme }) => theme.colors.gray};
     transform: scale(1.1);
   }
 

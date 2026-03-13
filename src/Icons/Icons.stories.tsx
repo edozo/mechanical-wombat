@@ -104,6 +104,7 @@ import {
   FreeholdAutoPolygonIcon,
   LeaseholdAutoPolygonIcon,
   ActionsIndicatorIcon,
+  AiThreeStarsIcon,
 } from '.';
 
 export default {
@@ -159,6 +160,7 @@ const solidIcons = [
   { name: 'Align center', component: <AlignCenterIcon /> },
   { name: 'Align right', component: <AlignRightIcon /> },
   { name: 'Go To', component: <GoToIcon /> },
+  { name: 'Ai Three Stars', component: <AiThreeStarsIcon /> },
 ];
 
 const outlinedIcons = [
@@ -221,7 +223,7 @@ const outlinedIcons = [
 
 export const Solid: StoryFn = () => (
   <DisplayBoxWrapper>
-    {solidIcons.map(icon => (
+    {solidIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>
@@ -232,7 +234,7 @@ export const Solid: StoryFn = () => (
 
 export const Outline: StoryFn = () => (
   <DisplayBoxWrapper>
-    {outlinedIcons.map(icon => (
+    {outlinedIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>

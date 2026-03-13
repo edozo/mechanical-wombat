@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledBadge } from './Badge.styles';
 
-interface BadgeProps {
+export interface BadgeProps {
   /**
    * The background colour
    */

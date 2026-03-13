@@ -89,6 +89,11 @@
       }
     ],
     "react/destructuring-assignment": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "storybook/no-renderer-packages": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "@typescript-eslint/no-explicit-any": 0,
     "import/no-extraneous-dependencies": [
       "error",
@@ -106,6 +111,14 @@
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-restricted-types": ["error", {
+      "types": {
+        "JSX.Element": {
+          "message": "Use React.ReactElement instead",
+          "fixWith": "React.ReactElement"
+        }
+      }
+    }],
     "jsx-a11y/label-has-for": [
       2,
       {
@@ -130,8 +143,10 @@
           ".js",
           ".jsx",
           ".ts",
-          ".tsx"
-        ]
+          ".tsx",
+          ".svg"
+        ],
+        "moduleDirectories": ["node_modules", "src"]
       }
     },
     "react": {
@@ -144,13 +159,7 @@
         "*.tsx"
       ],
       "rules": {
-        "react/prop-types": "off",
-        "@typescript-eslint/explicit-function-return-type": [
-          "error",
-          {
-            "allowExpressions": true
-          }
-        ]
+        "react/prop-types": "off"
       }
     }
   ]
