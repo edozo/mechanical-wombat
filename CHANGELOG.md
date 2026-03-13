@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.1.3] - 2026-03-13
+
+### Changed
+
+- Updated `typescript` to `^5.9.3` (from `^5.4.5`).
+- Updated `@types/react` to `^18.3.0` and `@types/react-dom` to `^18.3.0`.
+- Added `@types/node` as an explicit devDependency; added `"node"` to `tsconfig.json` types array.
+- Removed `@types/styled-components` — styled-components v6 ships its own type declarations.
+- Removed `@types/jest` — unused; the project uses Storybook interaction tests, not Jest directly.
+- Updated `tsup` to `^8.5.1`, `postcss` to `^8.5.8`, `autoprefixer` to `^10.4.27`, `@mdx-js/react` to `^3.1.1`.
+- Updated `cross-env` to `^10.1.0`.
+- Updated `styled-components` devDependency to `^6.3.11`.
+
 ## [5.1.1] - 2026-03-12
 
 ### Fixed
@@ -193,3 +206,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [3.1.1]: https://github.com/edozo/mechanical-wombat/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/edozo/mechanical-wombat/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/edozo/mechanical-wombat/releases/tag/v3.0.0
+[5.1.3]: https://github.com/edozo/mechanical-wombat/compare/v5.1.2...v5.1.3
