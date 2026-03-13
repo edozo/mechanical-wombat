@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.1.2] - 2026-03-13
+
+### Changed
+
+- Upgraded Node.js runtime to v24.14.0 LTS (from v22.18.0).
+- Updated CircleCI Docker images to `cimg/node:24.14` / `cimg/node:24.14-browsers`.
+- Bumped `engines.node` minimum requirement from `>=18` to `>=20` (Node 18 reached EOL April 2025).
+
 ## [5.1.1] - 2026-03-12
 
 ### Fixed
@@ -193,3 +201,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [3.1.1]: https://github.com/edozo/mechanical-wombat/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/edozo/mechanical-wombat/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/edozo/mechanical-wombat/releases/tag/v3.0.0
+[5.1.2]: https://github.com/edozo/mechanical-wombat/compare/v5.1.1...v5.1.2
