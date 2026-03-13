@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.5] - 2026-03-13
+
+### Changed
+
+- Migrated Husky from v5 to v9: hooks configuration moved from `package.json` (`"husky"` key) to `.husky/pre-commit` script.
+- Updated `lint-staged` to `^16.3.3` (from `^10.5.4`).
+
 ## [5.1.1] - 2026-03-12
 
 ### Fixed
@@ -170,7 +177,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v5.1.1...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...HEAD
+[6.0.5]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...v6.0.5
 [5.1.1]: https://github.com/edozo/mechanical-wombat/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/edozo/mechanical-wombat/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/edozo/mechanical-wombat/compare/v4.3.2...v5.0.0
