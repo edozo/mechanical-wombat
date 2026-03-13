@@ -13,6 +13,7 @@ type SkeletonCompoundComponent = React.FC<PropsWithChildren<SkeletonProps>> & {
 };
 
 export const Skeleton: SkeletonCompoundComponent = ({ children }) => {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
   return <Fragment>{children}</Fragment>;
 };
 

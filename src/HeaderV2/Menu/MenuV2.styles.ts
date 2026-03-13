@@ -130,7 +130,9 @@ export const StyledNavIconTrigger = styled(NavigationMenu.Trigger)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 100ms ease-out, border-color 120ms ease-out;
+  transition:
+    background 100ms ease-out,
+    border-color 120ms ease-out;
 
   &:hover {
     background: ${({ theme }) => theme.colors.neutral[200]};
@@ -197,7 +199,10 @@ export const StyledNavViewport = styled(NavigationMenu.Viewport)`
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.boxShadow.xlarge};
   height: var(--radix-navigation-menu-viewport-height);
-  transition: width, height, 300ms ease;
+  transition:
+    width,
+    height,
+    300ms ease;
 
   &[data-state='open'] {
     animation: ${scaleIn} 200ms ease;
