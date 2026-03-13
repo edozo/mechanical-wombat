@@ -8,7 +8,7 @@ export default {
   component: PopoverContent,
 } as Meta;
 
-const Template: StoryFn = args => <PopoverContent {...args} />;
+const Template: StoryFn = (args) => <PopoverContent {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {

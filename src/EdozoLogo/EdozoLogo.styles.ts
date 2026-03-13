@@ -26,106 +26,106 @@ export const StyledLogo = styled.div.withConfig({
       width: 92px;
       height: 17px;
     `}
-      ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'maps' &&
-        css`
-          width: 149px;
-          height: 26px;
-        `}
+  ${({ size, variant }) =>
+    size === 'standard' &&
+    variant === 'maps' &&
+    css`
+      width: 149px;
+      height: 26px;
+    `}
 
       /* OCCUPIERS */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'occupiers' &&
-        css`
-          width: 121px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'occupiers' &&
+    css`
+      width: 121px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'occupiers' &&
-        css`
-          width: 195px;
-          height: 26px;
-        `}
+    size === 'standard' &&
+    variant === 'occupiers' &&
+    css`
+      width: 195px;
+      height: 26px;
+    `}
 
       /* INSIGHT */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'insight' &&
-        css`
-          width: 99px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'insight' &&
+    css`
+      width: 99px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'insight' &&
-        css`
-          width: 163px;
-          height: 26px;
-        `}
+    size === 'standard' &&
+    variant === 'insight' &&
+    css`
+      width: 163px;
+      height: 26px;
+    `}
 
       /* HELP CENTRE */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'helpCentre' &&
-        css`
-          width: 133px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'helpCentre' &&
+    css`
+      width: 133px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'helpCentre' &&
-        css`
-          width: 209px;
-          height: 26px;
-        `}
+    size === 'standard' &&
+    variant === 'helpCentre' &&
+    css`
+      width: 209px;
+      height: 26px;
+    `}
 
       /* REPORTS */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'reports' &&
-        css`
-          width: 99px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'reports' &&
+    css`
+      width: 99px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'reports' &&
-        css`
-          width: 163px;
-          height: 26px;
-        `}
+    size === 'standard' &&
+    variant === 'reports' &&
+    css`
+      width: 163px;
+      height: 26px;
+    `}
 
       /* EXTRACT */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'extract' &&
-        css`
-          width: 127px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'extract' &&
+    css`
+      width: 127px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'extract' &&
-        css`
-          width: 185px;
-          height: 23px;
-        `}
+    size === 'standard' &&
+    variant === 'extract' &&
+    css`
+      width: 185px;
+      height: 23px;
+    `}
       /* EDOZO */
       ${({ size, variant }) =>
-        size === 'small' &&
-        variant === 'edozo' &&
-        css`
-          width: 54px;
-          height: 17px;
-        `}
+    size === 'small' &&
+    variant === 'edozo' &&
+    css`
+      width: 54px;
+      height: 17px;
+    `}
       ${({ size, variant }) =>
-        size === 'standard' &&
-        variant === 'edozo' &&
-        css`
-          width: 84px;
-          height: 26px;
-        `}
+    size === 'standard' &&
+    variant === 'edozo' &&
+    css`
+      width: 84px;
+      height: 26px;
+    `}
 `;

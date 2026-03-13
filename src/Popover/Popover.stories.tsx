@@ -153,7 +153,7 @@ export const PopoverList: StoryFn = ({ ...args }) => {
         {...args}
         content={
           <List {...args}>
-            {elements.map(element => (
+            {elements.map((element) => (
               <List.Item disabled={element.disabled} key={element.node}>
                 {element.node}
               </List.Item>

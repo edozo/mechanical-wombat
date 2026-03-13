@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PlatformMenuV2 } from 'HeaderV2/Menu/PlatformMenu';
 import { MenuItemV2 } from 'HeaderV2/Menu/MenuItem';
 import {
-  StyledNavIndicatorArrow,
   StyledNavList,
   StyledNavMenu,
   StyledNavViewport,
@@ -33,7 +32,7 @@ const MenuV2: React.FC<Props> & MenuV2Composition = ({
 
     const handlePointerDown = (event: MouseEvent) => {
       if (!rootRef.current) return;
-      const target = event.target;
+      const { target } = event;
       if (!(target instanceof Node)) return;
       if (rootRef.current.contains(target)) return;
       setValue('');
@@ -57,11 +56,10 @@ const MenuV2: React.FC<Props> & MenuV2Composition = ({
       ref={rootRef}
       value={closeOnOutsideClickOnly ? value : undefined}
       onValueChange={closeOnOutsideClickOnly ? handleValueChange : undefined}
-      onPointerMove={openOnClickOnly ? event => event.preventDefault() : undefined}
-      onPointerLeave={openOnClickOnly ? event => event.preventDefault() : undefined}
+      onPointerMove={openOnClickOnly ? (event) => event.preventDefault() : undefined}
+      onPointerLeave={openOnClickOnly ? (event) => event.preventDefault() : undefined}
     >
       <StyledNavList>{children}</StyledNavList>
-      <StyledNavIndicatorArrow />
       <StyledNavViewportPosition>
         <StyledNavViewport />
       </StyledNavViewportPosition>

@@ -6,7 +6,7 @@ export default {
   component: Collapse,
 } as Meta;
 
-const Template: StoryFn<CollapseProps> = args => <Collapse {...args} />;
+const Template: StoryFn<CollapseProps> = (args) => <Collapse {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

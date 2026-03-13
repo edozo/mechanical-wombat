@@ -6,7 +6,7 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: StoryFn<ButtonProps> = args => <Button {...args} />;
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 export const Controlled = Template.bind({});
 Controlled.args = {

@@ -6,7 +6,7 @@ export default {
   component: TableDownloadButton,
 } as Meta;
 
-const Template: StoryFn<TableDownloadButtonProps> = args => (
+const Template: StoryFn<TableDownloadButtonProps> = (args) => (
   <TableDownloadButton {...args}>
     <p>Icon</p>
   </TableDownloadButton>

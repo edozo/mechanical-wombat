@@ -110,12 +110,12 @@ export const StyledNavTrigger = styled(NavigationMenu.Trigger)`
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.blue[300]};
   }
 
-  &[data-state='open'] svg {
-    transform: rotate(-180deg);
-  }
-
   svg {
     transition: transform 200ms ease;
+  }
+
+  &[data-state='open'] svg {
+    transform: rotate(-180deg);
   }
 `;
 
@@ -145,12 +145,12 @@ export const StyledNavIconTrigger = styled(NavigationMenu.Trigger)`
 export const StyledNavContent = styled(NavigationMenu.Content)`
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: max-content;
   background: ${({ theme }) => theme.colors.neutral[50]};
-  border-radius: ${({ theme }) => theme.borderRadius.standard};
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: ${({ theme }) => theme.spacing.sm};
-  min-width: 220px;
+  min-width: 260px;
   z-index: 3;
   animation-duration: 250ms;
   animation-timing-function: ease;
@@ -176,17 +176,6 @@ export const StyledNavContent = styled(NavigationMenu.Content)`
   }
 `;
 
-export const StyledNavIndicatorArrow = styled.div`
-  position: relative;
-  top: 70%;
-  background-color: ${({ theme }) => theme.colors.neutral[50]};
-  transform: rotate(45deg);
-  border-top-left-radius: 2px;
-  border: 1px solid ${({ theme }) => theme.colors.neutral[300]};
-  border-bottom: none;
-  border-right: none;
-`;
-
 export const StyledNavViewportPosition = styled.div`
   position: absolute;
   display: flex;
@@ -201,10 +190,11 @@ export const StyledNavViewport = styled(NavigationMenu.Viewport)`
   position: relative;
   transform-origin: top center;
   margin-top: ${({ theme }) => theme.spacing.xs};
-  width: 100%;
+  width: var(--radix-navigation-menu-viewport-width);
+  flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors.neutral[50]};
-  border-radius: ${({ theme }) => theme.borderRadius.standard};
-  overflow: visible;
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+  overflow: hidden;
   box-shadow: ${({ theme }) => theme.boxShadow.xlarge};
   height: var(--radix-navigation-menu-viewport-height);
   transition: width, height, 300ms ease;

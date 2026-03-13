@@ -6,7 +6,7 @@ export default {
   component: EdozoLogo,
 } as Meta;
 
-const Template: StoryFn = args => <EdozoLogo variant={args.variant} {...args} />;
+const Template: StoryFn = (args) => <EdozoLogo variant={args.variant} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

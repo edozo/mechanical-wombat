@@ -11,11 +11,15 @@ export default meta;
 export const DefaultTabsWithThreeOptions: StoryFn<typeof Tabs> = () => (
   <Tabs initialTab="tab-2">
     <Tabs.TabWrapper>
-      <Tabs.Tab tabId="tab-1" style={{ background: 'rgba(255,102,0,0.1)' }}>Tab A</Tabs.Tab>
+      <Tabs.Tab tabId="tab-1" style={{ background: 'rgba(255,102,0,0.1)' }}>
+        Tab A
+      </Tabs.Tab>
       <Tabs.Tab tabId="tab-2">Tab B</Tabs.Tab>
       <Tabs.Tab tabId="tab-3">Tab c</Tabs.Tab>
     </Tabs.TabWrapper>
-    <Tabs.Panel tabId="tab-1" style={{ background: 'rgba(255,102,0,0.1)' }}>a panel</Tabs.Panel>
+    <Tabs.Panel tabId="tab-1" style={{ background: 'rgba(255,102,0,0.1)' }}>
+      a panel
+    </Tabs.Panel>
     <Tabs.Panel tabId="tab-2">b panel</Tabs.Panel>
     <Tabs.Panel tabId="tab-3">c panel</Tabs.Panel>
   </Tabs>
@@ -70,11 +74,15 @@ export const FunWithTabsStretched: StoryFn<typeof Tabs> = () => (
             <Tabs.Tab tabId="tab-1">🚀</Tabs.Tab>
             <Tabs.Tab tabId="tab-2">
               <Badge color="#ff0" background="#f60">
-                I'm a Badge
+                I&apos;m a Badge
               </Badge>
             </Tabs.Tab>
             <Tabs.Tab tabId="tab-3">
-              <img src="https://i2-prod.mirror.co.uk/incoming/article5657868.ece/ALTERNATES/s1200b/Boris-Johnson.jpg" width="100px" />
+              <img
+                src="https://i2-prod.mirror.co.uk/incoming/article5657868.ece/ALTERNATES/s1200b/Boris-Johnson.jpg"
+                alt=""
+                width="100px"
+              />
             </Tabs.Tab>
           </Tabs.TabWrapper>
         </div>
@@ -116,6 +124,7 @@ FunWithTabsStretched.storyName = 'Fun with Tabs strached';
 
 export const TabsWithBeforeChangeHandler: StoryFn<typeof Tabs> = () => {
   const aClickHandler = (callback: () => void) => {
+    // eslint-disable-next-line no-restricted-globals, no-alert
     const shouldChange = confirm('change?');
     shouldChange && callback();
   };

@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 export type ButtonV3Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-export type ButtonV3Style = 'solid' | 'outline' | 'ghost';
+export type ButtonV3Appearance = 'solid' | 'outline' | 'ghost';
 export type ButtonV3Context = 'default' | 'notification';
 export type ButtonV3Status = 'info' | 'success' | 'warning' | 'danger';
 export type ButtonV3Size = 'sm' | 'md' | 'lg';
@@ -21,13 +21,17 @@ export interface ButtonV3ResolvedTone {
   disabledColor: string;
 }
 
-type ToneByStyle = Record<ButtonV3Style, ButtonV3ResolvedTone>;
-type ToneByVariant = Record<ButtonV3Variant, ToneByStyle>;
+type ToneByAppearance = Record<ButtonV3Appearance, ButtonV3ResolvedTone>;
+type ToneByVariant = Record<ButtonV3Variant, ToneByAppearance>;
 
-const getIntentTone = (theme: DefaultTheme, variant: ButtonV3Variant, style: ButtonV3Style): ButtonV3ResolvedTone => {
-  const indigo = theme.colors.indigo;
-  const teal = theme.colors.teal;
-  const neutral = theme.colors.neutral;
+const getIntentTone = (
+  theme: DefaultTheme,
+  variant: ButtonV3Variant,
+  appearance: ButtonV3Appearance,
+): ButtonV3ResolvedTone => {
+  const { indigo } = theme.colors;
+  const { teal } = theme.colors;
+  const { neutral } = theme.colors;
 
   const tonesByVariant: ToneByVariant = {
     primary: {
@@ -208,12 +212,16 @@ const getIntentTone = (theme: DefaultTheme, variant: ButtonV3Variant, style: But
     },
   };
 
-  return tonesByVariant[variant][style];
+  return tonesByVariant[variant][appearance];
 };
 
-const getStatusTone = (theme: DefaultTheme, status: ButtonV3Status, style: ButtonV3Style): ButtonV3ResolvedTone => {
+const getStatusTone = (
+  theme: DefaultTheme,
+  status: ButtonV3Status,
+  appearance: ButtonV3Appearance,
+): ButtonV3ResolvedTone => {
   const palette = theme.colors.status[status];
-  const statusTones: ToneByStyle = {
+  const statusTones: ToneByAppearance = {
     solid: {
       background: palette[500],
       border: palette[500],
@@ -258,20 +266,20 @@ const getStatusTone = (theme: DefaultTheme, status: ButtonV3Status, style: Butto
     },
   };
 
-  return statusTones[style];
+  return statusTones[appearance];
 };
 
 export const getButtonV3Tone = (
   theme: DefaultTheme,
   variant: ButtonV3Variant,
-  style: ButtonV3Style,
+  appearance: ButtonV3Appearance,
   status?: ButtonV3Status,
 ): ButtonV3ResolvedTone => {
   if (status) {
-    return getStatusTone(theme, status, style);
+    return getStatusTone(theme, status, appearance);
   }
 
-  return getIntentTone(theme, variant, style);
+  return getIntentTone(theme, variant, appearance);
 };
 
 interface ButtonV3SizeTokens {

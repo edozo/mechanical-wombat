@@ -57,7 +57,6 @@ You can add your own icons as SVG files and wrap them with the same Lucide defau
 Example:
 
 ```tsx
-// src/LucideIcons/custom/index.ts
 import MyBrandSvg from './my-brand-icon.svg';
 import { createLucideIcon } from '../Lucide';
 
@@ -107,11 +106,44 @@ Note: Icon exports are provided via a barrel (`src/Icons/index.tsx`) with named 
 
 You might want to make sure your changes work when used in another application/library locally before publishing a new version of the library. To do this, you can run `yarn pack`, which will package the library and create a `tgz` file in the project root directory. In your consuming app, you can then run `yarn add ./path/to/package-name-version.tgz`
 
+## Testing
+
+Storybook interaction tests (`play` functions) are the primary test mechanism. They run automatically in the Interactions panel when you load a story, and headlessly via the test runner.
+
+**Running locally** (requires Storybook to be running):
+
+```bash
+# Terminal 1
+yarn storybook
+
+# Terminal 2
+yarn test
+```
+
+**CI** — the `test-storybook` CircleCI job builds a static Storybook, serves it, and runs all `play` functions headlessly via Playwright.
+
+### Writing interaction tests
+
+Add a `play` function to any story that has meaningful interactive behaviour:
+
+```tsx
+import { expect, userEvent, within } from '@storybook/test';
+
+export const MyStory: StoryFn<Props> = (args) => <MyComponent {...args} />;
+MyStory.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  await userEvent.click(canvas.getByRole('button'));
+  expect(canvas.getByText('Done')).toBeInTheDocument();
+};
+```
+
+Only add `play` functions to stories with stateful or interactive behaviour — static/display-only stories don't need them.
+
 ## Contributing and publishing
 
 When making changes to this library, please make sure you:
 
-1. Add tests and run them
+1. Write or update interaction tests for any interactive behaviour and confirm they pass (`yarn test`)
 2. Update the version number in `package.json`
 3. Commit changes to a branch, open a PR and get it reviewed
 4. Once approved, merge to the `main` branch

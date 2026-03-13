@@ -60,7 +60,6 @@ import Bin from './icons/bin.svg';
 
 import autoPolygonUrl from './icons/auto-polygon-tool.svg?url';
 import AutoPolygon from './icons/auto-polygon-tool.svg';
-import LeaseholdAutoPolygon from './icons/auto-polygon-tool.svg';
 
 import drawPolygonUrl from './icons/draw-polygon-tool.svg?url';
 import DrawPolygon from './icons/draw-polygon-tool.svg';
@@ -306,6 +305,8 @@ import ActionsIndicator from './icons/actions-indicator.svg';
 
 import aiThreeStarsUrl from './icons/ai-three-stars.svg?url';
 import AiThreeStars from './icons/ai-three-stars.svg';
+
+const LeaseholdAutoPolygon = AutoPolygon;
 
 const DEFAULT_ICON_COLOR = '#4c4c4c';
 

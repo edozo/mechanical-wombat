@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+export const StyledUserInfo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.xs};
+  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral[200]};
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
+  font-family: ${({ theme }) => theme.typography.fontFamily.sans};
+  font-size: ${({ theme }) => theme.typography.scale.sm.size};
+  line-height: ${({ theme }) => theme.typography.scale.sm.lineHeight};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
+  color: ${({ theme }) => theme.colors.neutral[600]};
+`;
+
 export const StyledLogoutButton = styled.button`
   display: flex;
   align-items: center;
@@ -9,7 +23,7 @@ export const StyledLogoutButton = styled.button`
   background: transparent;
   cursor: pointer;
   padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
-  border-radius: ${({ theme }) => theme.borderRadius.standard};
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   font-family: ${({ theme }) => theme.typography.fontFamily.sans};
   font-size: ${({ theme }) => theme.typography.scale.sm.size};
   line-height: ${({ theme }) => theme.typography.scale.sm.lineHeight};

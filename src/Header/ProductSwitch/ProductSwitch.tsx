@@ -44,7 +44,7 @@ export const ProductSwitch: React.FC<Props> = ({ edozoProducts, appName }) => {
         content={
           <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
             <List variant="platform">
-              {edozoProducts.map(product => (
+              {edozoProducts.map((product) => (
                 <List.Item
                   key={product.url}
                   onClick={() => linkHandler(product)}

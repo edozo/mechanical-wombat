@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { ButtonV3, ButtonV3Props } from './ButtonV3';
 import { LucideIcon } from 'LucideIcons';
+import { ButtonV3, ButtonV3Props } from './ButtonV3';
 import { defaultTheme } from '../defaultTheme';
 
 export default {
@@ -13,8 +13,8 @@ export default {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'tertiary', 'quaternary'],
     },
-    style: {
-      description: 'Visual treatment for the selected intent.',
+    appearance: {
+      description: 'Visual appearance for the selected intent.',
       control: { type: 'select' },
       options: ['solid', 'outline', 'ghost'],
     },
@@ -70,7 +70,7 @@ export default {
   args: {
     children: 'ButtonV3',
     variant: 'secondary',
-    style: 'solid',
+    appearance: 'solid',
     size: 'md',
     disabled: false,
     isLoading: false,
@@ -79,11 +79,11 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<ButtonV3Props> = args => <ButtonV3 {...args} />;
+const Template: StoryFn<ButtonV3Props> = (args) => <ButtonV3 {...args} />;
 
 export const Playground = Template.bind({});
 
-export const Variants: StoryFn<ButtonV3Props> = args => (
+export const Variants: StoryFn<ButtonV3Props> = (args) => (
   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
     <ButtonV3 {...args} asChild={false} variant="primary">
       Primary
@@ -100,23 +100,23 @@ export const Variants: StoryFn<ButtonV3Props> = args => (
   </div>
 );
 
-export const Styles: StoryFn<ButtonV3Props> = args => (
+export const Styles: StoryFn<ButtonV3Props> = (args) => (
   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-    <ButtonV3 {...args} asChild={false} style="solid">
+    <ButtonV3 {...args} asChild={false} appearance="solid">
       Solid
     </ButtonV3>
-    <ButtonV3 {...args} asChild={false} style="outline">
+    <ButtonV3 {...args} asChild={false} appearance="outline">
       Outline
     </ButtonV3>
-    <ButtonV3 {...args} asChild={false} style="ghost">
+    <ButtonV3 {...args} asChild={false} appearance="ghost">
       Ghost
     </ButtonV3>
   </div>
 );
 
-export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
+export const VariantStyleMatrix: StoryFn<ButtonV3Props> = (args) => {
   const variants: Array<ButtonV3Props['variant']> = ['primary', 'secondary', 'tertiary', 'quaternary'];
-  const styles: Array<ButtonV3Props['style']> = ['solid', 'outline', 'ghost'];
+  const appearances: Array<ButtonV3Props['appearance']> = ['solid', 'outline', 'ghost'];
 
   return (
     <div
@@ -129,9 +129,9 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
       }}
     >
       <div />
-      {styles.map(style => (
+      {appearances.map((appearance) => (
         <div
-          key={`variant-header-${style}`}
+          key={`variant-header-${appearance}`}
           style={{
             fontWeight: defaultTheme.typography.fontWeight.semibold,
             fontFamily: defaultTheme.typography.fontFamily.sans,
@@ -139,11 +139,11 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
             textTransform: 'capitalize',
           }}
         >
-          {style}
+          {appearance}
         </div>
       ))}
 
-      {variants.flatMap(variant => [
+      {variants.flatMap((variant) => [
         <div
           key={`variant-row-${variant}`}
           style={{
@@ -155,17 +155,17 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
         >
           {variant}
         </div>,
-        ...styles.map(style => (
+        ...appearances.map((appearance) => (
           <div
-            key={`${variant}-${style}`}
+            key={`${variant}-${appearance}`}
             style={{
               border: `1px dashed ${defaultTheme.colors.neutral[400]}`,
               borderRadius: defaultTheme.borderRadius.sm,
               padding: defaultTheme.spacing.sm,
             }}
           >
-            <ButtonV3 {...args} asChild={false} variant={variant} style={style}>
-              {variant} {style}
+            <ButtonV3 {...args} asChild={false} variant={variant} appearance={appearance}>
+              {variant} {appearance}
             </ButtonV3>
           </div>
         )),
@@ -174,9 +174,9 @@ export const VariantStyleMatrix: StoryFn<ButtonV3Props> = args => {
   );
 };
 
-export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
+export const NotificationContextMatrix: StoryFn<ButtonV3Props> = (args) => {
   const statuses: Array<NonNullable<ButtonV3Props['status']>> = ['info', 'success', 'warning', 'danger'];
-  const styles: Array<ButtonV3Props['style']> = ['solid', 'outline', 'ghost'];
+  const appearances: Array<ButtonV3Props['appearance']> = ['solid', 'outline', 'ghost'];
 
   return (
     <div
@@ -189,9 +189,9 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
       }}
     >
       <div />
-      {styles.map(style => (
+      {appearances.map((appearance) => (
         <div
-          key={`header-${style}`}
+          key={`header-${appearance}`}
           style={{
             fontWeight: defaultTheme.typography.fontWeight.semibold,
             fontFamily: defaultTheme.typography.fontFamily.sans,
@@ -199,11 +199,11 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
             textTransform: 'capitalize',
           }}
         >
-          {style}
+          {appearance}
         </div>
       ))}
 
-      {statuses.flatMap(status => [
+      {statuses.flatMap((status) => [
         <div
           key={`row-${status}`}
           style={{
@@ -215,17 +215,17 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
         >
           {status}
         </div>,
-        ...styles.map(style => (
+        ...appearances.map((appearance) => (
           <div
-            key={`${status}-${style}`}
+            key={`${status}-${appearance}`}
             style={{
               border: `1px dashed ${defaultTheme.colors.neutral[400]}`,
               borderRadius: defaultTheme.borderRadius.small,
               padding: defaultTheme.spacing.sm,
             }}
           >
-            <ButtonV3 {...args} asChild={false} context="notification" status={status} style={style}>
-              {status} {style}
+            <ButtonV3 {...args} asChild={false} context="notification" status={status} appearance={appearance}>
+              {status} {appearance}
             </ButtonV3>
           </div>
         )),
@@ -234,8 +234,15 @@ export const NotificationContextMatrix: StoryFn<ButtonV3Props> = args => {
   );
 };
 
-export const IconOnly: StoryFn<ButtonV3Props> = args => (
-  <ButtonV3 {...args} asChild={false} iconOnly aria-label="Search" leadingIcon={<span>⌕</span>} trailingIcon={undefined} />
+export const IconOnly: StoryFn<ButtonV3Props> = (args) => (
+  <ButtonV3
+    {...args}
+    asChild={false}
+    iconOnly
+    aria-label="Search"
+    leadingIcon={<span>⌕</span>}
+    trailingIcon={undefined}
+  />
 );
 
 export const ButtonWithTrailingArrowRight = Template.bind({});
@@ -258,7 +265,7 @@ export const AsChildAnchorUsage = Template.bind({});
 AsChildAnchorUsage.args = {
   asChild: true,
   variant: 'secondary',
-  style: 'outline',
+  appearance: 'outline',
   size: 'md',
   children: (
     <a href="https://www.edozo.com" target="_blank" rel="noopener noreferrer">

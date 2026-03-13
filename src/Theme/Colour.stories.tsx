@@ -1,7 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
+import { useTheme } from 'styled-components';
 import { DisplayBox, DisplayBoxWrapper } from '../DisplayBox';
 import { DisplayBoxTitle, DisplayBoxSubTitle, DisplayBoxBody } from '../DisplayBox/DisplayBox.styles';
-import { useTheme } from 'styled-components';
 
 export default {
   title: 'Theme/Colours',
@@ -171,9 +171,9 @@ export const Alert: StoryFn = () => {
 
 const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] as const;
 
-const renderTokenGrid = (title: string, tokens: Record<typeof steps[number], string>) => (
+const renderTokenGrid = (title: string, tokens: Record<(typeof steps)[number], string>) => (
   <DisplayBoxWrapper showBorder={false}>
-    {steps.map(step => (
+    {steps.map((step) => (
       <DisplayBox background={tokens[step]} key={`${title}-${step}`}>
         <DisplayBoxSubTitle>{step}</DisplayBoxSubTitle>
         <DisplayBoxTitle>{title}</DisplayBoxTitle>
