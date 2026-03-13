@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [5.1.3] - 2026-03-13
+## [6.0.1] - 2026-03-13
 
 ### Changed
 
@@ -206,4 +206,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [3.1.1]: https://github.com/edozo/mechanical-wombat/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/edozo/mechanical-wombat/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/edozo/mechanical-wombat/releases/tag/v3.0.0
-[5.1.3]: https://github.com/edozo/mechanical-wombat/compare/v5.1.2...v5.1.3
+[6.0.1]: https://github.com/edozo/mechanical-wombat/compare/v6.0.0...v6.0.1
