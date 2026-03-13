@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Tooltip } from './Tooltip';
 
 export default {
@@ -7,7 +6,7 @@ export default {
   component: Tooltip,
 } as Meta;
 
-export const Basic: Story = () => (
+export const Basic: StoryFn = () => (
   <Tooltip
     content={
       <div>
@@ -19,7 +18,7 @@ export const Basic: Story = () => (
   </Tooltip>
 );
 
-export const Interactive: Story = () => (
+export const Interactive: StoryFn = () => (
   <div style={{ minHeight: '50vh' }}>
     <Tooltip
       interactive

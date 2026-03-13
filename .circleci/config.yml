@@ -1,0 +1,121 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:22.18
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Lint
+          command: yarn lint
+
+      - run:
+          name: Type check
+          command: yarn typecheck
+
+      - run:
+          name: Build
+          command: yarn build
+
+  test-storybook:
+    docker:
+      - image: cimg/node:22.18-browsers
+    resource_class: medium
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Install Playwright Chromium
+          command: npx playwright install --with-deps chromium
+
+      - run:
+          name: Run Storybook interaction tests
+          command: |
+            yarn build-storybook
+            npx http-server storybook-static --port 9009 --silent &
+            SB_SERVER_PID=$!
+            trap "kill $SB_SERVER_PID" EXIT
+            npx wait-on tcp:9009
+            yarn test --maxWorkers=2
+
+  publish:
+    docker:
+      - image: cimg/node:22.18
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Build
+          command: yarn build
+
+      - run:
+          name: Configure .npmrc
+          command: |
+            sed -i 's/GH_TOKEN/GH_PACKAGE_WRITE/g' .npmrc
+
+      - run:
+          name: Publish
+          command: npm publish
+
+  deploy-storybook:
+    docker:
+      - image: cimg/node:22.18
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Build Storybook
+          command: yarn build-storybook
+
+      - run:
+          name: Deploy Storybook to GitHub Pages
+          command: |
+            git config --global user.email "ci@circleci.com"
+            git config --global user.name "CircleCI"
+            git remote set-url origin https://$GH_PACKAGE_WRITE@github.com/edozo/mechanical-wombat.git
+            yarn gh-pages -d storybook-static -b gh-pages
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build-and-test:
+          context:
+            - GithubPackages
+      - test-storybook:
+          context:
+            - GithubPackages
+      - publish:
+          requires:
+            - build-and-test
+            - test-storybook
+          filters:
+            branches:
+              only: main
+          context:
+            - GithubPackages
+      - deploy-storybook:
+          requires:
+            - publish
+          filters:
+            branches:
+              only: main
+          context:
+            - GithubPackages

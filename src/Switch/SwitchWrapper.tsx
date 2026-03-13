@@ -4,7 +4,7 @@ import { Switch } from './Switch';
 
 export interface SwitchWrapperProps {
   defaultToggleValue: boolean;
-  size: string;
+  size?: 'small' | 'default';
   disabled: boolean;
   id: string;
   onText: string;

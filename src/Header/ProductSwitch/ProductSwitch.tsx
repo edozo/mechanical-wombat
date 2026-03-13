@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
-import { ProductInfo } from '../AppHeader';
-import { SwitchAppIconColour } from '../../Icons';
-import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from './ProductSwitch.styles';
-import { List } from '../../List';
-import { Popover } from '../../Popover';
-import { EdozoLogo } from '../../EdozoLogo';
+import { ProductInfo } from 'Header/AppHeader';
+import { SwitchAppIconColour } from 'Icons';
+import { ItemWrapper, StyledButtonTitle, StyledButtonV2, StyledText } from 'Header/ProductSwitch/ProductSwitch.styles';
+import { List } from 'List';
+import { Popover } from 'Popover';
+import { EdozoLogo, LogoVariants } from 'EdozoLogo';
 
-export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
+interface Props {
+  edozoProducts: ProductInfo[];
+  appName: string;
+}
+
+export const ProductSwitch: React.FC<Props> = ({ edozoProducts, appName }) => {
   const [platformAppPopover, setPlatformAppPopover] = useState(false);
   const showPopover = (): void => setPlatformAppPopover(true);
   const hidePopover = (): void => setPlatformAppPopover(false);
 
   const linkHandler = (product: ProductInfo): boolean | void => {
-    const { stageUrl, productionUrl } = product;
+    const { url } = product;
     const { hostname } = window.location;
     if (hostname === 'localhost') {
       // eslint-disable-next-line no-restricted-globals, no-alert
       if (confirm('You are being taken away from your local environment')) {
-        window.open(stageUrl, '_blank');
+        window.open(url, '_blank');
         return false;
       }
       return false;
     }
-    const [, , topLevelDomain] = hostname.split('.');
-    topLevelDomain === 'co' ? window.open(stageUrl, '_blank') : window.open(productionUrl, '_blank');
+
+    window.open(url, '_blank');
     hidePopover();
   };
 
@@ -39,14 +44,14 @@ export const ProductSwitch: React.FC<any> = ({ edozoProducts, appName }) => {
         content={
           <div style={{ margin: '10px 0', borderRadius: 'inherit' }}>
             <List variant="platform">
-              {edozoProducts.map((product: any) => (
+              {edozoProducts.map((product) => (
                 <List.Item
-                  key={product.productionUrl}
+                  key={product.url}
                   onClick={() => linkHandler(product)}
                   disabled={product.disabled || appName === product.appName}
                 >
                   <ItemWrapper>
-                    <EdozoLogo size="small" variant={product.appName} />
+                    <EdozoLogo size="small" variant={product.appName as LogoVariants} />
                     <StyledText>{product.description}</StyledText>
                   </ItemWrapper>
                 </List.Item>

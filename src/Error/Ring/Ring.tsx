@@ -4,6 +4,7 @@ import { StyledRing } from './Ring.styles';
 export interface Props {
   opacity?: number;
   padding?: string;
+  children?: React.ReactNode;
 }
 
 export const Ring: React.FC<Props> = ({ children, opacity = 1, padding = '0px', ...rest }) => (

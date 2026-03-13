@@ -5,7 +5,7 @@ import { ErrorColumn } from '../ErrorColumn';
 import { ErrorInfo } from '../ErrorInfo';
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const GenericError: React.FC<Props> = ({

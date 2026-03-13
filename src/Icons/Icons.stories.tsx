@@ -1,7 +1,6 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DisplayBoxWrapper } from '../DisplayBox';
-import { DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles.ts';
+import { DisplayBoxSubTitle } from '../DisplayBox/DisplayBox.styles';
 import {
   ZoomIcon,
   ZoomInIcon,
@@ -105,6 +104,7 @@ import {
   FreeholdAutoPolygonIcon,
   LeaseholdAutoPolygonIcon,
   ActionsIndicatorIcon,
+  AiThreeStarsIcon,
 } from '.';
 
 export default {
@@ -160,6 +160,7 @@ const solidIcons = [
   { name: 'Align center', component: <AlignCenterIcon /> },
   { name: 'Align right', component: <AlignRightIcon /> },
   { name: 'Go To', component: <GoToIcon /> },
+  { name: 'Ai Three Stars', component: <AiThreeStarsIcon /> },
 ];
 
 const outlinedIcons = [
@@ -220,9 +221,9 @@ const outlinedIcons = [
   { name: 'Actions Indicator', component: <ActionsIndicatorIcon /> },
 ];
 
-export const Solid: Story = () => (
+export const Solid: StoryFn = () => (
   <DisplayBoxWrapper>
-    {solidIcons.map(icon => (
+    {solidIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>
@@ -231,9 +232,9 @@ export const Solid: Story = () => (
   </DisplayBoxWrapper>
 );
 
-export const Outline: Story = () => (
+export const Outline: StoryFn = () => (
   <DisplayBoxWrapper>
-    {outlinedIcons.map(icon => (
+    {outlinedIcons.map((icon) => (
       <div style={{ padding: '8px', textAlign: 'center' }} key={icon.name}>
         {icon.component}
         <DisplayBoxSubTitle style={{ width: '60px' }}>{icon.name}</DisplayBoxSubTitle>

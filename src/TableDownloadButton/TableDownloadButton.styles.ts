@@ -8,11 +8,10 @@ export const TableActionButton = styled.button<TableDownloadButtonProps>`
   height: 100%;
   width: 100%;
   color: white;
-  ${p => {
-    const { variant } = p;
-    const main = p.theme.colors.aliases[variant];
-    const light = p.theme.colors.aliases[`${variant}Light` as ColorVariant];
-    const dark = p.theme.colors.aliases[`${variant}Dark` as ColorVariant];
+  ${({ theme, variant }) => {
+    const main = theme.colors.aliases[variant];
+    const light = theme.colors.aliases[`${variant}Light` as ColorVariant];
+    const dark = theme.colors.aliases[`${variant}Dark` as ColorVariant];
     return css`
       border: 2px solid ${main};
       background-color: ${main};
@@ -30,8 +29,8 @@ export const TableActionButton = styled.button<TableDownloadButtonProps>`
         background-color: ${dark};
       }
       &:disabled {
-        background-color: ${p.theme.colors.gray};
-        border: 2px solid ${p.theme.colors.gray};
+        background-color: ${theme.colors.gray};
+        border: 2px solid ${theme.colors.gray};
         cursor: not-allowed;
       }
     `;

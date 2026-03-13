@@ -7,13 +7,14 @@ export interface ButtonProps {
   borderRadius?: 'small' | 'standard' | 'large';
   disabled?: boolean;
   onClick?: () => void;
+  children?: React.ReactNode;
 }
 
 /**
  * @deprecated This Button component is deprecated and will be removed in the next major version.
  * Please use the new ButtonV2 component instead.
  */
-export const Button: React.FC<ButtonProps> = props => {
+export const Button: React.FC<ButtonProps> = (props) => {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console

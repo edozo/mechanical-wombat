@@ -9,7 +9,7 @@ export interface TableDownloadButtonProps extends ButtonHTMLAttributes<HTMLButto
   children: React.ReactNode;
 }
 
-export const TableDownloadButton: React.FC<TableDownloadButtonProps> = props => {
+export const TableDownloadButton: React.FC<TableDownloadButtonProps> = (props) => {
   const { children, ...rest } = props;
   return (
     <TableActionButton type="button" {...rest}>

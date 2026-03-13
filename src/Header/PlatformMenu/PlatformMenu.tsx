@@ -1,4 +1,10 @@
 import React from 'react';
 import { StyledPlatformMenu } from './PlatformMenu.styles';
 
-export const PlatformMenu: React.FC = ({ children }) => <StyledPlatformMenu>{children}</StyledPlatformMenu>;
+export interface PlatformMenuProps {
+  children?: React.ReactNode;
+}
+
+export const PlatformMenu: React.FC<PlatformMenuProps> = ({ children }) => (
+  <StyledPlatformMenu>{children}</StyledPlatformMenu>
+);

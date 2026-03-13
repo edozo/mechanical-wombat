@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Downshift from 'downshift';
+import Downshift, { DownshiftProps, StateChangeOptions } from 'downshift';
 import {
   StyledDownshiftWrapper,
   StyledDownshiftPreview,
@@ -9,12 +9,13 @@ import {
   StyledListItemImage,
   StyledArrow,
 } from './DropDown.styles';
-import arrow from './arrow.svg'; // TODO: Make the react SVG as component work
+import ArrowIcon from './arrow.svg';
 
 export interface DropDownItem {
   label: React.ReactNode;
   value: string | number;
   thumbnail?: string;
+  disabled?: boolean;
 }
 
 export interface Props {
@@ -22,43 +23,86 @@ export interface Props {
   onChange: (item?: DropDownItem) => void;
   selectedItem: DropDownItem;
   initialSelectedItem?: DropDownItem;
+  size?: 'small' | 'standard';
 }
 
 const itemToString = (item: DropDownItem): string => (item ? item.value.toString() : '');
 
-export const DropDown = (props: Props): JSX.Element => (
-  <div>
-    <Downshift {...props} itemToString={itemToString}>
-      {({ getMenuProps, getItemProps, getToggleButtonProps, highlightedIndex, selectedItem, isOpen, getRootProps }) => (
-        <StyledDownshiftWrapper {...getRootProps()}>
-          <StyledDownshiftPreview {...getToggleButtonProps()}>
-            <StyledDownshiftPreviewInner>
-              {selectedItem && selectedItem.thumbnail && (
-                <StyledListItemImage alt={`${selectedItem.label} - thumbnail`} src={selectedItem.thumbnail} />
-              )}
-              {selectedItem?.label}
-            </StyledDownshiftPreviewInner>
-            <StyledArrow isOpen={isOpen} alt={isOpen ? 'Close arrow' : 'Open arrow'} src={arrow} />
-          </StyledDownshiftPreview>
-          {isOpen && (
-            <StyledList {...getMenuProps()}>
-              {props.items.map((item: DropDownItem, index: number) => (
-                <StyledListItem
-                  highlighted={index === highlightedIndex}
-                  selectedItem={item.value === selectedItem?.value}
-                  {...getItemProps({
-                    item,
-                    key: item.value,
-                  })}
-                >
-                  {item.thumbnail && <StyledListItemImage alt={`${item.label} - thumbnail`} src={item.thumbnail} />}
-                  {item.label}
-                </StyledListItem>
-              ))}
-            </StyledList>
-          )}
-        </StyledDownshiftWrapper>
-      )}
-    </Downshift>
-  </div>
-);
+const preventDisabledSelection: DownshiftProps<DropDownItem>['stateReducer'] = (state, changes) => {
+  const typedChanges = changes as StateChangeOptions<DropDownItem>;
+  if (
+    (typedChanges.type === Downshift.stateChangeTypes.keyDownEnter ||
+      typedChanges.type === Downshift.stateChangeTypes.clickItem ||
+      typedChanges.type === Downshift.stateChangeTypes.blurInput) &&
+    typedChanges.selectedItem &&
+    typedChanges.selectedItem.disabled
+  ) {
+    return {
+      ...typedChanges,
+      selectedItem: state.selectedItem as DropDownItem | undefined,
+    } as Partial<StateChangeOptions<DropDownItem>>;
+  }
+  return changes;
+};
+
+export const DropDown: React.FC<Props> = (props) => {
+  const { size = 'standard', ...downshiftProps } = props;
+
+  return (
+    <div>
+      <Downshift {...downshiftProps} itemToString={itemToString} stateReducer={preventDisabledSelection}>
+        {({
+          getMenuProps,
+          getItemProps,
+          getToggleButtonProps,
+          highlightedIndex,
+          selectedItem,
+          isOpen,
+          getRootProps,
+        }) => (
+          <div {...getRootProps()}>
+            <StyledDownshiftWrapper>
+              <StyledDownshiftPreview $size={size} {...getToggleButtonProps()}>
+                <StyledDownshiftPreviewInner>
+                  {selectedItem && selectedItem.thumbnail && (
+                    <StyledListItemImage
+                      $size={size}
+                      alt={`${selectedItem.label} - thumbnail`}
+                      src={selectedItem.thumbnail}
+                    />
+                  )}
+                  {selectedItem?.label}
+                </StyledDownshiftPreviewInner>
+                <StyledArrow $size={size} $isOpen={isOpen} aria-hidden>
+                  <ArrowIcon />
+                </StyledArrow>
+              </StyledDownshiftPreview>
+              {/* Always render the menu root so Downshift can attach refs/aria correctly */}
+              <StyledList {...getMenuProps({ refKey: 'ref' })} hidden={!isOpen}>
+                {isOpen &&
+                  props.items.map((item: DropDownItem, index: number) => (
+                    <StyledListItem
+                      $size={size}
+                      highlighted={highlightedIndex !== undefined && index === highlightedIndex}
+                      selectedItem={item.value === selectedItem?.value}
+                      $disabled={!!item.disabled}
+                      {...getItemProps({
+                        item,
+                        key: item.value,
+                        disabled: item.disabled,
+                      })}
+                    >
+                      {item.thumbnail && (
+                        <StyledListItemImage $size={size} alt={`${item.label} - thumbnail`} src={item.thumbnail} />
+                      )}
+                      {item.label}
+                    </StyledListItem>
+                  ))}
+              </StyledList>
+            </StyledDownshiftWrapper>
+          </div>
+        )}
+      </Downshift>
+    </div>
+  );
+};

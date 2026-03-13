@@ -1,14 +1,13 @@
 import React from 'react';
-import { ProductSwitch } from './ProductSwitch';
-import { LogoutIcon } from '../Icons';
-import { Menu } from './Menu';
-import { Context, Header } from './Header';
+import { ProductSwitch } from 'Header/ProductSwitch';
+import { LogoutIcon } from 'Icons';
+import { Menu } from 'Header/Menu';
+import { Context, Header } from 'Header/Header';
 
 export interface ProductInfo {
   appName: string;
   description: string;
-  productionUrl: string;
-  stageUrl: string;
+  url: string;
   disabled?: boolean;
 }
 
@@ -16,26 +15,22 @@ const defaultProducts: ProductInfo[] = [
   {
     appName: 'maps',
     description: 'Create best in class OS mapping with single click technology',
-    productionUrl: 'https://maps.edozo.com/',
-    stageUrl: 'https://dev-maps.edozo.co/',
+    url: 'https://maps.edozo.com/',
   },
   {
     appName: 'occupiers',
     description: 'Create plans and see occupiers for all use classes',
-    productionUrl: 'https://occupiers.edozo.com/',
-    stageUrl: 'https://occupiers.edozo.co/',
+    url: 'https://occupiers.edozo.com/',
   },
   {
     appName: 'insight',
     description: 'Find thousands of commercial property transaction comps',
-    productionUrl: 'https://app.edozo.com/',
-    stageUrl: 'https://stage-rails.edozo.co/search',
+    url: 'https://insight.edozo.com/',
   },
   {
     appName: 'reports',
     description: 'Create automated valuation reports',
-    productionUrl: 'https://reports.edozo.com/',
-    stageUrl: 'https://reports.edozo.co/',
+    url: 'https://reports.edozo.com/',
   },
 ];
 
@@ -44,6 +39,8 @@ export interface AppHeaderProps extends Context {
   logoSection: React.ReactNode;
   isAuthenticated?: boolean;
   edozoProducts?: ProductInfo[];
+  children?: React.ReactNode;
+  appName: string;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({

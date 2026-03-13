@@ -30,3 +30,7 @@ build-storybook.log
 
 .idea
 notes.md
+
+*.tgz
+
+.claude/

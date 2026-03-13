@@ -7,7 +7,7 @@ import { MenuItem, MenuItemProps } from './MenuItem';
 
 interface MenuComposition {
   Item: React.FC<MenuItemProps>;
-  PlatformMenu: React.FC;
+  PlatformMenu: React.FC<React.PropsWithChildren<unknown>>;
   PlatformButton: React.FC<PlatformMenuButtonProps>;
 }
 
@@ -20,7 +20,7 @@ const Menu: React.FC<Props> & MenuComposition = ({ children }) => {
 };
 
 Menu.Item = MenuItem;
-Menu.PlatformMenu = PlatformMenu;
+Menu.PlatformMenu = PlatformMenu as React.FC<React.PropsWithChildren<unknown>>;
 Menu.PlatformButton = PlatformButton;
 
 export { Menu };

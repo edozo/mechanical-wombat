@@ -8,16 +8,16 @@ interface StyledInputGroupProps {
 export const StyledInputGroup = styled.div<StyledInputGroupProps>`
   display: flex;
   width: 100%;
-  border: ${p => p.$border && `1px solid ${p.theme.colors.grayDark}`};
+  border: ${({ theme, $border }) => $border && `1px solid ${theme.colors.grayDark}`};
   background: white;
   overflow: auto;
-  ${p =>
-    p.$radius === 'standard' &&
+  ${({ $radius }) =>
+    $radius === 'standard' &&
     css`
       border-radius: 6px;
     `}
-  ${p =>
-    p.$radius === 'round' &&
+  ${({ $radius }) =>
+    $radius === 'round' &&
     css`
       border-radius: 50px;
     `};

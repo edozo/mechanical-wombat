@@ -1,6 +1,7 @@
+import React from 'react';
 import { withGlobalStyles } from './custom/withGlobalStyles';
-import { withThemesProvider } from "themeprovider-storybook";
 import { defaultTheme } from '../src/defaultTheme';
+import { ThemeProvider } from '../src/ThemeProvider';
 
 export const parameters = {
   backgrounds: {
@@ -10,7 +11,13 @@ export const parameters = {
       { name: 'light gray', value: '#e6e6e6' },
     ],
   },
-}
+};
 
-const themes = [defaultTheme];
-export const decorators = [withGlobalStyles, withThemesProvider(themes)]
+export const decorators = [
+  withGlobalStyles,
+  Story => (
+    <ThemeProvider theme={defaultTheme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];

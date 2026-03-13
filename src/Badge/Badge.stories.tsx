@@ -1,5 +1,4 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Badge, BadgeProps } from './Badge';
 
 export default {
@@ -9,9 +8,9 @@ export default {
     color: { control: 'color' },
     background: { control: 'color' },
   },
-} as Meta;
+} as Meta<BadgeProps>;
 
-const Template: Story<BadgeProps> = args => <Badge {...args} />;
+const Template: StoryFn<BadgeProps> = (args: BadgeProps) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
