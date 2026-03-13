@@ -73,16 +73,14 @@ Teapot.args = {
 export const Permissions = Template.bind({});
 Permissions.args = {
   children: (
-    <Fragment>
-      <ErrorColumn>
-        <ErrorInfo>
-          <div>
-            <p>You do not have access to edozo admin, please contact someone that can change your permissions.</p>
-          </div>
-          <Button>Logout</Button>
-        </ErrorInfo>
-      </ErrorColumn>
-    </Fragment>
+    <ErrorColumn>
+      <ErrorInfo>
+        <div>
+          <p>You do not have access to edozo admin, please contact someone that can change your permissions.</p>
+        </div>
+        <Button>Logout</Button>
+      </ErrorInfo>
+    </ErrorColumn>
   ),
 };
 

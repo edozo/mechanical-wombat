@@ -96,7 +96,10 @@ export const StyledButtonV3 = styled.button.withConfig({
   appearance: none;
   user-select: none;
   white-space: nowrap;
-  transition: color 220ms ease-in-out, background 220ms ease-in-out, border-color 220ms ease-in-out;
+  transition:
+    color 220ms ease-in-out,
+    background 220ms ease-in-out,
+    border-color 220ms ease-in-out;
 
   svg {
     transition: transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1);

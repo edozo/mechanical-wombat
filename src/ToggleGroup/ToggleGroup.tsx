@@ -20,12 +20,12 @@ export interface State {
 class ToggleGroup extends React.Component<Props, State> {
   state = { activeItem: this.props.selectedItem };
 
-  componentDidUpdate = (prevProps: any): void => {
+  componentDidUpdate(prevProps: any): void {
     if (this.props.selectedItem.value && this.props.selectedItem.value !== prevProps.selectedItem.value) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ activeItem: this.props.selectedItem });
     }
-  };
+  }
 
   handleClick = (item: Item): void => {
     this.setState({ activeItem: item });
