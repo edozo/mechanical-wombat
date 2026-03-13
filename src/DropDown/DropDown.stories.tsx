@@ -43,7 +43,7 @@ const items: DropDownItem[] = [
   },
 ];
 
-const Template: StoryFn<Props> = args => (
+const Template: StoryFn<Props> = (args) => (
   <div style={{ height: '200px' }}>
     <DropDown {...args} />
   </div>
@@ -60,7 +60,7 @@ WithImages.args = {
 export const WithoutImages = Template.bind({});
 WithoutImages.args = {
   selectedItem: items[2],
-  items: items,
+  items,
   onChange: () => {},
   size: 'standard',
 };
@@ -76,7 +76,7 @@ SmallWithImages.args = {
 export const SmallWithoutImages = Template.bind({});
 SmallWithoutImages.args = {
   selectedItem: items[1],
-  items: items,
+  items,
   onChange: () => {},
   size: 'small',
 };

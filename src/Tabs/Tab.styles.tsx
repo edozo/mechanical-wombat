@@ -11,8 +11,8 @@ interface TabWrapperProps {
 
 export const StyledTabWrapper = styled.div<TabWrapperProps>`
   display: flex;
-  ${p =>
-    p.$stretch &&
+  ${({ $stretch }) =>
+    $stretch &&
     css`
       justify-content: stretch;
       * {
@@ -22,34 +22,34 @@ export const StyledTabWrapper = styled.div<TabWrapperProps>`
 `;
 
 export const StyledTab = styled.span<TabStyleProps>`
-  background: ${p => p.theme.colors.white};
-  color: ${p => p.theme.colors.grayDarker};
-  padding: ${p => p.theme.spacing.xsmall} ${p => p.theme.spacing.small};
-  border-radius: ${p => p.theme.borderRadius.large} ${p => p.theme.borderRadius.large} 0 0;
-  font-size: ${p => p.theme.font.size.text.base};
-  line-height: ${p => p.theme.font.lineHeight.text.base};
-  font-weight: ${p => p.theme.font.weight.semibold};
+  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.grayDarker};
+  padding: ${({ theme }) => theme.spacing.xsmall} ${({ theme }) => theme.spacing.small};
+  border-radius: ${({ theme }) => theme.borderRadius.large} ${({ theme }) => theme.borderRadius.large} 0 0;
+  font-size: ${({ theme }) => theme.font.size.text.base};
+  line-height: ${({ theme }) => theme.font.lineHeight.text.base};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 
-  ${p =>
-    p.$isActive &&
+  ${({ theme, $isActive }) =>
+    $isActive &&
     css`
-      font-weight: ${p.theme.font.weight.bold};
-      background: ${p.theme.colors.grayLight};
-      color: ${p.theme.colors.black};
+      font-weight: ${theme.font.weight.bold};
+      background: ${theme.colors.grayLight};
+      color: ${theme.colors.black};
     `}
 
-  ${p =>
-    p.$disabled &&
+  ${({ theme, $disabled }) =>
+    $disabled &&
     css`
-      font-weight: ${p.theme.font.weight.regular};
-      font-size: ${p.theme.font.size.text.small};
-      background: ${p.theme.colors.grayLighter};
-      color: ${p.theme.colors.grayDark};
+      font-weight: ${theme.font.weight.regular};
+      font-size: ${theme.font.size.text.small};
+      background: ${theme.colors.grayLighter};
+      color: ${theme.colors.grayDark};
       cursor: not-allowed;
     `}
 `;

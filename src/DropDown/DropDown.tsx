@@ -45,7 +45,7 @@ const preventDisabledSelection: DownshiftProps<DropDownItem>['stateReducer'] = (
   return changes;
 };
 
-export const DropDown = (props: Props): JSX.Element => {
+export const DropDown: React.FC<Props> = (props) => {
   const { size = 'standard', ...downshiftProps } = props;
 
   return (

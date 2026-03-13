@@ -38,7 +38,7 @@ export const ToggleInner = styled.span<Partial<Props>>`
     text-transform: uppercase;
     padding-left: 6px;
     padding-right: 24px;
-    background-color: ${p => p.theme.colors.aliases.primary};
+    background-color: ${({ theme }) => theme.colors.aliases.primary};
     color: #fff;
   }
 
@@ -51,8 +51,8 @@ export const ToggleInner = styled.span<Partial<Props>>`
     color: #fff;
   }
 
-  ${p =>
-    p.disabled &&
+  ${({ disabled }) =>
+    disabled &&
     css`
       background-color: #ccc;
       cursor: not-allowed;
@@ -61,8 +61,8 @@ export const ToggleInner = styled.span<Partial<Props>>`
         cursor: not-allowed;
       }
     `};
-  ${p =>
-    p.size === 'small' &&
+  ${({ size }) =>
+    size === 'small' &&
     css`
       &:after,
       &:before {
@@ -82,8 +82,8 @@ export const Toggle = styled.span<Partial<Props>>`
   right: 30px;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
-  ${p =>
-    p.disabled &&
+  ${({ disabled }) =>
+    disabled &&
     css`
       background-color: #ccc;
       cursor: not-allowed;
@@ -92,8 +92,8 @@ export const Toggle = styled.span<Partial<Props>>`
         cursor: not-allowed;
       }
     `};
-  ${p =>
-    p.size === 'small' &&
+  ${({ size }) =>
+    size === 'small' &&
     css`
       width: 16px;
       right: 38px;
@@ -117,8 +117,8 @@ export const SwitchParent = styled.div<Partial<Props>>`
     }
   }
 
-  ${p =>
-    p.size === 'small' &&
+  ${({ size }) =>
+    size === 'small' &&
     css`
       width: 58px;
     `}

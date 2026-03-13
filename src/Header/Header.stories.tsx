@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import { AppHeader, AppHeaderProps } from './AppHeader';
 import { EdozoLogo } from '../EdozoLogo';
@@ -13,10 +13,14 @@ export default {
 } as Meta;
 
 export const Default: StoryFn = () => (
-  <AppHeader appName="edozo" logoSection={<EdozoLogo variant={"edozo" as LogoVariants} size="small" />} logout={() => {}} />
+  <AppHeader
+    appName="edozo"
+    logoSection={<EdozoLogo variant={'edozo' as LogoVariants} size="small" />}
+    logout={() => {}}
+  />
 );
 
-export const ControlledAppHeader: StoryFn<AppHeaderProps> = args => (
+export const ControlledAppHeader: StoryFn<AppHeaderProps> = (args) => (
   <AppHeader
     logoSection={
       <a>

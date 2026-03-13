@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18
     steps:
       - checkout
 
@@ -12,16 +12,21 @@ jobs:
           command: yarn
 
       - run:
-          name: Test
-          command: yarn test
+          name: Lint
+          command: yarn lint
+
+      - run:
+          name: Type check
+          command: yarn typecheck
 
       - run:
           name: Build
           command: yarn build
 
-  publish:
+  test-storybook:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18-browsers
+    resource_class: medium
     steps:
       - checkout
 
@@ -30,8 +35,28 @@ jobs:
           command: yarn
 
       - run:
-          name: Test
-          command: yarn test
+          name: Install Playwright Chromium
+          command: npx playwright install --with-deps chromium
+
+      - run:
+          name: Run Storybook interaction tests
+          command: |
+            yarn build-storybook
+            npx http-server storybook-static --port 9009 --silent &
+            SB_SERVER_PID=$!
+            trap "kill $SB_SERVER_PID" EXIT
+            npx wait-on tcp:9009
+            yarn test --maxWorkers=2
+
+  publish:
+    docker:
+      - image: cimg/node:22.18
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn
 
       - run:
           name: Build
@@ -48,7 +73,7 @@ jobs:
 
   deploy-storybook:
     docker:
-      - image: cimg/node:20.10
+      - image: cimg/node:22.18
     steps:
       - checkout
 
@@ -74,9 +99,13 @@ workflows:
       - build-and-test:
           context:
             - GithubPackages
+      - test-storybook:
+          context:
+            - GithubPackages
       - publish:
           requires:
             - build-and-test
+            - test-storybook
           filters:
             branches:
               only: main
