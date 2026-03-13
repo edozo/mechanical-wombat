@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.2] - 2026-03-13
+
+### Changed
+
+- Updated `prettier` to `^3.8.1` (from `^2.8.8`) and `pretty-quick` to `^4.2.2`.
+- Updated `eslint-config-prettier` to `^10.1.8` and `eslint-plugin-prettier` to `^5.5.5`.
+- Updated `eslint-config-airbnb` to `^19.0.4`.
+- Updated `eslint-plugin-react-hooks` to `^7.0.1` and `eslint-plugin-jest` to `^29.15.0`.
+- Removed deprecated `prettier/react` and `prettier/@typescript-eslint` extends from `.eslintrc.json` (removed in `eslint-config-prettier` v8).
+- Added `"react/function-component-definition": "off"` to ESLint rules (codebase uses arrow function components throughout).
+
+### Fixed
+
+- `ToggleGroup`: converted `componentDidUpdate` from arrow function to a regular class method (`react/no-arrow-function-lifecycle`).
+- `Error.stories.tsx`: removed unnecessary Fragment wrapper around single-child JSX.
+- `Skeleton.tsx`, `InputGroup.tsx`: added targeted `eslint-disable` comments for `react/jsx-no-useless-fragment` and `react/jsx-no-constructed-context-values`.
+
 ## [5.1.1] - 2026-03-12
 
 ### Fixed
@@ -193,3 +210,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [3.1.1]: https://github.com/edozo/mechanical-wombat/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/edozo/mechanical-wombat/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/edozo/mechanical-wombat/releases/tag/v3.0.0
+[6.0.2]: https://github.com/edozo/mechanical-wombat/compare/v6.0.1...v6.0.2
