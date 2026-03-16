@@ -11,7 +11,6 @@ import { AppName } from 'EdozoLogoV2';
 
 export interface ProductInfo {
   appName: AppName;
-  description: string;
   url: string;
   disabled?: boolean;
 }
@@ -19,22 +18,18 @@ export interface ProductInfo {
 const defaultProducts: ProductInfo[] = [
   {
     appName: 'maps',
-    description: 'Create best in class OS mapping with single click technology',
     url: 'https://maps.edozo.com/',
   },
   {
     appName: 'occupiers',
-    description: 'Create plans and see occupiers for all use classes',
     url: 'https://occupiers.edozo.com/',
   },
   {
     appName: 'insight',
-    description: 'Find thousands of commercial property transaction comps',
     url: 'https://insight.edozo.com/',
   },
   {
     appName: 'reports',
-    description: 'Create automated valuation reports',
     url: 'https://reports.edozo.com/',
   },
 ];

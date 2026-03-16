@@ -152,7 +152,6 @@ export const StyledNavContent = styled(NavigationMenu.Content)`
   background: ${({ theme }) => theme.colors.neutral[50]};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: ${({ theme }) => theme.spacing.sm};
-  min-width: 260px;
   z-index: 3;
   animation-duration: 250ms;
   animation-timing-function: ease;
