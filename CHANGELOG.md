@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.6] - 2026-03-16
+
+### Changed
+
+- Upgraded Storybook from v9 to v10 (`storybook`, `@storybook/addon-docs`, `@storybook/react`, `@storybook/react-vite`, `@storybook/react-webpack5`, `eslint-plugin-storybook` to `^10.2.19`).
+- Updated `@storybook/test-runner` to `^0.24.2`.
+- Updated `@types/node` to `^24.12.0` and `@types/react` to `^18.3.28`.
+
 ## [6.0.5] - 2026-03-13
 
 ### Changed
@@ -232,6 +240,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
 [unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...HEAD
+[6.0.6]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...v6.0.6
 [6.0.5]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...v6.0.5
 [6.0.4]: https://github.com/edozo/mechanical-wombat/compare/v6.0.3...v6.0.4
 [6.0.3]: https://github.com/edozo/mechanical-wombat/compare/v6.0.2...v6.0.3
