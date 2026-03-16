@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Removed `description` field from the `ProductInfo` interface in `AppHeaderV2` — descriptions are no longer displayed in the product switcher menu.
 
+## [6.0.6] - 2026-03-16
+
+### Changed
+
+- Upgraded Storybook from v9 to v10 (`storybook`, `@storybook/addon-docs`, `@storybook/react`, `@storybook/react-vite`, `@storybook/react-webpack5`, `eslint-plugin-storybook` to `^10.2.19`).
+- Updated `@storybook/test-runner` to `^0.24.2`.
+- Updated `@types/node` to `^24.12.0` and `@types/react` to `^18.3.28`.
+
 ## [6.0.5] - 2026-03-13
 
 ### Changed
