@@ -229,14 +229,11 @@ export const Variants: StoryFn<ComponentNameProps> = (args) => (
 
 When adding or changing components:
 
-1. Update `CHANGELOG.md` following the [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) format:
-   - Add a new `## [x.y.z] - YYYY-MM-DD` section below `## [Unreleased]`
-   - Group entries under the appropriate subsection: `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, or `### Security`
-   - Add a compare link at the bottom of the file: `[x.y.z]: https://github.com/edozo/mechanical-wombat/compare/vPREV...vNEXT`
-2. Bump `version` in `package.json` following semver (patch for fixes, minor for new components/props, major for breaking changes)
-3. Ensure the component is exported from `src/index.tsx`
+1. Update `CHANGELOG.md` — add a new `## [x.y.z] - YYYY-MM-DD` section below `## [Unreleased]`, group entries under `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, or `### Security`, and add a compare link at the bottom of the file.
+2. Bump `version` in `package.json` following semver (patch for fixes, minor for new components/props, major for breaking changes).
+3. Ensure the component is exported from `src/index.tsx`.
 
-Merging to `main` triggers CI publish to GitHub Packages. The `tag-release` workflow (`.github/workflows/tag-release.yml`) automatically creates a `vX.Y.Z` git tag from `package.json` on every merge — this is what makes the CHANGELOG compare links work.
+See [`RELEASING.md`](./RELEASING.md) for the full release process, CI pipeline details, and post-merge verification steps.
 
 ## Git Workflow
 
