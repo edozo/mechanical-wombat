@@ -1,12 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { ProductInfo } from 'HeaderV2/AppHeaderV2';
-import {
-  ItemWrapper,
-  ProductsButtonLabel,
-  StyledProductList,
-  StyledText,
-} from 'HeaderV2/ProductSwitch/ProductSwitchV2.styles';
+import { ItemWrapper, ProductsButtonLabel } from 'HeaderV2/ProductSwitch/ProductSwitchV2.styles';
 import { List } from 'List';
 import { LucideIcon } from 'LucideIcons';
 import { StyledNavContent, StyledNavItem, StyledNavTrigger } from 'HeaderV2/Menu/MenuV2.styles';
@@ -29,18 +24,15 @@ export const ProductSwitchV2: React.FC<Props> = ({ edozoProducts, triggerProps }
         <LucideIcon icon={ChevronDown} size="sm" aria-hidden="true" />
       </StyledNavTrigger>
       <StyledNavContent>
-        <StyledProductList>
-          <List variant="platform">
-            {edozoProducts.map((product) => (
-              <List.Item key={product.url} onClick={() => linkHandler(product)} disabled={product.disabled}>
-                <ItemWrapper>
-                  <EdozoLogoV2 size="small" appName={product.appName} />
-                  <StyledText>{product.description}</StyledText>
-                </ItemWrapper>
-              </List.Item>
-            ))}
-          </List>
-        </StyledProductList>
+        <List variant="platform">
+          {edozoProducts.map((product) => (
+            <List.Item key={product.url} onClick={() => linkHandler(product)} disabled={product.disabled}>
+              <ItemWrapper>
+                <EdozoLogoV2 size="small" appName={product.appName} />
+              </ItemWrapper>
+            </List.Item>
+          ))}
+        </List>
       </StyledNavContent>
     </StyledNavItem>
   );

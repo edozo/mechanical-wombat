@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.0] - 2026-03-16
+
+### Removed
+
+- Removed `description` field from the `ProductInfo` interface in `AppHeaderV2` — descriptions are no longer displayed in the product switcher menu.
+
 ## [6.0.6] - 2026-03-16
 
 ### Changed
@@ -239,7 +245,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/edozo/mechanical-wombat/compare/v6.0.6...v7.0.0
 [6.0.6]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...v6.0.6
 [6.0.5]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...v6.0.5
 [6.0.4]: https://github.com/edozo/mechanical-wombat/compare/v6.0.3...v6.0.4
