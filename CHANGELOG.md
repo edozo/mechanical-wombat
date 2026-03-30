@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.1] - 2026-03-30
+
+### Fixed
+
+- Fixed React 18.3 DOM prop warnings in `DropDown`: renamed `highlighted` and `selectedItem` styled-component props to transient `$highlighted` / `$selectedItem` to prevent forwarding to the DOM, and extracted `key` from the `getItemProps` spread to pass it directly to JSX.
+
 ## [7.0.0] - 2026-03-16
 
 ### Removed
@@ -246,6 +252,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
 [unreleased]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...HEAD
+[7.0.1]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/edozo/mechanical-wombat/compare/v6.0.6...v7.0.0
 [6.0.6]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...v6.0.6
 [6.0.5]: https://github.com/edozo/mechanical-wombat/compare/v6.0.4...v6.0.5
