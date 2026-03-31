@@ -135,9 +135,13 @@ workflows:
             branches:
               ignore: main
       - build-and-test:
+          requires:
+            - check-release-files
           context:
             - GithubPackages
       - test-storybook:
+          requires:
+            - check-release-files
           context:
             - GithubPackages
       - publish:
