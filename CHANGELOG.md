@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.2] - 2026-03-31
+
+### Changed
+
+- Added a `check-release-files` CircleCI job that fails if `package.json` or `CHANGELOG.md` are not modified on a PR branch, enforcing version bumps and changelog entries before merge.
+
 ## [7.0.1] - 2026-03-30
 
 ### Fixed
