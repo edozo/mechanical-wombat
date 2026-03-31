@@ -82,13 +82,13 @@ export const DropDown: React.FC<Props> = (props) => {
                 {isOpen &&
                   props.items.map((item: DropDownItem, index: number) => (
                     <StyledListItem
+                      key={item.value}
                       $size={size}
-                      highlighted={highlightedIndex !== undefined && index === highlightedIndex}
-                      selectedItem={item.value === selectedItem?.value}
+                      $highlighted={highlightedIndex !== undefined && index === highlightedIndex}
+                      $selectedItem={item.value === selectedItem?.value}
                       $disabled={!!item.disabled}
                       {...getItemProps({
                         item,
-                        key: item.value,
                         disabled: item.disabled,
                       })}
                     >

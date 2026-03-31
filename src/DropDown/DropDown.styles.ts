@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 export interface StyleProps {
   $isOpen?: boolean;
-  highlighted?: boolean;
-  selectedItem?: boolean;
+  $highlighted?: boolean;
+  $selectedItem?: boolean;
   $disabled?: boolean;
   $size?: 'small' | 'standard';
 }
@@ -91,15 +91,15 @@ export const StyledListItem = styled.li<StyleProps>`
       pointer-events: none;
     `};
 
-  ${({ theme, highlighted, $disabled }) =>
-    highlighted &&
+  ${({ theme, $highlighted, $disabled }) =>
+    $highlighted &&
     !$disabled &&
     css`
       background: ${theme.colors.grayLighter};
     `};
 
-  ${({ theme, selectedItem, $disabled }) =>
-    selectedItem &&
+  ${({ theme, $selectedItem, $disabled }) =>
+    $selectedItem &&
     !$disabled &&
     css`
       background: ${theme.colors.gray};
