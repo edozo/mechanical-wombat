@@ -237,15 +237,14 @@ See [`RELEASING.md`](./RELEASING.md) for the full release process, CI pipeline d
 
 ## Git Branch Naming Conventions
 
-- Always use `feat/`, `fix/`, `chore/`, or `docs/` prefixes.
+- Always use `feature/`, `fix/`, `chore/`, or `docs/` prefixes.
 - Use kebab-case (lowercase words separated by hyphens).
-- Keep names concise but descriptive (e.g., `feat/add-login-button`).
+- Keep names concise but descriptive (e.g., `feature/add-login-button`).
 - Include issue numbers if applicable (e.g., `fix/issue-123-header-styling`).
 - Prompt me to give a name if you're not sure.
 
 ## Git Workflow
 
-- Branch naming: `feature/<description>` or `fix/<description>`
 - Commit messages: imperative and descriptive (`Add Tooltip component`, not `added stuff`)
 - Open PRs against `main`
 
