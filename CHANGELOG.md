@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.1.0] - 2026-04-27
+
+### Added
+
+- Added `TypographyV2` components (`Display`, `HeadingLg`, `HeadingMd`, `HeadingSm`, `Body`, `Label`, `Caption`) built on the new `theme.typography` tokens (Inter font, role-based scale). All components support the `as` prop for polymorphic rendering.
+
+### Deprecated
+
+- All `Typography` components (`H1`–`H6`, `TextXLarge`–`TextXXSmall`, `Title`, `SubTitle`) are now marked `@deprecated`. Each JSDoc comment points to the recommended `TypographyV2` replacement.
+
 ## [7.0.2] - 2026-03-31
 
 ### Changed
