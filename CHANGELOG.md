@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.2.0] - 2026-04-28
+
+### Added
+
+- Exported `themeCssVariables` (plain CSS string of `--mw-*` custom property declarations) and `ThemeCssVariables` (styled-components `GlobalStyle` component that injects them into `:root`). Both cover all non-deprecated theme tokens — color palettes, status/system/alias/app colors, spacing, icons, border radius, shadows, typography, and breakpoints.
+
 ## [7.1.0] - 2026-04-27
 
 ### Added
