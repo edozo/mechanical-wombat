@@ -34,3 +34,4 @@ export type { SkeletonLineProps } from './Skeleton/SkeletonLine';
 export { SkeletonGroup } from './Skeleton/SkeletonGroup';
 export type { SkeletonGroupProps } from './Skeleton/SkeletonGroup';
 export { ThemeProvider } from './ThemeProvider';
+export { themeCssVariables, ThemeCssVariables } from './cssVariables';
