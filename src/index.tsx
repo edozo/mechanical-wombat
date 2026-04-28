@@ -4,6 +4,7 @@ export { ButtonV2 } from './ButtonV2';
 export { ButtonV3 } from './ButtonV3';
 export type { ButtonV3Props } from './ButtonV3';
 export * from './Typography';
+export * from './TypographyV2';
 export * from './Icons';
 export * from './LucideIcons';
 export { TableDownloadButton } from './TableDownloadButton';
