@@ -8,6 +8,8 @@ export * from './TypographyV2';
 export * from './Icons';
 export * from './LucideIcons';
 export { TableDownloadButton } from './TableDownloadButton';
+export { TableDownloadButtonV2 } from './TableDownloadButtonV2';
+export type { TableDownloadButtonV2Props } from './TableDownloadButtonV2';
 export { PopoverContent } from './PopoverContent';
 export { Popover } from './Popover';
 export { DropDown, DropDownItem } from './DropDown';
