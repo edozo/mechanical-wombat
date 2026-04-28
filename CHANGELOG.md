@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.2.0] - 2026-04-28
+
+### Added
+
+- Added `TableDownloadButtonV2`: a branded version of `TableDownloadButton` using the ButtonV3 design language — indigo palette, Inter font, smooth transitions, and a `focus-visible` ring. The original `TableDownloadButton` is unchanged.
+
 ## [7.1.0] - 2026-04-27
 
 ### Added
@@ -267,7 +273,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
-[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...HEAD
+[unreleased]: https://github.com/edozo/mechanical-wombat/compare/v7.2.0...HEAD
+[7.2.0]: https://github.com/edozo/mechanical-wombat/compare/v7.1.0...v7.2.0
+[7.1.0]: https://github.com/edozo/mechanical-wombat/compare/v7.0.2...v7.1.0
+[7.0.2]: https://github.com/edozo/mechanical-wombat/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/edozo/mechanical-wombat/compare/v6.0.6...v7.0.0
 [6.0.6]: https://github.com/edozo/mechanical-wombat/compare/v6.0.5...v6.0.6
