@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.1.1] - 2026-04-28
+
+### Fixed
+
+- Fixed CircleCI `build_and_deploy` workflow: `build-and-test` and `test-storybook` were gated behind `check-release-files`, which is filtered to non-main branches only. This meant that on merge to main, neither job ever started and `publish` never ran. Split into two workflows — `pr` (branch builds with the release-file gate) and `main` (direct build → test → publish → deploy on merge).
+
 ## [7.1.0] - 2026-04-27
 
 ### Added

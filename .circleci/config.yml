@@ -128,7 +128,8 @@ jobs:
             fi
 
 workflows:
-  build_and_deploy:
+  # Runs on every PR branch: enforce version bump + changelog, then build and test
+  pr:
     jobs:
       - check-release-files:
           filters:
@@ -142,6 +143,22 @@ workflows:
       - test-storybook:
           requires:
             - check-release-files
+          context:
+            - GithubPackages
+
+  # Runs on merge to main: build, test, publish, deploy
+  main:
+    jobs:
+      - build-and-test:
+          filters:
+            branches:
+              only: main
+          context:
+            - GithubPackages
+      - test-storybook:
+          filters:
+            branches:
+              only: main
           context:
             - GithubPackages
       - publish:
