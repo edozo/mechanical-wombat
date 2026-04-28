@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `TableDownloadButtonV2`: a branded version of `TableDownloadButton` using the ButtonV3 design language — indigo palette, Inter font, smooth transitions, and a `focus-visible` ring. The original `TableDownloadButton` is unchanged.
 
+## [7.1.1] - 2026-04-28
+
+### Fixed
+
+- Fixed CircleCI `build_and_deploy` workflow: `build-and-test` and `test-storybook` were gated behind `check-release-files`, which is filtered to non-main branches only. This meant that on merge to main, neither job ever started and `publish` never ran. Split into two workflows — `pr` (branch builds with the release-file gate) and `main` (direct build → test → publish → deploy on merge).
+
 ## [7.1.0] - 2026-04-27
 
 ### Added
@@ -274,7 +280,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING:** `AppHeader` now accepts only a `url` prop instead of both `stageUrl` and `prodUrl`. Consumers must derive the correct URL in their own apps.
 
 [unreleased]: https://github.com/edozo/mechanical-wombat/compare/v7.2.0...HEAD
-[7.2.0]: https://github.com/edozo/mechanical-wombat/compare/v7.1.0...v7.2.0
+[7.2.0]: https://github.com/edozo/mechanical-wombat/compare/v7.1.1...v7.2.0
+[7.1.1]: https://github.com/edozo/mechanical-wombat/compare/v7.1.0...v7.1.1
 [7.1.0]: https://github.com/edozo/mechanical-wombat/compare/v7.0.2...v7.1.0
 [7.0.2]: https://github.com/edozo/mechanical-wombat/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/edozo/mechanical-wombat/compare/v7.0.0...v7.0.1
