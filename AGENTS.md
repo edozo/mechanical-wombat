@@ -18,6 +18,18 @@ yarn yarn:package        # Pack a local .tgz for testing in consumer apps
 
 **Pre-commit hook** runs lint-staged (ESLint on staged files) and pretty-quick automatically.
 
+## Component versioning convention
+
+The library uses suffixed names to track design generations. The pattern is intentional and asymmetric:
+
+| Suffix | Meaning | Example |
+|---|---|---|
+| _(none)_ | Original, legacy implementation | `Badge`, `Tabs`, `Switch` |
+| `V2` | **Rebrand** — updated visual design, new theme tokens, Radix primitives where applicable | `BadgeV2`, `TabsV2`, `SwitchV2` |
+| `V3` | **Rebrand** — for `Button` only, where `V2` already existed before the rebrand effort | `ButtonV3` |
+
+In short: **V2 = rebranded** for every component except `Button`, where **V3 = rebranded** (because `ButtonV2` predates the rebrand). Do not add a `V3` suffix to any other component — if a rebranded version doesn't exist yet, create `ComponentNameV2`.
+
 ## Architecture
 
 `@edozo/mechanical-wombat` is a React UI component library published to GitHub Packages. It outputs dual ESM/CJS bundles via tsup.

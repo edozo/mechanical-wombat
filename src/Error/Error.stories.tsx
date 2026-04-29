@@ -9,7 +9,7 @@ import { GenericError as GenericErrorUI } from './usage/GenericError';
 import { Button } from '../Button';
 
 export default {
-  title: 'OccupierPlans/Error',
+  title: 'Components/Error',
   component: Error,
   argTypes: {},
 } as Meta;

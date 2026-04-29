@@ -1,6 +1,6 @@
 {
   "name": "@edozo/mechanical-wombat",
-  "version": "7.2.0",
+  "version": "7.3.0",
   "description": "React UI component lib for edozo apps and sites",
   "author": "edozo",
   "license": "MIT",
@@ -64,12 +64,22 @@
     "react": ">=18 <20",
     "react-dom": ">=18 <20",
     "styled-components": "^6.1.19",
-    "styled-reboot": "^5.0.0"
+    "styled-reboot": "^5.0.0",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-select": "^2.2.6"
   },
   "devDependencies": {
     "@mdx-js/react": "^3.1.1",
+    "@radix-ui/react-collapsible": "^1.1.12",
     "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toggle-group": "^1.1.11",
     "@storybook/addon-docs": "^10.2.19",
     "@storybook/react": "^10.2.19",
     "@storybook/react-vite": "^10.2.19",

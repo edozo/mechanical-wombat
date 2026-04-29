@@ -5,7 +5,7 @@ import { StackIcon } from '../Icons';
 import { EmptyState } from './EmptyState';
 
 export default {
-  title: 'OccupierPlans/EmptyState',
+  title: 'Components/EmptyState',
   component: EmptyState,
 } as Meta;
 

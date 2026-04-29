@@ -7,7 +7,7 @@ import { InputGroup } from './InputGroup';
 import { GlobalSearch } from './GlobalSearch';
 
 export default {
-  title: 'OccupierPlans/InputGroup',
+  title: 'Components/InputGroup',
   component: InputGroup,
   argTypes: {
     onChange: { action: 'changed' },
