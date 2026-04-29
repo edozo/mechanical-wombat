@@ -8,8 +8,8 @@ import {
 } from 'ErrorV2/ErrorV2.styles';
 
 export interface ErrorV2Props extends React.HTMLAttributes<HTMLDivElement> {
-  /** Large code or number displayed as the primary visual (e.g. "404", "500"). */
-  code?: React.ReactNode;
+  /** Error code displayed as the primary visual (e.g. 404, "500"). */
+  code?: string | number;
   /** Short error title shown below the code. */
   title: string;
   /** Supplementary description providing context or guidance. */
