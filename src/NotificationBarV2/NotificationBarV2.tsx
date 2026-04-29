@@ -34,6 +34,12 @@ export interface NotificationBarV2AccordionProps extends React.HTMLAttributes<HT
   details: React.ReactNode;
   /** Called when the dismiss button is clicked. Renders a dismiss button when provided. */
   onDismiss?: () => void;
+  /** Controlled open state. */
+  open?: boolean;
+  /** Default open state for uncontrolled usage. */
+  defaultOpen?: boolean;
+  /** Called when the open state changes. */
+  onOpenChange?: (open: boolean) => void;
   /** Summary content shown in the collapsed state. */
   children: React.ReactNode;
 }
@@ -53,11 +59,37 @@ export const NotificationBarV2 = forwardRef<HTMLDivElement, NotificationBarV2Pro
 NotificationBarV2.displayName = 'NotificationBarV2';
 
 export const NotificationBarV2Accordion = forwardRef<HTMLDivElement, NotificationBarV2AccordionProps>(
-  ({ variant = 'info', square = false, details, onDismiss, children, ...rest }, ref) => {
-    const [open, setOpen] = useState(false);
+  (
+    {
+      variant = 'info',
+      square = false,
+      details,
+      onDismiss,
+      open: openProp,
+      defaultOpen = false,
+      onOpenChange,
+      children,
+      ...rest
+    },
+    ref,
+  ) => {
+    const [internalOpen, setInternalOpen] = useState(defaultOpen);
+    const open = openProp !== undefined ? openProp : internalOpen;
+
+    const handleOpenChange = (next: boolean) => {
+      if (openProp === undefined) setInternalOpen(next);
+      onOpenChange?.(next);
+    };
 
     return (
-      <StyledAccordionRoot ref={ref} $variant={variant} $square={square} open={open} onOpenChange={setOpen} {...rest}>
+      <StyledAccordionRoot
+        ref={ref}
+        $variant={variant}
+        $square={square}
+        open={open}
+        onOpenChange={handleOpenChange}
+        {...rest}
+      >
         <AccordionSummaryRow>
           <AccordionSummary>{children}</AccordionSummary>
           <AccordionTrigger>

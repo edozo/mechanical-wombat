@@ -34,7 +34,6 @@ export interface InputGroupV2ItemProps extends React.HTMLAttributes<HTMLDivEleme
 
 const InputGroupV2Root = forwardRef<HTMLDivElement, InputGroupV2Props>(
   ({ radius = 'standard', inputSize = 'sm', border = true, children, ...rest }, ref) => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const contextValue: InputGroupV2ContextValue = useMemo(
       () => ({ radius, inputSize, border }),
       [radius, inputSize, border],

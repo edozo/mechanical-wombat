@@ -5,8 +5,12 @@ interface TabsV2ContextValue {
   appearance: TabsV2Appearance;
 }
 
-const TabsV2Context = createContext<TabsV2ContextValue>({ appearance: 'underline' });
+const TabsV2Context = createContext<TabsV2ContextValue | null>(null);
 
-export const useTabsV2Context = (): TabsV2ContextValue => useContext(TabsV2Context);
+export const useTabsV2Context = (): TabsV2ContextValue => {
+  const ctx = useContext(TabsV2Context);
+  if (!ctx) throw new Error('TabsV2 sub-components must be used inside a TabsV2 root');
+  return ctx;
+};
 
 export { TabsV2Context };

@@ -18,6 +18,10 @@ export const StyledInputGroupV2 = styled.div<{ $border: boolean; $radius: 'stand
     css`
       border-radius: ${({ theme }) => theme.borderRadius.round};
     `}
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.indigo[400]};
+  }
 `;
 
 export const StyledInputV2 = styled.input<{ $inputSize: 'sm' | 'md' }>`
@@ -41,7 +45,7 @@ export const StyledInputV2 = styled.input<{ $inputSize: 'sm' | 'md' }>`
     color: ${({ theme }) => theme.colors.neutral[500]};
   }
 
-  &:focus {
+  &:focus-visible {
     outline: none;
   }
 `;
@@ -68,7 +72,7 @@ export const StyledTextareaV2 = styled.textarea<{ $inputSize: 'sm' | 'md' }>`
     color: ${({ theme }) => theme.colors.neutral[500]};
   }
 
-  &:focus {
+  &:focus-visible {
     outline: none;
   }
 `;
