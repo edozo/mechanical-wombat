@@ -27,7 +27,7 @@ export default {
 } as Meta;
 
 const Template: StoryFn<ErrorV2Props> = (args) => (
-  <ErrorV2 {...args} action={<ButtonV3 variant="primary">Take me home</ButtonV3>} />
+  <ErrorV2 {...args} action={<ButtonV3 variant="secondary">Take me home</ButtonV3>} />
 );
 
 export const Playground = Template.bind({});
@@ -37,7 +37,7 @@ export const NotFound: StoryFn = () => (
     code="404"
     title="Page not found"
     description="The page you're looking for doesn't exist or has moved."
-    action={<ButtonV3 variant="primary">Take me home</ButtonV3>}
+    action={<ButtonV3 variant="secondary">Take me home</ButtonV3>}
   />
 );
 
@@ -46,7 +46,7 @@ export const ServerError: StoryFn = () => (
     code="500"
     title="Something went wrong"
     description="We're having trouble on our end. Please try again in a moment."
-    action={<ButtonV3 variant="primary">Refresh the page</ButtonV3>}
+    action={<ButtonV3 variant="secondary">Refresh the page</ButtonV3>}
   />
 );
 
@@ -54,7 +54,7 @@ export const NoCode: StoryFn = () => (
   <ErrorV2
     title="Access denied"
     description="You don't have permission to view this page."
-    action={<ButtonV3 variant="primary">Go back</ButtonV3>}
+    action={<ButtonV3 variant="secondary">Go back</ButtonV3>}
   />
 );
 
