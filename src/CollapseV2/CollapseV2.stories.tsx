@@ -58,7 +58,7 @@ export const Square: StoryFn<CollapseV2Props> = (args) => (
 
 export const Interactions: StoryFn<CollapseV2Props> = (args) => (
   <div style={{ width: 400 }}>
-    <CollapseV2 {...args} trigger="Toggle content">
+    <CollapseV2 {...args} defaultOpen trigger="Toggle content">
       <p data-testid="content" style={{ margin: 0, fontFamily: 'Inter, sans-serif', fontSize: 14 }}>
         Hidden content revealed
       </p>
@@ -70,9 +70,11 @@ Interactions.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const trigger = canvas.getByRole('button');
 
-  expect(canvas.queryByTestId('content')).toBeInTheDocument();
+  expect(canvas.getByTestId('content')).toBeInTheDocument();
 
   await userEvent.click(trigger);
+  expect(canvas.queryByTestId('content')).not.toBeInTheDocument();
+
   await userEvent.click(trigger);
   expect(canvas.getByTestId('content')).toBeInTheDocument();
 };
