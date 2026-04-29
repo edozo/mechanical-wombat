@@ -8,9 +8,9 @@ interface TabsV2ContextValue {
 const TabsV2Context = createContext<TabsV2ContextValue | null>(null);
 
 export const useTabsV2Context = (): TabsV2ContextValue => {
-  const ctx = useContext(TabsV2Context);
-  if (!ctx) throw new Error('TabsV2 sub-components must be used inside a TabsV2 root');
-  return ctx;
+  const context = useContext(TabsV2Context);
+  if (!context) throw new Error('TabsV2 sub-components must be used inside a TabsV2 root');
+  return context;
 };
 
 export { TabsV2Context };
