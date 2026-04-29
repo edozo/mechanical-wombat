@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Collapse, CollapseProps } from './Collapse';
 
 export default {
-  title: 'OccupierPlans/Collapse',
+  title: 'Components/Collapse',
   component: Collapse,
 } as Meta;
 

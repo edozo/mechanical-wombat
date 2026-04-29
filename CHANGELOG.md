@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.3.0] - 2026-04-28
+
+### Added
+
+- Added `BadgeV2`: pill-shaped by default (`border-radius: round`), semantic `variant` prop (`neutral`, `info`, `success`, `warning`, `danger`, `primary`) with theme-token colour pairs, and `size` prop (`sm`, `md`, `lg`).
+- Added `EmptyStateV2`: structured empty state with dedicated `icon`, `title`, `description`, and `action` slots; replaces the freeform-children API.
+- Added `ListV2`: compound component (`ListV2.Item`) on updated neutral-scale hover tokens; `ListV2.Item` supports `asChild` via Radix Slot and `disabled` with proper `aria-disabled`.
+- Added `InputGroupV2`: compound component (`InputGroupV2.Input`, `InputGroupV2.Textarea`, `InputGroupV2.Button`, `InputGroupV2.Item`) with `forwardRef` on all sub-components, new theme tokens, and direct prop passing to inputs instead of context-only.
+- Added `SwitchV2`: built on `@radix-ui/react-switch`; replaces the custom checkbox approach with a fully accessible toggle, `size` prop (`sm`, `md`), and indigo-branded checked state.
+- Added `CollapseV2`: built on `@radix-ui/react-collapsible`; replaces `react-collapsed`, supports controlled (`open`/`onOpenChange`) and uncontrolled (`defaultOpen`) modes, with a Lucide chevron that rotates on open.
+- Added `NotificationBarV2` and `NotificationBarV2Accordion`: four variants (`info`, `success`, `warning`, `danger`), optional dismiss button, accordion built on `@radix-ui/react-collapsible`.
+- Added `TabsV2`: compound component (`TabsV2.List`, `TabsV2.Trigger`, `TabsV2.Content`) built on `@radix-ui/react-tabs`; active tab styled with indigo underline; supports `stretch` on the list.
+- Added `ToggleGroupV2`: built on `@radix-ui/react-toggle-group`; replaces the legacy class component; supports `single` and `multiple` selection types, `size` prop (`sm`, `md`), per-item `disabled`.
+- Added `DropDownV2`: built on `@radix-ui/react-select`; `value`/`onValueChange` controlled API, optional item thumbnails, `size` prop (`sm`, `md`), and portal-rendered content.
+- Added peer dependencies: `@radix-ui/react-switch`, `@radix-ui/react-tabs`, `@radix-ui/react-toggle-group`, `@radix-ui/react-collapsible`, `@radix-ui/react-select`.
+
 ## [7.2.0] - 2026-04-28
 
 ### Added
