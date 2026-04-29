@@ -24,5 +24,5 @@ export const StyledPopoverV2Content = styled(Popover.Content)`
 `;
 
 export const StyledPopoverV2Arrow = styled(Popover.Arrow)`
-  fill: ${({ theme }) => theme.colors.neutral[200]};
+  fill: ${({ theme }) => theme.colors.neutral[50]};
 `;

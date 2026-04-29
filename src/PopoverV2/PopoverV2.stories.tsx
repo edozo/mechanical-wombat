@@ -83,6 +83,8 @@ export const Interactions: StoryFn = () => (
   </div>
 );
 
+Interactions.tags = ['play-fn'];
+
 Interactions.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const trigger = canvas.getByRole('button', { name: 'Open popover' });

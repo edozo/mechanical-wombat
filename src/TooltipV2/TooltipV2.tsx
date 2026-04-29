@@ -3,6 +3,23 @@ import { StyledTooltipArrow, StyledTooltipContent } from 'TooltipV2/TooltipV2.st
 
 export type TooltipV2Side = 'top' | 'right' | 'bottom' | 'left';
 
+export interface TooltipV2ProviderProps {
+  /** Delay in ms before any tooltip in the tree opens. Overridden per-instance by delayDuration. */
+  delayDuration?: number;
+  /** Children. */
+  children: React.ReactNode;
+}
+
+/**
+ * Optional app-root provider. Place once at the top of your tree to share tooltip delay
+ * settings and reduce context overhead on pages with many tooltips.
+ * TooltipV2 includes its own Provider as a fallback when this is not used.
+ */
+export const TooltipV2Provider = ({ delayDuration = 400, children }: TooltipV2ProviderProps) => (
+  <Tooltip.Provider delayDuration={delayDuration}>{children}</Tooltip.Provider>
+);
+TooltipV2Provider.displayName = 'TooltipV2Provider';
+
 export interface TooltipV2Props {
   /** Content displayed inside the tooltip bubble. */
   content: React.ReactNode;

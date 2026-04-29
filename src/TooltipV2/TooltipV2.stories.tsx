@@ -56,6 +56,8 @@ export const Interactions: StoryFn<TooltipV2Props> = () => (
   </div>
 );
 
+Interactions.tags = ['play-fn'];
+
 Interactions.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const trigger = canvas.getByRole('button', { name: 'Trigger' });
@@ -64,4 +66,5 @@ Interactions.play = async ({ canvasElement }) => {
   expect(await within(document.body).findByRole('tooltip')).toBeInTheDocument();
 
   await userEvent.unhover(trigger);
+  expect(within(document.body).queryByRole('tooltip')).not.toBeInTheDocument();
 };

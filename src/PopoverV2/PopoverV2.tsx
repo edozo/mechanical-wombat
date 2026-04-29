@@ -40,7 +40,7 @@ const PopoverV2Trigger = forwardRef<HTMLButtonElement, React.ComponentPropsWitho
 PopoverV2Trigger.displayName = 'PopoverV2.Trigger';
 
 const PopoverV2Content = forwardRef<HTMLDivElement, PopoverV2ContentProps>(
-  ({ side = 'bottom', align = 'end', sideOffset = 8, children, ...rest }, ref) => (
+  ({ side = 'bottom', align = 'center', sideOffset = 8, children, ...rest }, ref) => (
     <Popover.Portal>
       <StyledPopoverV2Content ref={ref} side={side} align={align} sideOffset={sideOffset} {...rest}>
         {children}
