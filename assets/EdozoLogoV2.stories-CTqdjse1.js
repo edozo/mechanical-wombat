@@ -1,0 +1,7 @@
+import{j as r}from"./iframe-Ym7xYKuD.js";import{E as a}from"./EdozoLogoV2-ikfpEHoZ.js";import"./preload-helper-PPVm8Dsz.js";import"./edozo-logo-CAU68y0J.js";const m={title:"Components/EdozoLogoV2",component:a,argTypes:{appName:{description:"App name to display.",control:{type:"select"},options:["edozo","maps","occupiers","insight","reports","extract"]},size:{description:"Visual size of the logo.",control:{type:"select"},options:["small","standard"]}},args:{appName:"edozo",size:"standard"}},p=s=>r.jsx(a,{...s}),e=p.bind({}),o=s=>r.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"16px"},children:["edozo","maps","occupiers","insight","reports","extract"].map(t=>r.jsx(a,{...s,appName:t},t))});o.args={size:"standard"};o.__docgenInfo={description:"",methods:[],displayName:"AllProducts"};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:"args => <EdozoLogoV2 {...args} />",...e.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`args => <div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '16px'
+}}>
+    {(['edozo', 'maps', 'occupiers', 'insight', 'reports', 'extract'] as AppName[]).map(name => <EdozoLogoV2 key={name} {...args} appName={name} />)}
+  </div>`,...o.parameters?.docs?.source}}};const l=["Playground","AllProducts"];export{o as AllProducts,e as Playground,l as __namedExportsOrder,m as default};
