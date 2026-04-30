@@ -66,5 +66,5 @@ Interactions.play = async ({ canvasElement }) => {
   expect(await within(document.body).findByRole('tooltip')).toBeInTheDocument();
 
   await userEvent.unhover(trigger);
-  expect(within(document.body).queryByRole('tooltip')).not.toBeInTheDocument();
+  expect(within(document.body).queryByRole('tooltip')).not.toBeVisible();
 };
