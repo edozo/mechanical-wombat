@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.5.0] - 2026-04-30
+
+### Added
+
+- Added `TooltipV2`: replaces Tippy-based `Tooltip` with `@radix-ui/react-tooltip`. Props: `content`, `children` (single focusable element), `side`, `delayDuration`, plus controlled `open`/`defaultOpen`/`onOpenChange`. Includes fade animation and a styled arrow.
+- Added `PopoverV2`: replaces Tippy-based `Popover`/`PopoverContent` with `@radix-ui/react-popover`. Compound component: `PopoverV2.Trigger`, `PopoverV2.Content`, `PopoverV2.Close`. Content renders in a portal; supports `side`, `align`, and `sideOffset`.
+- Added `SkeletonV2`: replaces deprecated colour tokens (`grayLight`/`grayLighter`) with `neutral[100]`/`neutral[200]`. Compound component: `SkeletonV2.Line` (shimmer block) and `SkeletonV2.Group` (flex column with theme `gap`). Both sub-components gain `forwardRef`. New `color` prop: `'default'` (grey shimmer) or `'light'` (lighter shimmer for use on dark backgrounds).
+- Added `@radix-ui/react-tooltip` and `@radix-ui/react-popover` as peer dependencies.
+
 ## [7.4.0] - 2026-04-29
 
 ### Added
