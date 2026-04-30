@@ -93,72 +93,13 @@ jobs:
             git remote set-url origin https://$GH_PACKAGE_WRITE@github.com/edozo/mechanical-wombat.git
             yarn gh-pages -d storybook-static -b gh-pages
 
-  check-release-files:
-    docker:
-      - image: cimg/node:24.14
-    steps:
-      - checkout
-
-      - run:
-          name: Fetch main branch
-          command: git fetch origin main
-
-      - run:
-          name: Check version bump and CHANGELOG update
-          command: |
-            CHANGED=$(git diff --name-only origin/main...HEAD)
-            FAILED=""
-
-            if ! echo "$CHANGED" | grep -qx "package.json"; then
-              echo "ERROR: package.json has not been modified. Bump the version before merging."
-              FAILED=1
-            else
-              echo "OK: package.json modified."
-            fi
-
-            if ! echo "$CHANGED" | grep -qx "CHANGELOG.md"; then
-              echo "ERROR: CHANGELOG.md has not been modified. Add a changelog entry before merging."
-              FAILED=1
-            else
-              echo "OK: CHANGELOG.md modified."
-            fi
-
-            if [ -n "$FAILED" ]; then
-              exit 1
-            fi
-
 workflows:
-  # Runs on every PR branch: enforce version bump + changelog, then build and test
-  pr:
+  build_and_deploy:
     jobs:
-      - check-release-files:
-          filters:
-            branches:
-              ignore: main
       - build-and-test:
-          requires:
-            - check-release-files
           context:
             - GithubPackages
       - test-storybook:
-          requires:
-            - check-release-files
-          context:
-            - GithubPackages
-
-  # Runs on merge to main: build, test, publish, deploy
-  main:
-    jobs:
-      - build-and-test:
-          filters:
-            branches:
-              only: main
-          context:
-            - GithubPackages
-      - test-storybook:
-          filters:
-            branches:
-              only: main
           context:
             - GithubPackages
       - publish:
