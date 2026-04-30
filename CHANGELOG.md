@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.4.0] - 2026-04-29
+
+### Added
+
+- Added `ErrorV2`: a structured full-page error state component with `code`, `title`, `description`, and `action` slots. Replaces the bare `Error` shell with an on-brand, centred layout. `code` accepts `string | number`; `action` accepts any `React.ReactNode` (typically a `ButtonV3`).
+
 ## [7.3.0] - 2026-04-28
 
 ### Added

@@ -27,6 +27,8 @@ export { defaultTheme } from './defaultTheme';
 export { Collapse } from './Collapse';
 export { EmptyState } from './EmptyState';
 export { Error, NotFound, GenericError } from './Error';
+export { ErrorV2 } from './ErrorV2';
+export type { ErrorV2Props } from './ErrorV2';
 export { GlobalSearch, InputGroup } from './InputGroup';
 export { Header, AppHeader, Menu } from './Header';
 export { HeaderV2, AppHeaderV2, MenuV2 } from './HeaderV2';
